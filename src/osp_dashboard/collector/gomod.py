@@ -2,9 +2,29 @@
 
 import os
 import re
+import subprocess
 from dataclasses import dataclass, field
 
 import httpx
+
+
+def get_github_token() -> str:
+    """Get GitHub token from environment or gh CLI."""
+    token = os.environ.get("GITHUB_TOKEN", "")
+    if not token:
+        # Try to get token from gh CLI
+        try:
+            result = subprocess.run(
+                ["gh", "auth", "token"],
+                capture_output=True,
+                text=True,
+                timeout=5,
+            )
+            if result.returncode == 0:
+                token = result.stdout.strip()
+        except (subprocess.TimeoutExpired, FileNotFoundError):
+            pass
+    return token
 
 
 @dataclass
@@ -105,8 +125,8 @@ def check_release_status(
 
     status.branch_name = branch_name
 
-    # Get GitHub token from environment
-    token = os.environ.get("GITHUB_TOKEN", "")
+    # Get GitHub token
+    token = get_github_token()
     headers = {}
     if token:
         headers["Authorization"] = f"token {token}"
