@@ -6,6 +6,7 @@ on:
     paths:
       - 'config.yaml'
       - 'src/**'
+      - 'data/vulns.json'
       - '.github/workflows/generate.yml'
   schedule:
     # Run daily at 6:00 UTC
