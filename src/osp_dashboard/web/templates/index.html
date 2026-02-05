@@ -123,7 +123,7 @@
             <!-- Version-level status ribbon -->
             {% set has_issues = version_stats[version].has_go_mismatch or version_stats[version].has_dep_mismatch or version_stats[version].total_cves > 0 or version_stats[version].total_dep_cves > 0 %}
             {% if has_issues %}
-            <div class="mb-6 p-4 rounded-lg glass border border-white/10 space-y-2">
+            <div class="mb-6 p-4 rounded-lg bg-amber-500/10 border border-amber-500/30 space-y-2">
                 {% if version_stats[version].has_go_mismatch %}
                 <div class="flex items-center gap-2 text-sm">
                     <span class="text-yellow-400 text-lg">⚠</span>
@@ -344,12 +344,23 @@
                                 {% endif %}
                             </td>
                             <td class="py-3 px-4">
-                                {% if comp.cves %}
-                                <div class="flex flex-wrap gap-1">
+                                {% set ns = namespace(has_cves=false) %}
+                                {% for dep in comp.external_deps %}{% if dep.cves %}{% set ns.has_cves = true %}{% endif %}{% endfor %}
+                                {% if ns.has_cves or comp.cves %}
+                                <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     {% for cve in comp.cves %}
-                                    <a href="{{ cve.url }}" target="_blank" class="cve-badge-{{ cve.severity }} px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="{{ cve.id }}: {{ cve.summary }}">
-                                        {{ cve.severity[:1] | upper }}
+                                    <a href="{{ cve.url }}" target="_blank" class="font-mono text-xs text-red-400" title="{{ cve.id }}: {{ cve.summary }}">
+                                        {{ cve.id }}
                                     </a>
+                                    {% endfor %}
+                                    {% for dep in comp.external_deps %}
+                                    {% if dep.cves %}
+                                    {% for cve in dep.cves %}
+                                    <span class="font-mono text-xs" title="{{ cve.id }}">
+                                        <span class="text-red-300">{{ dep.path.split('/')[-1] }}</span><span class="text-red-500">@{{ dep.version }}</span>
+                                    </span>
+                                    {% endfor %}
+                                    {% endif %}
                                     {% endfor %}
                                 </div>
                                 {% else %}
