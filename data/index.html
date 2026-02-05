@@ -156,6 +156,8 @@
                     
                     
                     
+                    
+                    
                 </div>
             </div>
             <!-- Release versions -->
@@ -165,6 +167,20 @@
                     
                     
                     
+                    
+                    
+                    
+                    <button
+                        class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white"
+                        onclick="showVersion('1.22')"
+                        data-version="1.22"
+                    >
+                        OSP 1.22
+                        
+                        <span class="ml-1 text-yellow-400" title="Go version mismatch, Dependency version mismatch">⚠</span>
+                        
+                        
+                    </button>
                     
                     
                     
@@ -2290,6 +2306,1053 @@
                                                 </span>
                                                 <span class="text-purple-400 font-mono">
                                                     v0.32.11
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-gray-300 truncate" title="knative.dev/pkg">
+                                                    pkg
+                                                </span>
+                                                <span class="text-purple-400 font-mono">
+                                                    v0.0.0-20250415155312-ed3e2158b883
+                                                </span>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div
+            id="version-1.22"
+            class="version-content hidden"
+        >
+            <!-- Version-level status ribbon -->
+            
+            
+            <div class="mb-6 p-4 rounded-lg bg-amber-500/10 border border-amber-500/30 space-y-2">
+                
+                <div class="flex items-center gap-2 text-sm">
+                    <span class="text-yellow-400 text-lg">⚠</span>
+                    <span class="text-yellow-400 font-medium">Go mismatch:</span>
+                    <span class="text-yellow-300">1.25, 1.24</span>
+                </div>
+                
+
+                
+                <div class="flex items-center gap-2 text-sm">
+                    <span class="text-yellow-400 text-lg">⚠</span>
+                    <span class="text-yellow-400 font-medium">Dep mismatch:</span>
+                    <span class="text-yellow-300">api, cel-go, client-go, otel, pkg, sigstore</span>
+                </div>
+                
+
+                
+
+                
+
+                
+                <div class="flex items-center gap-2 text-sm flex-wrap">
+                    <span class="text-purple-400 text-lg">🔍</span>
+                    
+                    <span class="text-green-400 font-medium">govulncheck: 0 reachable vulnerabilities ✓</span>
+                    
+                </div>
+                
+            </div>
+            
+
+            <!-- Table View -->
+            <div class="table-view overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="border-b border-white/10">
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Component</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Ref</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Go</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Stale Deps</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Mismatched Deps</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">CVEs</th>
+                            <th class="text-right py-3 px-4 text-gray-400 font-medium">Deps</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                            <td class="py-3 px-4">
+                                <a href="https://github.com/tektoncd/operator" target="_blank" class="text-white hover:text-blue-400 transition-colors font-medium">
+                                    operator
+                                </a>
+                            </td>
+                            <td class="py-3 px-4">
+                                <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-xs font-medium">
+                                    v0.78.1
+                                </span>
+                            </td>
+                            <td class="py-3 px-4">
+                                <span class="text-yellow-400 font-mono text-xs">
+                                    1.24.0 ⚠
+                                </span>
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                    
+                                    <span class="font-mono text-xs" title="github.com/openshift-pipelines/pipelines-as-code (bundled: v0.41.1)">
+                                        <span class="text-orange-300">pipelines-as-code</span><span class="text-orange-500">@v0.39.2</span>
+                                    </span>
+                                    
+                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v1.9.0)">
+                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v1.6.0</span>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                    
+                                    <span class="font-mono text-xs" title="knative.dev/pkg (expected: v0.0.0-20250415155312-ed3e2158b883)">
+                                        <span class="text-gray-300">pkg</span><span class="text-gray-400">@v0.0.0-20250915135827-db4c336acdbe</span>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
+                            <td class="py-3 px-4 text-right">
+                                <span class="deps-toggle text-gray-400 hover:text-blue-400" onclick="toggleDeps('1.22-operator')" title="Click to show all dependencies">
+                                    35 ▼
+                                </span>
+                            </td>
+                        </tr>
+                        <!-- Expandable dependencies row -->
+                        <tr id="deps-1.22-operator" class="deps-row hidden bg-dark-800/50">
+                            <td colspan="7" class="py-3 px-4">
+                                <div class="grid grid-cols-2 gap-4">
+                                    
+                                    <div>
+                                        <p class="text-xs text-orange-400 uppercase tracking-wider mb-2">Tekton Dependencies</p>
+                                        <div class="space-y-1">
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-red-300 truncate" title="github.com/openshift-pipelines/pipelines-as-code">
+                                                    pipelines-as-code
+                                                </span>
+                                                <span class="text-red-400 font-mono">
+                                                    v0.39.2 (stale)
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-red-300 truncate" title="github.com/tektoncd/pipeline">
+                                                    pipeline
+                                                </span>
+                                                <span class="text-red-400 font-mono">
+                                                    v1.6.0 (stale)
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-orange-200 truncate" title="github.com/tektoncd/triggers">
+                                                    triggers
+                                                </span>
+                                                <span class="text-orange-400 font-mono">
+                                                    v0.34.0
+                                                </span>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div>
+                                        <p class="text-xs text-purple-400 uppercase tracking-wider mb-2">External Dependencies</p>
+                                        <div class="space-y-1">
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-gray-300 truncate" title="k8s.io/api">
+                                                    api
+                                                </span>
+                                                <span class="text-purple-400 font-mono">
+                                                    v0.34.1
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-gray-300 truncate" title="k8s.io/client-go">
+                                                    client-go
+                                                </span>
+                                                <span class="text-purple-400 font-mono">
+                                                    v1.5.2
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-yellow-300 truncate" title="knative.dev/pkg">
+                                                    pkg
+                                                </span>
+                                                <span class="text-yellow-400 font-mono">
+                                                    v0.0.0-20250915135827-db4c336acdbe (exp: v0.0.0-20250415155312-ed3e2158b883)
+                                                </span>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                            <td class="py-3 px-4">
+                                <a href="https://github.com/tektoncd/pipeline" target="_blank" class="text-white hover:text-blue-400 transition-colors font-medium">
+                                    pipeline
+                                </a>
+                            </td>
+                            <td class="py-3 px-4">
+                                <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-xs font-medium">
+                                    v1.9.0
+                                </span>
+                            </td>
+                            <td class="py-3 px-4">
+                                <span class="text-yellow-400 font-mono text-xs">
+                                    1.24.0 ⚠
+                                </span>
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                    
+                                    <span class="font-mono text-xs" title="github.com/google/cel-go (expected: v0.26.1)">
+                                        <span class="text-gray-300">cel-go</span><span class="text-gray-400">@v0.27.0</span>
+                                    </span>
+                                    
+                                    <span class="font-mono text-xs" title="github.com/sigstore/sigstore (expected: v1.9.6-0.20250729224751-181c5d3339b3)">
+                                        <span class="text-gray-300">sigstore</span><span class="text-gray-400">@v1.9.5</span>
+                                    </span>
+                                    
+                                    <span class="font-mono text-xs" title="k8s.io/api (expected: v0.34.1)">
+                                        <span class="text-gray-300">api</span><span class="text-gray-400">@v0.32.11</span>
+                                    </span>
+                                    
+                                    <span class="font-mono text-xs" title="k8s.io/client-go (expected: v1.5.2)">
+                                        <span class="text-gray-300">client-go</span><span class="text-gray-400">@v0.32.11</span>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
+                            <td class="py-3 px-4 text-right">
+                                <span class="deps-toggle text-gray-400 hover:text-blue-400" onclick="toggleDeps('1.22-pipeline')" title="Click to show all dependencies">
+                                    43 ▼
+                                </span>
+                            </td>
+                        </tr>
+                        <!-- Expandable dependencies row -->
+                        <tr id="deps-1.22-pipeline" class="deps-row hidden bg-dark-800/50">
+                            <td colspan="7" class="py-3 px-4">
+                                <div class="grid grid-cols-2 gap-4">
+                                    
+                                    
+                                    <div>
+                                        <p class="text-xs text-purple-400 uppercase tracking-wider mb-2">External Dependencies</p>
+                                        <div class="space-y-1">
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-yellow-300 truncate" title="github.com/google/cel-go">
+                                                    cel-go
+                                                </span>
+                                                <span class="text-yellow-400 font-mono">
+                                                    v0.27.0 (exp: v0.26.1)
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-gray-300 truncate" title="github.com/google/go-containerregistry">
+                                                    go-containerregistry
+                                                </span>
+                                                <span class="text-purple-400 font-mono">
+                                                    v0.20.6
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-gray-300 truncate" title="github.com/jenkins-x/go-scm">
+                                                    go-scm
+                                                </span>
+                                                <span class="text-purple-400 font-mono">
+                                                    v1.15.16
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-yellow-300 truncate" title="github.com/sigstore/sigstore">
+                                                    sigstore
+                                                </span>
+                                                <span class="text-yellow-400 font-mono">
+                                                    v1.9.5 (exp: v1.9.6-0.20250729224751-181c5d3339b3)
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-gray-300 truncate" title="go.opentelemetry.io/otel">
+                                                    otel
+                                                </span>
+                                                <span class="text-purple-400 font-mono">
+                                                    v1.39.0
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-yellow-300 truncate" title="k8s.io/api">
+                                                    api
+                                                </span>
+                                                <span class="text-yellow-400 font-mono">
+                                                    v0.32.11 (exp: v0.34.1)
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-yellow-300 truncate" title="k8s.io/client-go">
+                                                    client-go
+                                                </span>
+                                                <span class="text-yellow-400 font-mono">
+                                                    v0.32.11 (exp: v1.5.2)
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-gray-300 truncate" title="knative.dev/pkg">
+                                                    pkg
+                                                </span>
+                                                <span class="text-purple-400 font-mono">
+                                                    v0.0.0-20250415155312-ed3e2158b883
+                                                </span>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                            <td class="py-3 px-4">
+                                <a href="https://github.com/tektoncd/triggers" target="_blank" class="text-white hover:text-blue-400 transition-colors font-medium">
+                                    triggers
+                                </a>
+                            </td>
+                            <td class="py-3 px-4">
+                                <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-xs font-medium">
+                                    v0.34.0
+                                </span>
+                            </td>
+                            <td class="py-3 px-4">
+                                <span class="text-yellow-400 font-mono text-xs">
+                                    1.24.0 ⚠
+                                </span>
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                    
+                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v1.9.0)">
+                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v1.6.0</span>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                    
+                                    <span class="font-mono text-xs" title="go.opentelemetry.io/otel (expected: v1.39.0)">
+                                        <span class="text-gray-300">otel</span><span class="text-gray-400">@v1.38.0</span>
+                                    </span>
+                                    
+                                    <span class="font-mono text-xs" title="k8s.io/api (expected: v0.34.1)">
+                                        <span class="text-gray-300">api</span><span class="text-gray-400">@v0.32.9</span>
+                                    </span>
+                                    
+                                    <span class="font-mono text-xs" title="k8s.io/client-go (expected: v1.5.2)">
+                                        <span class="text-gray-300">client-go</span><span class="text-gray-400">@v0.32.9</span>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
+                            <td class="py-3 px-4 text-right">
+                                <span class="deps-toggle text-gray-400 hover:text-blue-400" onclick="toggleDeps('1.22-triggers')" title="Click to show all dependencies">
+                                    35 ▼
+                                </span>
+                            </td>
+                        </tr>
+                        <!-- Expandable dependencies row -->
+                        <tr id="deps-1.22-triggers" class="deps-row hidden bg-dark-800/50">
+                            <td colspan="7" class="py-3 px-4">
+                                <div class="grid grid-cols-2 gap-4">
+                                    
+                                    <div>
+                                        <p class="text-xs text-orange-400 uppercase tracking-wider mb-2">Tekton Dependencies</p>
+                                        <div class="space-y-1">
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-red-300 truncate" title="github.com/tektoncd/pipeline">
+                                                    pipeline
+                                                </span>
+                                                <span class="text-red-400 font-mono">
+                                                    v1.6.0 (stale)
+                                                </span>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div>
+                                        <p class="text-xs text-purple-400 uppercase tracking-wider mb-2">External Dependencies</p>
+                                        <div class="space-y-1">
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-gray-300 truncate" title="github.com/google/cel-go">
+                                                    cel-go
+                                                </span>
+                                                <span class="text-purple-400 font-mono">
+                                                    v0.26.1
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-yellow-300 truncate" title="go.opentelemetry.io/otel">
+                                                    otel
+                                                </span>
+                                                <span class="text-yellow-400 font-mono">
+                                                    v1.38.0 (exp: v1.39.0)
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-yellow-300 truncate" title="k8s.io/api">
+                                                    api
+                                                </span>
+                                                <span class="text-yellow-400 font-mono">
+                                                    v0.32.9 (exp: v0.34.1)
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-yellow-300 truncate" title="k8s.io/client-go">
+                                                    client-go
+                                                </span>
+                                                <span class="text-yellow-400 font-mono">
+                                                    v0.32.9 (exp: v1.5.2)
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-gray-300 truncate" title="knative.dev/pkg">
+                                                    pkg
+                                                </span>
+                                                <span class="text-purple-400 font-mono">
+                                                    v0.0.0-20250415155312-ed3e2158b883
+                                                </span>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                            <td class="py-3 px-4">
+                                <a href="https://github.com/tektoncd/cli" target="_blank" class="text-white hover:text-blue-400 transition-colors font-medium">
+                                    cli
+                                </a>
+                            </td>
+                            <td class="py-3 px-4">
+                                <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-xs font-medium">
+                                    v0.43.0
+                                </span>
+                            </td>
+                            <td class="py-3 px-4">
+                                <span class="text-yellow-400 font-mono text-xs">
+                                    1.24.6 ⚠
+                                </span>
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                    
+                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v1.9.0)">
+                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v1.6.0</span>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                    
+                                    <span class="font-mono text-xs" title="k8s.io/api (expected: v0.34.1)">
+                                        <span class="text-gray-300">api</span><span class="text-gray-400">@v0.34.2</span>
+                                    </span>
+                                    
+                                    <span class="font-mono text-xs" title="k8s.io/client-go (expected: v1.5.2)">
+                                        <span class="text-gray-300">client-go</span><span class="text-gray-400">@v0.34.2</span>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
+                            <td class="py-3 px-4 text-right">
+                                <span class="deps-toggle text-gray-400 hover:text-blue-400" onclick="toggleDeps('1.22-cli')" title="Click to show all dependencies">
+                                    38 ▼
+                                </span>
+                            </td>
+                        </tr>
+                        <!-- Expandable dependencies row -->
+                        <tr id="deps-1.22-cli" class="deps-row hidden bg-dark-800/50">
+                            <td colspan="7" class="py-3 px-4">
+                                <div class="grid grid-cols-2 gap-4">
+                                    
+                                    <div>
+                                        <p class="text-xs text-orange-400 uppercase tracking-wider mb-2">Tekton Dependencies</p>
+                                        <div class="space-y-1">
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-orange-200 truncate" title="github.com/tektoncd/chains">
+                                                    chains
+                                                </span>
+                                                <span class="text-orange-400 font-mono">
+                                                    v0.26.0
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-red-300 truncate" title="github.com/tektoncd/pipeline">
+                                                    pipeline
+                                                </span>
+                                                <span class="text-red-400 font-mono">
+                                                    v1.6.0 (stale)
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-orange-200 truncate" title="github.com/tektoncd/triggers">
+                                                    triggers
+                                                </span>
+                                                <span class="text-orange-400 font-mono">
+                                                    v0.34.0
+                                                </span>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div>
+                                        <p class="text-xs text-purple-400 uppercase tracking-wider mb-2">External Dependencies</p>
+                                        <div class="space-y-1">
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-gray-300 truncate" title="github.com/google/go-containerregistry">
+                                                    go-containerregistry
+                                                </span>
+                                                <span class="text-purple-400 font-mono">
+                                                    v0.20.6
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-gray-300 truncate" title="github.com/sigstore/sigstore">
+                                                    sigstore
+                                                </span>
+                                                <span class="text-purple-400 font-mono">
+                                                    v1.9.6-0.20250729224751-181c5d3339b3
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-yellow-300 truncate" title="k8s.io/api">
+                                                    api
+                                                </span>
+                                                <span class="text-yellow-400 font-mono">
+                                                    v0.34.2 (exp: v0.34.1)
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-yellow-300 truncate" title="k8s.io/client-go">
+                                                    client-go
+                                                </span>
+                                                <span class="text-yellow-400 font-mono">
+                                                    v0.34.2 (exp: v1.5.2)
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-gray-300 truncate" title="knative.dev/pkg">
+                                                    pkg
+                                                </span>
+                                                <span class="text-purple-400 font-mono">
+                                                    v0.0.0-20250415155312-ed3e2158b883
+                                                </span>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                            <td class="py-3 px-4">
+                                <a href="https://github.com/openshift-pipelines/pipelines-as-code" target="_blank" class="text-white hover:text-blue-400 transition-colors font-medium">
+                                    pipelines-as-code
+                                </a>
+                            </td>
+                            <td class="py-3 px-4">
+                                <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-xs font-medium">
+                                    v0.41.1
+                                </span>
+                            </td>
+                            <td class="py-3 px-4">
+                                <span class="text-gray-200 font-mono text-xs">
+                                    1.25.0
+                                </span>
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                    
+                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v1.9.0)">
+                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v1.7.0</span>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                    
+                                    <span class="font-mono text-xs" title="k8s.io/api (expected: v0.34.1)">
+                                        <span class="text-gray-300">api</span><span class="text-gray-400">@v0.35.0</span>
+                                    </span>
+                                    
+                                    <span class="font-mono text-xs" title="knative.dev/pkg (expected: v0.0.0-20250415155312-ed3e2158b883)">
+                                        <span class="text-gray-300">pkg</span><span class="text-gray-400">@v0.0.0-20260114161248-8c840449eed2</span>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
+                            <td class="py-3 px-4 text-right">
+                                <span class="deps-toggle text-gray-400 hover:text-blue-400" onclick="toggleDeps('1.22-pipelines-as-code')" title="Click to show all dependencies">
+                                    46 ▼
+                                </span>
+                            </td>
+                        </tr>
+                        <!-- Expandable dependencies row -->
+                        <tr id="deps-1.22-pipelines-as-code" class="deps-row hidden bg-dark-800/50">
+                            <td colspan="7" class="py-3 px-4">
+                                <div class="grid grid-cols-2 gap-4">
+                                    
+                                    <div>
+                                        <p class="text-xs text-orange-400 uppercase tracking-wider mb-2">Tekton Dependencies</p>
+                                        <div class="space-y-1">
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-red-300 truncate" title="github.com/tektoncd/pipeline">
+                                                    pipeline
+                                                </span>
+                                                <span class="text-red-400 font-mono">
+                                                    v1.7.0 (stale)
+                                                </span>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div>
+                                        <p class="text-xs text-purple-400 uppercase tracking-wider mb-2">External Dependencies</p>
+                                        <div class="space-y-1">
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-gray-300 truncate" title="github.com/google/cel-go">
+                                                    cel-go
+                                                </span>
+                                                <span class="text-purple-400 font-mono">
+                                                    v0.26.1
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-gray-300 truncate" title="github.com/jenkins-x/go-scm">
+                                                    go-scm
+                                                </span>
+                                                <span class="text-purple-400 font-mono">
+                                                    v1.15.16
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-yellow-300 truncate" title="k8s.io/api">
+                                                    api
+                                                </span>
+                                                <span class="text-yellow-400 font-mono">
+                                                    v0.35.0 (exp: v0.34.1)
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-gray-300 truncate" title="k8s.io/client-go">
+                                                    client-go
+                                                </span>
+                                                <span class="text-purple-400 font-mono">
+                                                    v1.5.2
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-yellow-300 truncate" title="knative.dev/pkg">
+                                                    pkg
+                                                </span>
+                                                <span class="text-yellow-400 font-mono">
+                                                    v0.0.0-20260114161248-8c840449eed2 (exp: v0.0.0-20250415155312-ed3e2158b883)
+                                                </span>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                            <td class="py-3 px-4">
+                                <a href="https://github.com/tektoncd/chains" target="_blank" class="text-white hover:text-blue-400 transition-colors font-medium">
+                                    chains
+                                </a>
+                            </td>
+                            <td class="py-3 px-4">
+                                <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-xs font-medium">
+                                    v0.26.0
+                                </span>
+                            </td>
+                            <td class="py-3 px-4">
+                                <span class="text-yellow-400 font-mono text-xs">
+                                    1.24.6 ⚠
+                                </span>
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                    
+                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v1.9.0)">
+                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v1.3.1</span>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                    
+                                    <span class="font-mono text-xs" title="k8s.io/client-go (expected: v1.5.2)">
+                                        <span class="text-gray-300">client-go</span><span class="text-gray-400">@v0.34.1</span>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
+                            <td class="py-3 px-4 text-right">
+                                <span class="deps-toggle text-gray-400 hover:text-blue-400" onclick="toggleDeps('1.22-chains')" title="Click to show all dependencies">
+                                    44 ▼
+                                </span>
+                            </td>
+                        </tr>
+                        <!-- Expandable dependencies row -->
+                        <tr id="deps-1.22-chains" class="deps-row hidden bg-dark-800/50">
+                            <td colspan="7" class="py-3 px-4">
+                                <div class="grid grid-cols-2 gap-4">
+                                    
+                                    <div>
+                                        <p class="text-xs text-orange-400 uppercase tracking-wider mb-2">Tekton Dependencies</p>
+                                        <div class="space-y-1">
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-red-300 truncate" title="github.com/tektoncd/pipeline">
+                                                    pipeline
+                                                </span>
+                                                <span class="text-red-400 font-mono">
+                                                    v1.3.1 (stale)
+                                                </span>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div>
+                                        <p class="text-xs text-purple-400 uppercase tracking-wider mb-2">External Dependencies</p>
+                                        <div class="space-y-1">
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-gray-300 truncate" title="github.com/google/go-containerregistry">
+                                                    go-containerregistry
+                                                </span>
+                                                <span class="text-purple-400 font-mono">
+                                                    v0.20.6
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-gray-300 truncate" title="github.com/sigstore/sigstore">
+                                                    sigstore
+                                                </span>
+                                                <span class="text-purple-400 font-mono">
+                                                    v1.9.6-0.20250729224751-181c5d3339b3
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-gray-300 truncate" title="k8s.io/api">
+                                                    api
+                                                </span>
+                                                <span class="text-purple-400 font-mono">
+                                                    v0.34.1
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-yellow-300 truncate" title="k8s.io/client-go">
+                                                    client-go
+                                                </span>
+                                                <span class="text-yellow-400 font-mono">
+                                                    v0.34.1 (exp: v1.5.2)
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-gray-300 truncate" title="knative.dev/pkg">
+                                                    pkg
+                                                </span>
+                                                <span class="text-purple-400 font-mono">
+                                                    v0.0.0-20250415155312-ed3e2158b883
+                                                </span>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                            <td class="py-3 px-4">
+                                <a href="https://github.com/tektoncd/results" target="_blank" class="text-white hover:text-blue-400 transition-colors font-medium">
+                                    results
+                                </a>
+                            </td>
+                            <td class="py-3 px-4">
+                                <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-xs font-medium">
+                                    v0.17.2
+                                </span>
+                            </td>
+                            <td class="py-3 px-4">
+                                <span class="text-yellow-400 font-mono text-xs">
+                                    1.24.0 ⚠
+                                </span>
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                    
+                                    <span class="font-mono text-xs" title="github.com/tektoncd/cli (bundled: v0.43.0)">
+                                        <span class="text-orange-300">cli</span><span class="text-orange-500">@v0.41.1</span>
+                                    </span>
+                                    
+                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v1.9.0)">
+                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v1.6.0</span>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                    
+                                    <span class="font-mono text-xs" title="k8s.io/api (expected: v0.34.1)">
+                                        <span class="text-gray-300">api</span><span class="text-gray-400">@v0.32.9</span>
+                                    </span>
+                                    
+                                    <span class="font-mono text-xs" title="k8s.io/client-go (expected: v1.5.2)">
+                                        <span class="text-gray-300">client-go</span><span class="text-gray-400">@v0.32.9</span>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
+                            <td class="py-3 px-4 text-right">
+                                <span class="deps-toggle text-gray-400 hover:text-blue-400" onclick="toggleDeps('1.22-results')" title="Click to show all dependencies">
+                                    56 ▼
+                                </span>
+                            </td>
+                        </tr>
+                        <!-- Expandable dependencies row -->
+                        <tr id="deps-1.22-results" class="deps-row hidden bg-dark-800/50">
+                            <td colspan="7" class="py-3 px-4">
+                                <div class="grid grid-cols-2 gap-4">
+                                    
+                                    <div>
+                                        <p class="text-xs text-orange-400 uppercase tracking-wider mb-2">Tekton Dependencies</p>
+                                        <div class="space-y-1">
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-red-300 truncate" title="github.com/tektoncd/cli">
+                                                    cli
+                                                </span>
+                                                <span class="text-red-400 font-mono">
+                                                    v0.41.1 (stale)
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-red-300 truncate" title="github.com/tektoncd/pipeline">
+                                                    pipeline
+                                                </span>
+                                                <span class="text-red-400 font-mono">
+                                                    v1.6.0 (stale)
+                                                </span>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div>
+                                        <p class="text-xs text-purple-400 uppercase tracking-wider mb-2">External Dependencies</p>
+                                        <div class="space-y-1">
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-gray-300 truncate" title="github.com/google/cel-go">
+                                                    cel-go
+                                                </span>
+                                                <span class="text-purple-400 font-mono">
+                                                    v0.26.1
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-yellow-300 truncate" title="k8s.io/api">
+                                                    api
+                                                </span>
+                                                <span class="text-yellow-400 font-mono">
+                                                    v0.32.9 (exp: v0.34.1)
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-yellow-300 truncate" title="k8s.io/client-go">
+                                                    client-go
+                                                </span>
+                                                <span class="text-yellow-400 font-mono">
+                                                    v0.32.9 (exp: v1.5.2)
                                                 </span>
                                             </div>
                                             
@@ -9473,7 +10536,7 @@
 
         // On page load, default to 'next' version
         document.addEventListener('DOMContentLoaded', function() {
-            const versions = ['next', 'main', '1.21', '1.20', '1.19', '1.18', '1.17', '1.16', '1.15'];
+            const versions = ['next', 'main', '1.22', '1.21', '1.20', '1.19', '1.18', '1.17', '1.16', '1.15'];
             const defaultVersion = versions.includes('next') ? 'next' : versions[0];
             showVersion(defaultVersion);
         });
