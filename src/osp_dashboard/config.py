@@ -14,6 +14,8 @@ class Config:
     versions: dict[str, dict[str, str]] = field(default_factory=dict)
     # Dependencies to highlight in the UI
     highlight_dependencies: list[str] = field(default_factory=list)
+    # Support status for each version (full, maintenance, security, unsupported, upcoming, development)
+    support_status: dict[str, str] = field(default_factory=dict)
 
 
 def load_config(path: Path | str) -> Config:
@@ -36,6 +38,7 @@ def load_config(path: Path | str) -> Config:
     return Config(
         versions=data.get("versions", {}),
         highlight_dependencies=data.get("highlight_dependencies", []),
+        support_status=data.get("support_status", {}),
     )
 
 

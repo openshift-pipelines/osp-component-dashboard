@@ -89,6 +89,7 @@ def collect_command(args: argparse.Namespace) -> int:
         cve_data=all_cves,
         dep_advisories=dep_advisories,
         vuln_data=vuln_data,
+        support_status=config.support_status,
     )
     print("Done!")
 

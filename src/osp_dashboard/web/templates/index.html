@@ -76,6 +76,27 @@
         .mismatch-badge {
             background: rgba(255, 255, 255, 0.2);
         }
+        .support-full {
+            background: #22c55e;
+            color: white;
+        }
+        .support-maintenance {
+            background: #eab308;
+            color: black;
+        }
+        .support-security {
+            background: #f97316;
+            color: white;
+        }
+        .support-unsupported {
+            background: #6b7280;
+            color: white;
+            opacity: 0.7;
+        }
+        .support-upcoming {
+            background: #3b82f6;
+            color: white;
+        }
         .version-pill.dev-main {
             background: linear-gradient(135deg, #10b981 0%, #059669 100%);
         }
@@ -149,11 +170,21 @@
                     {% for version in versions %}
                     {% if version not in ['main', 'next'] %}
                     <button
-                        class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white"
+                        class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white {% if support_status[version] == 'unsupported' %}opacity-50{% endif %}"
                         onclick="showVersion('{{ version }}')"
                         data-version="{{ version }}"
                     >
                         OSP {{ version }}
+                        {% if support_status[version] %}
+                        <span class="ml-1.5 px-1.5 py-0.5 rounded text-[10px] font-bold support-{{ support_status[version] }}" title="{{ support_status[version] | title }} Support">
+                            {% if support_status[version] == 'full' %}FULL
+                            {% elif support_status[version] == 'maintenance' %}MAINT
+                            {% elif support_status[version] == 'security' %}SEC
+                            {% elif support_status[version] == 'unsupported' %}EOL
+                            {% elif support_status[version] == 'upcoming' %}NEW
+                            {% endif %}
+                        </span>
+                        {% endif %}
                         {% if version_stats[version].has_go_mismatch or version_stats[version].has_dep_mismatch %}
                         <span class="ml-1 text-yellow-400" title="{% if version_stats[version].has_go_mismatch %}Go version mismatch{% endif %}{% if version_stats[version].has_go_mismatch and version_stats[version].has_dep_mismatch %}, {% endif %}{% if version_stats[version].has_dep_mismatch %}Dependency version mismatch{% endif %}">⚠</span>
                         {% endif %}
@@ -443,6 +474,16 @@
                     <h4 class="text-gray-300 font-medium mb-2">Deps</h4>
                     <div class="space-y-1.5 text-gray-400">
                         <div>Total dependency count. Click to expand.</div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-gray-300 font-medium mb-2">Support Status</h4>
+                    <div class="space-y-1.5 text-gray-400">
+                        <div><span class="px-1.5 py-0.5 rounded text-[10px] font-bold support-full">FULL</span> — Full support</div>
+                        <div><span class="px-1.5 py-0.5 rounded text-[10px] font-bold support-maintenance">MAINT</span> — Maintenance only</div>
+                        <div><span class="px-1.5 py-0.5 rounded text-[10px] font-bold support-security">SEC</span> — Security fixes only</div>
+                        <div><span class="px-1.5 py-0.5 rounded text-[10px] font-bold support-unsupported">EOL</span> — End of life</div>
+                        <div><span class="px-1.5 py-0.5 rounded text-[10px] font-bold support-upcoming">NEW</span> — Upcoming release</div>
                     </div>
                 </div>
             </div>

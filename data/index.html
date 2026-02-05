@@ -76,6 +76,27 @@
         .mismatch-badge {
             background: rgba(255, 255, 255, 0.2);
         }
+        .support-full {
+            background: #22c55e;
+            color: white;
+        }
+        .support-maintenance {
+            background: #eab308;
+            color: black;
+        }
+        .support-security {
+            background: #f97316;
+            color: white;
+        }
+        .support-unsupported {
+            background: #6b7280;
+            color: white;
+            opacity: 0.7;
+        }
+        .support-upcoming {
+            background: #3b82f6;
+            color: white;
+        }
         .version-pill.dev-main {
             background: linear-gradient(135deg, #10b981 0%, #059669 100%);
         }
@@ -171,12 +192,18 @@
                     
                     
                     <button
-                        class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white"
+                        class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white "
                         onclick="showVersion('1.22')"
                         data-version="1.22"
                     >
                         OSP 1.22
                         
+                        <span class="ml-1.5 px-1.5 py-0.5 rounded text-[10px] font-bold support-upcoming" title="Upcoming Support">
+                            NEW
+                            
+                        </span>
+                        
+                        
                         <span class="ml-1 text-yellow-400" title="Go version mismatch, Dependency version mismatch">⚠</span>
                         
                         
@@ -185,12 +212,18 @@
                     
                     
                     <button
-                        class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white"
+                        class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white "
                         onclick="showVersion('1.21')"
                         data-version="1.21"
                     >
                         OSP 1.21
                         
+                        <span class="ml-1.5 px-1.5 py-0.5 rounded text-[10px] font-bold support-full" title="Full Support">
+                            FULL
+                            
+                        </span>
+                        
+                        
                         <span class="ml-1 text-yellow-400" title="Dependency version mismatch">⚠</span>
                         
                         
@@ -199,12 +232,18 @@
                     
                     
                     <button
-                        class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white"
+                        class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white "
                         onclick="showVersion('1.20')"
                         data-version="1.20"
                     >
                         OSP 1.20
                         
+                        <span class="ml-1.5 px-1.5 py-0.5 rounded text-[10px] font-bold support-maintenance" title="Maintenance Support">
+                            MAINT
+                            
+                        </span>
+                        
+                        
                         <span class="ml-1 text-yellow-400" title="Go version mismatch, Dependency version mismatch">⚠</span>
                         
                         
@@ -213,12 +252,18 @@
                     
                     
                     <button
-                        class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white"
+                        class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white "
                         onclick="showVersion('1.19')"
                         data-version="1.19"
                     >
                         OSP 1.19
                         
+                        <span class="ml-1.5 px-1.5 py-0.5 rounded text-[10px] font-bold support-maintenance" title="Maintenance Support">
+                            MAINT
+                            
+                        </span>
+                        
+                        
                         <span class="ml-1 text-yellow-400" title="Dependency version mismatch">⚠</span>
                         
                         
@@ -227,11 +272,17 @@
                     
                     
                     <button
-                        class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white"
+                        class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white "
                         onclick="showVersion('1.18')"
                         data-version="1.18"
                     >
                         OSP 1.18
+                        
+                        <span class="ml-1.5 px-1.5 py-0.5 rounded text-[10px] font-bold support-security" title="Security Support">
+                            SEC
+                            
+                        </span>
+                        
                         
                         <span class="ml-1 text-yellow-400" title="Go version mismatch, Dependency version mismatch">⚠</span>
                         
@@ -241,12 +292,18 @@
                     
                     
                     <button
-                        class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white"
+                        class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white "
                         onclick="showVersion('1.17')"
                         data-version="1.17"
                     >
                         OSP 1.17
                         
+                        <span class="ml-1.5 px-1.5 py-0.5 rounded text-[10px] font-bold support-security" title="Security Support">
+                            SEC
+                            
+                        </span>
+                        
+                        
                         <span class="ml-1 text-yellow-400" title="Dependency version mismatch">⚠</span>
                         
                         
@@ -255,12 +312,18 @@
                     
                     
                     <button
-                        class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white"
+                        class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white opacity-50"
                         onclick="showVersion('1.16')"
                         data-version="1.16"
                     >
                         OSP 1.16
                         
+                        <span class="ml-1.5 px-1.5 py-0.5 rounded text-[10px] font-bold support-unsupported" title="Unsupported Support">
+                            EOL
+                            
+                        </span>
+                        
+                        
                         <span class="ml-1 text-yellow-400" title="Dependency version mismatch">⚠</span>
                         
                         
@@ -269,11 +332,17 @@
                     
                     
                     <button
-                        class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white"
+                        class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white opacity-50"
                         onclick="showVersion('1.15')"
                         data-version="1.15"
                     >
                         OSP 1.15
+                        
+                        <span class="ml-1.5 px-1.5 py-0.5 rounded text-[10px] font-bold support-unsupported" title="Unsupported Support">
+                            EOL
+                            
+                        </span>
+                        
                         
                         <span class="ml-1 text-yellow-400" title="Go version mismatch, Dependency version mismatch">⚠</span>
                         
@@ -11701,6 +11770,16 @@
                     <h4 class="text-gray-300 font-medium mb-2">Deps</h4>
                     <div class="space-y-1.5 text-gray-400">
                         <div>Total dependency count. Click to expand.</div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-gray-300 font-medium mb-2">Support Status</h4>
+                    <div class="space-y-1.5 text-gray-400">
+                        <div><span class="px-1.5 py-0.5 rounded text-[10px] font-bold support-full">FULL</span> — Full support</div>
+                        <div><span class="px-1.5 py-0.5 rounded text-[10px] font-bold support-maintenance">MAINT</span> — Maintenance only</div>
+                        <div><span class="px-1.5 py-0.5 rounded text-[10px] font-bold support-security">SEC</span> — Security fixes only</div>
+                        <div><span class="px-1.5 py-0.5 rounded text-[10px] font-bold support-unsupported">EOL</span> — End of life</div>
+                        <div><span class="px-1.5 py-0.5 rounded text-[10px] font-bold support-upcoming">NEW</span> — Upcoming release</div>
                     </div>
                 </div>
             </div>

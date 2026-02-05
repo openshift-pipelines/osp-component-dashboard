@@ -110,6 +110,7 @@ def generate_html(
     cve_data: dict[str, dict[str, list]] | None = None,
     dep_advisories: dict[str, list] | None = None,
     vuln_data: dict[str, dict[str, list]] | None = None,
+    support_status: dict[str, str] | None = None,
 ) -> None:
     """Generate the dashboard HTML.
 
@@ -372,6 +373,7 @@ def generate_html(
         versions=sorted_versions,
         versions_data=versions_data,
         version_stats=version_stats,
+        support_status=support_status or {},
     )
 
     output_path = Path(output_path)
