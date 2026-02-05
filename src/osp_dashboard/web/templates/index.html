@@ -62,6 +62,22 @@
         .mismatch-badge {
             background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%);
         }
+        .version-pill.dev-main {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+        .version-pill.dev-next {
+            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+        }
+        .deps-toggle {
+            cursor: pointer;
+            user-select: none;
+        }
+        .deps-toggle:hover {
+            color: #60a5fa;
+        }
+        .deps-row.hidden {
+            display: none;
+        }
     </style>
 </head>
 <body class="bg-dark-900 text-gray-100 min-h-screen">
@@ -78,22 +94,55 @@
         </header>
 
         <!-- Version Selector -->
-        <div class="flex justify-center flex-wrap gap-3 mb-6">
-            {% for version in versions %}
-            <button
-                class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 {% if loop.first %}active text-white{% else %}text-gray-300 hover:text-white{% endif %}"
-                onclick="showVersion('{{ version }}')"
-                data-version="{{ version }}"
-            >
-                OSP {{ version }}
-                {% if version_stats[version].has_go_mismatch or version_stats[version].has_dep_mismatch %}
-                <span class="ml-1 text-yellow-400" title="{% if version_stats[version].has_go_mismatch %}Go version mismatch{% endif %}{% if version_stats[version].has_go_mismatch and version_stats[version].has_dep_mismatch %}, {% endif %}{% if version_stats[version].has_dep_mismatch %}Dependency version mismatch{% endif %}">⚠</span>
+        <div class="flex flex-col items-center gap-3 mb-6">
+            <!-- Release versions -->
+            <div class="flex justify-center flex-wrap gap-3">
+                {% for version in versions %}
+                {% if version not in ['main', 'next'] %}
+                <button
+                    class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white"
+                    onclick="showVersion('{{ version }}')"
+                    data-version="{{ version }}"
+                >
+                    OSP {{ version }}
+                    {% if version_stats[version].has_go_mismatch or version_stats[version].has_dep_mismatch %}
+                    <span class="ml-1 text-yellow-400" title="{% if version_stats[version].has_go_mismatch %}Go version mismatch{% endif %}{% if version_stats[version].has_go_mismatch and version_stats[version].has_dep_mismatch %}, {% endif %}{% if version_stats[version].has_dep_mismatch %}Dependency version mismatch{% endif %}">⚠</span>
+                    {% endif %}
+                    {% if version_stats[version].total_cves > 0 %}
+                    <span class="ml-1 text-red-400" title="{{ version_stats[version].total_cves }} CVE(s) affecting this version">🛡</span>
+                    {% endif %}
+                </button>
                 {% endif %}
-                {% if version_stats[version].total_cves > 0 %}
-                <span class="ml-1 text-red-400" title="{{ version_stats[version].total_cves }} CVE(s) affecting this version">🛡</span>
+                {% endfor %}
+            </div>
+            <!-- Development versions (main/next) -->
+            <div class="flex justify-center gap-3">
+                {% for version in versions %}
+                {% if version == 'main' %}
+                <button
+                    class="version-pill dev-main px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 hover:scale-105 text-white"
+                    onclick="showVersion('{{ version }}')"
+                    data-version="{{ version }}"
+                >
+                    🌱 main
+                    {% if version_stats[version].has_go_mismatch or version_stats[version].has_dep_mismatch %}
+                    <span class="ml-1 text-yellow-200">⚠</span>
+                    {% endif %}
+                </button>
+                {% elif version == 'next' %}
+                <button
+                    class="version-pill dev-next px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 hover:scale-105 text-white"
+                    onclick="showVersion('{{ version }}')"
+                    data-version="{{ version }}"
+                >
+                    🚀 next
+                    {% if version_stats[version].has_go_mismatch or version_stats[version].has_dep_mismatch %}
+                    <span class="ml-1 text-yellow-200">⚠</span>
+                    {% endif %}
+                </button>
                 {% endif %}
-            </button>
-            {% endfor %}
+                {% endfor %}
+            </div>
         </div>
 
         <!-- View Toggle -->
@@ -118,7 +167,7 @@
         {% for version in versions %}
         <div
             id="version-{{ version }}"
-            class="version-content {% if not loop.first %}hidden{% endif %}"
+            class="version-content hidden"
         >
             <!-- Version-level status ribbon -->
             {% set has_issues = version_stats[version].has_go_mismatch or version_stats[version].has_dep_mismatch or version_stats[version].total_cves > 0 or version_stats[version].total_dep_cves > 0 or version_stats[version].total_vulns > 0 %}
@@ -311,7 +360,7 @@
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Stale Deps</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Mismatched Deps</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">CVEs</th>
-                            <th class="text-right py-3 px-4 text-gray-400 font-medium">Total</th>
+                            <th class="text-right py-3 px-4 text-gray-400 font-medium">Deps</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -322,7 +371,11 @@
                                     {{ comp.repo }}
                                 </a>
                             </td>
-                            <td class="py-3 px-4 text-gray-500 font-mono text-xs">{{ comp.ref }}</td>
+                            <td class="py-3 px-4">
+                                <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-xs font-medium">
+                                    {{ comp.ref }}
+                                </span>
+                            </td>
                             <td class="py-3 px-4">
                                 <span class="{% if comp.go_version_mismatch %}text-yellow-400{% else %}text-cyan-400{% endif %} font-mono text-xs">
                                     {{ comp.go_version }}{% if comp.go_version_mismatch %} ⚠{% endif %}
@@ -380,7 +433,52 @@
                                 <span class="text-gray-600">-</span>
                                 {% endif %}
                             </td>
-                            <td class="py-3 px-4 text-right text-gray-500">{{ comp.total_deps }}</td>
+                            <td class="py-3 px-4 text-right">
+                                <span class="deps-toggle text-gray-400 hover:text-blue-400" onclick="toggleDeps('{{ version }}-{{ comp.repo }}')" title="Click to show all dependencies">
+                                    {{ comp.total_deps }} ▼
+                                </span>
+                            </td>
+                        </tr>
+                        <!-- Expandable dependencies row -->
+                        <tr id="deps-{{ version }}-{{ comp.repo }}" class="deps-row hidden bg-dark-800/50">
+                            <td colspan="7" class="py-3 px-4">
+                                <div class="grid grid-cols-2 gap-4">
+                                    {% if comp.internal_deps %}
+                                    <div>
+                                        <p class="text-xs text-orange-400 uppercase tracking-wider mb-2">Tekton Dependencies</p>
+                                        <div class="space-y-1">
+                                            {% for dep in comp.internal_deps %}
+                                            <div class="flex justify-between text-xs">
+                                                <span class="{% if dep.is_stale %}text-red-300{% else %}text-orange-200{% endif %} truncate" title="{{ dep.path }}">
+                                                    {{ dep.path.split('/')[-1] }}
+                                                </span>
+                                                <span class="{% if dep.is_stale %}text-red-400{% else %}text-orange-400{% endif %} font-mono">
+                                                    {{ dep.version }}{% if dep.is_stale %} (stale){% endif %}
+                                                </span>
+                                            </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                    {% if comp.external_deps %}
+                                    <div>
+                                        <p class="text-xs text-purple-400 uppercase tracking-wider mb-2">External Dependencies</p>
+                                        <div class="space-y-1">
+                                            {% for dep in comp.external_deps %}
+                                            <div class="flex justify-between text-xs">
+                                                <span class="{% if dep.cves %}text-red-300{% elif dep.version_differs %}text-yellow-300{% else %}text-gray-300{% endif %} truncate" title="{{ dep.path }}">
+                                                    {{ dep.path.split('/')[-1] }}
+                                                </span>
+                                                <span class="{% if dep.cves %}text-red-400{% elif dep.version_differs %}text-yellow-400{% else %}text-purple-400{% endif %} font-mono">
+                                                    {{ dep.version }}{% if dep.version_differs %} (exp: {{ dep.expected_version }}){% endif %}
+                                                </span>
+                                            </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </td>
                         </tr>
                         {% endfor %}
                     </tbody>
@@ -415,14 +513,21 @@
             // Show selected version content
             document.getElementById('version-' + version).classList.remove('hidden');
 
-            // Update pill styles
+            // Update pill styles - handle both regular and dev pills
             document.querySelectorAll('.version-pill').forEach(pill => {
+                const isDevPill = pill.classList.contains('dev-main') || pill.classList.contains('dev-next');
                 if (pill.dataset.version === version) {
-                    pill.classList.add('active', 'text-white');
-                    pill.classList.remove('text-gray-300');
+                    pill.classList.add('active');
+                    if (!isDevPill) {
+                        pill.classList.add('text-white');
+                        pill.classList.remove('text-gray-300');
+                    }
                 } else {
-                    pill.classList.remove('active', 'text-white');
-                    pill.classList.add('text-gray-300');
+                    pill.classList.remove('active');
+                    if (!isDevPill) {
+                        pill.classList.remove('text-white');
+                        pill.classList.add('text-gray-300');
+                    }
                 }
             });
         }
@@ -446,6 +551,27 @@
                 el.classList.toggle('hidden', view !== 'table');
             });
         }
+
+        function toggleDeps(id) {
+            const row = document.getElementById('deps-' + id);
+            const toggle = event.target;
+            if (row.classList.contains('hidden')) {
+                row.classList.remove('hidden');
+                toggle.textContent = toggle.textContent.replace('▼', '▲');
+            } else {
+                row.classList.add('hidden');
+                toggle.textContent = toggle.textContent.replace('▲', '▼');
+            }
+        }
+
+        // On page load, select the first release version (not main/next)
+        document.addEventListener('DOMContentLoaded', function() {
+            const versions = [{% for v in versions %}'{{ v }}'{% if not loop.last %}, {% endif %}{% endfor %}];
+            const firstRelease = versions.find(v => v !== 'main' && v !== 'next');
+            if (firstRelease) {
+                showVersion(firstRelease);
+            }
+        });
     </script>
 </body>
 </html>
