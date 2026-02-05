@@ -2,8 +2,8 @@ name: Vulnerability Scan
 
 on:
   schedule:
-    # Run weekly on Sunday at 2:00 UTC
-    - cron: '0 2 * * 0'
+    # Run daily at 2:00 UTC (before generate at 6:00 UTC)
+    - cron: '0 2 * * *'
   workflow_dispatch:
 
 permissions:
