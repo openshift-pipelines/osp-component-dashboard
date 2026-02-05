@@ -59,6 +59,9 @@
         .cve-badge-unknown {
             background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
         }
+        .mismatch-badge {
+            background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%);
+        }
     </style>
 </head>
 <body class="bg-dark-900 text-gray-100 min-h-screen">
@@ -83,8 +86,8 @@
                 data-version="{{ version }}"
             >
                 OSP {{ version }}
-                {% if version_stats[version].has_go_mismatch %}
-                <span class="ml-1 text-yellow-400" title="Go version mismatch detected">⚠</span>
+                {% if version_stats[version].has_go_mismatch or version_stats[version].has_dep_mismatch %}
+                <span class="ml-1 text-yellow-400" title="{% if version_stats[version].has_go_mismatch %}Go version mismatch{% endif %}{% if version_stats[version].has_go_mismatch and version_stats[version].has_dep_mismatch %}, {% endif %}{% if version_stats[version].has_dep_mismatch %}Dependency version mismatch{% endif %}">⚠</span>
                 {% endif %}
                 {% if version_stats[version].total_cves > 0 %}
                 <span class="ml-1 text-red-400" title="{{ version_stats[version].total_cves }} CVE(s) affecting this version">🛡</span>
@@ -117,13 +120,35 @@
             id="version-{{ version }}"
             class="version-content {% if not loop.first %}hidden{% endif %}"
         >
-            <!-- Version-level warning -->
+            <!-- Version-level warnings -->
             {% if version_stats[version].has_go_mismatch %}
-            <div class="mb-6 p-4 rounded-lg bg-yellow-500/10 border border-yellow-500/30">
+            <div class="mb-4 p-4 rounded-lg bg-yellow-500/10 border border-yellow-500/30">
                 <p class="text-yellow-400 text-sm flex items-center gap-2">
                     <span class="text-lg">⚠</span>
                     <strong>Go version mismatch:</strong>
-                    Components in this release use different Go versions: {{ version_stats[version].go_versions | join(', ') }}
+                    Components use different Go versions: {{ version_stats[version].go_versions | join(', ') }}
+                </p>
+            </div>
+            {% endif %}
+
+            {% if version_stats[version].has_dep_mismatch %}
+            <div class="mb-4 p-4 rounded-lg bg-yellow-500/10 border border-yellow-500/30">
+                <p class="text-yellow-400 text-sm flex items-center gap-2">
+                    <span class="text-lg">⚠</span>
+                    <strong>Dependency version mismatch:</strong>
+                    {{ version_stats[version].mismatched_deps | join(', ') }}
+                </p>
+            </div>
+            {% endif %}
+
+            {% if version_stats[version].total_cves > 0 %}
+            <div class="mb-4 p-4 rounded-lg bg-red-500/10 border border-red-500/30">
+                <p class="text-red-400 text-sm flex items-center gap-2">
+                    <span class="text-lg">🛡</span>
+                    <strong>Security advisories ({{ version_stats[version].total_cves }}):</strong>
+                    {% for cve in version_stats[version].cve_details %}
+                    <a href="{{ cve.url }}" target="_blank" class="hover:text-red-300">{{ cve.id }} ({{ cve.component }})</a>{% if not loop.last %}, {% endif %}
+                    {% endfor %}
                 </p>
             </div>
             {% endif %}
@@ -142,12 +167,15 @@
                         >
                             {{ comp.owner }}/{{ comp.repo }}
                         </a>
-                        <p class="text-sm text-gray-500 mt-1">{{ comp.ref }}</p>
+                        <div class="flex items-center gap-2 mt-1">
+                            <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-sm font-medium">
+                                {{ comp.ref }}
+                            </span>
+                            <span class="{% if comp.go_version_mismatch %}go-badge-warn{% else %}go-badge{% endif %} px-2 py-0.5 rounded-full text-xs font-bold text-white" {% if comp.go_version_mismatch %}title="Different from other components in this release"{% endif %}>
+                                Go {{ comp.go_version }}{% if comp.go_version_mismatch %} ⚠{% endif %}
+                            </span>
+                        </div>
                     </div>
-                    <span class="{% if comp.go_version_mismatch %}go-badge-warn{% else %}go-badge{% endif %} px-3 py-1 rounded-full text-xs font-bold text-white" {% if comp.go_version_mismatch %}title="Different from other components in this release"{% endif %}>
-                        Go {{ comp.go_version }}
-                        {% if comp.go_version_mismatch %}⚠{% endif %}
-                    </span>
                 </div>
 
                 <!-- Internal Dependencies (Cross-dependencies) -->
@@ -189,12 +217,19 @@
                     <div class="space-y-1.5">
                         {% for dep in comp.external_deps %}
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-gray-300 truncate max-w-[60%]" title="{{ dep.path }}">
+                            <span class="{% if dep.version_differs %}text-yellow-300{% else %}text-gray-300{% endif %} truncate max-w-[50%]" title="{{ dep.path }}">
                                 {{ dep.path.split('/')[-1] if '/' in dep.path else dep.path }}
                             </span>
-                            <span class="text-purple-400 font-mono text-xs">
-                                {{ dep.version }}
-                            </span>
+                            <div class="flex items-center gap-2">
+                                {% if dep.version_differs %}
+                                <span class="mismatch-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="Version mismatch: expected {{ dep.expected_version }}">
+                                    MISMATCH
+                                </span>
+                                {% endif %}
+                                <span class="{% if dep.version_differs %}text-yellow-400{% else %}text-purple-400{% endif %} font-mono text-xs" {% if dep.version_differs %}title="Expected: {{ dep.expected_version }}"{% endif %}>
+                                    {{ dep.version }}
+                                </span>
+                            </div>
                         </div>
                         {% endfor %}
                     </div>
@@ -268,10 +303,10 @@
                             </td>
                             <td class="py-3 px-4">
                                 {% if comp.internal_deps %}
-                                <div class="flex flex-wrap gap-1">
+                                <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     {% for dep in comp.internal_deps %}
-                                    <span class="{% if dep.is_stale %}text-red-400{% else %}text-orange-400{% endif %} font-mono text-xs" title="{{ dep.path }} {{ dep.version }}{% if dep.is_stale %} (bundled: {{ dep.bundled_version }}){% endif %}">
-                                        {{ dep.path.split('/')[-1] if '/' in dep.path else dep.path }}{% if dep.is_stale %}!{% endif %}
+                                    <span class="font-mono text-xs" title="{{ dep.path }}{% if dep.is_stale %} (bundled: {{ dep.bundled_version }}){% endif %}">
+                                        <span class="{% if dep.is_stale %}text-red-300{% else %}text-orange-300{% endif %}">{{ dep.path.split('/')[-1] }}</span><span class="{% if dep.is_stale %}text-red-500{% else %}text-orange-500{% endif %}">@{{ dep.version }}</span>{% if dep.is_stale %}<span class="text-red-400">!</span>{% endif %}
                                     </span>
                                     {% endfor %}
                                 </div>
@@ -281,10 +316,10 @@
                             </td>
                             <td class="py-3 px-4">
                                 {% if comp.external_deps %}
-                                <div class="flex flex-wrap gap-1">
+                                <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     {% for dep in comp.external_deps %}
-                                    <span class="text-purple-400 font-mono text-xs" title="{{ dep.path }} {{ dep.version }}">
-                                        {{ dep.path.split('/')[-1] if '/' in dep.path else dep.path }}
+                                    <span class="font-mono text-xs" title="{{ dep.path }}{% if dep.version_differs %} (expected: {{ dep.expected_version }}){% endif %}">
+                                        <span class="{% if dep.version_differs %}text-yellow-300{% else %}text-purple-300{% endif %}">{{ dep.path.split('/')[-1] }}</span><span class="{% if dep.version_differs %}text-yellow-500{% else %}text-purple-500{% endif %}">@{{ dep.version }}</span>{% if dep.version_differs %}<span class="text-yellow-400">!</span>{% endif %}
                                     </span>
                                     {% endfor %}
                                 </div>

@@ -116,6 +116,30 @@ def generate_html(
         # Get CVE data for this version
         version_cves = cve_data.get(osp_version, {}) if cve_data else {}
 
+        # Collect dependency versions across all components for mismatch detection
+        dep_versions: dict[str, dict[str, list[str]]] = {}  # {dep_path: {version: [components]}}
+        for comp in components:
+            for dep in comp.dependencies:
+                if dep.path in highlight_deps and not is_internal_dep(dep.path):
+                    if dep.path not in dep_versions:
+                        dep_versions[dep.path] = {}
+                    if dep.version not in dep_versions[dep.path]:
+                        dep_versions[dep.path][dep.version] = []
+                    dep_versions[dep.path][dep.version].append(comp.repo)
+
+        # Determine expected version for each dep (most common, or newest if tie)
+        expected_dep_versions: dict[str, str] = {}
+        mismatched_deps: set[str] = set()
+        for dep_path, versions in dep_versions.items():
+            if len(versions) > 1:
+                mismatched_deps.add(dep_path)
+            # Pick version used by most components, break ties with newest
+            best_version = max(
+                versions.keys(),
+                key=lambda v: (len(versions[v]), parse_semver(v))
+            )
+            expected_dep_versions[dep_path] = best_version
+
         for comp in components:
             # Check if this component's Go version differs from expected
             comp_go_normalized = normalize_go_version(comp.go_version)
@@ -169,6 +193,21 @@ def generate_html(
                 for adv in comp_cves
             ]
 
+            # Process external deps to check for version mismatch
+            external_deps_data = []
+            for dep in external_deps:
+                is_mismatched = dep.path in mismatched_deps
+                expected_version = expected_dep_versions.get(dep.path)
+                version_differs = is_mismatched and dep.version != expected_version
+
+                external_deps_data.append({
+                    "path": dep.path,
+                    "version": dep.version,
+                    "is_mismatched": is_mismatched,
+                    "version_differs": version_differs,
+                    "expected_version": expected_version,
+                })
+
             versions_data[osp_version].append({
                 "owner": comp.owner,
                 "repo": comp.repo,
@@ -176,21 +215,32 @@ def generate_html(
                 "go_version": comp.go_version,
                 "go_version_mismatch": go_version_mismatch,
                 "internal_deps": internal_deps_data,
-                "external_deps": [
-                    {"path": d.path, "version": d.version} for d in external_deps
-                ],
+                "external_deps": external_deps_data,
                 "total_deps": len(comp.dependencies),
                 "cves": cve_list,
             })
 
-        # Count total CVEs for this version
+        # Count total CVEs for this version and track affected components
         total_cves = sum(len(cves) for cves in version_cves.values())
+        cve_details = []
+        for component_key, cves in version_cves.items():
+            repo = component_key.split("/")[-1]
+            for adv in cves:
+                cve_details.append({
+                    "id": adv.cve_id or adv.ghsa_id,
+                    "severity": adv.severity,
+                    "component": repo,
+                    "url": adv.url,
+                })
 
         # Store version-level stats
         version_stats[osp_version] = {
             "has_go_mismatch": has_go_mismatch,
             "go_versions": sorted([f"{v[0]}.{v[1]}" for v in go_versions], reverse=True),
             "total_cves": total_cves,
+            "cve_details": cve_details,
+            "has_dep_mismatch": len(mismatched_deps) > 0,
+            "mismatched_deps": sorted([p.split("/")[-1] for p in mismatched_deps]),
         }
 
     # Sort OSP versions descending (newest first)
