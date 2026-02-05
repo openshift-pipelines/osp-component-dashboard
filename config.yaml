@@ -1,5 +1,5 @@
-# OSP version -> upstream component versions
-# Source: https://spaces.redhat.com/pages/viewpage.action?pageId=... (component-matrix)
+# OSP Component Dashboard Configuration
+# Components are auto-resolved from operator's components.yaml
 
 # Support status for each version
 # Values: full, maintenance, security, unsupported, upcoming, development
@@ -8,94 +8,63 @@ support_status:
   "next": development
   "1.22": upcoming
   "1.21": full
-  "1.20": maintenance
+  "1.20": full
   "1.19": maintenance
   "1.18": security
   "1.17": security
   "1.16": unsupported
   "1.15": unsupported
 
-versions:
-  "main":
-    tektoncd/operator: "main"
-    tektoncd/pipeline: "main"
-    tektoncd/triggers: "main"
-    tektoncd/cli: "main"
-    openshift-pipelines/pipelines-as-code: "main"
-    tektoncd/chains: "main"
-    tektoncd/results: "main"
-  "next":
-    tektoncd/operator: "v0.78.1"
-    tektoncd/pipeline: "v1.9.0"
-    tektoncd/triggers: "v0.34.0"
-    tektoncd/cli: "v0.43.0"
-    openshift-pipelines/pipelines-as-code: "v0.41.1"
-    tektoncd/chains: "v0.26.0"
-    tektoncd/results: "v0.17.2"
-  "1.22":
-    tektoncd/operator: "v0.78.1"
-    tektoncd/pipeline: "v1.9.0"
-    tektoncd/triggers: "v0.34.0"
-    tektoncd/cli: "v0.43.0"
-    openshift-pipelines/pipelines-as-code: "v0.41.1"
-    tektoncd/chains: "v0.26.0"
-    tektoncd/results: "v0.17.2"
-  "1.21":
-    tektoncd/operator: "v0.78.0"
-    tektoncd/pipeline: "v1.6.0"
-    tektoncd/triggers: "v0.34.0"
-    tektoncd/cli: "v0.43.0"
-    openshift-pipelines/pipelines-as-code: "v0.39.0"
-    tektoncd/chains: "v0.26.0"
-    tektoncd/results: "v0.17.0"
-  "1.20":
-    tektoncd/operator: "v0.77.0"
-    tektoncd/pipeline: "v1.3.0"
-    tektoncd/triggers: "v0.33.0"
-    tektoncd/cli: "v0.42.0"
-    openshift-pipelines/pipelines-as-code: "v0.37.0"
-    tektoncd/chains: "v0.26.0"
-    tektoncd/results: "v0.16.0"
-  "1.19":
-    tektoncd/operator: "v0.76.0"
-    tektoncd/pipeline: "v1.0.0"
-    tektoncd/triggers: "v0.32.0"
-    tektoncd/cli: "v0.41.0"
-    openshift-pipelines/pipelines-as-code: "v0.35.0"
-    tektoncd/chains: "v0.25.0"
-    tektoncd/results: "v0.15.0"
-  "1.18":
-    tektoncd/operator: "v0.75.0"
-    tektoncd/pipeline: "v0.68.0"
-    tektoncd/triggers: "v0.31.0"
-    tektoncd/cli: "v0.40.0"
-    openshift-pipelines/pipelines-as-code: "v0.33.0"
-    tektoncd/chains: "v0.24.0"
-    tektoncd/results: "v0.14.0"
-  "1.17":
-    tektoncd/operator: "v0.74.0"
-    tektoncd/pipeline: "v0.65.0"
-    tektoncd/triggers: "v0.30.0"
-    tektoncd/cli: "v0.39.0"
-    openshift-pipelines/pipelines-as-code: "v0.29.0"
-    tektoncd/chains: "v0.23.0"
-    tektoncd/results: "v0.13.0"
-  "1.16":
-    tektoncd/operator: "v0.73.0"
-    tektoncd/pipeline: "v0.62.0"
-    tektoncd/triggers: "v0.29.0"
-    tektoncd/cli: "v0.38.0"
-    openshift-pipelines/pipelines-as-code: "v0.28.0"
-    tektoncd/chains: "v0.22.0"
-    tektoncd/results: "v0.12.0"
-  "1.15":
-    tektoncd/operator: "v0.71.0"
-    tektoncd/pipeline: "v0.59.0"
-    tektoncd/triggers: "v0.27.0"
-    tektoncd/cli: "v0.37.0"
-    openshift-pipelines/pipelines-as-code: "v0.27.0"
-    tektoncd/chains: "v0.20.0"
-    tektoncd/results: "v0.10.0"
+# Operator branch/tag for each OSP version
+# Components are fetched from components.yaml at this ref
+operator_branches:
+  "main": "main"
+  "next": "release-v0.78.x"
+  "1.22": "release-v0.78.x"
+  "1.21": "release-v0.78.x"
+  "1.20": "release-v0.77.x"
+  "1.19": "release-v0.76.x"
+  "1.18": "release-v0.75.x"
+  "1.17": "release-v0.74.x"
+  "1.16": "release-v0.73.x"
+  "1.15": "release-v0.71.x"
+
+# Components not tracked in operator's components.yaml
+# Format: {component: {osp_version: ref}}
+extra_components:
+  tektoncd/cli:
+    "main": "main"
+    "next": "v0.43.0"
+    "1.22": "v0.43.0"
+    "1.21": "v0.43.0"
+    "1.20": "v0.42.0"
+    "1.19": "v0.41.0"
+    "1.18": "v0.40.0"
+    "1.17": "v0.39.0"
+    "1.16": "v0.38.0"
+    "1.15": "v0.37.0"
+  openshift-pipelines/opc:
+    "main": "main"
+    "next": "v1.19.0"
+    "1.22": "v1.19.0"
+    "1.21": "v1.19.0"
+    "1.20": "v1.18.0"
+    "1.19": "v1.17.0"
+    "1.18": "v1.16.0"
+  openshift-pipelines/tekton-caches:
+    "main": "main"
+    "next": "v0.3.1"
+    "1.22": "v0.3.1"
+  openshift-pipelines/tekton-assist:
+    "main": "main"
+    "next": "v0.1.1"
+    "1.22": "v0.1.1"
+
+# Components to skip from operator's components.yaml
+# These are not tracked on the dashboard
+skip_components:
+  - dashboard
+  - hub
 
 # Key dependencies to highlight
 highlight_dependencies:
@@ -107,6 +76,12 @@ highlight_dependencies:
   - github.com/tektoncd/cli
   - github.com/tektoncd/operator
   - github.com/openshift-pipelines/pipelines-as-code
+  - github.com/tektoncd/pruner
+  - github.com/openshift-pipelines/manual-approval-gate
+  - github.com/openshift-pipelines/opc
+  - github.com/openshift-pipelines/tekton-caches
+  - github.com/openshift-pipelines/tekton-assist
+  - github.com/konflux-ci/tekton-kueue
   # External dependencies
   - k8s.io/api
   - k8s.io/client-go

@@ -67,6 +67,30 @@ def dep_path_to_component_key(path: str) -> str | None:
     return None
 
 
+# Component display priority (lower = first)
+COMPONENT_PRIORITY = {
+    "operator": 0,
+    "pipeline": 1,
+    "pipelines-as-code": 2,
+}
+
+
+def get_component_sort_key(repo: str) -> tuple[int, str]:
+    """Get sort key for component ordering.
+
+    Components are sorted by priority (operator, pipeline, pac first),
+    then alphabetically.
+
+    Args:
+        repo: Repository name (e.g., "operator", "pipeline")
+
+    Returns:
+        Tuple of (priority, repo_name) for sorting
+    """
+    priority = COMPONENT_PRIORITY.get(repo, 100)
+    return (priority, repo)
+
+
 def version_in_range(version: str, range_str: str) -> bool:
     """Check if a version falls within a vulnerability range."""
     if not range_str:
@@ -182,7 +206,10 @@ def generate_html(
             )
             expected_dep_versions[dep_path] = best_version
 
-        for comp in components:
+        # Sort components by priority (operator, pipeline, pac first, then alphabetically)
+        sorted_components = sorted(components, key=lambda c: get_component_sort_key(c.repo))
+
+        for comp in sorted_components:
             # Check if this component's Go version differs from expected
             comp_go_normalized = normalize_go_version(comp.go_version)
             go_version_mismatch = has_go_mismatch and comp_go_normalized != expected_go
@@ -289,6 +316,7 @@ def generate_html(
                 "total_deps": len(comp.dependencies),
                 "cves": cve_list,
                 "vulns": vuln_list,
+                "is_primary": comp.repo == "operator",
                 "release_status": {
                     "branch_exists": comp.release_status.branch_exists,
                     "branch_name": comp.release_status.branch_name,

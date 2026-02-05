@@ -6,6 +6,7 @@ import subprocess
 from dataclasses import dataclass, field
 
 import httpx
+import yaml
 
 
 def get_github_token() -> str:
@@ -242,6 +243,28 @@ def parse_gomod(content: str) -> tuple[str, list[Dependency]]:
                     dependencies.append(Dependency(path=path, version=version))
 
     return go_version, dependencies
+
+
+def fetch_operator_components(
+    ref: str, timeout: float = 30.0
+) -> dict[str, dict[str, str]]:
+    """Fetch components.yaml from the operator repository.
+
+    Args:
+        ref: Git ref (tag, branch, or commit) for tektoncd/operator
+        timeout: Request timeout in seconds
+
+    Returns:
+        Dict mapping component name to {github: "owner/repo", version: "vX.Y.Z"}
+
+    Raises:
+        httpx.HTTPStatusError: If the request fails
+    """
+    url = f"https://raw.githubusercontent.com/tektoncd/operator/{ref}/components.yaml"
+    with httpx.Client(timeout=timeout, follow_redirects=True) as client:
+        response = client.get(url)
+        response.raise_for_status()
+        return yaml.safe_load(response.text)
 
 
 def collect_component_data(

@@ -276,7 +276,7 @@
                         {% for comp in versions_data[version] %}
                         <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
                             <td class="py-3 px-4">
-                                <a href="https://github.com/{{ comp.owner }}/{{ comp.repo }}" target="_blank" class="text-white hover:text-blue-400 transition-colors font-medium">
+                                <a href="https://github.com/{{ comp.owner }}/{{ comp.repo }}" target="_blank" class="text-white hover:text-blue-400 transition-colors {% if comp.is_primary %}font-bold{% else %}font-medium{% endif %}">
                                     {{ comp.repo }}
                                 </a>
                             </td>

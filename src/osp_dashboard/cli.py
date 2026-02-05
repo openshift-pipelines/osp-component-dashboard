@@ -6,7 +6,7 @@ from pathlib import Path
 
 from .collector import collect_component_data, get_advisories_for_version, fetch_advisories
 from .collector.govulncheck import scan_component, save_scan_results, load_scan_results
-from .config import load_config, parse_component
+from .config import load_config, parse_component, resolve_versions
 from .web import generate_html
 
 
@@ -17,6 +17,9 @@ def collect_command(args: argparse.Namespace) -> int:
 
     print(f"Loading config from {config_path}")
     config = load_config(config_path)
+
+    print("\nResolving component versions from operator...")
+    resolve_versions(config, verbose=True)
 
     # Load govulncheck scan results if provided
     vuln_data = None
@@ -104,6 +107,9 @@ def scan_command(args: argparse.Namespace) -> int:
 
     print(f"Loading config from {config_path}")
     config = load_config(config_path)
+
+    print("\nResolving component versions from operator...")
+    resolve_versions(config, verbose=True)
 
     # Check if govulncheck is available
     import subprocess
