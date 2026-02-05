@@ -120,36 +120,45 @@
             id="version-{{ version }}"
             class="version-content {% if not loop.first %}hidden{% endif %}"
         >
-            <!-- Version-level warnings -->
-            {% if version_stats[version].has_go_mismatch %}
-            <div class="mb-4 p-4 rounded-lg bg-yellow-500/10 border border-yellow-500/30">
-                <p class="text-yellow-400 text-sm flex items-center gap-2">
-                    <span class="text-lg">⚠</span>
-                    <strong>Go version mismatch:</strong>
-                    Components use different Go versions: {{ version_stats[version].go_versions | join(', ') }}
-                </p>
-            </div>
-            {% endif %}
+            <!-- Version-level status ribbon -->
+            {% set has_issues = version_stats[version].has_go_mismatch or version_stats[version].has_dep_mismatch or version_stats[version].total_cves > 0 or version_stats[version].total_dep_cves > 0 %}
+            {% if has_issues %}
+            <div class="mb-6 p-4 rounded-lg glass border border-white/10 space-y-2">
+                {% if version_stats[version].has_go_mismatch %}
+                <div class="flex items-center gap-2 text-sm">
+                    <span class="text-yellow-400 text-lg">⚠</span>
+                    <span class="text-yellow-400 font-medium">Go mismatch:</span>
+                    <span class="text-yellow-300">{{ version_stats[version].go_versions | join(', ') }}</span>
+                </div>
+                {% endif %}
 
-            {% if version_stats[version].has_dep_mismatch %}
-            <div class="mb-4 p-4 rounded-lg bg-yellow-500/10 border border-yellow-500/30">
-                <p class="text-yellow-400 text-sm flex items-center gap-2">
-                    <span class="text-lg">⚠</span>
-                    <strong>Dependency version mismatch:</strong>
-                    {{ version_stats[version].mismatched_deps | join(', ') }}
-                </p>
-            </div>
-            {% endif %}
+                {% if version_stats[version].has_dep_mismatch %}
+                <div class="flex items-center gap-2 text-sm">
+                    <span class="text-yellow-400 text-lg">⚠</span>
+                    <span class="text-yellow-400 font-medium">Dep mismatch:</span>
+                    <span class="text-yellow-300">{{ version_stats[version].mismatched_deps | join(', ') }}</span>
+                </div>
+                {% endif %}
 
-            {% if version_stats[version].total_cves > 0 %}
-            <div class="mb-4 p-4 rounded-lg bg-red-500/10 border border-red-500/30">
-                <p class="text-red-400 text-sm flex items-center gap-2">
-                    <span class="text-lg">🛡</span>
-                    <strong>Security advisories ({{ version_stats[version].total_cves }}):</strong>
+                {% if version_stats[version].total_cves > 0 %}
+                <div class="flex items-center gap-2 text-sm flex-wrap">
+                    <span class="text-red-400 text-lg">🛡</span>
+                    <span class="text-red-400 font-medium">Component CVEs:</span>
                     {% for cve in version_stats[version].cve_details %}
-                    <a href="{{ cve.url }}" target="_blank" class="hover:text-red-300">{{ cve.id }} ({{ cve.component }})</a>{% if not loop.last %}, {% endif %}
+                    <a href="{{ cve.url }}" target="_blank" class="text-red-300 hover:text-red-200">{{ cve.id }} ({{ cve.component }})</a>{% if not loop.last %}<span class="text-gray-600">,</span>{% endif %}
                     {% endfor %}
-                </p>
+                </div>
+                {% endif %}
+
+                {% if version_stats[version].total_dep_cves > 0 %}
+                <div class="flex items-center gap-2 text-sm flex-wrap">
+                    <span class="text-red-400 text-lg">🛡</span>
+                    <span class="text-red-400 font-medium">Dependency CVEs:</span>
+                    {% for cve in version_stats[version].dep_cve_details %}
+                    <a href="{{ cve.url }}" target="_blank" class="text-red-300 hover:text-red-200">{{ cve.id }} ({{ cve.dep }})</a>{% if not loop.last %}<span class="text-gray-600">,</span>{% endif %}
+                    {% endfor %}
+                </div>
+                {% endif %}
             </div>
             {% endif %}
 

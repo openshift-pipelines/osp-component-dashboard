@@ -281,6 +281,22 @@ def generate_html(
                     "url": adv.url,
                 })
 
+        # Collect dependency CVEs from the components we just processed
+        dep_cve_details = []
+        seen_dep_cves = set()
+        for comp_data in versions_data[osp_version]:
+            for dep in comp_data["external_deps"]:
+                for cve in dep.get("cves", []):
+                    cve_key = (cve["id"], dep["path"])
+                    if cve_key not in seen_dep_cves:
+                        seen_dep_cves.add(cve_key)
+                        dep_cve_details.append({
+                            "id": cve["id"],
+                            "severity": cve["severity"],
+                            "dep": dep["path"].split("/")[-1],
+                            "url": cve["url"],
+                        })
+
         # Store version-level stats
         version_stats[osp_version] = {
             "has_go_mismatch": has_go_mismatch,
@@ -289,6 +305,8 @@ def generate_html(
             "cve_details": cve_details,
             "has_dep_mismatch": len(mismatched_deps) > 0,
             "mismatched_deps": sorted([p.split("/")[-1] for p in mismatched_deps]),
+            "dep_cve_details": dep_cve_details,
+            "total_dep_cves": len(dep_cve_details),
         }
 
     # Sort OSP versions descending (newest first)

@@ -202,27 +202,38 @@
             id="version-next"
             class="version-content "
         >
-            <!-- Version-level warnings -->
+            <!-- Version-level status ribbon -->
             
-            <div class="mb-4 p-4 rounded-lg bg-yellow-500/10 border border-yellow-500/30">
-                <p class="text-yellow-400 text-sm flex items-center gap-2">
-                    <span class="text-lg">⚠</span>
-                    <strong>Go version mismatch:</strong>
-                    Components use different Go versions: 1.25, 1.24
-                </p>
-            </div>
             
+            <div class="mb-6 p-4 rounded-lg glass border border-white/10 space-y-2">
+                
+                <div class="flex items-center gap-2 text-sm">
+                    <span class="text-yellow-400 text-lg">⚠</span>
+                    <span class="text-yellow-400 font-medium">Go mismatch:</span>
+                    <span class="text-yellow-300">1.25, 1.24</span>
+                </div>
+                
 
-            
-            <div class="mb-4 p-4 rounded-lg bg-yellow-500/10 border border-yellow-500/30">
-                <p class="text-yellow-400 text-sm flex items-center gap-2">
-                    <span class="text-lg">⚠</span>
-                    <strong>Dependency version mismatch:</strong>
-                    api, cel-go, client-go, otel, pkg, sigstore
-                </p>
-            </div>
-            
+                
+                <div class="flex items-center gap-2 text-sm">
+                    <span class="text-yellow-400 text-lg">⚠</span>
+                    <span class="text-yellow-400 font-medium">Dep mismatch:</span>
+                    <span class="text-yellow-300">api, cel-go, client-go, otel, pkg, sigstore</span>
+                </div>
+                
 
+                
+
+                
+                <div class="flex items-center gap-2 text-sm flex-wrap">
+                    <span class="text-red-400 text-lg">🛡</span>
+                    <span class="text-red-400 font-medium">Dependency CVEs:</span>
+                    
+                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="text-red-300 hover:text-red-200">CVE-2026-24137 (sigstore)</a>
+                    
+                </div>
+                
+            </div>
             
 
             <!-- Cards View -->
@@ -1712,19 +1723,32 @@
             id="version-1.21"
             class="version-content hidden"
         >
-            <!-- Version-level warnings -->
+            <!-- Version-level status ribbon -->
             
+            
+            <div class="mb-6 p-4 rounded-lg glass border border-white/10 space-y-2">
+                
 
-            
-            <div class="mb-4 p-4 rounded-lg bg-yellow-500/10 border border-yellow-500/30">
-                <p class="text-yellow-400 text-sm flex items-center gap-2">
-                    <span class="text-lg">⚠</span>
-                    <strong>Dependency version mismatch:</strong>
-                    api, cel-go, client-go, go-scm, otel, pkg, sigstore
-                </p>
+                
+                <div class="flex items-center gap-2 text-sm">
+                    <span class="text-yellow-400 text-lg">⚠</span>
+                    <span class="text-yellow-400 font-medium">Dep mismatch:</span>
+                    <span class="text-yellow-300">api, cel-go, client-go, go-scm, otel, pkg, sigstore</span>
+                </div>
+                
+
+                
+
+                
+                <div class="flex items-center gap-2 text-sm flex-wrap">
+                    <span class="text-red-400 text-lg">🛡</span>
+                    <span class="text-red-400 font-medium">Dependency CVEs:</span>
+                    
+                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="text-red-300 hover:text-red-200">CVE-2026-24137 (sigstore)</a>
+                    
+                </div>
+                
             </div>
-            
-
             
 
             <!-- Cards View -->
@@ -3168,27 +3192,38 @@
             id="version-1.20"
             class="version-content hidden"
         >
-            <!-- Version-level warnings -->
+            <!-- Version-level status ribbon -->
             
-            <div class="mb-4 p-4 rounded-lg bg-yellow-500/10 border border-yellow-500/30">
-                <p class="text-yellow-400 text-sm flex items-center gap-2">
-                    <span class="text-lg">⚠</span>
-                    <strong>Go version mismatch:</strong>
-                    Components use different Go versions: 1.24, 1.23
-                </p>
-            </div>
             
+            <div class="mb-6 p-4 rounded-lg glass border border-white/10 space-y-2">
+                
+                <div class="flex items-center gap-2 text-sm">
+                    <span class="text-yellow-400 text-lg">⚠</span>
+                    <span class="text-yellow-400 font-medium">Go mismatch:</span>
+                    <span class="text-yellow-300">1.24, 1.23</span>
+                </div>
+                
 
-            
-            <div class="mb-4 p-4 rounded-lg bg-yellow-500/10 border border-yellow-500/30">
-                <p class="text-yellow-400 text-sm flex items-center gap-2">
-                    <span class="text-lg">⚠</span>
-                    <strong>Dependency version mismatch:</strong>
-                    api, cel-go, client-go, go-scm, pkg, sigstore
-                </p>
-            </div>
-            
+                
+                <div class="flex items-center gap-2 text-sm">
+                    <span class="text-yellow-400 text-lg">⚠</span>
+                    <span class="text-yellow-400 font-medium">Dep mismatch:</span>
+                    <span class="text-yellow-300">api, cel-go, client-go, go-scm, pkg, sigstore</span>
+                </div>
+                
 
+                
+
+                
+                <div class="flex items-center gap-2 text-sm flex-wrap">
+                    <span class="text-red-400 text-lg">🛡</span>
+                    <span class="text-red-400 font-medium">Dependency CVEs:</span>
+                    
+                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="text-red-300 hover:text-red-200">CVE-2026-24137 (sigstore)</a>
+                    
+                </div>
+                
+            </div>
             
 
             <!-- Cards View -->
@@ -4648,19 +4683,32 @@
             id="version-1.19"
             class="version-content hidden"
         >
-            <!-- Version-level warnings -->
+            <!-- Version-level status ribbon -->
             
+            
+            <div class="mb-6 p-4 rounded-lg glass border border-white/10 space-y-2">
+                
 
-            
-            <div class="mb-4 p-4 rounded-lg bg-yellow-500/10 border border-yellow-500/30">
-                <p class="text-yellow-400 text-sm flex items-center gap-2">
-                    <span class="text-lg">⚠</span>
-                    <strong>Dependency version mismatch:</strong>
-                    api, cel-go, client-go, go-scm, pkg
-                </p>
+                
+                <div class="flex items-center gap-2 text-sm">
+                    <span class="text-yellow-400 text-lg">⚠</span>
+                    <span class="text-yellow-400 font-medium">Dep mismatch:</span>
+                    <span class="text-yellow-300">api, cel-go, client-go, go-scm, pkg</span>
+                </div>
+                
+
+                
+
+                
+                <div class="flex items-center gap-2 text-sm flex-wrap">
+                    <span class="text-red-400 text-lg">🛡</span>
+                    <span class="text-red-400 font-medium">Dependency CVEs:</span>
+                    
+                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="text-red-300 hover:text-red-200">CVE-2026-24137 (sigstore)</a>
+                    
+                </div>
+                
             </div>
-            
-
             
 
             <!-- Cards View -->
@@ -6041,27 +6089,38 @@
             id="version-1.18"
             class="version-content hidden"
         >
-            <!-- Version-level warnings -->
+            <!-- Version-level status ribbon -->
             
-            <div class="mb-4 p-4 rounded-lg bg-yellow-500/10 border border-yellow-500/30">
-                <p class="text-yellow-400 text-sm flex items-center gap-2">
-                    <span class="text-lg">⚠</span>
-                    <strong>Go version mismatch:</strong>
-                    Components use different Go versions: 1.23, 1.22
-                </p>
-            </div>
             
+            <div class="mb-6 p-4 rounded-lg glass border border-white/10 space-y-2">
+                
+                <div class="flex items-center gap-2 text-sm">
+                    <span class="text-yellow-400 text-lg">⚠</span>
+                    <span class="text-yellow-400 font-medium">Go mismatch:</span>
+                    <span class="text-yellow-300">1.23, 1.22</span>
+                </div>
+                
 
-            
-            <div class="mb-4 p-4 rounded-lg bg-yellow-500/10 border border-yellow-500/30">
-                <p class="text-yellow-400 text-sm flex items-center gap-2">
-                    <span class="text-lg">⚠</span>
-                    <strong>Dependency version mismatch:</strong>
-                    api, cel-go, client-go, go-containerregistry, go-scm, pkg, sigstore
-                </p>
-            </div>
-            
+                
+                <div class="flex items-center gap-2 text-sm">
+                    <span class="text-yellow-400 text-lg">⚠</span>
+                    <span class="text-yellow-400 font-medium">Dep mismatch:</span>
+                    <span class="text-yellow-300">api, cel-go, client-go, go-containerregistry, go-scm, pkg, sigstore</span>
+                </div>
+                
 
+                
+
+                
+                <div class="flex items-center gap-2 text-sm flex-wrap">
+                    <span class="text-red-400 text-lg">🛡</span>
+                    <span class="text-red-400 font-medium">Dependency CVEs:</span>
+                    
+                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="text-red-300 hover:text-red-200">CVE-2026-24137 (sigstore)</a>
+                    
+                </div>
+                
+            </div>
             
 
             <!-- Cards View -->
@@ -7490,19 +7549,32 @@
             id="version-1.17"
             class="version-content hidden"
         >
-            <!-- Version-level warnings -->
+            <!-- Version-level status ribbon -->
             
+            
+            <div class="mb-6 p-4 rounded-lg glass border border-white/10 space-y-2">
+                
 
-            
-            <div class="mb-4 p-4 rounded-lg bg-yellow-500/10 border border-yellow-500/30">
-                <p class="text-yellow-400 text-sm flex items-center gap-2">
-                    <span class="text-lg">⚠</span>
-                    <strong>Dependency version mismatch:</strong>
-                    api, cel-go, client-go, go-containerregistry, pkg, sigstore
-                </p>
+                
+                <div class="flex items-center gap-2 text-sm">
+                    <span class="text-yellow-400 text-lg">⚠</span>
+                    <span class="text-yellow-400 font-medium">Dep mismatch:</span>
+                    <span class="text-yellow-300">api, cel-go, client-go, go-containerregistry, pkg, sigstore</span>
+                </div>
+                
+
+                
+
+                
+                <div class="flex items-center gap-2 text-sm flex-wrap">
+                    <span class="text-red-400 text-lg">🛡</span>
+                    <span class="text-red-400 font-medium">Dependency CVEs:</span>
+                    
+                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="text-red-300 hover:text-red-200">CVE-2026-24137 (sigstore)</a>
+                    
+                </div>
+                
             </div>
-            
-
             
 
             <!-- Cards View -->
@@ -8934,19 +9006,32 @@
             id="version-1.16"
             class="version-content hidden"
         >
-            <!-- Version-level warnings -->
+            <!-- Version-level status ribbon -->
             
+            
+            <div class="mb-6 p-4 rounded-lg glass border border-white/10 space-y-2">
+                
 
-            
-            <div class="mb-4 p-4 rounded-lg bg-yellow-500/10 border border-yellow-500/30">
-                <p class="text-yellow-400 text-sm flex items-center gap-2">
-                    <span class="text-lg">⚠</span>
-                    <strong>Dependency version mismatch:</strong>
-                    api, cel-go, client-go, go-containerregistry, pkg, sigstore
-                </p>
+                
+                <div class="flex items-center gap-2 text-sm">
+                    <span class="text-yellow-400 text-lg">⚠</span>
+                    <span class="text-yellow-400 font-medium">Dep mismatch:</span>
+                    <span class="text-yellow-300">api, cel-go, client-go, go-containerregistry, pkg, sigstore</span>
+                </div>
+                
+
+                
+
+                
+                <div class="flex items-center gap-2 text-sm flex-wrap">
+                    <span class="text-red-400 text-lg">🛡</span>
+                    <span class="text-red-400 font-medium">Dependency CVEs:</span>
+                    
+                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="text-red-300 hover:text-red-200">CVE-2026-24137 (sigstore)</a>
+                    
+                </div>
+                
             </div>
-            
-
             
 
             <!-- Cards View -->
@@ -10394,27 +10479,38 @@
             id="version-1.15"
             class="version-content hidden"
         >
-            <!-- Version-level warnings -->
+            <!-- Version-level status ribbon -->
             
-            <div class="mb-4 p-4 rounded-lg bg-yellow-500/10 border border-yellow-500/30">
-                <p class="text-yellow-400 text-sm flex items-center gap-2">
-                    <span class="text-lg">⚠</span>
-                    <strong>Go version mismatch:</strong>
-                    Components use different Go versions: 1.22, 1.21, 1.19
-                </p>
-            </div>
             
+            <div class="mb-6 p-4 rounded-lg glass border border-white/10 space-y-2">
+                
+                <div class="flex items-center gap-2 text-sm">
+                    <span class="text-yellow-400 text-lg">⚠</span>
+                    <span class="text-yellow-400 font-medium">Go mismatch:</span>
+                    <span class="text-yellow-300">1.22, 1.21, 1.19</span>
+                </div>
+                
 
-            
-            <div class="mb-4 p-4 rounded-lg bg-yellow-500/10 border border-yellow-500/30">
-                <p class="text-yellow-400 text-sm flex items-center gap-2">
-                    <span class="text-lg">⚠</span>
-                    <strong>Dependency version mismatch:</strong>
-                    api, cel-go, client-go, go-containerregistry, pkg, sigstore
-                </p>
-            </div>
-            
+                
+                <div class="flex items-center gap-2 text-sm">
+                    <span class="text-yellow-400 text-lg">⚠</span>
+                    <span class="text-yellow-400 font-medium">Dep mismatch:</span>
+                    <span class="text-yellow-300">api, cel-go, client-go, go-containerregistry, pkg, sigstore</span>
+                </div>
+                
 
+                
+
+                
+                <div class="flex items-center gap-2 text-sm flex-wrap">
+                    <span class="text-red-400 text-lg">🛡</span>
+                    <span class="text-red-400 font-medium">Dependency CVEs:</span>
+                    
+                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="text-red-300 hover:text-red-200">CVE-2026-24137 (sigstore)</a>
+                    
+                </div>
+                
+            </div>
             
 
             <!-- Cards View -->
