@@ -13,6 +13,10 @@ on:
     - cron: '0 6 * * *'
   workflow_dispatch:
 
+concurrency:
+  group: generate
+  cancel-in-progress: true
+
 permissions:
   contents: write
   pages: write
