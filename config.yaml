@@ -19,7 +19,7 @@ support_status:
 # Components are fetched from components.yaml at this ref
 operator_branches:
   "main": "main"
-  "next": "release-v0.78.x"
+  "next": "main"  # Uses versions from components.yaml (unlike "main" which uses main branches)
   "1.22": "release-v0.78.x"
   "1.21": "release-v0.78.x"
   "1.20": "release-v0.77.x"

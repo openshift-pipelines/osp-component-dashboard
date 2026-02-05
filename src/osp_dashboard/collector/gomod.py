@@ -109,7 +109,7 @@ def check_release_status(
     Args:
         owner: Repository owner
         repo: Repository name
-        current_ref: Current version tag (e.g., "v1.9.0")
+        current_ref: Current version tag (e.g., "v1.9.0") or release branch (e.g., "release-v0.78.x")
         timeout: Request timeout in seconds
 
     Returns:
@@ -117,21 +117,34 @@ def check_release_status(
     """
     status = ReleaseStatus(current_version=current_ref)
 
-    # Skip non-version refs (main, branches)
-    if not current_ref.startswith("v"):
+    # Skip main branch
+    if current_ref == "main":
         return status
-
-    branch_name = get_release_branch_name(current_ref)
-    if not branch_name:
-        return status
-
-    status.branch_name = branch_name
 
     # Get GitHub token
     token = get_github_token()
     headers = {}
     if token:
         headers["Authorization"] = f"token {token}"
+
+    # Determine if this is a release branch ref or a version tag
+    is_branch_ref = current_ref.startswith("release-")
+
+    if is_branch_ref:
+        # Extract version pattern from branch name (e.g., "v0.78" from "release-v0.78.x")
+        branch_name = current_ref
+        match = re.match(r"release-(v\d+\.\d+)\.x", current_ref)
+        version_prefix = match.group(1) if match else None
+    else:
+        # Version tag - derive branch name
+        if not current_ref.startswith("v"):
+            return status
+        branch_name = get_release_branch_name(current_ref)
+        if not branch_name:
+            return status
+        version_prefix = current_ref.rsplit(".", 1)[0]  # "v1.9" from "v1.9.0"
+
+    status.branch_name = branch_name
 
     try:
         with httpx.Client(timeout=timeout, headers=headers) as client:
@@ -152,11 +165,13 @@ def check_release_status(
             tags = tags_resp.json()
 
             # Filter to matching minor version and sort
-            version_prefix = current_ref.rsplit(".", 1)[0]  # "v1.9" from "v1.9.0"
-            matching_tags = [
-                t for t in tags
-                if t["name"].startswith(version_prefix + ".")
-            ]
+            if version_prefix:
+                matching_tags = [
+                    t for t in tags
+                    if t["name"].startswith(version_prefix + ".")
+                ]
+            else:
+                matching_tags = []
 
             if matching_tags:
                 # Tags are usually sorted newest first, but let's be sure
@@ -168,10 +183,14 @@ def check_release_status(
                 latest_tag = matching_tags[0]
                 status.latest_version = latest_tag["name"]
 
-                # Check if there's a newer version
-                current_patch = parse_patch(current_ref)
-                latest_patch = parse_patch(status.latest_version)
-                status.update_available = latest_patch > current_patch
+                if is_branch_ref:
+                    # For branch refs, current_version should be the latest tag
+                    status.current_version = latest_tag["name"]
+                else:
+                    # Check if there's a newer version than what we're tracking
+                    current_patch = parse_patch(current_ref)
+                    latest_patch = parse_patch(status.latest_version)
+                    status.update_available = latest_patch > current_patch
 
                 # Check if there are unreleased commits
                 latest_tag_sha = latest_tag["commit"]["sha"]

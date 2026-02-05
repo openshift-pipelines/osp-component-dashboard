@@ -353,7 +353,7 @@
                 <div class="flex items-center gap-2 text-sm">
                     <span class="text-yellow-400 text-lg">⚠</span>
                     <span class="text-yellow-400 font-medium">Dep mismatch:</span>
-                    <span class="text-yellow-300">api, cel-go, client-go, go-scm, otel, pkg, sigstore</span>
+                    <span class="text-yellow-300">api, cel-go, client-go, otel, pkg, sigstore</span>
                 </div>
                 
 
@@ -398,7 +398,7 @@
                             </td>
                             <td class="py-3 px-4">
                                 <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-xs font-medium">
-                                    release-v0.78.x
+                                    main
                                 </span>
                             </td>
                             <td class="py-3 px-4">
@@ -408,13 +408,23 @@
                             </td>
                             <td class="py-3 px-4">
                                 <span class="text-gray-200 font-mono text-xs">
-                                    1.25.0
+                                    1.25.5
                                 </span>
                             </td>
                             <td class="py-3 px-4">
                                 
                                 
-                                <span class="text-gray-600">-</span>
+                                <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                    
+                                    <span class="font-mono text-xs" title="github.com/openshift-pipelines/pipelines-as-code (bundled: v0.41.1)">
+                                        <span class="text-orange-300">pipelines-as-code</span><span class="text-orange-500">@v0.41.0</span>
+                                    </span>
+                                    
+                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v1.9.0)">
+                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v1.7.0</span>
+                                    </span>
+                                    
+                                </div>
                                 
                             </td>
                             <td class="py-3 px-4">
@@ -423,7 +433,7 @@
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="knative.dev/pkg (expected: v0.0.0-20250415155312-ed3e2158b883)">
-                                        <span class="text-gray-300">pkg</span><span class="text-gray-400">@v0.0.0-20250915135827-db4c336acdbe</span>
+                                        <span class="text-gray-300">pkg</span><span class="text-gray-400">@v0.0.0-20260114161248-8c840449eed2</span>
                                     </span>
                                     
                                 </div>
@@ -439,7 +449,7 @@
                             </td>
                             <td class="py-3 px-4 text-right">
                                 <span class="deps-toggle text-gray-400 hover:text-blue-400" onclick="toggleDeps('next-operator')" title="Click to show all dependencies">
-                                    35 ▼
+                                    37 ▼
                                 </span>
                             </td>
                         </tr>
@@ -453,20 +463,20 @@
                                         <div class="space-y-1">
                                             
                                             <div class="flex justify-between text-xs">
-                                                <span class="text-orange-200 truncate" title="github.com/openshift-pipelines/pipelines-as-code">
+                                                <span class="text-red-300 truncate" title="github.com/openshift-pipelines/pipelines-as-code">
                                                     pipelines-as-code
                                                 </span>
-                                                <span class="text-orange-400 font-mono">
-                                                    v0.39.3
+                                                <span class="text-red-400 font-mono">
+                                                    v0.41.0 (stale)
                                                 </span>
                                             </div>
                                             
                                             <div class="flex justify-between text-xs">
-                                                <span class="text-orange-200 truncate" title="github.com/tektoncd/pipeline">
+                                                <span class="text-red-300 truncate" title="github.com/tektoncd/pipeline">
                                                     pipeline
                                                 </span>
-                                                <span class="text-orange-400 font-mono">
-                                                    v1.6.0
+                                                <span class="text-red-400 font-mono">
+                                                    v1.7.0 (stale)
                                                 </span>
                                             </div>
                                             
@@ -497,11 +507,20 @@
                                         <div class="space-y-1">
                                             
                                             <div class="flex justify-between text-xs">
+                                                <span class="text-gray-300 truncate" title="github.com/konflux-ci/tekton-kueue">
+                                                    tekton-kueue
+                                                </span>
+                                                <span class="text-purple-400 font-mono">
+                                                    v0.0.0-20251231110853-e7a97991aa34
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
                                                 <span class="text-gray-300 truncate" title="k8s.io/api">
                                                     api
                                                 </span>
                                                 <span class="text-purple-400 font-mono">
-                                                    v0.34.1
+                                                    v0.35.0
                                                 </span>
                                             </div>
                                             
@@ -519,7 +538,7 @@
                                                     pkg
                                                 </span>
                                                 <span class="text-yellow-400 font-mono">
-                                                    v0.0.0-20250915135827-db4c336acdbe (exp: v0.0.0-20250415155312-ed3e2158b883)
+                                                    v0.0.0-20260114161248-8c840449eed2 (exp: v0.0.0-20250415155312-ed3e2158b883)
                                                 </span>
                                             </div>
                                             
@@ -538,14 +557,12 @@
                             </td>
                             <td class="py-3 px-4">
                                 <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-xs font-medium">
-                                    v1.6.0
+                                    v1.9.0
                                 </span>
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <span class="text-yellow-400 text-xs" title="9 commits on release-v1.6.x since v1.6.0">
-                                    +9 ahead
-                                </span>
+                                <span class="text-green-500 text-xs">✓</span>
                                 
                             </td>
                             <td class="py-3 px-4">
@@ -565,11 +582,7 @@
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/google/cel-go (expected: v0.26.1)">
-                                        <span class="text-gray-300">cel-go</span><span class="text-gray-400">@v0.26.0</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/jenkins-x/go-scm (expected: v1.15.16)">
-                                        <span class="text-gray-300">go-scm</span><span class="text-gray-400">@v1.15.4</span>
+                                        <span class="text-gray-300">cel-go</span><span class="text-gray-400">@v0.27.0</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="github.com/sigstore/sigstore (expected: v1.9.6-0.20250729224751-181c5d3339b3)">
@@ -577,15 +590,15 @@
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="go.opentelemetry.io/otel (expected: v1.38.0)">
-                                        <span class="text-gray-300">otel</span><span class="text-gray-400">@v1.37.0</span>
+                                        <span class="text-gray-300">otel</span><span class="text-gray-400">@v1.39.0</span>
                                     </span>
                                     
-                                    <span class="font-mono text-xs" title="k8s.io/api (expected: v0.34.1)">
-                                        <span class="text-gray-300">api</span><span class="text-gray-400">@v0.32.8</span>
+                                    <span class="font-mono text-xs" title="k8s.io/api (expected: v0.35.0)">
+                                        <span class="text-gray-300">api</span><span class="text-gray-400">@v0.32.11</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v1.5.2)">
-                                        <span class="text-gray-300">client-go</span><span class="text-gray-400">@v0.32.8</span>
+                                        <span class="text-gray-300">client-go</span><span class="text-gray-400">@v0.32.11</span>
                                     </span>
                                     
                                 </div>
@@ -650,7 +663,7 @@
                                                     cel-go
                                                 </span>
                                                 <span class="text-yellow-400 font-mono">
-                                                    v0.26.0 (exp: v0.26.1)
+                                                    v0.27.0 (exp: v0.26.1)
                                                 </span>
                                             </div>
                                             
@@ -664,11 +677,11 @@
                                             </div>
                                             
                                             <div class="flex justify-between text-xs">
-                                                <span class="text-yellow-300 truncate" title="github.com/jenkins-x/go-scm">
+                                                <span class="text-gray-300 truncate" title="github.com/jenkins-x/go-scm">
                                                     go-scm
                                                 </span>
-                                                <span class="text-yellow-400 font-mono">
-                                                    v1.15.4 (exp: v1.15.16)
+                                                <span class="text-purple-400 font-mono">
+                                                    v1.15.16
                                                 </span>
                                             </div>
                                             
@@ -686,7 +699,7 @@
                                                     otel
                                                 </span>
                                                 <span class="text-yellow-400 font-mono">
-                                                    v1.37.0 (exp: v1.38.0)
+                                                    v1.39.0 (exp: v1.38.0)
                                                 </span>
                                             </div>
                                             
@@ -695,7 +708,7 @@
                                                     api
                                                 </span>
                                                 <span class="text-yellow-400 font-mono">
-                                                    v0.32.8 (exp: v0.34.1)
+                                                    v0.32.11 (exp: v0.35.0)
                                                 </span>
                                             </div>
                                             
@@ -704,7 +717,7 @@
                                                     client-go
                                                 </span>
                                                 <span class="text-yellow-400 font-mono">
-                                                    v0.32.8 (exp: v1.5.2)
+                                                    v0.32.11 (exp: v1.5.2)
                                                 </span>
                                             </div>
                                             
@@ -732,19 +745,19 @@
                             </td>
                             <td class="py-3 px-4">
                                 <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-xs font-medium">
-                                    v0.39.3
+                                    v0.41.1
                                 </span>
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <span class="text-orange-400 font-mono text-xs" title="Update available on release-v0.39.x">
-                                    → v0.39.4
+                                <span class="text-yellow-400 text-xs" title="1 commits on release-v0.41.x since v0.41.1">
+                                    +1 ahead
                                 </span>
                                 
                             </td>
                             <td class="py-3 px-4">
-                                <span class="text-yellow-400 font-mono text-xs">
-                                    1.24.0 ⚠
+                                <span class="text-gray-200 font-mono text-xs">
+                                    1.25.0
                                 </span>
                             </td>
                             <td class="py-3 px-4">
@@ -752,8 +765,8 @@
                                 
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v1.6.0)">
-                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v1.4.0</span>
+                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v1.9.0)">
+                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v1.7.0</span>
                                     </span>
                                     
                                 </div>
@@ -765,7 +778,7 @@
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="knative.dev/pkg (expected: v0.0.0-20250415155312-ed3e2158b883)">
-                                        <span class="text-gray-300">pkg</span><span class="text-gray-400">@v0.0.0-20250915135827-db4c336acdbe</span>
+                                        <span class="text-gray-300">pkg</span><span class="text-gray-400">@v0.0.0-20260114161248-8c840449eed2</span>
                                     </span>
                                     
                                 </div>
@@ -799,7 +812,7 @@
                                                     pipeline
                                                 </span>
                                                 <span class="text-red-400 font-mono">
-                                                    v1.4.0 (stale)
+                                                    v1.7.0 (stale)
                                                 </span>
                                             </div>
                                             
@@ -834,7 +847,7 @@
                                                     api
                                                 </span>
                                                 <span class="text-purple-400 font-mono">
-                                                    v0.34.1
+                                                    v0.35.0
                                                 </span>
                                             </div>
                                             
@@ -852,7 +865,7 @@
                                                     pkg
                                                 </span>
                                                 <span class="text-yellow-400 font-mono">
-                                                    v0.0.0-20250915135827-db4c336acdbe (exp: v0.0.0-20250415155312-ed3e2158b883)
+                                                    v0.0.0-20260114161248-8c840449eed2 (exp: v0.0.0-20250415155312-ed3e2158b883)
                                                 </span>
                                             </div>
                                             
@@ -891,7 +904,7 @@
                                 
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v1.6.0)">
+                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v1.9.0)">
                                         <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v1.3.1</span>
                                     </span>
                                     
@@ -902,6 +915,10 @@
                                 
                                 
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                    
+                                    <span class="font-mono text-xs" title="k8s.io/api (expected: v0.35.0)">
+                                        <span class="text-gray-300">api</span><span class="text-gray-400">@v0.34.1</span>
+                                    </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v1.5.2)">
                                         <span class="text-gray-300">client-go</span><span class="text-gray-400">@v0.34.1</span>
@@ -993,11 +1010,11 @@
                                             </div>
                                             
                                             <div class="flex justify-between text-xs">
-                                                <span class="text-gray-300 truncate" title="k8s.io/api">
+                                                <span class="text-yellow-300 truncate" title="k8s.io/api">
                                                     api
                                                 </span>
-                                                <span class="text-purple-400 font-mono">
-                                                    v0.34.1
+                                                <span class="text-yellow-400 font-mono">
+                                                    v0.34.1 (exp: v0.35.0)
                                                 </span>
                                             </div>
                                             
@@ -1050,7 +1067,13 @@
                             <td class="py-3 px-4">
                                 
                                 
-                                <span class="text-gray-600">-</span>
+                                <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                    
+                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v1.9.0)">
+                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v1.6.0</span>
+                                    </span>
+                                    
+                                </div>
                                 
                             </td>
                             <td class="py-3 px-4">
@@ -1058,7 +1081,7 @@
                                 
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="k8s.io/api (expected: v0.34.1)">
+                                    <span class="font-mono text-xs" title="k8s.io/api (expected: v0.35.0)">
                                         <span class="text-gray-300">api</span><span class="text-gray-400">@v0.34.2</span>
                                     </span>
                                     
@@ -1126,11 +1149,11 @@
                                             </div>
                                             
                                             <div class="flex justify-between text-xs">
-                                                <span class="text-orange-200 truncate" title="github.com/tektoncd/pipeline">
+                                                <span class="text-red-300 truncate" title="github.com/tektoncd/pipeline">
                                                     pipeline
                                                 </span>
-                                                <span class="text-orange-400 font-mono">
-                                                    v1.6.0
+                                                <span class="text-red-400 font-mono">
+                                                    v1.6.0 (stale)
                                                 </span>
                                             </div>
                                             
@@ -1174,7 +1197,7 @@
                                                     api
                                                 </span>
                                                 <span class="text-yellow-400 font-mono">
-                                                    v0.34.2 (exp: v0.34.1)
+                                                    v0.34.2 (exp: v0.35.0)
                                                 </span>
                                             </div>
                                             
@@ -1229,7 +1252,7 @@
                                 
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v1.6.0)">
+                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v1.9.0)">
                                         <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v1.0.0</span>
                                     </span>
                                     
@@ -1241,7 +1264,7 @@
                                 
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="k8s.io/api (expected: v0.34.1)">
+                                    <span class="font-mono text-xs" title="k8s.io/api (expected: v0.35.0)">
                                         <span class="text-gray-300">api</span><span class="text-gray-400">@v0.32.4</span>
                                     </span>
                                     
@@ -1297,7 +1320,7 @@
                                                     api
                                                 </span>
                                                 <span class="text-yellow-400 font-mono">
-                                                    v0.32.4 (exp: v0.34.1)
+                                                    v0.32.4 (exp: v0.35.0)
                                                 </span>
                                             </div>
                                             
@@ -1358,7 +1381,7 @@
                                         <span class="text-orange-300">manual-approval-gate</span><span class="text-orange-500">@v0.6.0</span>
                                     </span>
                                     
-                                    <span class="font-mono text-xs" title="github.com/openshift-pipelines/pipelines-as-code (bundled: v0.39.3)">
+                                    <span class="font-mono text-xs" title="github.com/openshift-pipelines/pipelines-as-code (bundled: v0.41.1)">
                                         <span class="text-orange-300">pipelines-as-code</span><span class="text-orange-500">@v0.35.0</span>
                                     </span>
                                     
@@ -1470,7 +1493,13 @@
                             <td class="py-3 px-4">
                                 
                                 
-                                <span class="text-gray-600">-</span>
+                                <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                    
+                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v1.9.0)">
+                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v1.6.0</span>
+                                    </span>
+                                    
+                                </div>
                                 
                             </td>
                             <td class="py-3 px-4">
@@ -1478,7 +1507,7 @@
                                 
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="k8s.io/api (expected: v0.34.1)">
+                                    <span class="font-mono text-xs" title="k8s.io/api (expected: v0.35.0)">
                                         <span class="text-gray-300">api</span><span class="text-gray-400">@v0.33.1</span>
                                     </span>
                                     
@@ -1517,11 +1546,11 @@
                                         <div class="space-y-1">
                                             
                                             <div class="flex justify-between text-xs">
-                                                <span class="text-orange-200 truncate" title="github.com/tektoncd/pipeline">
+                                                <span class="text-red-300 truncate" title="github.com/tektoncd/pipeline">
                                                     pipeline
                                                 </span>
-                                                <span class="text-orange-400 font-mono">
-                                                    v1.6.0
+                                                <span class="text-red-400 font-mono">
+                                                    v1.6.0 (stale)
                                                 </span>
                                             </div>
                                             
@@ -1547,7 +1576,7 @@
                                                     api
                                                 </span>
                                                 <span class="text-yellow-400 font-mono">
-                                                    v0.33.1 (exp: v0.34.1)
+                                                    v0.33.1 (exp: v0.35.0)
                                                 </span>
                                             </div>
                                             
@@ -1608,6 +1637,10 @@
                                         <span class="text-orange-300">cli</span><span class="text-orange-500">@v0.41.1</span>
                                     </span>
                                     
+                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v1.9.0)">
+                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v1.6.0</span>
+                                    </span>
+                                    
                                 </div>
                                 
                             </td>
@@ -1616,7 +1649,7 @@
                                 
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="k8s.io/api (expected: v0.34.1)">
+                                    <span class="font-mono text-xs" title="k8s.io/api (expected: v0.35.0)">
                                         <span class="text-gray-300">api</span><span class="text-gray-400">@v0.32.9</span>
                                     </span>
                                     
@@ -1660,11 +1693,11 @@
                                             </div>
                                             
                                             <div class="flex justify-between text-xs">
-                                                <span class="text-orange-200 truncate" title="github.com/tektoncd/pipeline">
+                                                <span class="text-red-300 truncate" title="github.com/tektoncd/pipeline">
                                                     pipeline
                                                 </span>
-                                                <span class="text-orange-400 font-mono">
-                                                    v1.6.0
+                                                <span class="text-red-400 font-mono">
+                                                    v1.6.0 (stale)
                                                 </span>
                                             </div>
                                             
@@ -1690,7 +1723,7 @@
                                                     api
                                                 </span>
                                                 <span class="text-yellow-400 font-mono">
-                                                    v0.32.9 (exp: v0.34.1)
+                                                    v0.32.9 (exp: v0.35.0)
                                                 </span>
                                             </div>
                                             
@@ -1802,7 +1835,7 @@
                                 
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v1.6.0)">
+                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v1.9.0)">
                                         <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v1.4.0</span>
                                     </span>
                                     
@@ -1814,7 +1847,7 @@
                                 
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="k8s.io/api (expected: v0.34.1)">
+                                    <span class="font-mono text-xs" title="k8s.io/api (expected: v0.35.0)">
                                         <span class="text-gray-300">api</span><span class="text-gray-400">@v0.32.8</span>
                                     </span>
                                     
@@ -1879,7 +1912,7 @@
                                                     api
                                                 </span>
                                                 <span class="text-yellow-400 font-mono">
-                                                    v0.32.8 (exp: v0.34.1)
+                                                    v0.32.8 (exp: v0.35.0)
                                                 </span>
                                             </div>
                                             
@@ -1898,6 +1931,153 @@
                                                 </span>
                                                 <span class="text-purple-400 font-mono">
                                                     v0.0.0-20250415155312-ed3e2158b883
+                                                </span>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                            <td class="py-3 px-4">
+                                <a href="https://github.com/konflux-ci/tekton-kueue" target="_blank" class="text-white hover:text-blue-400 transition-colors font-medium">
+                                    tekton-kueue
+                                </a>
+                            </td>
+                            <td class="py-3 px-4">
+                                <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-xs font-medium">
+                                    v0.3.0
+                                </span>
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-yellow-400 text-xs" title="5 commits on release-v0.3.x since v0.3.0">
+                                    +5 ahead
+                                </span>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                <span class="text-gray-200 font-mono text-xs">
+                                    1.25.3
+                                </span>
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                    
+                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v1.9.0)">
+                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v1.6.0</span>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                    
+                                    <span class="font-mono text-xs" title="github.com/google/cel-go (expected: v0.26.1)">
+                                        <span class="text-gray-300">cel-go</span><span class="text-gray-400">@v0.26.0</span>
+                                    </span>
+                                    
+                                    <span class="font-mono text-xs" title="k8s.io/api (expected: v0.35.0)">
+                                        <span class="text-gray-300">api</span><span class="text-gray-400">@v0.34.1</span>
+                                    </span>
+                                    
+                                    <span class="font-mono text-xs" title="k8s.io/client-go (expected: v1.5.2)">
+                                        <span class="text-gray-300">client-go</span><span class="text-gray-400">@v0.34.1</span>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
+                            <td class="py-3 px-4 text-right">
+                                <span class="deps-toggle text-gray-400 hover:text-blue-400" onclick="toggleDeps('next-tekton-kueue')" title="Click to show all dependencies">
+                                    16 ▼
+                                </span>
+                            </td>
+                        </tr>
+                        <!-- Expandable dependencies row -->
+                        <tr id="deps-next-tekton-kueue" class="deps-row hidden bg-dark-800/50">
+                            <td colspan="7" class="py-3 px-4">
+                                <div class="grid grid-cols-2 gap-4">
+                                    
+                                    <div>
+                                        <p class="text-xs text-orange-400 uppercase tracking-wider mb-2">Tekton Dependencies</p>
+                                        <div class="space-y-1">
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-red-300 truncate" title="github.com/tektoncd/pipeline">
+                                                    pipeline
+                                                </span>
+                                                <span class="text-red-400 font-mono">
+                                                    v1.6.0 (stale)
+                                                </span>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div>
+                                        <p class="text-xs text-purple-400 uppercase tracking-wider mb-2">External Dependencies</p>
+                                        <div class="space-y-1">
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-yellow-300 truncate" title="github.com/google/cel-go">
+                                                    cel-go
+                                                </span>
+                                                <span class="text-yellow-400 font-mono">
+                                                    v0.26.0 (exp: v0.26.1)
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-yellow-300 truncate" title="k8s.io/api">
+                                                    api
+                                                </span>
+                                                <span class="text-yellow-400 font-mono">
+                                                    v0.34.1 (exp: v0.35.0)
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-yellow-300 truncate" title="k8s.io/client-go">
+                                                    client-go
+                                                </span>
+                                                <span class="text-yellow-400 font-mono">
+                                                    v0.34.1 (exp: v1.5.2)
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-gray-300 truncate" title="knative.dev/pkg">
+                                                    pkg
+                                                </span>
+                                                <span class="text-purple-400 font-mono">
+                                                    v0.0.0-20250415155312-ed3e2158b883
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between text-xs">
+                                                <span class="text-gray-300 truncate" title="sigs.k8s.io/controller-runtime">
+                                                    controller-runtime
+                                                </span>
+                                                <span class="text-purple-400 font-mono">
+                                                    v0.22.3
                                                 </span>
                                             </div>
                                             
@@ -1932,7 +2112,13 @@
                             <td class="py-3 px-4">
                                 
                                 
-                                <span class="text-gray-600">-</span>
+                                <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                    
+                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v1.9.0)">
+                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v1.6.0</span>
+                                    </span>
+                                    
+                                </div>
                                 
                             </td>
                             <td class="py-3 px-4">
@@ -1940,7 +2126,7 @@
                                 
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="k8s.io/api (expected: v0.34.1)">
+                                    <span class="font-mono text-xs" title="k8s.io/api (expected: v0.35.0)">
                                         <span class="text-gray-300">api</span><span class="text-gray-400">@v0.32.9</span>
                                     </span>
                                     
@@ -1975,11 +2161,11 @@
                                         <div class="space-y-1">
                                             
                                             <div class="flex justify-between text-xs">
-                                                <span class="text-orange-200 truncate" title="github.com/tektoncd/pipeline">
+                                                <span class="text-red-300 truncate" title="github.com/tektoncd/pipeline">
                                                     pipeline
                                                 </span>
-                                                <span class="text-orange-400 font-mono">
-                                                    v1.6.0
+                                                <span class="text-red-400 font-mono">
+                                                    v1.6.0 (stale)
                                                 </span>
                                             </div>
                                             
@@ -2014,7 +2200,7 @@
                                                     api
                                                 </span>
                                                 <span class="text-yellow-400 font-mono">
-                                                    v0.32.9 (exp: v0.34.1)
+                                                    v0.32.9 (exp: v0.35.0)
                                                 </span>
                                             </div>
                                             
@@ -3902,7 +4088,9 @@
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <span class="text-gray-600 text-xs">n/a</span>
+                                <span class="text-yellow-400 text-xs" title="13 commits on release-v0.78.x since v0.78.1">
+                                    +13 ahead
+                                </span>
                                 
                             </td>
                             <td class="py-3 px-4">
@@ -5617,7 +5805,9 @@
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <span class="text-gray-600 text-xs">n/a</span>
+                                <span class="text-yellow-400 text-xs" title="13 commits on release-v0.78.x since v0.78.1">
+                                    +13 ahead
+                                </span>
                                 
                             </td>
                             <td class="py-3 px-4">
@@ -7143,7 +7333,9 @@
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <span class="text-gray-600 text-xs">n/a</span>
+                                <span class="text-yellow-400 text-xs" title="38 commits on release-v0.77.x since v0.77.0">
+                                    +38 ahead
+                                </span>
                                 
                             </td>
                             <td class="py-3 px-4">
@@ -8692,7 +8884,9 @@
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <span class="text-gray-600 text-xs">n/a</span>
+                                <span class="text-yellow-400 text-xs" title="17 commits on release-v0.76.x since v0.76.0">
+                                    +17 ahead
+                                </span>
                                 
                             </td>
                             <td class="py-3 px-4">
@@ -10163,7 +10357,9 @@
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <span class="text-gray-600 text-xs">n/a</span>
+                                <span class="text-yellow-400 text-xs" title="26 commits on release-v0.75.x since v0.75.0">
+                                    +26 ahead
+                                </span>
                                 
                             </td>
                             <td class="py-3 px-4">
@@ -11557,7 +11753,9 @@
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <span class="text-gray-600 text-xs">n/a</span>
+                                <span class="text-yellow-400 text-xs" title="20 commits on release-v0.74.x since v0.74.1">
+                                    +20 ahead
+                                </span>
                                 
                             </td>
                             <td class="py-3 px-4">
@@ -12818,7 +13016,9 @@
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <span class="text-gray-600 text-xs">n/a</span>
+                                <span class="text-yellow-400 text-xs" title="19 commits on release-v0.73.x since v0.73.2">
+                                    +19 ahead
+                                </span>
                                 
                             </td>
                             <td class="py-3 px-4">
@@ -14093,7 +14293,9 @@
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <span class="text-gray-600 text-xs">n/a</span>
+                                <span class="text-yellow-400 text-xs" title="42 commits on release-v0.71.x since v0.71.0">
+                                    +42 ahead
+                                </span>
                                 
                             </td>
                             <td class="py-3 px-4">
