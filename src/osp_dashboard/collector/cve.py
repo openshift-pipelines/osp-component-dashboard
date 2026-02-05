@@ -1,13 +1,13 @@
 """CVE collector using GitHub Advisory Database API."""
 
-import os
 import re
 from dataclasses import dataclass
 
 import httpx
 
+from .gomod import get_github_token
+
 GITHUB_ADVISORIES_URL = "https://api.github.com/advisories"
-GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 
 
 @dataclass
@@ -92,8 +92,9 @@ def fetch_advisories(package: str) -> list[Advisory]:
             "Accept": "application/vnd.github+json",
             "X-GitHub-Api-Version": "2022-11-28",
         }
-        if GITHUB_TOKEN:
-            headers["Authorization"] = f"Bearer {GITHUB_TOKEN}"
+        token = get_github_token()
+        if token:
+            headers["Authorization"] = f"Bearer {token}"
 
         with httpx.Client(timeout=30.0) as client:
             response = client.get(
