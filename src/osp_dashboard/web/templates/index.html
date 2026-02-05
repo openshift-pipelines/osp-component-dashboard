@@ -176,14 +176,7 @@
                     >
                         OSP {{ version }}
                         {% if support_status[version] %}
-                        <span class="ml-1.5 px-1.5 py-0.5 rounded text-[10px] font-bold support-{{ support_status[version] }}" title="{{ support_status[version] | title }} Support">
-                            {% if support_status[version] == 'full' %}FULL
-                            {% elif support_status[version] == 'maintenance' %}MAINT
-                            {% elif support_status[version] == 'security' %}SEC
-                            {% elif support_status[version] == 'unsupported' %}EOL
-                            {% elif support_status[version] == 'upcoming' %}NEW
-                            {% endif %}
-                        </span>
+                        <span class="ml-1.5 w-2.5 h-2.5 rounded-full inline-block support-{{ support_status[version] }}" title="{% if support_status[version] == 'full' %}Full Support{% elif support_status[version] == 'maintenance' %}Maintenance{% elif support_status[version] == 'security' %}Security Only{% elif support_status[version] == 'unsupported' %}End of Life{% elif support_status[version] == 'upcoming' %}Upcoming{% endif %}"></span>
                         {% endif %}
                         {% if version_stats[version].has_go_mismatch or version_stats[version].has_dep_mismatch %}
                         <span class="ml-1 text-yellow-400" title="{% if version_stats[version].has_go_mismatch %}Go version mismatch{% endif %}{% if version_stats[version].has_go_mismatch and version_stats[version].has_dep_mismatch %}, {% endif %}{% if version_stats[version].has_dep_mismatch %}Dependency version mismatch{% endif %}">⚠</span>
@@ -479,11 +472,11 @@
                 <div>
                     <h4 class="text-gray-300 font-medium mb-2">Support Status</h4>
                     <div class="space-y-1.5 text-gray-400">
-                        <div><span class="px-1.5 py-0.5 rounded text-[10px] font-bold support-full">FULL</span> — Full support</div>
-                        <div><span class="px-1.5 py-0.5 rounded text-[10px] font-bold support-maintenance">MAINT</span> — Maintenance only</div>
-                        <div><span class="px-1.5 py-0.5 rounded text-[10px] font-bold support-security">SEC</span> — Security fixes only</div>
-                        <div><span class="px-1.5 py-0.5 rounded text-[10px] font-bold support-unsupported">EOL</span> — End of life</div>
-                        <div><span class="px-1.5 py-0.5 rounded text-[10px] font-bold support-upcoming">NEW</span> — Upcoming release</div>
+                        <div><span class="w-2.5 h-2.5 rounded-full inline-block support-full"></span> — Full support</div>
+                        <div><span class="w-2.5 h-2.5 rounded-full inline-block support-maintenance"></span> — Maintenance only</div>
+                        <div><span class="w-2.5 h-2.5 rounded-full inline-block support-security"></span> — Security fixes only</div>
+                        <div><span class="w-2.5 h-2.5 rounded-full inline-block support-unsupported"></span> — End of life</div>
+                        <div><span class="w-2.5 h-2.5 rounded-full inline-block support-upcoming"></span> — Upcoming release</div>
                     </div>
                 </div>
             </div>
