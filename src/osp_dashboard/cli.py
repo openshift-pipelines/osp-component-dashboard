@@ -5,6 +5,7 @@ import sys
 from pathlib import Path
 
 from .collector import collect_component_data, get_advisories_for_version, fetch_advisories
+from .collector.govulncheck import scan_component, save_scan_results, load_scan_results
 from .config import load_config, parse_component
 from .web import generate_html
 
@@ -68,6 +69,52 @@ def collect_command(args: argparse.Namespace) -> int:
     return 0
 
 
+def scan_command(args: argparse.Namespace) -> int:
+    """Scan components for vulnerabilities using govulncheck."""
+    config_path = Path(args.config)
+    output_path = Path(args.output)
+
+    print(f"Loading config from {config_path}")
+    config = load_config(config_path)
+
+    # Check if govulncheck is available
+    import subprocess
+    try:
+        subprocess.run(["govulncheck", "-version"], capture_output=True, check=True)
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        print("Error: govulncheck not found. Install with:", file=sys.stderr)
+        print("  go install golang.org/x/vuln/cmd/govulncheck@latest", file=sys.stderr)
+        return 1
+
+    all_vulns = {}
+    total_findings = 0
+
+    for osp_version, components in config.versions.items():
+        print(f"\nScanning OSP {osp_version}...")
+        version_vulns = {}
+
+        for component, ref in components.items():
+            owner, repo = parse_component(component)
+            print(f"  Scanning {owner}/{repo} @ {ref}...")
+
+            findings = scan_component(owner, repo, ref)
+            if findings:
+                version_vulns[component] = findings
+                called = sum(1 for f in findings if f.is_called)
+                print(f"    {len(findings)} vuln(s) found ({called} called)")
+                total_findings += len(findings)
+            else:
+                print(f"    No vulnerabilities found")
+
+        all_vulns[osp_version] = version_vulns
+
+    print(f"\nSaving results to {output_path}...")
+    save_scan_results(all_vulns, output_path)
+    print(f"Done! Total: {total_findings} vulnerabilities across all versions")
+
+    return 0
+
+
 def main() -> int:
     """Main CLI entry point."""
     parser = argparse.ArgumentParser(
@@ -91,7 +138,28 @@ def main() -> int:
         default="data/index.html",
         help="Output HTML path (default: data/index.html)",
     )
+    collect_parser.add_argument(
+        "--vulns",
+        help="Path to govulncheck scan results (from 'scan' command)",
+    )
     collect_parser.set_defaults(func=collect_command)
+
+    # Scan command
+    scan_parser = subparsers.add_parser(
+        "scan",
+        help="Scan components for vulnerabilities using govulncheck (slow)",
+    )
+    scan_parser.add_argument(
+        "-c", "--config",
+        default="config.yaml",
+        help="Path to config.yaml (default: config.yaml)",
+    )
+    scan_parser.add_argument(
+        "-o", "--output",
+        default="data/vulns.json",
+        help="Output JSON path (default: data/vulns.json)",
+    )
+    scan_parser.set_defaults(func=scan_command)
 
     args = parser.parse_args()
     return args.func(args)

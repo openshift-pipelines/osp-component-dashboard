@@ -10,7 +10,7 @@ Requires: govulncheck installed (`go install golang.org/x/vuln/cmd/govulncheck@l
 import json
 import subprocess
 import tempfile
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict
 from pathlib import Path
 
 
@@ -19,12 +19,13 @@ class VulnFinding:
     """A vulnerability finding from govulncheck."""
 
     vuln_id: str  # GO-2023-1234
-    cve_id: str | None  # CVE-2023-12345
+    aliases: list[str]  # [CVE-2023-12345, GHSA-xxxx]
     summary: str
     module_path: str  # github.com/example/pkg
     found_version: str  # v1.2.3
     fixed_version: str | None  # v1.2.4
     is_called: bool  # True if vulnerable code is actually called
+    symbol: str | None  # The vulnerable function/symbol
 
 
 def clone_repo(owner: str, repo: str, ref: str, dest: Path) -> bool:
@@ -37,7 +38,8 @@ def clone_repo(owner: str, repo: str, ref: str, dest: Path) -> bool:
             capture_output=True,
         )
         return True
-    except subprocess.CalledProcessError:
+    except subprocess.CalledProcessError as e:
+        print(f"    Failed to clone: {e.stderr.decode() if e.stderr else 'unknown error'}")
         return False
 
 
@@ -51,6 +53,7 @@ def run_govulncheck(repo_path: Path) -> list[VulnFinding]:
         List of VulnFinding objects
     """
     findings = []
+    osv_cache = {}  # Cache OSV data by ID
 
     try:
         result = subprocess.run(
@@ -58,7 +61,7 @@ def run_govulncheck(repo_path: Path) -> list[VulnFinding]:
             cwd=repo_path,
             capture_output=True,
             text=True,
-            timeout=300,  # 5 minute timeout
+            timeout=600,  # 10 minute timeout
         )
 
         # Parse JSON output (streaming format, one JSON object per line)
@@ -68,36 +71,73 @@ def run_govulncheck(repo_path: Path) -> list[VulnFinding]:
             try:
                 data = json.loads(line)
 
+                # Cache OSV entries for later lookup
+                if "osv" in data:
+                    osv = data["osv"]
+                    osv_cache[osv.get("id", "")] = osv
+
                 # Look for vulnerability findings
                 if "finding" in data:
                     finding = data["finding"]
-                    osv = finding.get("osv", "")
+                    osv_id = finding.get("osv", "")
 
-                    # Get module info
+                    # Get module info from trace
                     trace = finding.get("trace", [])
                     module_info = trace[0] if trace else {}
 
+                    # Get OSV details
+                    osv_data = osv_cache.get(osv_id, {})
+                    aliases = osv_data.get("aliases", [])
+                    summary = osv_data.get("summary", "")
+
+                    # Get fixed version from affected data
+                    fixed_version = None
+                    for affected in osv_data.get("affected", []):
+                        if affected.get("package", {}).get("name") == module_info.get("module"):
+                            ranges = affected.get("ranges", [])
+                            for r in ranges:
+                                for event in r.get("events", []):
+                                    if "fixed" in event:
+                                        fixed_version = event["fixed"]
+                                        break
+
+                    # Get the vulnerable symbol
+                    symbol = None
+                    if len(trace) > 0:
+                        last_frame = trace[-1]
+                        if "function" in last_frame:
+                            symbol = last_frame.get("function")
+
                     findings.append(
                         VulnFinding(
-                            vuln_id=osv,
-                            cve_id=None,  # Need to look up separately
-                            summary="",  # Need to look up separately
+                            vuln_id=osv_id,
+                            aliases=aliases,
+                            summary=summary,
                             module_path=module_info.get("module", ""),
                             found_version=module_info.get("version", ""),
-                            fixed_version=None,
-                            is_called=len(trace) > 1,  # Has call stack = called
+                            fixed_version=fixed_version,
+                            is_called=len(trace) > 1,
+                            symbol=symbol,
                         )
                     )
             except json.JSONDecodeError:
                 continue
 
     except subprocess.TimeoutExpired:
-        pass
+        print("    govulncheck timed out")
     except FileNotFoundError:
-        # govulncheck not installed
-        pass
+        print("    govulncheck not installed")
 
-    return findings
+    # Deduplicate findings by (vuln_id, module_path)
+    seen = set()
+    unique_findings = []
+    for f in findings:
+        key = (f.vuln_id, f.module_path)
+        if key not in seen:
+            seen.add(key)
+            unique_findings.append(f)
+
+    return unique_findings
 
 
 def scan_component(owner: str, repo: str, ref: str) -> list[VulnFinding]:
@@ -120,18 +160,48 @@ def scan_component(owner: str, repo: str, ref: str) -> list[VulnFinding]:
         return run_govulncheck(repo_path)
 
 
-# Example usage for GitHub Actions workflow:
-#
-# jobs:
-#   scan:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/setup-go@v5
-#         with:
-#           go-version: '1.22'
-#
-#       - name: Install govulncheck
-#         run: go install golang.org/x/vuln/cmd/govulncheck@latest
-#
-#       - name: Run vulnerability scan
-#         run: uv run osp-dashboard scan  # New command to add
+def save_scan_results(
+    results: dict[str, dict[str, list[VulnFinding]]],
+    output_path: Path | str,
+) -> None:
+    """Save scan results to JSON file.
+
+    Args:
+        results: Dict of {osp_version: {component: [VulnFinding, ...]}}
+        output_path: Path to write JSON output
+    """
+    # Convert dataclasses to dicts
+    serializable = {}
+    for version, components in results.items():
+        serializable[version] = {}
+        for component, findings in components.items():
+            serializable[version][component] = [asdict(f) for f in findings]
+
+    output_path = Path(output_path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(json.dumps(serializable, indent=2))
+
+
+def load_scan_results(
+    input_path: Path | str,
+) -> dict[str, dict[str, list[VulnFinding]]]:
+    """Load scan results from JSON file.
+
+    Args:
+        input_path: Path to JSON file
+
+    Returns:
+        Dict of {osp_version: {component: [VulnFinding, ...]}}
+    """
+    input_path = Path(input_path)
+    data = json.loads(input_path.read_text())
+
+    results = {}
+    for version, components in data.items():
+        results[version] = {}
+        for component, findings in components.items():
+            results[version][component] = [
+                VulnFinding(**f) for f in findings
+            ]
+
+    return results
