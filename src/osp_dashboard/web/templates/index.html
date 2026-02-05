@@ -56,7 +56,7 @@
             filter: saturate(1);
         }
         .stale-badge {
-            background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%);
+            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
         }
         .cve-badge-critical {
             background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
@@ -271,7 +271,7 @@
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     {% for dep in stale_deps %}
                                     <span class="font-mono text-xs" title="{{ dep.path }} (bundled: {{ dep.bundled_version }})">
-                                        <span class="text-yellow-300">{{ dep.path.split('/')[-1] }}</span><span class="text-yellow-500">@{{ dep.version }}</span>
+                                        <span class="text-orange-300">{{ dep.path.split('/')[-1] }}</span><span class="text-orange-500">@{{ dep.version }}</span>
                                     </span>
                                     {% endfor %}
                                 </div>
