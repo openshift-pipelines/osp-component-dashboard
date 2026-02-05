@@ -414,23 +414,35 @@
                                 {% endif %}
                             </td>
                             <td class="py-3 px-4">
-                                {% set ns = namespace(has_cves=false) %}
+                                {% set ns = namespace(has_cves=false, has_vulns=false) %}
                                 {% for dep in comp.external_deps %}{% if dep.cves %}{% set ns.has_cves = true %}{% endif %}{% endfor %}
-                                {% if ns.has_cves or comp.cves %}
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                {% if comp.vulns %}{% set ns.has_vulns = true %}{% endif %}
+                                {% if ns.has_cves or ns.has_vulns or comp.cves %}
+                                <div class="flex flex-wrap gap-x-2 gap-y-1">
+                                    {# Component CVEs from GitHub Advisory #}
                                     {% for cve in comp.cves %}
-                                    <a href="{{ cve.url }}" target="_blank" class="font-mono text-xs text-red-400" title="{{ cve.id }}: {{ cve.summary }}">
-                                        {{ cve.id }}
+                                    <a href="{{ cve.url }}" target="_blank" class="inline-flex items-center gap-1 font-mono text-xs" title="{{ cve.id }}: {{ cve.summary }}">
+                                        <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300">GH</span>
+                                        <span class="text-red-400">{{ cve.id }}</span>
                                     </a>
                                     {% endfor %}
+                                    {# Dependency CVEs from GitHub Advisory #}
                                     {% for dep in comp.external_deps %}
                                     {% if dep.cves %}
                                     {% for cve in dep.cves %}
-                                    <span class="font-mono text-xs" title="{{ cve.id }}">
-                                        <span class="text-red-300">{{ dep.path.split('/')[-1] }}</span><span class="text-red-500">@{{ dep.version }}</span>
-                                    </span>
+                                    <a href="{{ cve.url }}" target="_blank" class="inline-flex items-center gap-1 font-mono text-xs" title="{{ cve.id }} in {{ dep.path }}">
+                                        <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300">GH</span>
+                                        <span class="text-red-400">{{ dep.path.split('/')[-1] }}</span>
+                                    </a>
                                     {% endfor %}
                                     {% endif %}
+                                    {% endfor %}
+                                    {# Vulns from govulncheck #}
+                                    {% for vuln in comp.vulns %}
+                                    <span class="inline-flex items-center gap-1 font-mono text-xs" title="{{ vuln.id }}: {{ vuln.summary }}{% if vuln.is_called %} (CALLED){% endif %}">
+                                        <span class="px-1 py-0.5 rounded {% if vuln.is_called %}bg-purple-500/30 text-purple-200{% else %}bg-purple-500/20 text-purple-300{% endif %}">VC{% if vuln.is_called %}!{% endif %}</span>
+                                        <span class="{% if vuln.is_called %}text-purple-200{% else %}text-purple-400{% endif %}">{{ vuln.module }}</span>
+                                    </span>
                                     {% endfor %}
                                 </div>
                                 {% else %}
@@ -491,8 +503,49 @@
         </div>
         {% endfor %}
 
+        <!-- Legend -->
+        <div class="mt-16 glass rounded-xl p-6">
+            <h3 class="text-lg font-semibold text-white mb-4">Legend</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                <div>
+                    <h4 class="text-gray-300 font-medium mb-2">Vulnerability Sources</h4>
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-3">
+                            <span class="px-1.5 py-0.5 rounded bg-red-500/20 text-red-300 font-mono text-xs">GH</span>
+                            <span class="text-gray-400"><strong class="text-gray-300">GitHub Advisory</strong> — CVE exists in dependency version range. May not be exploitable.</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-300 font-mono text-xs">VC</span>
+                            <span class="text-gray-400"><strong class="text-gray-300">govulncheck</strong> — Vulnerability detected but code path not called.</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="px-1.5 py-0.5 rounded bg-purple-500/30 text-purple-200 font-mono text-xs">VC!</span>
+                            <span class="text-gray-400"><strong class="text-gray-300">govulncheck (called)</strong> — Vulnerable code is actually reachable. <strong class="text-red-400">Action required.</strong></span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-gray-300 font-medium mb-2">Status Indicators</h4>
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-3">
+                            <span class="text-yellow-400">⚠</span>
+                            <span class="text-gray-400"><strong class="text-gray-300">Go mismatch</strong> — Components use different Go versions.</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="stale-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white">STALE</span>
+                            <span class="text-gray-400"><strong class="text-gray-300">Stale dependency</strong> — Uses older version than bundled in this release.</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="mismatch-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white">MISMATCH</span>
+                            <span class="text-gray-400"><strong class="text-gray-300">Version mismatch</strong> — Different versions across components in same release.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Footer -->
-        <footer class="text-center mt-16 space-y-3">
+        <footer class="text-center mt-8 space-y-3">
             <p class="text-gray-400 text-sm">
                 Vibed with <span class="text-pink-400">♥</span> by
                 <a href="https://github.com/vdemeester" class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent hover:from-purple-400 hover:to-pink-400 transition-all">@vdemeester</a>
