@@ -34,6 +34,26 @@
         }
         .version-pill.active {
             background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3), 0 4px 12px rgba(0, 0, 0, 0.3);
+            transform: scale(1.05);
+        }
+        /* Dev pills: dim when inactive, bright with ring when active */
+        .version-pill.dev-main:not(.active),
+        .version-pill.dev-next:not(.active) {
+            opacity: 0.6;
+            filter: saturate(0.7);
+        }
+        .version-pill.dev-main.active {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.5), 0 4px 12px rgba(0, 0, 0, 0.3);
+            opacity: 1;
+            filter: saturate(1);
+        }
+        .version-pill.dev-next.active {
+            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+            box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.5), 0 4px 12px rgba(0, 0, 0, 0.3);
+            opacity: 1;
+            filter: saturate(1);
         }
         .go-badge {
             background: linear-gradient(135deg, #00add8 0%, #00a29c 100%);
