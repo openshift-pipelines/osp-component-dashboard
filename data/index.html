@@ -94,6 +94,18 @@
             
             <button
                 class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white"
+                onclick="showVersion('main')"
+                data-version="main"
+            >
+                OSP main
+                
+                <span class="ml-1 text-yellow-400" title="Go version mismatch, Dependency version mismatch">⚠</span>
+                
+                
+            </button>
+            
+            <button
+                class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white"
                 onclick="showVersion('1.21')"
                 data-version="1.21"
             >
@@ -225,13 +237,7 @@
                 
 
                 
-                <div class="flex items-center gap-2 text-sm flex-wrap">
-                    <span class="text-red-400 text-lg">🛡</span>
-                    <span class="text-red-400 font-medium">Dependency CVEs:</span>
-                    
-                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="text-red-300 hover:text-red-200">CVE-2026-24137 (sigstore)</a>
-                    
-                </div>
+
                 
             </div>
             
@@ -466,21 +472,17 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-yellow-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
-                                
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="cve-badge-medium px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="CVE-2026-24137">
-                                    M
-                                </a>
                                 
                                 
                                 <span class="mismatch-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="Version mismatch: expected v1.9.6-0.20250729224751-181c5d3339b3">
                                     MISMATCH
                                 </span>
                                 
-                                <span class="text-red-400 font-mono text-xs" title="Expected: v1.9.6-0.20250729224751-181c5d3339b3">
+                                <span class="text-yellow-400 font-mono text-xs" title="Expected: v1.9.6-0.20250729224751-181c5d3339b3">
                                     v1.9.5
                                 </span>
                             </div>
@@ -817,17 +819,13 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
                                 
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="cve-badge-medium px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="CVE-2026-24137">
-                                    M
-                                </a>
                                 
-                                
-                                <span class="text-red-400 font-mono text-xs" >
+                                <span class="text-purple-400 font-mono text-xs" >
                                     v1.9.6-0.20250729224751-181c5d3339b3
                                 </span>
                             </div>
@@ -1123,17 +1121,13 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
                                 
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="cve-badge-medium px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="CVE-2026-24137">
-                                    M
-                                </a>
                                 
-                                
-                                <span class="text-red-400 font-mono text-xs" >
+                                <span class="text-purple-400 font-mono text-xs" >
                                     v1.9.6-0.20250729224751-181c5d3339b3
                                 </span>
                             </div>
@@ -1468,32 +1462,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <span class="font-mono text-xs" title="CVE-2026-24137">
-                                        <span class="text-red-300">sigstore</span><span class="text-red-500">@v1.9.5</span>
-                                    </span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">43</td>
@@ -1597,26 +1566,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <span class="font-mono text-xs" title="CVE-2026-24137">
-                                        <span class="text-red-300">sigstore</span><span class="text-red-500">@v1.9.6-0.20250729224751-181c5d3339b3</span>
-                                    </span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">38</td>
@@ -1712,26 +1662,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <span class="font-mono text-xs" title="CVE-2026-24137">
-                                        <span class="text-red-300">sigstore</span><span class="text-red-500">@v1.9.6-0.20250729224751-181c5d3339b3</span>
-                                    </span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">44</td>
@@ -1797,6 +1728,1431 @@
         </div>
         
         <div
+            id="version-main"
+            class="version-content hidden"
+        >
+            <!-- Version-level status ribbon -->
+            
+            
+            <div class="mb-6 p-4 rounded-lg bg-amber-500/10 border border-amber-500/30 space-y-2">
+                
+                <div class="flex items-center gap-2 text-sm">
+                    <span class="text-yellow-400 text-lg">⚠</span>
+                    <span class="text-yellow-400 font-medium">Go mismatch:</span>
+                    <span class="text-yellow-300">1.25, 1.24</span>
+                </div>
+                
+
+                
+                <div class="flex items-center gap-2 text-sm">
+                    <span class="text-yellow-400 text-lg">⚠</span>
+                    <span class="text-yellow-400 font-medium">Dep mismatch:</span>
+                    <span class="text-yellow-300">api, cel-go, client-go, otel, pkg</span>
+                </div>
+                
+
+                
+
+                
+
+                
+            </div>
+            
+
+            <!-- Cards View -->
+            <div class="cards-view grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <div class="glass glass-hover rounded-xl p-6 transition-all duration-200">
+                <!-- Component Header -->
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <a
+                            href="https://github.com/tektoncd/operator"
+                            target="_blank"
+                            class="text-lg font-semibold text-white hover:text-blue-400 transition-colors"
+                        >
+                            tektoncd/operator
+                        </a>
+                        <div class="flex items-center gap-2 mt-1">
+                            <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-sm font-medium">
+                                main
+                            </span>
+                            <span class="go-badge px-2 py-0.5 rounded-full text-xs font-bold text-white" >
+                                Go 1.25.5
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Internal Dependencies (Cross-dependencies) -->
+                
+                <div class="mb-4">
+                    <p class="text-xs text-orange-400 uppercase tracking-wider mb-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-orange-400"></span>
+                        Tekton Dependencies
+                    </p>
+                    <div class="space-y-1.5">
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-orange-200 truncate max-w-[50%]" title="github.com/openshift-pipelines/pipelines-as-code">
+                                pipelines-as-code
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                <span class="text-orange-400 font-mono text-xs" >
+                                    v0.41.0
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-orange-200 truncate max-w-[50%]" title="github.com/tektoncd/pipeline">
+                                pipeline
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                <span class="text-orange-400 font-mono text-xs" >
+                                    v1.7.0
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-orange-200 truncate max-w-[50%]" title="github.com/tektoncd/triggers">
+                                triggers
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                <span class="text-orange-400 font-mono text-xs" >
+                                    v0.34.0
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+
+                <!-- External Dependencies -->
+                
+                <div class="space-y-2">
+                    <p class="text-xs text-gray-500 uppercase tracking-wider mb-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-purple-400"></span>
+                        External Dependencies
+                    </p>
+                    <div class="space-y-1.5">
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="k8s.io/api">
+                                api
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="text-purple-400 font-mono text-xs" >
+                                    v0.35.0
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-yellow-300 truncate max-w-[40%]" title="k8s.io/client-go">
+                                client-go
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="mismatch-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="Version mismatch: expected v0.32.11">
+                                    MISMATCH
+                                </span>
+                                
+                                <span class="text-yellow-400 font-mono text-xs" title="Expected: v0.32.11">
+                                    v1.5.2
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-yellow-300 truncate max-w-[40%]" title="knative.dev/pkg">
+                                pkg
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="mismatch-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="Version mismatch: expected v0.0.0-20250415155312-ed3e2158b883">
+                                    MISMATCH
+                                </span>
+                                
+                                <span class="text-yellow-400 font-mono text-xs" title="Expected: v0.0.0-20250415155312-ed3e2158b883">
+                                    v0.0.0-20260114161248-8c840449eed2
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+
+                
+
+                <!-- CVEs -->
+                
+
+                <!-- Footer -->
+                <div class="mt-4 pt-4 border-t border-white/5">
+                    <p class="text-xs text-gray-500">
+                        37 total dependencies
+                        
+                    </p>
+                </div>
+            </div>
+            
+            <div class="glass glass-hover rounded-xl p-6 transition-all duration-200">
+                <!-- Component Header -->
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <a
+                            href="https://github.com/tektoncd/pipeline"
+                            target="_blank"
+                            class="text-lg font-semibold text-white hover:text-blue-400 transition-colors"
+                        >
+                            tektoncd/pipeline
+                        </a>
+                        <div class="flex items-center gap-2 mt-1">
+                            <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-sm font-medium">
+                                main
+                            </span>
+                            <span class="go-badge px-2 py-0.5 rounded-full text-xs font-bold text-white" >
+                                Go 1.25.0
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Internal Dependencies (Cross-dependencies) -->
+                
+
+                <!-- External Dependencies -->
+                
+                <div class="space-y-2">
+                    <p class="text-xs text-gray-500 uppercase tracking-wider mb-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-purple-400"></span>
+                        External Dependencies
+                    </p>
+                    <div class="space-y-1.5">
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/google/cel-go">
+                                cel-go
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="text-purple-400 font-mono text-xs" >
+                                    v0.27.0
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/google/go-containerregistry">
+                                go-containerregistry
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="text-purple-400 font-mono text-xs" >
+                                    v0.20.7
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/jenkins-x/go-scm">
+                                go-scm
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="text-purple-400 font-mono text-xs" >
+                                    v1.15.16
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                                sigstore
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="text-purple-400 font-mono text-xs" >
+                                    v1.10.4
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="go.opentelemetry.io/otel">
+                                otel
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="text-purple-400 font-mono text-xs" >
+                                    v1.40.0
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-yellow-300 truncate max-w-[40%]" title="k8s.io/api">
+                                api
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="mismatch-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="Version mismatch: expected v0.35.0">
+                                    MISMATCH
+                                </span>
+                                
+                                <span class="text-yellow-400 font-mono text-xs" title="Expected: v0.35.0">
+                                    v0.32.11
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="k8s.io/client-go">
+                                client-go
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="text-purple-400 font-mono text-xs" >
+                                    v0.32.11
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="knative.dev/pkg">
+                                pkg
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="text-purple-400 font-mono text-xs" >
+                                    v0.0.0-20250415155312-ed3e2158b883
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+
+                
+
+                <!-- CVEs -->
+                
+
+                <!-- Footer -->
+                <div class="mt-4 pt-4 border-t border-white/5">
+                    <p class="text-xs text-gray-500">
+                        43 total dependencies
+                        
+                    </p>
+                </div>
+            </div>
+            
+            <div class="glass glass-hover rounded-xl p-6 transition-all duration-200">
+                <!-- Component Header -->
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <a
+                            href="https://github.com/tektoncd/triggers"
+                            target="_blank"
+                            class="text-lg font-semibold text-white hover:text-blue-400 transition-colors"
+                        >
+                            tektoncd/triggers
+                        </a>
+                        <div class="flex items-center gap-2 mt-1">
+                            <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-sm font-medium">
+                                main
+                            </span>
+                            <span class="go-badge-warn px-2 py-0.5 rounded-full text-xs font-bold text-white" title="Different from other components in this release">
+                                Go 1.24.0 ⚠
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Internal Dependencies (Cross-dependencies) -->
+                
+                <div class="mb-4">
+                    <p class="text-xs text-orange-400 uppercase tracking-wider mb-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-orange-400"></span>
+                        Tekton Dependencies
+                    </p>
+                    <div class="space-y-1.5">
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-orange-200 truncate max-w-[50%]" title="github.com/tektoncd/pipeline">
+                                pipeline
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                <span class="text-orange-400 font-mono text-xs" >
+                                    v1.9.0
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+
+                <!-- External Dependencies -->
+                
+                <div class="space-y-2">
+                    <p class="text-xs text-gray-500 uppercase tracking-wider mb-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-purple-400"></span>
+                        External Dependencies
+                    </p>
+                    <div class="space-y-1.5">
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/google/cel-go">
+                                cel-go
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="text-purple-400 font-mono text-xs" >
+                                    v0.27.0
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-yellow-300 truncate max-w-[40%]" title="go.opentelemetry.io/otel">
+                                otel
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="mismatch-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="Version mismatch: expected v1.40.0">
+                                    MISMATCH
+                                </span>
+                                
+                                <span class="text-yellow-400 font-mono text-xs" title="Expected: v1.40.0">
+                                    v1.39.0
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-yellow-300 truncate max-w-[40%]" title="k8s.io/api">
+                                api
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="mismatch-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="Version mismatch: expected v0.35.0">
+                                    MISMATCH
+                                </span>
+                                
+                                <span class="text-yellow-400 font-mono text-xs" title="Expected: v0.35.0">
+                                    v0.32.11
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="k8s.io/client-go">
+                                client-go
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="text-purple-400 font-mono text-xs" >
+                                    v0.32.11
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="knative.dev/pkg">
+                                pkg
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="text-purple-400 font-mono text-xs" >
+                                    v0.0.0-20250415155312-ed3e2158b883
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+
+                
+
+                <!-- CVEs -->
+                
+
+                <!-- Footer -->
+                <div class="mt-4 pt-4 border-t border-white/5">
+                    <p class="text-xs text-gray-500">
+                        35 total dependencies
+                        
+                    </p>
+                </div>
+            </div>
+            
+            <div class="glass glass-hover rounded-xl p-6 transition-all duration-200">
+                <!-- Component Header -->
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <a
+                            href="https://github.com/tektoncd/cli"
+                            target="_blank"
+                            class="text-lg font-semibold text-white hover:text-blue-400 transition-colors"
+                        >
+                            tektoncd/cli
+                        </a>
+                        <div class="flex items-center gap-2 mt-1">
+                            <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-sm font-medium">
+                                main
+                            </span>
+                            <span class="go-badge px-2 py-0.5 rounded-full text-xs font-bold text-white" >
+                                Go 1.25.5
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Internal Dependencies (Cross-dependencies) -->
+                
+                <div class="mb-4">
+                    <p class="text-xs text-orange-400 uppercase tracking-wider mb-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-orange-400"></span>
+                        Tekton Dependencies
+                    </p>
+                    <div class="space-y-1.5">
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-orange-200 truncate max-w-[50%]" title="github.com/tektoncd/chains">
+                                chains
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                <span class="text-orange-400 font-mono text-xs" >
+                                    v0.26.0
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-orange-200 truncate max-w-[50%]" title="github.com/tektoncd/pipeline">
+                                pipeline
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                <span class="text-orange-400 font-mono text-xs" >
+                                    v1.7.0
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-orange-200 truncate max-w-[50%]" title="github.com/tektoncd/triggers">
+                                triggers
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                <span class="text-orange-400 font-mono text-xs" >
+                                    v0.34.0
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+
+                <!-- External Dependencies -->
+                
+                <div class="space-y-2">
+                    <p class="text-xs text-gray-500 uppercase tracking-wider mb-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-purple-400"></span>
+                        External Dependencies
+                    </p>
+                    <div class="space-y-1.5">
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/google/go-containerregistry">
+                                go-containerregistry
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="text-purple-400 font-mono text-xs" >
+                                    v0.20.7
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                                sigstore
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="text-purple-400 font-mono text-xs" >
+                                    v1.10.4
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-yellow-300 truncate max-w-[40%]" title="k8s.io/api">
+                                api
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="mismatch-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="Version mismatch: expected v0.35.0">
+                                    MISMATCH
+                                </span>
+                                
+                                <span class="text-yellow-400 font-mono text-xs" title="Expected: v0.35.0">
+                                    v0.34.3
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-yellow-300 truncate max-w-[40%]" title="k8s.io/client-go">
+                                client-go
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="mismatch-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="Version mismatch: expected v0.32.11">
+                                    MISMATCH
+                                </span>
+                                
+                                <span class="text-yellow-400 font-mono text-xs" title="Expected: v0.32.11">
+                                    v0.34.3
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="knative.dev/pkg">
+                                pkg
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="text-purple-400 font-mono text-xs" >
+                                    v0.0.0-20250415155312-ed3e2158b883
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+
+                
+
+                <!-- CVEs -->
+                
+
+                <!-- Footer -->
+                <div class="mt-4 pt-4 border-t border-white/5">
+                    <p class="text-xs text-gray-500">
+                        38 total dependencies
+                        
+                    </p>
+                </div>
+            </div>
+            
+            <div class="glass glass-hover rounded-xl p-6 transition-all duration-200">
+                <!-- Component Header -->
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <a
+                            href="https://github.com/openshift-pipelines/pipelines-as-code"
+                            target="_blank"
+                            class="text-lg font-semibold text-white hover:text-blue-400 transition-colors"
+                        >
+                            openshift-pipelines/pipelines-as-code
+                        </a>
+                        <div class="flex items-center gap-2 mt-1">
+                            <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-sm font-medium">
+                                main
+                            </span>
+                            <span class="go-badge px-2 py-0.5 rounded-full text-xs font-bold text-white" >
+                                Go 1.25.0
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Internal Dependencies (Cross-dependencies) -->
+                
+                <div class="mb-4">
+                    <p class="text-xs text-orange-400 uppercase tracking-wider mb-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-orange-400"></span>
+                        Tekton Dependencies
+                    </p>
+                    <div class="space-y-1.5">
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-orange-200 truncate max-w-[50%]" title="github.com/tektoncd/pipeline">
+                                pipeline
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                <span class="text-orange-400 font-mono text-xs" >
+                                    v1.7.0
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+
+                <!-- External Dependencies -->
+                
+                <div class="space-y-2">
+                    <p class="text-xs text-gray-500 uppercase tracking-wider mb-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-purple-400"></span>
+                        External Dependencies
+                    </p>
+                    <div class="space-y-1.5">
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-yellow-300 truncate max-w-[40%]" title="github.com/google/cel-go">
+                                cel-go
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="mismatch-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="Version mismatch: expected v0.27.0">
+                                    MISMATCH
+                                </span>
+                                
+                                <span class="text-yellow-400 font-mono text-xs" title="Expected: v0.27.0">
+                                    v0.26.1
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/jenkins-x/go-scm">
+                                go-scm
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="text-purple-400 font-mono text-xs" >
+                                    v1.15.16
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="k8s.io/api">
+                                api
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="text-purple-400 font-mono text-xs" >
+                                    v0.35.0
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-yellow-300 truncate max-w-[40%]" title="k8s.io/client-go">
+                                client-go
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="mismatch-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="Version mismatch: expected v0.32.11">
+                                    MISMATCH
+                                </span>
+                                
+                                <span class="text-yellow-400 font-mono text-xs" title="Expected: v0.32.11">
+                                    v1.5.2
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-yellow-300 truncate max-w-[40%]" title="knative.dev/pkg">
+                                pkg
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="mismatch-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="Version mismatch: expected v0.0.0-20250415155312-ed3e2158b883">
+                                    MISMATCH
+                                </span>
+                                
+                                <span class="text-yellow-400 font-mono text-xs" title="Expected: v0.0.0-20250415155312-ed3e2158b883">
+                                    v0.0.0-20260114161248-8c840449eed2
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+
+                
+
+                <!-- CVEs -->
+                
+
+                <!-- Footer -->
+                <div class="mt-4 pt-4 border-t border-white/5">
+                    <p class="text-xs text-gray-500">
+                        46 total dependencies
+                        
+                    </p>
+                </div>
+            </div>
+            
+            <div class="glass glass-hover rounded-xl p-6 transition-all duration-200">
+                <!-- Component Header -->
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <a
+                            href="https://github.com/tektoncd/chains"
+                            target="_blank"
+                            class="text-lg font-semibold text-white hover:text-blue-400 transition-colors"
+                        >
+                            tektoncd/chains
+                        </a>
+                        <div class="flex items-center gap-2 mt-1">
+                            <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-sm font-medium">
+                                main
+                            </span>
+                            <span class="go-badge px-2 py-0.5 rounded-full text-xs font-bold text-white" >
+                                Go 1.25.5
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Internal Dependencies (Cross-dependencies) -->
+                
+                <div class="mb-4">
+                    <p class="text-xs text-orange-400 uppercase tracking-wider mb-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-orange-400"></span>
+                        Tekton Dependencies
+                    </p>
+                    <div class="space-y-1.5">
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-orange-200 truncate max-w-[50%]" title="github.com/tektoncd/pipeline">
+                                pipeline
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                <span class="text-orange-400 font-mono text-xs" >
+                                    v1.9.0
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+
+                <!-- External Dependencies -->
+                
+                <div class="space-y-2">
+                    <p class="text-xs text-gray-500 uppercase tracking-wider mb-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-purple-400"></span>
+                        External Dependencies
+                    </p>
+                    <div class="space-y-1.5">
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/google/go-containerregistry">
+                                go-containerregistry
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="text-purple-400 font-mono text-xs" >
+                                    v0.20.7
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                                sigstore
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="text-purple-400 font-mono text-xs" >
+                                    v1.10.4
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="k8s.io/api">
+                                api
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="text-purple-400 font-mono text-xs" >
+                                    v0.35.0
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-yellow-300 truncate max-w-[40%]" title="k8s.io/client-go">
+                                client-go
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="mismatch-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="Version mismatch: expected v0.32.11">
+                                    MISMATCH
+                                </span>
+                                
+                                <span class="text-yellow-400 font-mono text-xs" title="Expected: v0.32.11">
+                                    v0.35.0
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="knative.dev/pkg">
+                                pkg
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="text-purple-400 font-mono text-xs" >
+                                    v0.0.0-20250415155312-ed3e2158b883
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+
+                
+
+                <!-- CVEs -->
+                
+
+                <!-- Footer -->
+                <div class="mt-4 pt-4 border-t border-white/5">
+                    <p class="text-xs text-gray-500">
+                        44 total dependencies
+                        
+                    </p>
+                </div>
+            </div>
+            
+            <div class="glass glass-hover rounded-xl p-6 transition-all duration-200">
+                <!-- Component Header -->
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <a
+                            href="https://github.com/tektoncd/results"
+                            target="_blank"
+                            class="text-lg font-semibold text-white hover:text-blue-400 transition-colors"
+                        >
+                            tektoncd/results
+                        </a>
+                        <div class="flex items-center gap-2 mt-1">
+                            <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-sm font-medium">
+                                main
+                            </span>
+                            <span class="go-badge-warn px-2 py-0.5 rounded-full text-xs font-bold text-white" title="Different from other components in this release">
+                                Go 1.24.0 ⚠
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Internal Dependencies (Cross-dependencies) -->
+                
+                <div class="mb-4">
+                    <p class="text-xs text-orange-400 uppercase tracking-wider mb-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-orange-400"></span>
+                        Tekton Dependencies
+                    </p>
+                    <div class="space-y-1.5">
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-orange-200 truncate max-w-[50%]" title="github.com/tektoncd/cli">
+                                cli
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                <span class="text-orange-400 font-mono text-xs" >
+                                    v0.41.1
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-orange-200 truncate max-w-[50%]" title="github.com/tektoncd/pipeline">
+                                pipeline
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                <span class="text-orange-400 font-mono text-xs" >
+                                    v1.6.0
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+
+                <!-- External Dependencies -->
+                
+                <div class="space-y-2">
+                    <p class="text-xs text-gray-500 uppercase tracking-wider mb-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-purple-400"></span>
+                        External Dependencies
+                    </p>
+                    <div class="space-y-1.5">
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-yellow-300 truncate max-w-[40%]" title="github.com/google/cel-go">
+                                cel-go
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="mismatch-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="Version mismatch: expected v0.27.0">
+                                    MISMATCH
+                                </span>
+                                
+                                <span class="text-yellow-400 font-mono text-xs" title="Expected: v0.27.0">
+                                    v0.26.1
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-yellow-300 truncate max-w-[40%]" title="k8s.io/api">
+                                api
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="mismatch-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="Version mismatch: expected v0.35.0">
+                                    MISMATCH
+                                </span>
+                                
+                                <span class="text-yellow-400 font-mono text-xs" title="Expected: v0.35.0">
+                                    v0.32.11
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="k8s.io/client-go">
+                                client-go
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="text-purple-400 font-mono text-xs" >
+                                    v0.32.11
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="knative.dev/pkg">
+                                pkg
+                            </span>
+                            <div class="flex items-center gap-2">
+                                
+                                
+                                <span class="text-purple-400 font-mono text-xs" >
+                                    v0.0.0-20250415155312-ed3e2158b883
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+
+                
+
+                <!-- CVEs -->
+                
+
+                <!-- Footer -->
+                <div class="mt-4 pt-4 border-t border-white/5">
+                    <p class="text-xs text-gray-500">
+                        56 total dependencies
+                        
+                    </p>
+                </div>
+            </div>
+            
+            </div>
+
+            <!-- Table View -->
+            <div class="table-view hidden overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="border-b border-white/10">
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Component</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Ref</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Go</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Stale Deps</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Mismatched Deps</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">CVEs</th>
+                            <th class="text-right py-3 px-4 text-gray-400 font-medium">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                            <td class="py-3 px-4">
+                                <a href="https://github.com/tektoncd/operator" target="_blank" class="text-white hover:text-blue-400 transition-colors font-medium">
+                                    operator
+                                </a>
+                            </td>
+                            <td class="py-3 px-4 text-gray-500 font-mono text-xs">main</td>
+                            <td class="py-3 px-4">
+                                <span class="text-cyan-400 font-mono text-xs">
+                                    1.25.5
+                                </span>
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                    
+                                    <span class="font-mono text-xs" title="k8s.io/client-go (expected: v0.32.11)">
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v1.5.2</span>
+                                    </span>
+                                    
+                                    <span class="font-mono text-xs" title="knative.dev/pkg (expected: v0.0.0-20250415155312-ed3e2158b883)">
+                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20260114161248-8c840449eed2</span>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
+                            <td class="py-3 px-4 text-right text-gray-500">37</td>
+                        </tr>
+                        
+                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                            <td class="py-3 px-4">
+                                <a href="https://github.com/tektoncd/pipeline" target="_blank" class="text-white hover:text-blue-400 transition-colors font-medium">
+                                    pipeline
+                                </a>
+                            </td>
+                            <td class="py-3 px-4 text-gray-500 font-mono text-xs">main</td>
+                            <td class="py-3 px-4">
+                                <span class="text-cyan-400 font-mono text-xs">
+                                    1.25.0
+                                </span>
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                    
+                                    <span class="font-mono text-xs" title="k8s.io/api (expected: v0.35.0)">
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.32.11</span>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
+                            <td class="py-3 px-4 text-right text-gray-500">43</td>
+                        </tr>
+                        
+                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                            <td class="py-3 px-4">
+                                <a href="https://github.com/tektoncd/triggers" target="_blank" class="text-white hover:text-blue-400 transition-colors font-medium">
+                                    triggers
+                                </a>
+                            </td>
+                            <td class="py-3 px-4 text-gray-500 font-mono text-xs">main</td>
+                            <td class="py-3 px-4">
+                                <span class="text-yellow-400 font-mono text-xs">
+                                    1.24.0 ⚠
+                                </span>
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                    
+                                    <span class="font-mono text-xs" title="go.opentelemetry.io/otel (expected: v1.40.0)">
+                                        <span class="text-yellow-300">otel</span><span class="text-yellow-500">@v1.39.0</span>
+                                    </span>
+                                    
+                                    <span class="font-mono text-xs" title="k8s.io/api (expected: v0.35.0)">
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.32.11</span>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
+                            <td class="py-3 px-4 text-right text-gray-500">35</td>
+                        </tr>
+                        
+                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                            <td class="py-3 px-4">
+                                <a href="https://github.com/tektoncd/cli" target="_blank" class="text-white hover:text-blue-400 transition-colors font-medium">
+                                    cli
+                                </a>
+                            </td>
+                            <td class="py-3 px-4 text-gray-500 font-mono text-xs">main</td>
+                            <td class="py-3 px-4">
+                                <span class="text-cyan-400 font-mono text-xs">
+                                    1.25.5
+                                </span>
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                    
+                                    <span class="font-mono text-xs" title="k8s.io/api (expected: v0.35.0)">
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.34.3</span>
+                                    </span>
+                                    
+                                    <span class="font-mono text-xs" title="k8s.io/client-go (expected: v0.32.11)">
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.34.3</span>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
+                            <td class="py-3 px-4 text-right text-gray-500">38</td>
+                        </tr>
+                        
+                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                            <td class="py-3 px-4">
+                                <a href="https://github.com/openshift-pipelines/pipelines-as-code" target="_blank" class="text-white hover:text-blue-400 transition-colors font-medium">
+                                    pipelines-as-code
+                                </a>
+                            </td>
+                            <td class="py-3 px-4 text-gray-500 font-mono text-xs">main</td>
+                            <td class="py-3 px-4">
+                                <span class="text-cyan-400 font-mono text-xs">
+                                    1.25.0
+                                </span>
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                    
+                                    <span class="font-mono text-xs" title="github.com/google/cel-go (expected: v0.27.0)">
+                                        <span class="text-yellow-300">cel-go</span><span class="text-yellow-500">@v0.26.1</span>
+                                    </span>
+                                    
+                                    <span class="font-mono text-xs" title="k8s.io/client-go (expected: v0.32.11)">
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v1.5.2</span>
+                                    </span>
+                                    
+                                    <span class="font-mono text-xs" title="knative.dev/pkg (expected: v0.0.0-20250415155312-ed3e2158b883)">
+                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20260114161248-8c840449eed2</span>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
+                            <td class="py-3 px-4 text-right text-gray-500">46</td>
+                        </tr>
+                        
+                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                            <td class="py-3 px-4">
+                                <a href="https://github.com/tektoncd/chains" target="_blank" class="text-white hover:text-blue-400 transition-colors font-medium">
+                                    chains
+                                </a>
+                            </td>
+                            <td class="py-3 px-4 text-gray-500 font-mono text-xs">main</td>
+                            <td class="py-3 px-4">
+                                <span class="text-cyan-400 font-mono text-xs">
+                                    1.25.5
+                                </span>
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                    
+                                    <span class="font-mono text-xs" title="k8s.io/client-go (expected: v0.32.11)">
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.35.0</span>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
+                            <td class="py-3 px-4 text-right text-gray-500">44</td>
+                        </tr>
+                        
+                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                            <td class="py-3 px-4">
+                                <a href="https://github.com/tektoncd/results" target="_blank" class="text-white hover:text-blue-400 transition-colors font-medium">
+                                    results
+                                </a>
+                            </td>
+                            <td class="py-3 px-4 text-gray-500 font-mono text-xs">main</td>
+                            <td class="py-3 px-4">
+                                <span class="text-yellow-400 font-mono text-xs">
+                                    1.24.0 ⚠
+                                </span>
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                    
+                                    <span class="font-mono text-xs" title="github.com/google/cel-go (expected: v0.27.0)">
+                                        <span class="text-yellow-300">cel-go</span><span class="text-yellow-500">@v0.26.1</span>
+                                    </span>
+                                    
+                                    <span class="font-mono text-xs" title="k8s.io/api (expected: v0.35.0)">
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.32.11</span>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
+                            <td class="py-3 px-4 text-right text-gray-500">56</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div
             id="version-1.21"
             class="version-content hidden"
         >
@@ -1817,13 +3173,7 @@
                 
 
                 
-                <div class="flex items-center gap-2 text-sm flex-wrap">
-                    <span class="text-red-400 text-lg">🛡</span>
-                    <span class="text-red-400 font-medium">Dependency CVEs:</span>
-                    
-                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="text-red-300 hover:text-red-200">CVE-2026-24137 (sigstore)</a>
-                    
-                </div>
+
                 
             </div>
             
@@ -2054,21 +3404,17 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-yellow-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
-                                
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="cve-badge-medium px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="CVE-2026-24137">
-                                    M
-                                </a>
                                 
                                 
                                 <span class="mismatch-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="Version mismatch: expected v1.9.6-0.20250729224751-181c5d3339b3">
                                     MISMATCH
                                 </span>
                                 
-                                <span class="text-red-400 font-mono text-xs" title="Expected: v1.9.6-0.20250729224751-181c5d3339b3">
+                                <span class="text-yellow-400 font-mono text-xs" title="Expected: v1.9.6-0.20250729224751-181c5d3339b3">
                                     v1.9.5
                                 </span>
                             </div>
@@ -2397,17 +3743,13 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
                                 
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="cve-badge-medium px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="CVE-2026-24137">
-                                    M
-                                </a>
                                 
-                                
-                                <span class="text-red-400 font-mono text-xs" >
+                                <span class="text-purple-400 font-mono text-xs" >
                                     v1.9.6-0.20250729224751-181c5d3339b3
                                 </span>
                             </div>
@@ -2699,17 +4041,13 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
                                 
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="cve-badge-medium px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="CVE-2026-24137">
-                                    M
-                                </a>
                                 
-                                
-                                <span class="text-red-400 font-mono text-xs" >
+                                <span class="text-purple-400 font-mono text-xs" >
                                     v1.9.6-0.20250729224751-181c5d3339b3
                                 </span>
                             </div>
@@ -3038,32 +4376,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <span class="font-mono text-xs" title="CVE-2026-24137">
-                                        <span class="text-red-300">sigstore</span><span class="text-red-500">@v1.9.5</span>
-                                    </span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">43</td>
@@ -3151,26 +4464,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <span class="font-mono text-xs" title="CVE-2026-24137">
-                                        <span class="text-red-300">sigstore</span><span class="text-red-500">@v1.9.6-0.20250729224751-181c5d3339b3</span>
-                                    </span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">38</td>
@@ -3262,26 +4556,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <span class="font-mono text-xs" title="CVE-2026-24137">
-                                        <span class="text-red-300">sigstore</span><span class="text-red-500">@v1.9.6-0.20250729224751-181c5d3339b3</span>
-                                    </span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">44</td>
@@ -3369,13 +4644,7 @@
                 
 
                 
-                <div class="flex items-center gap-2 text-sm flex-wrap">
-                    <span class="text-red-400 text-lg">🛡</span>
-                    <span class="text-red-400 font-medium">Dependency CVEs:</span>
-                    
-                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="text-red-300 hover:text-red-200">CVE-2026-24137 (sigstore)</a>
-                    
-                </div>
+
                 
             </div>
             
@@ -3618,17 +4887,13 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
                                 
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="cve-badge-medium px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="CVE-2026-24137">
-                                    M
-                                </a>
                                 
-                                
-                                <span class="text-red-400 font-mono text-xs" >
+                                <span class="text-purple-400 font-mono text-xs" >
                                     v1.9.5
                                 </span>
                             </div>
@@ -3941,17 +5206,13 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
                                 
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="cve-badge-medium px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="CVE-2026-24137">
-                                    M
-                                </a>
                                 
-                                
-                                <span class="text-red-400 font-mono text-xs" >
+                                <span class="text-purple-400 font-mono text-xs" >
                                     v1.9.5
                                 </span>
                             </div>
@@ -4251,21 +5512,17 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-yellow-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
-                                
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="cve-badge-medium px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="CVE-2026-24137">
-                                    M
-                                </a>
                                 
                                 
                                 <span class="mismatch-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="Version mismatch: expected v1.9.5">
                                     MISMATCH
                                 </span>
                                 
-                                <span class="text-red-400 font-mono text-xs" title="Expected: v1.9.5">
+                                <span class="text-yellow-400 font-mono text-xs" title="Expected: v1.9.5">
                                     v1.9.6-0.20250729224751-181c5d3339b3
                                 </span>
                             </div>
@@ -4596,32 +5853,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <span class="font-mono text-xs" title="CVE-2026-24137">
-                                        <span class="text-red-300">sigstore</span><span class="text-red-500">@v1.9.5</span>
-                                    </span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">43</td>
@@ -4705,26 +5937,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <span class="font-mono text-xs" title="CVE-2026-24137">
-                                        <span class="text-red-300">sigstore</span><span class="text-red-500">@v1.9.5</span>
-                                    </span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">38</td>
@@ -4830,26 +6043,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <span class="font-mono text-xs" title="CVE-2026-24137">
-                                        <span class="text-red-300">sigstore</span><span class="text-red-500">@v1.9.6-0.20250729224751-181c5d3339b3</span>
-                                    </span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">44</td>
@@ -4931,13 +6125,7 @@
                 
 
                 
-                <div class="flex items-center gap-2 text-sm flex-wrap">
-                    <span class="text-red-400 text-lg">🛡</span>
-                    <span class="text-red-400 font-medium">Dependency CVEs:</span>
-                    
-                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="text-red-300 hover:text-red-200">CVE-2026-24137 (sigstore)</a>
-                    
-                </div>
+
                 
             </div>
             
@@ -5172,17 +6360,13 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
                                 
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="cve-badge-medium px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="CVE-2026-24137">
-                                    M
-                                </a>
                                 
-                                
-                                <span class="text-red-400 font-mono text-xs" >
+                                <span class="text-purple-400 font-mono text-xs" >
                                     v1.9.4
                                 </span>
                             </div>
@@ -5494,17 +6678,13 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
                                 
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="cve-badge-medium px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="CVE-2026-24137">
-                                    M
-                                </a>
                                 
-                                
-                                <span class="text-red-400 font-mono text-xs" >
+                                <span class="text-purple-400 font-mono text-xs" >
                                     v1.9.4
                                 </span>
                             </div>
@@ -5788,17 +6968,13 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
                                 
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="cve-badge-medium px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="CVE-2026-24137">
-                                    M
-                                </a>
                                 
-                                
-                                <span class="text-red-400 font-mono text-xs" >
+                                <span class="text-purple-400 font-mono text-xs" >
                                     v1.9.4
                                 </span>
                             </div>
@@ -6115,32 +7291,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <span class="font-mono text-xs" title="CVE-2026-24137">
-                                        <span class="text-red-300">sigstore</span><span class="text-red-500">@v1.9.4</span>
-                                    </span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">45</td>
@@ -6218,26 +7369,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <span class="font-mono text-xs" title="CVE-2026-24137">
-                                        <span class="text-red-300">sigstore</span><span class="text-red-500">@v1.9.4</span>
-                                    </span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">38</td>
@@ -6329,26 +7461,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <span class="font-mono text-xs" title="CVE-2026-24137">
-                                        <span class="text-red-300">sigstore</span><span class="text-red-500">@v1.9.4</span>
-                                    </span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">44</td>
@@ -6420,13 +7533,7 @@
                 
 
                 
-                <div class="flex items-center gap-2 text-sm flex-wrap">
-                    <span class="text-red-400 text-lg">🛡</span>
-                    <span class="text-red-400 font-medium">Dependency CVEs:</span>
-                    
-                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="text-red-300 hover:text-red-200">CVE-2026-24137 (sigstore)</a>
-                    
-                </div>
+
                 
             </div>
             
@@ -6669,17 +7776,13 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
                                 
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="cve-badge-medium px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="CVE-2026-24137">
-                                    M
-                                </a>
                                 
-                                
-                                <span class="text-red-400 font-mono text-xs" >
+                                <span class="text-purple-400 font-mono text-xs" >
                                     v1.8.12
                                 </span>
                             </div>
@@ -6975,21 +8078,17 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-yellow-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
-                                
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="cve-badge-medium px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="CVE-2026-24137">
-                                    M
-                                </a>
                                 
                                 
                                 <span class="mismatch-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="Version mismatch: expected v1.8.12">
                                     MISMATCH
                                 </span>
                                 
-                                <span class="text-red-400 font-mono text-xs" title="Expected: v1.8.12">
+                                <span class="text-yellow-400 font-mono text-xs" title="Expected: v1.8.12">
                                     v1.8.15
                                 </span>
                             </div>
@@ -7289,17 +8388,13 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
                                 
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="cve-badge-medium px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="CVE-2026-24137">
-                                    M
-                                </a>
                                 
-                                
-                                <span class="text-red-400 font-mono text-xs" >
+                                <span class="text-purple-400 font-mono text-xs" >
                                     v1.8.12
                                 </span>
                             </div>
@@ -7626,32 +8721,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <span class="font-mono text-xs" title="CVE-2026-24137">
-                                        <span class="text-red-300">sigstore</span><span class="text-red-500">@v1.8.12</span>
-                                    </span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">49</td>
@@ -7733,26 +8803,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <span class="font-mono text-xs" title="CVE-2026-24137">
-                                        <span class="text-red-300">sigstore</span><span class="text-red-500">@v1.8.15</span>
-                                    </span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">38</td>
@@ -7854,26 +8905,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <span class="font-mono text-xs" title="CVE-2026-24137">
-                                        <span class="text-red-300">sigstore</span><span class="text-red-500">@v1.8.12</span>
-                                    </span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">42</td>
@@ -7951,13 +8983,7 @@
                 
 
                 
-                <div class="flex items-center gap-2 text-sm flex-wrap">
-                    <span class="text-red-400 text-lg">🛡</span>
-                    <span class="text-red-400 font-medium">Dependency CVEs:</span>
-                    
-                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="text-red-300 hover:text-red-200">CVE-2026-24137 (sigstore)</a>
-                    
-                </div>
+
                 
             </div>
             
@@ -8196,21 +9222,17 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-yellow-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
-                                
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="cve-badge-medium px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="CVE-2026-24137">
-                                    M
-                                </a>
                                 
                                 
                                 <span class="mismatch-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="Version mismatch: expected v1.8.10">
                                     MISMATCH
                                 </span>
                                 
-                                <span class="text-red-400 font-mono text-xs" title="Expected: v1.8.10">
+                                <span class="text-yellow-400 font-mono text-xs" title="Expected: v1.8.10">
                                     v1.8.4
                                 </span>
                             </div>
@@ -8506,17 +9528,13 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
                                 
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="cve-badge-medium px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="CVE-2026-24137">
-                                    M
-                                </a>
                                 
-                                
-                                <span class="text-red-400 font-mono text-xs" >
+                                <span class="text-purple-400 font-mono text-xs" >
                                     v1.8.10
                                 </span>
                             </div>
@@ -8799,17 +9817,13 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
                                 
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="cve-badge-medium px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="CVE-2026-24137">
-                                    M
-                                </a>
                                 
-                                
-                                <span class="text-red-400 font-mono text-xs" >
+                                <span class="text-purple-400 font-mono text-xs" >
                                     v1.8.10
                                 </span>
                             </div>
@@ -9152,32 +10166,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <span class="font-mono text-xs" title="CVE-2026-24137">
-                                        <span class="text-red-300">sigstore</span><span class="text-red-500">@v1.8.4</span>
-                                    </span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">49</td>
@@ -9255,26 +10244,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <span class="font-mono text-xs" title="CVE-2026-24137">
-                                        <span class="text-red-300">sigstore</span><span class="text-red-500">@v1.8.10</span>
-                                    </span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">38</td>
@@ -9372,26 +10342,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <span class="font-mono text-xs" title="CVE-2026-24137">
-                                        <span class="text-red-300">sigstore</span><span class="text-red-500">@v1.8.10</span>
-                                    </span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">42</td>
@@ -9485,13 +10436,7 @@
                 
 
                 
-                <div class="flex items-center gap-2 text-sm flex-wrap">
-                    <span class="text-red-400 text-lg">🛡</span>
-                    <span class="text-red-400 font-medium">Dependency CVEs:</span>
-                    
-                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="text-red-300 hover:text-red-200">CVE-2026-24137 (sigstore)</a>
-                    
-                </div>
+
                 
             </div>
             
@@ -9726,21 +10671,17 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-yellow-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
-                                
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="cve-badge-medium px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="CVE-2026-24137">
-                                    M
-                                </a>
                                 
                                 
                                 <span class="mismatch-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="Version mismatch: expected v1.8.8">
                                     MISMATCH
                                 </span>
                                 
-                                <span class="text-red-400 font-mono text-xs" title="Expected: v1.8.8">
+                                <span class="text-yellow-400 font-mono text-xs" title="Expected: v1.8.8">
                                     v1.8.4
                                 </span>
                             </div>
@@ -10036,17 +10977,13 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
                                 
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="cve-badge-medium px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="CVE-2026-24137">
-                                    M
-                                </a>
                                 
-                                
-                                <span class="text-red-400 font-mono text-xs" >
+                                <span class="text-purple-400 font-mono text-xs" >
                                     v1.8.8
                                 </span>
                             </div>
@@ -10337,21 +11274,17 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-yellow-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
-                                
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="cve-badge-medium px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="CVE-2026-24137">
-                                    M
-                                </a>
                                 
                                 
                                 <span class="mismatch-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="Version mismatch: expected v1.8.8">
                                     MISMATCH
                                 </span>
                                 
-                                <span class="text-red-400 font-mono text-xs" title="Expected: v1.8.8">
+                                <span class="text-yellow-400 font-mono text-xs" title="Expected: v1.8.8">
                                     v1.8.3
                                 </span>
                             </div>
@@ -10690,32 +11623,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <span class="font-mono text-xs" title="CVE-2026-24137">
-                                        <span class="text-red-300">sigstore</span><span class="text-red-500">@v1.8.4</span>
-                                    </span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">49</td>
@@ -10793,26 +11701,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <span class="font-mono text-xs" title="CVE-2026-24137">
-                                        <span class="text-red-300">sigstore</span><span class="text-red-500">@v1.8.8</span>
-                                    </span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">38</td>
@@ -10926,26 +11815,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <span class="font-mono text-xs" title="CVE-2026-24137">
-                                        <span class="text-red-300">sigstore</span><span class="text-red-500">@v1.8.3</span>
-                                    </span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">42</td>
@@ -11041,13 +11911,7 @@
                 
 
                 
-                <div class="flex items-center gap-2 text-sm flex-wrap">
-                    <span class="text-red-400 text-lg">🛡</span>
-                    <span class="text-red-400 font-medium">Dependency CVEs:</span>
-                    
-                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="text-red-300 hover:text-red-200">CVE-2026-24137 (sigstore)</a>
-                    
-                </div>
+
                 
             </div>
             
@@ -11270,17 +12134,13 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
                                 
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="cve-badge-medium px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="CVE-2026-24137">
-                                    M
-                                </a>
                                 
-                                
-                                <span class="text-red-400 font-mono text-xs" >
+                                <span class="text-purple-400 font-mono text-xs" >
                                     v1.8.3
                                 </span>
                             </div>
@@ -11592,17 +12452,13 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
                                 
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="cve-badge-medium px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="CVE-2026-24137">
-                                    M
-                                </a>
                                 
-                                
-                                <span class="text-red-400 font-mono text-xs" >
+                                <span class="text-purple-400 font-mono text-xs" >
                                     v1.8.3
                                 </span>
                             </div>
@@ -11885,21 +12741,17 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-yellow-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
-                                
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="cve-badge-medium px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="CVE-2026-24137">
-                                    M
-                                </a>
                                 
                                 
                                 <span class="mismatch-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="Version mismatch: expected v1.8.3">
                                     MISMATCH
                                 </span>
                                 
-                                <span class="text-red-400 font-mono text-xs" title="Expected: v1.8.3">
+                                <span class="text-yellow-400 font-mono text-xs" title="Expected: v1.8.3">
                                     v1.8.1
                                 </span>
                             </div>
@@ -12232,32 +13084,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <span class="font-mono text-xs" title="CVE-2026-24137">
-                                        <span class="text-red-300">sigstore</span><span class="text-red-500">@v1.8.3</span>
-                                    </span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">50</td>
@@ -12345,26 +13172,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <span class="font-mono text-xs" title="CVE-2026-24137">
-                                        <span class="text-red-300">sigstore</span><span class="text-red-500">@v1.8.3</span>
-                                    </span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">38</td>
@@ -12472,26 +13280,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <span class="font-mono text-xs" title="CVE-2026-24137">
-                                        <span class="text-red-300">sigstore</span><span class="text-red-500">@v1.8.1</span>
-                                    </span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">39</td>

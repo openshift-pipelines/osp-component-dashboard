@@ -121,7 +121,7 @@
             class="version-content {% if not loop.first %}hidden{% endif %}"
         >
             <!-- Version-level status ribbon -->
-            {% set has_issues = version_stats[version].has_go_mismatch or version_stats[version].has_dep_mismatch or version_stats[version].total_cves > 0 or version_stats[version].total_dep_cves > 0 %}
+            {% set has_issues = version_stats[version].has_go_mismatch or version_stats[version].has_dep_mismatch or version_stats[version].total_cves > 0 or version_stats[version].total_dep_cves > 0 or version_stats[version].total_vulns > 0 %}
             {% if has_issues %}
             <div class="mb-6 p-4 rounded-lg bg-amber-500/10 border border-amber-500/30 space-y-2">
                 {% if version_stats[version].has_go_mismatch %}
@@ -157,6 +157,19 @@
                     {% for cve in version_stats[version].dep_cve_details %}
                     <a href="{{ cve.url }}" target="_blank" class="text-red-300 hover:text-red-200">{{ cve.id }} ({{ cve.dep }})</a>{% if not loop.last %}<span class="text-gray-600">,</span>{% endif %}
                     {% endfor %}
+                </div>
+                {% endif %}
+
+                {% if version_stats[version].total_vulns > 0 %}
+                <div class="flex items-center gap-2 text-sm flex-wrap">
+                    <span class="text-purple-400 text-lg">🔍</span>
+                    <span class="text-purple-400 font-medium">govulncheck ({{ version_stats[version].called_vulns }} called / {{ version_stats[version].total_vulns }} total):</span>
+                    {% for vuln in version_stats[version].vuln_details[:10] %}
+                    <span class="{% if vuln.is_called %}text-red-300{% else %}text-purple-300{% endif %}">{{ vuln.id }} ({{ vuln.component }}{% if vuln.is_called %} ⚡{% endif %})</span>{% if not loop.last %}<span class="text-gray-600">,</span>{% endif %}
+                    {% endfor %}
+                    {% if version_stats[version].vuln_details | length > 10 %}
+                    <span class="text-gray-500">... +{{ version_stats[version].vuln_details | length - 10 }} more</span>
+                    {% endif %}
                 </div>
                 {% endif %}
             </div>

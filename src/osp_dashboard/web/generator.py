@@ -109,6 +109,7 @@ def generate_html(
     bundled_versions: dict[str, dict[str, str]] | None = None,
     cve_data: dict[str, dict[str, list]] | None = None,
     dep_advisories: dict[str, list] | None = None,
+    vuln_data: dict[str, dict[str, list]] | None = None,
 ) -> None:
     """Generate the dashboard HTML.
 
@@ -120,6 +121,7 @@ def generate_html(
         bundled_versions: Dict of OSP version -> {component: version} for staleness check
         cve_data: Dict of OSP version -> {component: [Advisory, ...]} for CVE display
         dep_advisories: Dict of dep_path -> [Advisory, ...] for dependency CVE checking
+        vuln_data: Dict of OSP version -> {component: [VulnFinding, ...]} from govulncheck
     """
     if template_dir is None:
         template_dir = Path(__file__).parent / "templates"
@@ -151,6 +153,9 @@ def generate_html(
 
         # Get CVE data for this version
         version_cves = cve_data.get(osp_version, {}) if cve_data else {}
+
+        # Get govulncheck data for this version
+        version_vulns = vuln_data.get(osp_version, {}) if vuln_data else {}
 
         # Collect dependency versions across all components for mismatch detection
         dep_versions: dict[str, dict[str, list[str]]] = {}  # {dep_path: {version: [components]}}
@@ -229,6 +234,22 @@ def generate_html(
                 for adv in comp_cves
             ]
 
+            # Get govulncheck findings for this component
+            comp_vulns = version_vulns.get(component_key, [])
+            vuln_list = [
+                {
+                    "id": v.vuln_id,
+                    "aliases": v.aliases,
+                    "summary": v.summary,
+                    "module": v.module_path.split("/")[-1] if v.module_path else "",
+                    "found_version": v.found_version,
+                    "fixed_version": v.fixed_version,
+                    "is_called": v.is_called,
+                    "symbol": v.symbol,
+                }
+                for v in comp_vulns
+            ]
+
             # Process external deps to check for version mismatch
             external_deps_data = []
             for dep in external_deps:
@@ -266,6 +287,7 @@ def generate_html(
                 "external_deps": external_deps_data,
                 "total_deps": len(comp.dependencies),
                 "cves": cve_list,
+                "vulns": vuln_list,
             })
 
         # Count total CVEs for this version and track affected components
@@ -297,6 +319,27 @@ def generate_html(
                             "url": cve["url"],
                         })
 
+        # Collect govulncheck findings for version stats
+        vuln_details = []
+        total_vulns = 0
+        called_vulns = 0
+        for component_key, vulns in version_vulns.items():
+            repo = component_key.split("/")[-1]
+            for v in vulns:
+                total_vulns += 1
+                if v.is_called:
+                    called_vulns += 1
+                # Get primary CVE ID from aliases
+                cve_id = next((a for a in v.aliases if a.startswith("CVE-")), v.vuln_id)
+                vuln_details.append({
+                    "id": cve_id,
+                    "go_id": v.vuln_id,
+                    "component": repo,
+                    "module": v.module_path.split("/")[-1] if v.module_path else "",
+                    "is_called": v.is_called,
+                    "symbol": v.symbol,
+                })
+
         # Store version-level stats
         version_stats[osp_version] = {
             "has_go_mismatch": has_go_mismatch,
@@ -307,6 +350,9 @@ def generate_html(
             "mismatched_deps": sorted([p.split("/")[-1] for p in mismatched_deps]),
             "dep_cve_details": dep_cve_details,
             "total_dep_cves": len(dep_cve_details),
+            "total_vulns": total_vulns,
+            "called_vulns": called_vulns,
+            "vuln_details": vuln_details,
         }
 
     # Sort OSP versions descending (newest first)

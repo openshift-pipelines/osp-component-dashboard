@@ -18,6 +18,22 @@ def collect_command(args: argparse.Namespace) -> int:
     print(f"Loading config from {config_path}")
     config = load_config(config_path)
 
+    # Load govulncheck scan results if provided
+    vuln_data = None
+    if args.vulns:
+        vulns_path = Path(args.vulns)
+        if vulns_path.exists():
+            print(f"\nLoading govulncheck results from {vulns_path}")
+            vuln_data = load_scan_results(vulns_path)
+            total = sum(
+                len(findings)
+                for version in vuln_data.values()
+                for findings in version.values()
+            )
+            print(f"  Loaded {total} vulnerability findings")
+        else:
+            print(f"Warning: {vulns_path} not found, skipping vuln data", file=sys.stderr)
+
     # Pre-fetch CVE advisories for all tracked dependencies (to avoid repeated API calls)
     print("\nFetching CVE advisories for tracked dependencies...")
     dep_advisories = {}
@@ -63,6 +79,7 @@ def collect_command(args: argparse.Namespace) -> int:
         bundled_versions=config.versions,
         cve_data=all_cves,
         dep_advisories=dep_advisories,
+        vuln_data=vuln_data,
     )
     print("Done!")
 

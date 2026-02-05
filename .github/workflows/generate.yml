@@ -35,7 +35,13 @@ jobs:
         run: uv sync
 
       - name: Generate dashboard
-        run: uv run osp-dashboard collect
+        run: |
+          # Use cached vuln scan results if available
+          if [ -f data/vulns.json ]; then
+            uv run osp-dashboard collect --vulns data/vulns.json
+          else
+            uv run osp-dashboard collect
+          fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
