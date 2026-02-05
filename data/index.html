@@ -94,156 +94,164 @@
         </header>
 
         <!-- Version Selector -->
-        <div class="flex flex-col items-center gap-3 mb-6">
-            <!-- Release versions -->
-            <div class="flex justify-center flex-wrap gap-3">
-                
-                
-                
-                
-                
-                
-                <button
-                    class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white"
-                    onclick="showVersion('1.21')"
-                    data-version="1.21"
-                >
-                    OSP 1.21
-                    
-                    <span class="ml-1 text-yellow-400" title="Dependency version mismatch">⚠</span>
+        <div class="flex flex-col items-center gap-4 mb-6">
+            <!-- Development versions (main/next) - shown first as primary options -->
+            <div class="flex items-center gap-4">
+                <span class="text-xs text-gray-500 uppercase tracking-wide">Development</span>
+                <div class="flex gap-3">
                     
                     
-                </button>
-                
-                
-                
-                <button
-                    class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white"
-                    onclick="showVersion('1.20')"
-                    data-version="1.20"
-                >
-                    OSP 1.20
-                    
-                    <span class="ml-1 text-yellow-400" title="Go version mismatch, Dependency version mismatch">⚠</span>
-                    
-                    
-                </button>
-                
-                
-                
-                <button
-                    class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white"
-                    onclick="showVersion('1.19')"
-                    data-version="1.19"
-                >
-                    OSP 1.19
-                    
-                    <span class="ml-1 text-yellow-400" title="Dependency version mismatch">⚠</span>
+                    <button
+                        class="version-pill dev-next px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 hover:scale-105 text-white"
+                        onclick="showVersion('next')"
+                        data-version="next"
+                    >
+                        🚀 next
+                        <span class="ml-1 text-xs opacity-75">(latest releases)</span>
+                        
+                        <span class="ml-1 text-yellow-200">⚠</span>
+                        
+                    </button>
                     
                     
-                </button>
-                
-                
-                
-                <button
-                    class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white"
-                    onclick="showVersion('1.18')"
-                    data-version="1.18"
-                >
-                    OSP 1.18
                     
-                    <span class="ml-1 text-yellow-400" title="Go version mismatch, Dependency version mismatch">⚠</span>
-                    
-                    
-                </button>
-                
-                
-                
-                <button
-                    class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white"
-                    onclick="showVersion('1.17')"
-                    data-version="1.17"
-                >
-                    OSP 1.17
-                    
-                    <span class="ml-1 text-yellow-400" title="Dependency version mismatch">⚠</span>
+                    <button
+                        class="version-pill dev-main px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 hover:scale-105 text-white"
+                        onclick="showVersion('main')"
+                        data-version="main"
+                    >
+                        🌱 main
+                        <span class="ml-1 text-xs opacity-75">(bleeding edge)</span>
+                        
+                        <span class="ml-1 text-yellow-200">⚠</span>
+                        
+                    </button>
                     
                     
-                </button>
-                
-                
-                
-                <button
-                    class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white"
-                    onclick="showVersion('1.16')"
-                    data-version="1.16"
-                >
-                    OSP 1.16
-                    
-                    <span class="ml-1 text-yellow-400" title="Dependency version mismatch">⚠</span>
                     
                     
-                </button>
-                
-                
-                
-                <button
-                    class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white"
-                    onclick="showVersion('1.15')"
-                    data-version="1.15"
-                >
-                    OSP 1.15
-                    
-                    <span class="ml-1 text-yellow-400" title="Go version mismatch, Dependency version mismatch">⚠</span>
                     
                     
-                </button>
-                
-                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
             </div>
-            <!-- Development versions (main/next) -->
-            <div class="flex justify-center gap-3">
-                
-                
-                <button
-                    class="version-pill dev-next px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 hover:scale-105 text-white"
-                    onclick="showVersion('next')"
-                    data-version="next"
-                >
-                    🚀 next
+            <!-- Release versions -->
+            <div class="flex items-center gap-4">
+                <span class="text-xs text-gray-500 uppercase tracking-wide">Releases</span>
+                <div class="flex flex-wrap gap-3">
                     
-                    <span class="ml-1 text-yellow-200">⚠</span>
                     
-                </button>
-                
-                
-                
-                <button
-                    class="version-pill dev-main px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 hover:scale-105 text-white"
-                    onclick="showVersion('main')"
-                    data-version="main"
-                >
-                    🌱 main
                     
-                    <span class="ml-1 text-yellow-200">⚠</span>
                     
-                </button>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
+                    
+                    
+                    <button
+                        class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white"
+                        onclick="showVersion('1.21')"
+                        data-version="1.21"
+                    >
+                        OSP 1.21
+                        
+                        <span class="ml-1 text-yellow-400" title="Dependency version mismatch">⚠</span>
+                        
+                        
+                    </button>
+                    
+                    
+                    
+                    <button
+                        class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white"
+                        onclick="showVersion('1.20')"
+                        data-version="1.20"
+                    >
+                        OSP 1.20
+                        
+                        <span class="ml-1 text-yellow-400" title="Go version mismatch, Dependency version mismatch">⚠</span>
+                        
+                        
+                    </button>
+                    
+                    
+                    
+                    <button
+                        class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white"
+                        onclick="showVersion('1.19')"
+                        data-version="1.19"
+                    >
+                        OSP 1.19
+                        
+                        <span class="ml-1 text-yellow-400" title="Dependency version mismatch">⚠</span>
+                        
+                        
+                    </button>
+                    
+                    
+                    
+                    <button
+                        class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white"
+                        onclick="showVersion('1.18')"
+                        data-version="1.18"
+                    >
+                        OSP 1.18
+                        
+                        <span class="ml-1 text-yellow-400" title="Go version mismatch, Dependency version mismatch">⚠</span>
+                        
+                        
+                    </button>
+                    
+                    
+                    
+                    <button
+                        class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white"
+                        onclick="showVersion('1.17')"
+                        data-version="1.17"
+                    >
+                        OSP 1.17
+                        
+                        <span class="ml-1 text-yellow-400" title="Dependency version mismatch">⚠</span>
+                        
+                        
+                    </button>
+                    
+                    
+                    
+                    <button
+                        class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white"
+                        onclick="showVersion('1.16')"
+                        data-version="1.16"
+                    >
+                        OSP 1.16
+                        
+                        <span class="ml-1 text-yellow-400" title="Dependency version mismatch">⚠</span>
+                        
+                        
+                    </button>
+                    
+                    
+                    
+                    <button
+                        class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white"
+                        onclick="showVersion('1.15')"
+                        data-version="1.15"
+                    >
+                        OSP 1.15
+                        
+                        <span class="ml-1 text-yellow-400" title="Go version mismatch, Dependency version mismatch">⚠</span>
+                        
+                        
+                    </button>
+                    
+                    
+                </div>
             </div>
         </div>
 
@@ -293,14 +301,6 @@
 
                 
 
-                
-                <div class="flex items-center gap-2 text-sm flex-wrap">
-                    <span class="text-red-400 text-lg">🛡</span>
-                    <span class="text-red-400 font-medium">Dependency CVEs:</span>
-                    
-                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="text-red-300 hover:text-red-200">CVE-2026-24137 (sigstore)</a>
-                    
-                </div>
                 
 
                 
@@ -548,21 +548,17 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-yellow-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
-                                
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-0.5" title="CVE-2026-24137">
-                                    <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300 text-[10px] font-bold">GH</span>
-                                </a>
                                 
                                 
                                 <span class="mismatch-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="Version mismatch: expected v1.9.6-0.20250729224751-181c5d3339b3">
                                     MISMATCH
                                 </span>
                                 
-                                <span class="text-red-400 font-mono text-xs" title="Expected: v1.9.6-0.20250729224751-181c5d3339b3">
+                                <span class="text-yellow-400 font-mono text-xs" title="Expected: v1.9.6-0.20250729224751-181c5d3339b3">
                                     v1.9.5
                                 </span>
                             </div>
@@ -907,17 +903,13 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
                                 
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-0.5" title="CVE-2026-24137">
-                                    <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300 text-[10px] font-bold">GH</span>
-                                </a>
                                 
-                                
-                                <span class="text-red-400 font-mono text-xs" >
+                                <span class="text-purple-400 font-mono text-xs" >
                                     v1.9.6-0.20250729224751-181c5d3339b3
                                 </span>
                             </div>
@@ -1221,17 +1213,13 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
                                 
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-0.5" title="CVE-2026-24137">
-                                    <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300 text-[10px] font-bold">GH</span>
-                                </a>
                                 
-                                
-                                <span class="text-red-400 font-mono text-xs" >
+                                <span class="text-purple-400 font-mono text-xs" >
                                     v1.9.6-0.20250729224751-181c5d3339b3
                                 </span>
                             </div>
@@ -1665,37 +1653,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-2 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-1 font-mono text-xs" title="CVE-2026-24137 in github.com/sigstore/sigstore">
-                                        <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300">GH</span>
-                                        <span class="text-red-400">sigstore</span>
-                                    </a>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right">
@@ -1742,10 +1700,10 @@
                                             </div>
                                             
                                             <div class="flex justify-between text-xs">
-                                                <span class="text-red-300 truncate" title="github.com/sigstore/sigstore">
+                                                <span class="text-yellow-300 truncate" title="github.com/sigstore/sigstore">
                                                     sigstore
                                                 </span>
-                                                <span class="text-red-400 font-mono">
+                                                <span class="text-yellow-400 font-mono">
                                                     v1.9.5 (exp: v1.9.6-0.20250729224751-181c5d3339b3)
                                                 </span>
                                             </div>
@@ -1982,31 +1940,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-2 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-1 font-mono text-xs" title="CVE-2026-24137 in github.com/sigstore/sigstore">
-                                        <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300">GH</span>
-                                        <span class="text-red-400">sigstore</span>
-                                    </a>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right">
@@ -2069,10 +2003,10 @@
                                             </div>
                                             
                                             <div class="flex justify-between text-xs">
-                                                <span class="text-red-300 truncate" title="github.com/sigstore/sigstore">
+                                                <span class="text-gray-300 truncate" title="github.com/sigstore/sigstore">
                                                     sigstore
                                                 </span>
-                                                <span class="text-red-400 font-mono">
+                                                <span class="text-purple-400 font-mono">
                                                     v1.9.6-0.20250729224751-181c5d3339b3
                                                 </span>
                                             </div>
@@ -2292,31 +2226,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-2 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-1 font-mono text-xs" title="CVE-2026-24137 in github.com/sigstore/sigstore">
-                                        <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300">GH</span>
-                                        <span class="text-red-400">sigstore</span>
-                                    </a>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right">
@@ -2361,10 +2271,10 @@
                                             </div>
                                             
                                             <div class="flex justify-between text-xs">
-                                                <span class="text-red-300 truncate" title="github.com/sigstore/sigstore">
+                                                <span class="text-gray-300 truncate" title="github.com/sigstore/sigstore">
                                                     sigstore
                                                 </span>
-                                                <span class="text-red-400 font-mono">
+                                                <span class="text-purple-400 font-mono">
                                                     v1.9.6-0.20250729224751-181c5d3339b3
                                                 </span>
                                             </div>
@@ -4660,14 +4570,6 @@
                 
 
                 
-                <div class="flex items-center gap-2 text-sm flex-wrap">
-                    <span class="text-red-400 text-lg">🛡</span>
-                    <span class="text-red-400 font-medium">Dependency CVEs:</span>
-                    
-                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="text-red-300 hover:text-red-200">CVE-2026-24137 (sigstore)</a>
-                    
-                </div>
-                
 
                 
                 <div class="flex items-center gap-2 text-sm flex-wrap">
@@ -4910,21 +4812,17 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-yellow-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
-                                
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-0.5" title="CVE-2026-24137">
-                                    <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300 text-[10px] font-bold">GH</span>
-                                </a>
                                 
                                 
                                 <span class="mismatch-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="Version mismatch: expected v1.9.6-0.20250729224751-181c5d3339b3">
                                     MISMATCH
                                 </span>
                                 
-                                <span class="text-red-400 font-mono text-xs" title="Expected: v1.9.6-0.20250729224751-181c5d3339b3">
+                                <span class="text-yellow-400 font-mono text-xs" title="Expected: v1.9.6-0.20250729224751-181c5d3339b3">
                                     v1.9.5
                                 </span>
                             </div>
@@ -5261,17 +5159,13 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
                                 
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-0.5" title="CVE-2026-24137">
-                                    <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300 text-[10px] font-bold">GH</span>
-                                </a>
                                 
-                                
-                                <span class="text-red-400 font-mono text-xs" >
+                                <span class="text-purple-400 font-mono text-xs" >
                                     v1.9.6-0.20250729224751-181c5d3339b3
                                 </span>
                             </div>
@@ -5571,17 +5465,13 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
                                 
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-0.5" title="CVE-2026-24137">
-                                    <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300 text-[10px] font-bold">GH</span>
-                                </a>
                                 
-                                
-                                <span class="text-red-400 font-mono text-xs" >
+                                <span class="text-purple-400 font-mono text-xs" >
                                     v1.9.6-0.20250729224751-181c5d3339b3
                                 </span>
                             </div>
@@ -6009,37 +5899,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-2 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-1 font-mono text-xs" title="CVE-2026-24137 in github.com/sigstore/sigstore">
-                                        <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300">GH</span>
-                                        <span class="text-red-400">sigstore</span>
-                                    </a>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right">
@@ -6086,10 +5946,10 @@
                                             </div>
                                             
                                             <div class="flex justify-between text-xs">
-                                                <span class="text-red-300 truncate" title="github.com/sigstore/sigstore">
+                                                <span class="text-yellow-300 truncate" title="github.com/sigstore/sigstore">
                                                     sigstore
                                                 </span>
-                                                <span class="text-red-400 font-mono">
+                                                <span class="text-yellow-400 font-mono">
                                                     v1.9.5 (exp: v1.9.6-0.20250729224751-181c5d3339b3)
                                                 </span>
                                             </div>
@@ -6310,31 +6170,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-2 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-1 font-mono text-xs" title="CVE-2026-24137 in github.com/sigstore/sigstore">
-                                        <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300">GH</span>
-                                        <span class="text-red-400">sigstore</span>
-                                    </a>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right">
@@ -6397,10 +6233,10 @@
                                             </div>
                                             
                                             <div class="flex justify-between text-xs">
-                                                <span class="text-red-300 truncate" title="github.com/sigstore/sigstore">
+                                                <span class="text-gray-300 truncate" title="github.com/sigstore/sigstore">
                                                     sigstore
                                                 </span>
-                                                <span class="text-red-400 font-mono">
+                                                <span class="text-purple-400 font-mono">
                                                     v1.9.6-0.20250729224751-181c5d3339b3
                                                 </span>
                                             </div>
@@ -6616,31 +6452,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-2 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-1 font-mono text-xs" title="CVE-2026-24137 in github.com/sigstore/sigstore">
-                                        <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300">GH</span>
-                                        <span class="text-red-400">sigstore</span>
-                                    </a>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right">
@@ -6685,10 +6497,10 @@
                                             </div>
                                             
                                             <div class="flex justify-between text-xs">
-                                                <span class="text-red-300 truncate" title="github.com/sigstore/sigstore">
+                                                <span class="text-gray-300 truncate" title="github.com/sigstore/sigstore">
                                                     sigstore
                                                 </span>
-                                                <span class="text-red-400 font-mono">
+                                                <span class="text-purple-400 font-mono">
                                                     v1.9.6-0.20250729224751-181c5d3339b3
                                                 </span>
                                             </div>
@@ -6894,14 +6706,6 @@
 
                 
 
-                
-                <div class="flex items-center gap-2 text-sm flex-wrap">
-                    <span class="text-red-400 text-lg">🛡</span>
-                    <span class="text-red-400 font-medium">Dependency CVEs:</span>
-                    
-                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="text-red-300 hover:text-red-200">CVE-2026-24137 (sigstore)</a>
-                    
-                </div>
                 
 
                 
@@ -7157,17 +6961,13 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
                                 
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-0.5" title="CVE-2026-24137">
-                                    <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300 text-[10px] font-bold">GH</span>
-                                </a>
                                 
-                                
-                                <span class="text-red-400 font-mono text-xs" >
+                                <span class="text-purple-400 font-mono text-xs" >
                                     v1.9.5
                                 </span>
                             </div>
@@ -7488,17 +7288,13 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
                                 
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-0.5" title="CVE-2026-24137">
-                                    <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300 text-[10px] font-bold">GH</span>
-                                </a>
                                 
-                                
-                                <span class="text-red-400 font-mono text-xs" >
+                                <span class="text-purple-400 font-mono text-xs" >
                                     v1.9.5
                                 </span>
                             </div>
@@ -7806,21 +7602,17 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-yellow-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
-                                
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-0.5" title="CVE-2026-24137">
-                                    <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300 text-[10px] font-bold">GH</span>
-                                </a>
                                 
                                 
                                 <span class="mismatch-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="Version mismatch: expected v1.9.5">
                                     MISMATCH
                                 </span>
                                 
-                                <span class="text-red-400 font-mono text-xs" title="Expected: v1.9.5">
+                                <span class="text-yellow-400 font-mono text-xs" title="Expected: v1.9.5">
                                     v1.9.6-0.20250729224751-181c5d3339b3
                                 </span>
                             </div>
@@ -8250,37 +8042,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-2 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-1 font-mono text-xs" title="CVE-2026-24137 in github.com/sigstore/sigstore">
-                                        <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300">GH</span>
-                                        <span class="text-red-400">sigstore</span>
-                                    </a>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right">
@@ -8327,10 +8089,10 @@
                                             </div>
                                             
                                             <div class="flex justify-between text-xs">
-                                                <span class="text-red-300 truncate" title="github.com/sigstore/sigstore">
+                                                <span class="text-gray-300 truncate" title="github.com/sigstore/sigstore">
                                                     sigstore
                                                 </span>
-                                                <span class="text-red-400 font-mono">
+                                                <span class="text-purple-400 font-mono">
                                                     v1.9.5
                                                 </span>
                                             </div>
@@ -8547,31 +8309,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-2 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-1 font-mono text-xs" title="CVE-2026-24137 in github.com/sigstore/sigstore">
-                                        <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300">GH</span>
-                                        <span class="text-red-400">sigstore</span>
-                                    </a>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right">
@@ -8634,10 +8372,10 @@
                                             </div>
                                             
                                             <div class="flex justify-between text-xs">
-                                                <span class="text-red-300 truncate" title="github.com/sigstore/sigstore">
+                                                <span class="text-gray-300 truncate" title="github.com/sigstore/sigstore">
                                                     sigstore
                                                 </span>
-                                                <span class="text-red-400 font-mono">
+                                                <span class="text-purple-400 font-mono">
                                                     v1.9.5
                                                 </span>
                                             </div>
@@ -8867,31 +8605,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-2 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-1 font-mono text-xs" title="CVE-2026-24137 in github.com/sigstore/sigstore">
-                                        <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300">GH</span>
-                                        <span class="text-red-400">sigstore</span>
-                                    </a>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right">
@@ -8936,10 +8650,10 @@
                                             </div>
                                             
                                             <div class="flex justify-between text-xs">
-                                                <span class="text-red-300 truncate" title="github.com/sigstore/sigstore">
+                                                <span class="text-yellow-300 truncate" title="github.com/sigstore/sigstore">
                                                     sigstore
                                                 </span>
-                                                <span class="text-red-400 font-mono">
+                                                <span class="text-yellow-400 font-mono">
                                                     v1.9.6-0.20250729224751-181c5d3339b3 (exp: v1.9.5)
                                                 </span>
                                             </div>
@@ -9139,14 +8853,6 @@
 
                 
 
-                
-                <div class="flex items-center gap-2 text-sm flex-wrap">
-                    <span class="text-red-400 text-lg">🛡</span>
-                    <span class="text-red-400 font-medium">Dependency CVEs:</span>
-                    
-                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="text-red-300 hover:text-red-200">CVE-2026-24137 (sigstore)</a>
-                    
-                </div>
                 
 
                 
@@ -9394,17 +9100,13 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
                                 
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-0.5" title="CVE-2026-24137">
-                                    <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300 text-[10px] font-bold">GH</span>
-                                </a>
                                 
-                                
-                                <span class="text-red-400 font-mono text-xs" >
+                                <span class="text-purple-400 font-mono text-xs" >
                                     v1.9.4
                                 </span>
                             </div>
@@ -9724,17 +9426,13 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
                                 
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-0.5" title="CVE-2026-24137">
-                                    <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300 text-[10px] font-bold">GH</span>
-                                </a>
                                 
-                                
-                                <span class="text-red-400 font-mono text-xs" >
+                                <span class="text-purple-400 font-mono text-xs" >
                                     v1.9.4
                                 </span>
                             </div>
@@ -10026,17 +9724,13 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
                                 
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-0.5" title="CVE-2026-24137">
-                                    <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300 text-[10px] font-bold">GH</span>
-                                </a>
                                 
-                                
-                                <span class="text-red-400 font-mono text-xs" >
+                                <span class="text-purple-400 font-mono text-xs" >
                                     v1.9.4
                                 </span>
                             </div>
@@ -10452,37 +10146,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-2 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-1 font-mono text-xs" title="CVE-2026-24137 in github.com/sigstore/sigstore">
-                                        <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300">GH</span>
-                                        <span class="text-red-400">sigstore</span>
-                                    </a>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right">
@@ -10529,10 +10193,10 @@
                                             </div>
                                             
                                             <div class="flex justify-between text-xs">
-                                                <span class="text-red-300 truncate" title="github.com/sigstore/sigstore">
+                                                <span class="text-gray-300 truncate" title="github.com/sigstore/sigstore">
                                                     sigstore
                                                 </span>
-                                                <span class="text-red-400 font-mono">
+                                                <span class="text-purple-400 font-mono">
                                                     v1.9.4
                                                 </span>
                                             </div>
@@ -10734,31 +10398,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-2 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-1 font-mono text-xs" title="CVE-2026-24137 in github.com/sigstore/sigstore">
-                                        <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300">GH</span>
-                                        <span class="text-red-400">sigstore</span>
-                                    </a>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right">
@@ -10821,10 +10461,10 @@
                                             </div>
                                             
                                             <div class="flex justify-between text-xs">
-                                                <span class="text-red-300 truncate" title="github.com/sigstore/sigstore">
+                                                <span class="text-gray-300 truncate" title="github.com/sigstore/sigstore">
                                                     sigstore
                                                 </span>
-                                                <span class="text-red-400 font-mono">
+                                                <span class="text-purple-400 font-mono">
                                                     v1.9.4
                                                 </span>
                                             </div>
@@ -11040,31 +10680,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-2 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-1 font-mono text-xs" title="CVE-2026-24137 in github.com/sigstore/sigstore">
-                                        <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300">GH</span>
-                                        <span class="text-red-400">sigstore</span>
-                                    </a>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right">
@@ -11109,10 +10725,10 @@
                                             </div>
                                             
                                             <div class="flex justify-between text-xs">
-                                                <span class="text-red-300 truncate" title="github.com/sigstore/sigstore">
+                                                <span class="text-gray-300 truncate" title="github.com/sigstore/sigstore">
                                                     sigstore
                                                 </span>
-                                                <span class="text-red-400 font-mono">
+                                                <span class="text-purple-400 font-mono">
                                                     v1.9.4
                                                 </span>
                                             </div>
@@ -11302,14 +10918,6 @@
 
                 
 
-                
-                <div class="flex items-center gap-2 text-sm flex-wrap">
-                    <span class="text-red-400 text-lg">🛡</span>
-                    <span class="text-red-400 font-medium">Dependency CVEs:</span>
-                    
-                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="text-red-300 hover:text-red-200">CVE-2026-24137 (sigstore)</a>
-                    
-                </div>
                 
 
                 
@@ -11565,17 +11173,13 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
                                 
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-0.5" title="CVE-2026-24137">
-                                    <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300 text-[10px] font-bold">GH</span>
-                                </a>
                                 
-                                
-                                <span class="text-red-400 font-mono text-xs" >
+                                <span class="text-purple-400 font-mono text-xs" >
                                     v1.8.12
                                 </span>
                             </div>
@@ -11879,21 +11483,17 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-yellow-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
-                                
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-0.5" title="CVE-2026-24137">
-                                    <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300 text-[10px] font-bold">GH</span>
-                                </a>
                                 
                                 
                                 <span class="mismatch-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="Version mismatch: expected v1.8.12">
                                     MISMATCH
                                 </span>
                                 
-                                <span class="text-red-400 font-mono text-xs" title="Expected: v1.8.12">
+                                <span class="text-yellow-400 font-mono text-xs" title="Expected: v1.8.12">
                                     v1.8.15
                                 </span>
                             </div>
@@ -12201,17 +11801,13 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
                                 
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-0.5" title="CVE-2026-24137">
-                                    <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300 text-[10px] font-bold">GH</span>
-                                </a>
                                 
-                                
-                                <span class="text-red-400 font-mono text-xs" >
+                                <span class="text-purple-400 font-mono text-xs" >
                                     v1.8.12
                                 </span>
                             </div>
@@ -12637,37 +12233,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-2 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-1 font-mono text-xs" title="CVE-2026-24137 in github.com/sigstore/sigstore">
-                                        <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300">GH</span>
-                                        <span class="text-red-400">sigstore</span>
-                                    </a>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right">
@@ -12714,10 +12280,10 @@
                                             </div>
                                             
                                             <div class="flex justify-between text-xs">
-                                                <span class="text-red-300 truncate" title="github.com/sigstore/sigstore">
+                                                <span class="text-gray-300 truncate" title="github.com/sigstore/sigstore">
                                                     sigstore
                                                 </span>
-                                                <span class="text-red-400 font-mono">
+                                                <span class="text-purple-400 font-mono">
                                                     v1.8.12
                                                 </span>
                                             </div>
@@ -12923,31 +12489,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-2 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-1 font-mono text-xs" title="CVE-2026-24137 in github.com/sigstore/sigstore">
-                                        <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300">GH</span>
-                                        <span class="text-red-400">sigstore</span>
-                                    </a>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right">
@@ -13010,10 +12552,10 @@
                                             </div>
                                             
                                             <div class="flex justify-between text-xs">
-                                                <span class="text-red-300 truncate" title="github.com/sigstore/sigstore">
+                                                <span class="text-yellow-300 truncate" title="github.com/sigstore/sigstore">
                                                     sigstore
                                                 </span>
-                                                <span class="text-red-400 font-mono">
+                                                <span class="text-yellow-400 font-mono">
                                                     v1.8.15 (exp: v1.8.12)
                                                 </span>
                                             </div>
@@ -13239,31 +12781,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-2 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-1 font-mono text-xs" title="CVE-2026-24137 in github.com/sigstore/sigstore">
-                                        <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300">GH</span>
-                                        <span class="text-red-400">sigstore</span>
-                                    </a>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right">
@@ -13308,10 +12826,10 @@
                                             </div>
                                             
                                             <div class="flex justify-between text-xs">
-                                                <span class="text-red-300 truncate" title="github.com/sigstore/sigstore">
+                                                <span class="text-gray-300 truncate" title="github.com/sigstore/sigstore">
                                                     sigstore
                                                 </span>
-                                                <span class="text-red-400 font-mono">
+                                                <span class="text-purple-400 font-mono">
                                                     v1.8.12
                                                 </span>
                                             </div>
@@ -13507,14 +13025,6 @@
 
                 
 
-                
-                <div class="flex items-center gap-2 text-sm flex-wrap">
-                    <span class="text-red-400 text-lg">🛡</span>
-                    <span class="text-red-400 font-medium">Dependency CVEs:</span>
-                    
-                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="text-red-300 hover:text-red-200">CVE-2026-24137 (sigstore)</a>
-                    
-                </div>
                 
 
                 
@@ -13766,21 +13276,17 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-yellow-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
-                                
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-0.5" title="CVE-2026-24137">
-                                    <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300 text-[10px] font-bold">GH</span>
-                                </a>
                                 
                                 
                                 <span class="mismatch-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="Version mismatch: expected v1.8.10">
                                     MISMATCH
                                 </span>
                                 
-                                <span class="text-red-400 font-mono text-xs" title="Expected: v1.8.10">
+                                <span class="text-yellow-400 font-mono text-xs" title="Expected: v1.8.10">
                                     v1.8.4
                                 </span>
                             </div>
@@ -14084,17 +13590,13 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
                                 
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-0.5" title="CVE-2026-24137">
-                                    <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300 text-[10px] font-bold">GH</span>
-                                </a>
                                 
-                                
-                                <span class="text-red-400 font-mono text-xs" >
+                                <span class="text-purple-400 font-mono text-xs" >
                                     v1.8.10
                                 </span>
                             </div>
@@ -14385,17 +13887,13 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
                                 
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-0.5" title="CVE-2026-24137">
-                                    <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300 text-[10px] font-bold">GH</span>
-                                </a>
                                 
-                                
-                                <span class="text-red-400 font-mono text-xs" >
+                                <span class="text-purple-400 font-mono text-xs" >
                                     v1.8.10
                                 </span>
                             </div>
@@ -14837,37 +14335,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-2 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-1 font-mono text-xs" title="CVE-2026-24137 in github.com/sigstore/sigstore">
-                                        <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300">GH</span>
-                                        <span class="text-red-400">sigstore</span>
-                                    </a>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right">
@@ -14914,10 +14382,10 @@
                                             </div>
                                             
                                             <div class="flex justify-between text-xs">
-                                                <span class="text-red-300 truncate" title="github.com/sigstore/sigstore">
+                                                <span class="text-yellow-300 truncate" title="github.com/sigstore/sigstore">
                                                     sigstore
                                                 </span>
-                                                <span class="text-red-400 font-mono">
+                                                <span class="text-yellow-400 font-mono">
                                                     v1.8.4 (exp: v1.8.10)
                                                 </span>
                                             </div>
@@ -15119,31 +14587,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-2 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-1 font-mono text-xs" title="CVE-2026-24137 in github.com/sigstore/sigstore">
-                                        <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300">GH</span>
-                                        <span class="text-red-400">sigstore</span>
-                                    </a>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right">
@@ -15206,10 +14650,10 @@
                                             </div>
                                             
                                             <div class="flex justify-between text-xs">
-                                                <span class="text-red-300 truncate" title="github.com/sigstore/sigstore">
+                                                <span class="text-gray-300 truncate" title="github.com/sigstore/sigstore">
                                                     sigstore
                                                 </span>
-                                                <span class="text-red-400 font-mono">
+                                                <span class="text-purple-400 font-mono">
                                                     v1.8.10
                                                 </span>
                                             </div>
@@ -15422,31 +14866,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-2 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-1 font-mono text-xs" title="CVE-2026-24137 in github.com/sigstore/sigstore">
-                                        <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300">GH</span>
-                                        <span class="text-red-400">sigstore</span>
-                                    </a>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right">
@@ -15491,10 +14911,10 @@
                                             </div>
                                             
                                             <div class="flex justify-between text-xs">
-                                                <span class="text-red-300 truncate" title="github.com/sigstore/sigstore">
+                                                <span class="text-gray-300 truncate" title="github.com/sigstore/sigstore">
                                                     sigstore
                                                 </span>
-                                                <span class="text-red-400 font-mono">
+                                                <span class="text-purple-400 font-mono">
                                                     v1.8.10
                                                 </span>
                                             </div>
@@ -15706,14 +15126,6 @@
 
                 
 
-                
-                <div class="flex items-center gap-2 text-sm flex-wrap">
-                    <span class="text-red-400 text-lg">🛡</span>
-                    <span class="text-red-400 font-medium">Dependency CVEs:</span>
-                    
-                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="text-red-300 hover:text-red-200">CVE-2026-24137 (sigstore)</a>
-                    
-                </div>
                 
 
                 
@@ -15961,21 +15373,17 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-yellow-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
-                                
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-0.5" title="CVE-2026-24137">
-                                    <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300 text-[10px] font-bold">GH</span>
-                                </a>
                                 
                                 
                                 <span class="mismatch-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="Version mismatch: expected v1.8.8">
                                     MISMATCH
                                 </span>
                                 
-                                <span class="text-red-400 font-mono text-xs" title="Expected: v1.8.8">
+                                <span class="text-yellow-400 font-mono text-xs" title="Expected: v1.8.8">
                                     v1.8.4
                                 </span>
                             </div>
@@ -16279,17 +15687,13 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
                                 
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-0.5" title="CVE-2026-24137">
-                                    <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300 text-[10px] font-bold">GH</span>
-                                </a>
                                 
-                                
-                                <span class="text-red-400 font-mono text-xs" >
+                                <span class="text-purple-400 font-mono text-xs" >
                                     v1.8.8
                                 </span>
                             </div>
@@ -16588,21 +15992,17 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-yellow-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
-                                
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-0.5" title="CVE-2026-24137">
-                                    <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300 text-[10px] font-bold">GH</span>
-                                </a>
                                 
                                 
                                 <span class="mismatch-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="Version mismatch: expected v1.8.8">
                                     MISMATCH
                                 </span>
                                 
-                                <span class="text-red-400 font-mono text-xs" title="Expected: v1.8.8">
+                                <span class="text-yellow-400 font-mono text-xs" title="Expected: v1.8.8">
                                     v1.8.3
                                 </span>
                             </div>
@@ -17040,37 +16440,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-2 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-1 font-mono text-xs" title="CVE-2026-24137 in github.com/sigstore/sigstore">
-                                        <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300">GH</span>
-                                        <span class="text-red-400">sigstore</span>
-                                    </a>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right">
@@ -17117,10 +16487,10 @@
                                             </div>
                                             
                                             <div class="flex justify-between text-xs">
-                                                <span class="text-red-300 truncate" title="github.com/sigstore/sigstore">
+                                                <span class="text-yellow-300 truncate" title="github.com/sigstore/sigstore">
                                                     sigstore
                                                 </span>
-                                                <span class="text-red-400 font-mono">
+                                                <span class="text-yellow-400 font-mono">
                                                     v1.8.4 (exp: v1.8.8)
                                                 </span>
                                             </div>
@@ -17322,31 +16692,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-2 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-1 font-mono text-xs" title="CVE-2026-24137 in github.com/sigstore/sigstore">
-                                        <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300">GH</span>
-                                        <span class="text-red-400">sigstore</span>
-                                    </a>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right">
@@ -17409,10 +16755,10 @@
                                             </div>
                                             
                                             <div class="flex justify-between text-xs">
-                                                <span class="text-red-300 truncate" title="github.com/sigstore/sigstore">
+                                                <span class="text-gray-300 truncate" title="github.com/sigstore/sigstore">
                                                     sigstore
                                                 </span>
-                                                <span class="text-red-400 font-mono">
+                                                <span class="text-purple-400 font-mono">
                                                     v1.8.8
                                                 </span>
                                             </div>
@@ -17641,31 +16987,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-2 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-1 font-mono text-xs" title="CVE-2026-24137 in github.com/sigstore/sigstore">
-                                        <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300">GH</span>
-                                        <span class="text-red-400">sigstore</span>
-                                    </a>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right">
@@ -17710,10 +17032,10 @@
                                             </div>
                                             
                                             <div class="flex justify-between text-xs">
-                                                <span class="text-red-300 truncate" title="github.com/sigstore/sigstore">
+                                                <span class="text-yellow-300 truncate" title="github.com/sigstore/sigstore">
                                                     sigstore
                                                 </span>
-                                                <span class="text-red-400 font-mono">
+                                                <span class="text-yellow-400 font-mono">
                                                     v1.8.3 (exp: v1.8.8)
                                                 </span>
                                             </div>
@@ -17927,14 +17249,6 @@
 
                 
 
-                
-                <div class="flex items-center gap-2 text-sm flex-wrap">
-                    <span class="text-red-400 text-lg">🛡</span>
-                    <span class="text-red-400 font-medium">Dependency CVEs:</span>
-                    
-                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="text-red-300 hover:text-red-200">CVE-2026-24137 (sigstore)</a>
-                    
-                </div>
                 
 
                 
@@ -18170,17 +17484,13 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
                                 
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-0.5" title="CVE-2026-24137">
-                                    <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300 text-[10px] font-bold">GH</span>
-                                </a>
                                 
-                                
-                                <span class="text-red-400 font-mono text-xs" >
+                                <span class="text-purple-400 font-mono text-xs" >
                                     v1.8.3
                                 </span>
                             </div>
@@ -18500,17 +17810,13 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-gray-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
                                 
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-0.5" title="CVE-2026-24137">
-                                    <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300 text-[10px] font-bold">GH</span>
-                                </a>
                                 
-                                
-                                <span class="text-red-400 font-mono text-xs" >
+                                <span class="text-purple-400 font-mono text-xs" >
                                     v1.8.3
                                 </span>
                             </div>
@@ -18801,21 +18107,17 @@
                         </div>
                         
                         <div class="flex items-center justify-between text-sm">
-                            <span class="text-red-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
+                            <span class="text-yellow-300 truncate max-w-[40%]" title="github.com/sigstore/sigstore">
                                 sigstore
                             </span>
                             <div class="flex items-center gap-2">
-                                
-                                <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-0.5" title="CVE-2026-24137">
-                                    <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300 text-[10px] font-bold">GH</span>
-                                </a>
                                 
                                 
                                 <span class="mismatch-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="Version mismatch: expected v1.8.3">
                                     MISMATCH
                                 </span>
                                 
-                                <span class="text-red-400 font-mono text-xs" title="Expected: v1.8.3">
+                                <span class="text-yellow-400 font-mono text-xs" title="Expected: v1.8.3">
                                     v1.8.1
                                 </span>
                             </div>
@@ -19247,37 +18549,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-2 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-1 font-mono text-xs" title="CVE-2026-24137 in github.com/sigstore/sigstore">
-                                        <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300">GH</span>
-                                        <span class="text-red-400">sigstore</span>
-                                    </a>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right">
@@ -19324,10 +18596,10 @@
                                             </div>
                                             
                                             <div class="flex justify-between text-xs">
-                                                <span class="text-red-300 truncate" title="github.com/sigstore/sigstore">
+                                                <span class="text-gray-300 truncate" title="github.com/sigstore/sigstore">
                                                     sigstore
                                                 </span>
-                                                <span class="text-red-400 font-mono">
+                                                <span class="text-purple-400 font-mono">
                                                     v1.8.3
                                                 </span>
                                             </div>
@@ -19539,31 +18811,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-2 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-1 font-mono text-xs" title="CVE-2026-24137 in github.com/sigstore/sigstore">
-                                        <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300">GH</span>
-                                        <span class="text-red-400">sigstore</span>
-                                    </a>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right">
@@ -19626,10 +18874,10 @@
                                             </div>
                                             
                                             <div class="flex justify-between text-xs">
-                                                <span class="text-red-300 truncate" title="github.com/sigstore/sigstore">
+                                                <span class="text-gray-300 truncate" title="github.com/sigstore/sigstore">
                                                     sigstore
                                                 </span>
-                                                <span class="text-red-400 font-mono">
+                                                <span class="text-purple-400 font-mono">
                                                     v1.8.3
                                                 </span>
                                             </div>
@@ -19852,31 +19100,7 @@
                                 
                                 
                                 
-                                <div class="flex flex-wrap gap-x-2 gap-y-1">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <a href="https://github.com/advisories/GHSA-fcv2-xgw5-pqxf" target="_blank" class="inline-flex items-center gap-1 font-mono text-xs" title="CVE-2026-24137 in github.com/sigstore/sigstore">
-                                        <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300">GH</span>
-                                        <span class="text-red-400">sigstore</span>
-                                    </a>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right">
@@ -19921,10 +19145,10 @@
                                             </div>
                                             
                                             <div class="flex justify-between text-xs">
-                                                <span class="text-red-300 truncate" title="github.com/sigstore/sigstore">
+                                                <span class="text-yellow-300 truncate" title="github.com/sigstore/sigstore">
                                                     sigstore
                                                 </span>
-                                                <span class="text-red-400 font-mono">
+                                                <span class="text-yellow-400 font-mono">
                                                     v1.8.1 (exp: v1.8.3)
                                                 </span>
                                             </div>
@@ -20235,13 +19459,11 @@
             }
         }
 
-        // On page load, select the first release version (not main/next)
+        // On page load, default to 'next' version
         document.addEventListener('DOMContentLoaded', function() {
             const versions = ['next', 'main', '1.21', '1.20', '1.19', '1.18', '1.17', '1.16', '1.15'];
-            const firstRelease = versions.find(v => v !== 'main' && v !== 'next');
-            if (firstRelease) {
-                showVersion(firstRelease);
-            }
+            const defaultVersion = versions.includes('next') ? 'next' : versions[0];
+            showVersion(defaultVersion);
         });
     </script>
 </body>

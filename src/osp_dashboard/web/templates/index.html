@@ -94,54 +94,62 @@
         </header>
 
         <!-- Version Selector -->
-        <div class="flex flex-col items-center gap-3 mb-6">
-            <!-- Release versions -->
-            <div class="flex justify-center flex-wrap gap-3">
-                {% for version in versions %}
-                {% if version not in ['main', 'next'] %}
-                <button
-                    class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white"
-                    onclick="showVersion('{{ version }}')"
-                    data-version="{{ version }}"
-                >
-                    OSP {{ version }}
-                    {% if version_stats[version].has_go_mismatch or version_stats[version].has_dep_mismatch %}
-                    <span class="ml-1 text-yellow-400" title="{% if version_stats[version].has_go_mismatch %}Go version mismatch{% endif %}{% if version_stats[version].has_go_mismatch and version_stats[version].has_dep_mismatch %}, {% endif %}{% if version_stats[version].has_dep_mismatch %}Dependency version mismatch{% endif %}">⚠</span>
+        <div class="flex flex-col items-center gap-4 mb-6">
+            <!-- Development versions (main/next) - shown first as primary options -->
+            <div class="flex items-center gap-4">
+                <span class="text-xs text-gray-500 uppercase tracking-wide">Development</span>
+                <div class="flex gap-3">
+                    {% for version in versions %}
+                    {% if version == 'next' %}
+                    <button
+                        class="version-pill dev-next px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 hover:scale-105 text-white"
+                        onclick="showVersion('{{ version }}')"
+                        data-version="{{ version }}"
+                    >
+                        🚀 next
+                        <span class="ml-1 text-xs opacity-75">(latest releases)</span>
+                        {% if version_stats[version].has_go_mismatch or version_stats[version].has_dep_mismatch %}
+                        <span class="ml-1 text-yellow-200">⚠</span>
+                        {% endif %}
+                    </button>
+                    {% elif version == 'main' %}
+                    <button
+                        class="version-pill dev-main px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 hover:scale-105 text-white"
+                        onclick="showVersion('{{ version }}')"
+                        data-version="{{ version }}"
+                    >
+                        🌱 main
+                        <span class="ml-1 text-xs opacity-75">(bleeding edge)</span>
+                        {% if version_stats[version].has_go_mismatch or version_stats[version].has_dep_mismatch %}
+                        <span class="ml-1 text-yellow-200">⚠</span>
+                        {% endif %}
+                    </button>
                     {% endif %}
-                    {% if version_stats[version].total_cves > 0 %}
-                    <span class="ml-1 text-red-400" title="{{ version_stats[version].total_cves }} CVE(s) affecting this version">🛡</span>
-                    {% endif %}
-                </button>
-                {% endif %}
-                {% endfor %}
+                    {% endfor %}
+                </div>
             </div>
-            <!-- Development versions (main/next) -->
-            <div class="flex justify-center gap-3">
-                {% for version in versions %}
-                {% if version == 'main' %}
-                <button
-                    class="version-pill dev-main px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 hover:scale-105 text-white"
-                    onclick="showVersion('{{ version }}')"
-                    data-version="{{ version }}"
-                >
-                    🌱 main
-                    {% if version_stats[version].has_go_mismatch or version_stats[version].has_dep_mismatch %}
-                    <span class="ml-1 text-yellow-200">⚠</span>
+            <!-- Release versions -->
+            <div class="flex items-center gap-4">
+                <span class="text-xs text-gray-500 uppercase tracking-wide">Releases</span>
+                <div class="flex flex-wrap gap-3">
+                    {% for version in versions %}
+                    {% if version not in ['main', 'next'] %}
+                    <button
+                        class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 text-gray-300 hover:text-white"
+                        onclick="showVersion('{{ version }}')"
+                        data-version="{{ version }}"
+                    >
+                        OSP {{ version }}
+                        {% if version_stats[version].has_go_mismatch or version_stats[version].has_dep_mismatch %}
+                        <span class="ml-1 text-yellow-400" title="{% if version_stats[version].has_go_mismatch %}Go version mismatch{% endif %}{% if version_stats[version].has_go_mismatch and version_stats[version].has_dep_mismatch %}, {% endif %}{% if version_stats[version].has_dep_mismatch %}Dependency version mismatch{% endif %}">⚠</span>
+                        {% endif %}
+                        {% if version_stats[version].total_cves > 0 %}
+                        <span class="ml-1 text-red-400" title="{{ version_stats[version].total_cves }} CVE(s) affecting this version">🛡</span>
+                        {% endif %}
+                    </button>
                     {% endif %}
-                </button>
-                {% elif version == 'next' %}
-                <button
-                    class="version-pill dev-next px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 hover:scale-105 text-white"
-                    onclick="showVersion('{{ version }}')"
-                    data-version="{{ version }}"
-                >
-                    🚀 next
-                    {% if version_stats[version].has_go_mismatch or version_stats[version].has_dep_mismatch %}
-                    <span class="ml-1 text-yellow-200">⚠</span>
-                    {% endif %}
-                </button>
-                {% endif %}
-                {% endfor %}
+                    {% endfor %}
+                </div>
             </div>
         </div>
 
@@ -650,13 +658,11 @@
             }
         }
 
-        // On page load, select the first release version (not main/next)
+        // On page load, default to 'next' version
         document.addEventListener('DOMContentLoaded', function() {
             const versions = [{% for v in versions %}'{{ v }}'{% if not loop.last %}, {% endif %}{% endfor %}];
-            const firstRelease = versions.find(v => v !== 'main' && v !== 'next');
-            if (firstRelease) {
-                showVersion(firstRelease);
-            }
+            const defaultVersion = versions.includes('next') ? 'next' : versions[0];
+            showVersion(defaultVersion);
         });
     </script>
 </body>
