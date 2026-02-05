@@ -353,6 +353,7 @@ def generate_html(
             "total_vulns": total_vulns,
             "called_vulns": called_vulns,
             "vuln_details": vuln_details,
+            "has_vuln_data": vuln_data is not None,
         }
 
     # Sort OSP versions descending (newest first)
