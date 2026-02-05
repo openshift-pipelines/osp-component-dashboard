@@ -149,14 +149,14 @@
         <div class="flex justify-center gap-2 mb-10">
             <button
                 id="view-cards"
-                class="view-toggle px-4 py-1.5 rounded-lg text-sm font-medium transition-all duration-200 active bg-white/10 text-white"
+                class="view-toggle px-4 py-1.5 rounded-lg text-sm font-medium transition-all duration-200 text-gray-400 hover:text-white hover:bg-white/5"
                 onclick="setView('cards')"
             >
                 Cards
             </button>
             <button
                 id="view-table"
-                class="view-toggle px-4 py-1.5 rounded-lg text-sm font-medium transition-all duration-200 text-gray-400 hover:text-white hover:bg-white/5"
+                class="view-toggle px-4 py-1.5 rounded-lg text-sm font-medium transition-all duration-200 active bg-white/10 text-white"
                 onclick="setView('table')"
             >
                 Table
@@ -225,7 +225,7 @@
             {% endif %}
 
             <!-- Cards View -->
-            <div class="cards-view grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="cards-view hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {% for comp in versions_data[version] %}
             <div class="glass glass-hover rounded-xl p-6 transition-all duration-200">
                 <!-- Component Header -->
@@ -350,7 +350,7 @@
             </div>
 
             <!-- Table View -->
-            <div class="table-view hidden overflow-x-auto">
+            <div class="table-view overflow-x-auto">
                 <table class="w-full text-sm">
                     <thead>
                         <tr class="border-b border-white/10">
@@ -502,7 +502,7 @@
     </div>
 
     <script>
-        let currentView = 'cards';
+        let currentView = 'table';
 
         function showVersion(version) {
             // Hide all version content
