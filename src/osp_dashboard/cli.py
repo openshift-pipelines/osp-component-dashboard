@@ -36,7 +36,12 @@ def collect_command(args: argparse.Namespace) -> int:
         all_data[osp_version] = version_data
 
     print(f"\nGenerating HTML to {output_path}...")
-    generate_html(all_data, config.highlight_dependencies, output_path)
+    generate_html(
+        all_data,
+        config.highlight_dependencies,
+        output_path,
+        bundled_versions=config.versions,
+    )
     print("Done!")
 
     return 0

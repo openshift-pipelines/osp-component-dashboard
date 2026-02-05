@@ -1,5 +1,6 @@
 """HTML generator for the dashboard."""
 
+import re
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader
@@ -18,11 +19,60 @@ def is_internal_dep(path: str) -> bool:
     return any(path.startswith(prefix) for prefix in INTERNAL_PREFIXES)
 
 
+def normalize_go_version(version: str) -> tuple[int, int]:
+    """Extract major.minor from Go version string for comparison.
+
+    Args:
+        version: Go version like "1.22", "1.22.5", "1.24.0"
+
+    Returns:
+        Tuple of (major, minor) for comparison
+    """
+    match = re.match(r"(\d+)\.(\d+)", version)
+    if match:
+        return (int(match.group(1)), int(match.group(2)))
+    return (0, 0)
+
+
+def parse_semver(version: str) -> tuple[int, int, int]:
+    """Parse semantic version string to tuple for comparison.
+
+    Args:
+        version: Version like "v0.62.0", "v1.3.0", "0.28.0"
+
+    Returns:
+        Tuple of (major, minor, patch)
+    """
+    # Remove leading 'v' if present
+    v = version.lstrip("v")
+    match = re.match(r"(\d+)\.(\d+)\.(\d+)", v)
+    if match:
+        return (int(match.group(1)), int(match.group(2)), int(match.group(3)))
+    return (0, 0, 0)
+
+
+def dep_path_to_component_key(path: str) -> str | None:
+    """Convert dependency path to component key (owner/repo).
+
+    Args:
+        path: Dependency path like "github.com/tektoncd/pipeline"
+
+    Returns:
+        Component key like "tektoncd/pipeline" or None if not a GitHub path
+    """
+    if path.startswith("github.com/"):
+        parts = path.split("/")
+        if len(parts) >= 3:
+            return f"{parts[1]}/{parts[2]}"
+    return None
+
+
 def generate_html(
     data: dict[str, list[ComponentData]],
     highlight_deps: list[str],
     output_path: Path | str,
     template_dir: Path | str | None = None,
+    bundled_versions: dict[str, dict[str, str]] | None = None,
 ) -> None:
     """Generate the dashboard HTML.
 
@@ -31,6 +81,7 @@ def generate_html(
         highlight_deps: List of dependency paths to highlight
         output_path: Where to write the generated HTML
         template_dir: Directory containing templates (defaults to templates/)
+        bundled_versions: Dict of OSP version -> {component: version} for staleness check
     """
     if template_dir is None:
         template_dir = Path(__file__).parent / "templates"
@@ -40,9 +91,31 @@ def generate_html(
 
     # Convert to template-friendly format
     versions_data = {}
+    version_stats = {}  # Per-version statistics
+
     for osp_version, components in data.items():
         versions_data[osp_version] = []
+
+        # Collect Go versions for mismatch detection
+        go_versions = set()
         for comp in components:
+            if comp.go_version:
+                go_versions.add(normalize_go_version(comp.go_version))
+
+        # Determine if there's a Go version mismatch (different major.minor)
+        has_go_mismatch = len(go_versions) > 1
+
+        # Find the most common/newest Go version as "expected"
+        expected_go = max(go_versions) if go_versions else (0, 0)
+
+        # Get bundled versions for this OSP release (for staleness check)
+        bundled = bundled_versions.get(osp_version, {}) if bundled_versions else {}
+
+        for comp in components:
+            # Check if this component's Go version differs from expected
+            comp_go_normalized = normalize_go_version(comp.go_version)
+            go_version_mismatch = has_go_mismatch and comp_go_normalized != expected_go
+
             # Filter to highlighted dependencies
             highlighted = [
                 d for d in comp.dependencies if d.path in highlight_deps
@@ -56,19 +129,45 @@ def generate_html(
             internal_deps.sort(key=lambda d: d.path)
             external_deps.sort(key=lambda d: d.path)
 
+            # Process internal deps to check for staleness
+            internal_deps_data = []
+            for dep in internal_deps:
+                dep_component = dep_path_to_component_key(dep.path)
+                is_stale = False
+                bundled_version = None
+
+                if dep_component and dep_component in bundled:
+                    bundled_version = bundled[dep_component]
+                    # Compare versions - if dependency is older than bundled, it's stale
+                    dep_semver = parse_semver(dep.version)
+                    bundled_semver = parse_semver(bundled_version)
+                    is_stale = dep_semver < bundled_semver
+
+                internal_deps_data.append({
+                    "path": dep.path,
+                    "version": dep.version,
+                    "is_stale": is_stale,
+                    "bundled_version": bundled_version,
+                })
+
             versions_data[osp_version].append({
                 "owner": comp.owner,
                 "repo": comp.repo,
                 "ref": comp.ref,
                 "go_version": comp.go_version,
-                "internal_deps": [
-                    {"path": d.path, "version": d.version} for d in internal_deps
-                ],
+                "go_version_mismatch": go_version_mismatch,
+                "internal_deps": internal_deps_data,
                 "external_deps": [
                     {"path": d.path, "version": d.version} for d in external_deps
                 ],
                 "total_deps": len(comp.dependencies),
             })
+
+        # Store version-level stats
+        version_stats[osp_version] = {
+            "has_go_mismatch": has_go_mismatch,
+            "go_versions": sorted([f"{v[0]}.{v[1]}" for v in go_versions], reverse=True),
+        }
 
     # Sort OSP versions descending (newest first)
     sorted_versions = sorted(versions_data.keys(), reverse=True)
@@ -76,6 +175,7 @@ def generate_html(
     html = template.render(
         versions=sorted_versions,
         versions_data=versions_data,
+        version_stats=version_stats,
     )
 
     output_path = Path(output_path)
