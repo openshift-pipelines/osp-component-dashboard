@@ -65,7 +65,7 @@ def collect_command(args: argparse.Namespace) -> int:
                     if data.release_status.update_available:
                         status_info = f", update: {data.release_status.latest_version}"
                     elif data.release_status.has_unreleased:
-                        status_info = ", unreleased commits"
+                        status_info = f", +{data.release_status.commits_ahead} ahead"
                 print(f"    Go {data.go_version}, {len(data.dependencies)} deps{status_info}")
 
                 # Fetch CVEs for this component

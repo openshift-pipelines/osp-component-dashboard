@@ -44,6 +44,7 @@ class ReleaseStatus:
     current_version: str = ""
     latest_version: str = ""
     has_unreleased: bool = False
+    commits_ahead: int = 0
     update_available: bool = False
 
 
@@ -181,6 +182,7 @@ def check_release_status(
                         compare_data = compare_resp.json()
                         ahead_by = compare_data.get("ahead_by", 0)
                         status.has_unreleased = ahead_by > 0
+                        status.commits_ahead = ahead_by
 
     except httpx.HTTPError:
         # If API fails, just return what we have

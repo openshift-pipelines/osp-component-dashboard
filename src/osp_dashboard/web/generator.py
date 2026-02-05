@@ -294,6 +294,7 @@ def generate_html(
                     "current_version": comp.release_status.current_version,
                     "latest_version": comp.release_status.latest_version,
                     "has_unreleased": comp.release_status.has_unreleased,
+                    "commits_ahead": comp.release_status.commits_ahead,
                     "update_available": comp.release_status.update_available,
                 },
             })
