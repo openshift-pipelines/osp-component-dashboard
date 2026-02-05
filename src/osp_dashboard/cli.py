@@ -88,6 +88,7 @@ def collect_command(args: argparse.Namespace) -> int:
 
 def scan_command(args: argparse.Namespace) -> int:
     """Scan components for vulnerabilities using govulncheck."""
+    import time
     config_path = Path(args.config)
     output_path = Path(args.output)
 
@@ -97,37 +98,55 @@ def scan_command(args: argparse.Namespace) -> int:
     # Check if govulncheck is available
     import subprocess
     try:
-        subprocess.run(["govulncheck", "-version"], capture_output=True, check=True)
+        result = subprocess.run(["govulncheck", "-version"], capture_output=True, check=True, text=True)
+        print(f"Using {result.stdout.strip()}")
     except (subprocess.CalledProcessError, FileNotFoundError):
         print("Error: govulncheck not found. Install with:", file=sys.stderr)
         print("  go install golang.org/x/vuln/cmd/govulncheck@latest", file=sys.stderr)
         return 1
 
+    # Count total scans
+    total_scans = sum(len(components) for components in config.versions.values())
+    current_scan = 0
+    start_time = time.time()
+
     all_vulns = {}
     total_findings = 0
 
     for osp_version, components in config.versions.items():
-        print(f"\nScanning OSP {osp_version}...")
+        print(f"\n{'='*60}")
+        print(f"Scanning OSP {osp_version} ({len(components)} components)")
+        print(f"{'='*60}")
         version_vulns = {}
 
         for component, ref in components.items():
+            current_scan += 1
             owner, repo = parse_component(component)
-            print(f"  Scanning {owner}/{repo} @ {ref}...")
+            elapsed = time.time() - start_time
+            print(f"\n  [{current_scan}/{total_scans}] {owner}/{repo} @ {ref}")
+            print(f"    Elapsed: {elapsed/60:.1f} min")
 
             findings = scan_component(owner, repo, ref)
             if findings:
                 version_vulns[component] = findings
                 called = sum(1 for f in findings if f.is_called)
-                print(f"    {len(findings)} vuln(s) found ({called} called)")
+                print(f"    Result: {len(findings)} vuln(s) ({called} called)")
                 total_findings += len(findings)
             else:
-                print(f"    No vulnerabilities found")
+                print(f"    Result: No vulnerabilities found")
 
         all_vulns[osp_version] = version_vulns
 
+    elapsed = time.time() - start_time
+    print(f"\n{'='*60}")
+    print(f"Scan complete!")
+    print(f"{'='*60}")
+    print(f"  Duration: {elapsed/60:.1f} minutes")
+    print(f"  Components scanned: {total_scans}")
+    print(f"  Vulnerabilities found: {total_findings}")
     print(f"\nSaving results to {output_path}...")
     save_scan_results(all_vulns, output_path)
-    print(f"Done! Total: {total_findings} vulnerabilities across all versions")
+    print("Done!")
 
     return 0
 

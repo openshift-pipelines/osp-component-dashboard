@@ -31,15 +31,18 @@ class VulnFinding:
 def clone_repo(owner: str, repo: str, ref: str, dest: Path) -> bool:
     """Clone a repo at a specific ref."""
     url = f"https://github.com/{owner}/{repo}.git"
+    print(f"      Cloning {owner}/{repo}@{ref}...", end=" ", flush=True)
     try:
         subprocess.run(
             ["git", "clone", "--depth", "1", "--branch", ref, url, str(dest)],
             check=True,
             capture_output=True,
         )
+        print("done")
         return True
     except subprocess.CalledProcessError as e:
-        print(f"    Failed to clone: {e.stderr.decode() if e.stderr else 'unknown error'}")
+        print(f"failed")
+        print(f"      Error: {e.stderr.decode() if e.stderr else 'unknown error'}")
         return False
 
 
@@ -55,6 +58,7 @@ def run_govulncheck(repo_path: Path) -> list[VulnFinding]:
     findings = []
     osv_cache = {}  # Cache OSV data by ID
 
+    print(f"      Running govulncheck...", end=" ", flush=True)
     try:
         result = subprocess.run(
             ["govulncheck", "-json", "./..."],
@@ -63,6 +67,7 @@ def run_govulncheck(repo_path: Path) -> list[VulnFinding]:
             text=True,
             timeout=600,  # 10 minute timeout
         )
+        print("done")
 
         # Parse JSON output (streaming format, one JSON object per line)
         for line in result.stdout.strip().split("\n"):
@@ -124,9 +129,9 @@ def run_govulncheck(repo_path: Path) -> list[VulnFinding]:
                 continue
 
     except subprocess.TimeoutExpired:
-        print("    govulncheck timed out")
+        print("timeout (10 min limit)")
     except FileNotFoundError:
-        print("    govulncheck not installed")
+        print("error: govulncheck not installed")
 
     # Deduplicate findings by (vuln_id, module_path)
     seen = set()
