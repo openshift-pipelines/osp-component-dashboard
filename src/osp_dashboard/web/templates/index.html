@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSP Component Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            900: '#0a0a0f',
+                            800: '#12121a',
+                            700: '#1a1a24',
+                            600: '#22222e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-hover:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.12);
+        }
+        .version-pill.active {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+        }
+        .go-badge {
+            background: linear-gradient(135deg, #00add8 0%, #00a29c 100%);
+        }
+        .internal-badge {
+            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+        }
+    </style>
+</head>
+<body class="bg-dark-900 text-gray-100 min-h-screen">
+    <!-- Background gradient -->
+    <div class="fixed inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/10 to-dark-900 pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 py-8">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
+                OSP Component Dashboard
+            </h1>
+            <p class="text-gray-400">OpenShift Pipelines version tracking</p>
+        </header>
+
+        <!-- Version Selector -->
+        <div class="flex justify-center flex-wrap gap-3 mb-10">
+            {% for version in versions %}
+            <button
+                class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 {% if loop.first %}active text-white{% else %}text-gray-300 hover:text-white{% endif %}"
+                onclick="showVersion('{{ version }}')"
+                data-version="{{ version }}"
+            >
+                OSP {{ version }}
+            </button>
+            {% endfor %}
+        </div>
+
+        <!-- Component Cards Container -->
+        {% for version in versions %}
+        <div
+            id="version-{{ version }}"
+            class="version-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 {% if not loop.first %}hidden{% endif %}"
+        >
+            {% for comp in versions_data[version] %}
+            <div class="glass glass-hover rounded-xl p-6 transition-all duration-200">
+                <!-- Component Header -->
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <a
+                            href="https://github.com/{{ comp.owner }}/{{ comp.repo }}"
+                            target="_blank"
+                            class="text-lg font-semibold text-white hover:text-blue-400 transition-colors"
+                        >
+                            {{ comp.owner }}/{{ comp.repo }}
+                        </a>
+                        <p class="text-sm text-gray-500 mt-1">{{ comp.ref }}</p>
+                    </div>
+                    <span class="go-badge px-3 py-1 rounded-full text-xs font-bold text-white">
+                        Go {{ comp.go_version }}
+                    </span>
+                </div>
+
+                <!-- Internal Dependencies (Cross-dependencies) -->
+                {% if comp.internal_deps %}
+                <div class="mb-4">
+                    <p class="text-xs text-orange-400 uppercase tracking-wider mb-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-orange-400"></span>
+                        Tekton Dependencies
+                    </p>
+                    <div class="space-y-1.5">
+                        {% for dep in comp.internal_deps %}
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-orange-200 truncate max-w-[60%]" title="{{ dep.path }}">
+                                {{ dep.path.split('/')[-1] if '/' in dep.path else dep.path }}
+                            </span>
+                            <span class="text-orange-400 font-mono text-xs">
+                                {{ dep.version }}
+                            </span>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+
+                <!-- External Dependencies -->
+                {% if comp.external_deps %}
+                <div class="space-y-2">
+                    <p class="text-xs text-gray-500 uppercase tracking-wider mb-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-purple-400"></span>
+                        External Dependencies
+                    </p>
+                    <div class="space-y-1.5">
+                        {% for dep in comp.external_deps %}
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-300 truncate max-w-[60%]" title="{{ dep.path }}">
+                                {{ dep.path.split('/')[-1] if '/' in dep.path else dep.path }}
+                            </span>
+                            <span class="text-purple-400 font-mono text-xs">
+                                {{ dep.version }}
+                            </span>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+
+                {% if not comp.internal_deps and not comp.external_deps %}
+                <p class="text-gray-500 text-sm italic">No highlighted dependencies</p>
+                {% endif %}
+
+                <!-- Footer -->
+                <div class="mt-4 pt-4 border-t border-white/5">
+                    <p class="text-xs text-gray-500">
+                        {{ comp.total_deps }} total dependencies
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+
+        <!-- Footer -->
+        <footer class="text-center mt-16 text-gray-500 text-sm">
+            <p>Generated by <a href="https://github.com/openshift-pipelines" class="text-blue-400 hover:underline">OSP Dashboard</a></p>
+        </footer>
+    </div>
+
+    <script>
+        function showVersion(version) {
+            // Hide all version content
+            document.querySelectorAll('.version-content').forEach(el => {
+                el.classList.add('hidden');
+            });
+
+            // Show selected version content
+            document.getElementById('version-' + version).classList.remove('hidden');
+
+            // Update pill styles
+            document.querySelectorAll('.version-pill').forEach(pill => {
+                if (pill.dataset.version === version) {
+                    pill.classList.add('active', 'text-white');
+                    pill.classList.remove('text-gray-300');
+                } else {
+                    pill.classList.remove('active', 'text-white');
+                    pill.classList.add('text-gray-300');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

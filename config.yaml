@@ -1,0 +1,108 @@
+# OSP version -> upstream component versions
+# Source: https://spaces.redhat.com/pages/viewpage.action?pageId=... (component-matrix)
+versions:
+  "1.21":
+    tektoncd/operator: "v0.78.0"
+    tektoncd/pipeline: "v1.6.0"
+    tektoncd/triggers: "v0.34.0"
+    tektoncd/cli: "v0.43.0"
+    openshift-pipelines/pipelines-as-code: "v0.39.0"
+    tektoncd/chains: "v0.26.0"
+    tektoncd/results: "v0.17.0"
+  "1.20":
+    tektoncd/operator: "v0.77.0"
+    tektoncd/pipeline: "v1.3.0"
+    tektoncd/triggers: "v0.33.0"
+    tektoncd/cli: "v0.42.0"
+    openshift-pipelines/pipelines-as-code: "v0.37.0"
+    tektoncd/chains: "v0.26.0"
+    tektoncd/results: "v0.16.0"
+  "1.19":
+    tektoncd/operator: "v0.76.0"
+    tektoncd/pipeline: "v1.0.0"
+    tektoncd/triggers: "v0.32.0"
+    tektoncd/cli: "v0.41.0"
+    openshift-pipelines/pipelines-as-code: "v0.35.0"
+    tektoncd/chains: "v0.25.0"
+    tektoncd/results: "v0.15.0"
+  "1.18":
+    tektoncd/operator: "v0.75.0"
+    tektoncd/pipeline: "v0.68.0"
+    tektoncd/triggers: "v0.31.0"
+    tektoncd/cli: "v0.40.0"
+    openshift-pipelines/pipelines-as-code: "v0.33.0"
+    tektoncd/chains: "v0.24.0"
+    tektoncd/results: "v0.14.0"
+  "1.17":
+    tektoncd/operator: "v0.74.0"
+    tektoncd/pipeline: "v0.65.0"
+    tektoncd/triggers: "v0.30.0"
+    tektoncd/cli: "v0.39.0"
+    openshift-pipelines/pipelines-as-code: "v0.29.0"
+    tektoncd/chains: "v0.23.0"
+    tektoncd/results: "v0.13.0"
+  "1.16":
+    tektoncd/operator: "v0.73.0"
+    tektoncd/pipeline: "v0.62.0"
+    tektoncd/triggers: "v0.29.0"
+    tektoncd/cli: "v0.38.0"
+    openshift-pipelines/pipelines-as-code: "v0.28.0"
+    tektoncd/chains: "v0.22.0"
+    tektoncd/results: "v0.12.0"
+  "1.15":
+    tektoncd/operator: "v0.71.0"
+    tektoncd/pipeline: "v0.59.0"
+    tektoncd/triggers: "v0.27.0"
+    tektoncd/cli: "v0.37.0"
+    openshift-pipelines/pipelines-as-code: "v0.27.0"
+    tektoncd/chains: "v0.20.0"
+    tektoncd/results: "v0.10.0"
+  "1.14":
+    tektoncd/operator: "v0.70.0"
+    tektoncd/pipeline: "v0.56.0"
+    tektoncd/triggers: "v0.26.0"
+    tektoncd/cli: "v0.35.0"
+    openshift-pipelines/pipelines-as-code: "v0.24.0"
+    tektoncd/chains: "v0.20.0"
+    tektoncd/results: "v0.9.0"
+  "1.13":
+    tektoncd/operator: "v0.69.1"
+    tektoncd/pipeline: "v0.53.0"
+    tektoncd/triggers: "v0.25.0"
+    tektoncd/cli: "v0.33.0"
+    openshift-pipelines/pipelines-as-code: "v0.22.0"
+    tektoncd/chains: "v0.19.0"
+    tektoncd/results: "v0.8.0"
+  "1.12":
+    tektoncd/operator: "v0.68.0"
+    tektoncd/pipeline: "v0.50.0"
+    tektoncd/triggers: "v0.25.0"
+    tektoncd/cli: "v0.32.0"
+    openshift-pipelines/pipelines-as-code: "v0.21.0"
+    tektoncd/chains: "v0.17.0"
+    tektoncd/results: "v0.8.0"
+  "1.11":
+    tektoncd/operator: "v0.67.0"
+    tektoncd/pipeline: "v0.47.0"
+    tektoncd/triggers: "v0.24.0"
+    tektoncd/cli: "v0.31.0"
+    openshift-pipelines/pipelines-as-code: "v0.19.0"
+    tektoncd/chains: "v0.16.0"
+    tektoncd/results: "v0.6.0"
+
+# Key dependencies to highlight
+highlight_dependencies:
+  # Internal OSP/Tekton cross-dependencies
+  - github.com/tektoncd/pipeline
+  - github.com/tektoncd/triggers
+  - github.com/tektoncd/chains
+  - github.com/tektoncd/results
+  - github.com/tektoncd/cli
+  - github.com/tektoncd/operator
+  - github.com/openshift-pipelines/pipelines-as-code
+  # External dependencies
+  - k8s.io/api
+  - k8s.io/client-go
+  - knative.dev/pkg
+  - github.com/google/go-github
+  - sigs.k8s.io/controller-runtime
