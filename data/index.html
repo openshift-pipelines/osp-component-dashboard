@@ -44,6 +44,21 @@
         .stale-badge {
             background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
         }
+        .cve-badge-critical {
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+        }
+        .cve-badge-high {
+            background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
+        }
+        .cve-badge-medium {
+            background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+        }
+        .cve-badge-low {
+            background: linear-gradient(135deg, #65a30d 0%, #4d7c0f 100%);
+        }
+        .cve-badge-unknown {
+            background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+        }
     </style>
 </head>
 <body class="bg-dark-900 text-gray-100 min-h-screen">
@@ -71,6 +86,7 @@
                 
                 <span class="ml-1 text-yellow-400" title="Go version mismatch detected">⚠</span>
                 
+                
             </button>
             
             <button
@@ -79,6 +95,7 @@
                 data-version="1.21"
             >
                 OSP 1.21
+                
                 
             </button>
             
@@ -91,6 +108,7 @@
                 
                 <span class="ml-1 text-yellow-400" title="Go version mismatch detected">⚠</span>
                 
+                
             </button>
             
             <button
@@ -99,6 +117,7 @@
                 data-version="1.19"
             >
                 OSP 1.19
+                
                 
             </button>
             
@@ -111,6 +130,7 @@
                 
                 <span class="ml-1 text-yellow-400" title="Go version mismatch detected">⚠</span>
                 
+                
             </button>
             
             <button
@@ -120,6 +140,7 @@
             >
                 OSP 1.17
                 
+                
             </button>
             
             <button
@@ -128,6 +149,7 @@
                 data-version="1.16"
             >
                 OSP 1.16
+                
                 
             </button>
             
@@ -139,6 +161,7 @@
                 OSP 1.15
                 
                 <span class="ml-1 text-yellow-400" title="Go version mismatch detected">⚠</span>
+                
                 
             </button>
             
@@ -300,10 +323,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         35 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -417,10 +444,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         43 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -533,10 +564,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         35 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -673,10 +708,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         38 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -789,10 +828,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         46 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -905,10 +948,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         44 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -1028,10 +1075,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         56 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -1048,6 +1099,7 @@
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Go</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Tekton Deps</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">External Deps</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">CVEs</th>
                             <th class="text-right py-3 px-4 text-gray-400 font-medium">Total</th>
                         </tr>
                     </thead>
@@ -1101,6 +1153,11 @@
                                     </span>
                                     
                                 </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">35</td>
@@ -1162,6 +1219,11 @@
                                 </div>
                                 
                             </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
                             <td class="py-3 px-4 text-right text-gray-500">43</td>
                         </tr>
                         
@@ -1213,6 +1275,11 @@
                                     </span>
                                     
                                 </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">35</td>
@@ -1276,6 +1343,11 @@
                                 </div>
                                 
                             </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
                             <td class="py-3 px-4 text-right text-gray-500">38</td>
                         </tr>
                         
@@ -1327,6 +1399,11 @@
                                     </span>
                                     
                                 </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">46</td>
@@ -1382,6 +1459,11 @@
                                 </div>
                                 
                             </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
                             <td class="py-3 px-4 text-right text-gray-500">44</td>
                         </tr>
                         
@@ -1433,6 +1515,11 @@
                                     </span>
                                     
                                 </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">56</td>
@@ -1563,10 +1650,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         35 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -1680,10 +1771,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         43 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -1792,10 +1887,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         35 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -1928,10 +2027,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         38 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -2044,10 +2147,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         46 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -2160,10 +2267,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         44 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -2279,10 +2390,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         54 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -2299,6 +2414,7 @@
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Go</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Tekton Deps</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">External Deps</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">CVEs</th>
                             <th class="text-right py-3 px-4 text-gray-400 font-medium">Total</th>
                         </tr>
                     </thead>
@@ -2352,6 +2468,11 @@
                                     </span>
                                     
                                 </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">35</td>
@@ -2413,6 +2534,11 @@
                                 </div>
                                 
                             </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
                             <td class="py-3 px-4 text-right text-gray-500">43</td>
                         </tr>
                         
@@ -2464,6 +2590,11 @@
                                     </span>
                                     
                                 </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">35</td>
@@ -2527,6 +2658,11 @@
                                 </div>
                                 
                             </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
                             <td class="py-3 px-4 text-right text-gray-500">38</td>
                         </tr>
                         
@@ -2578,6 +2714,11 @@
                                     </span>
                                     
                                 </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">46</td>
@@ -2633,6 +2774,11 @@
                                 </div>
                                 
                             </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
                             <td class="py-3 px-4 text-right text-gray-500">44</td>
                         </tr>
                         
@@ -2684,6 +2830,11 @@
                                     </span>
                                     
                                 </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">54</td>
@@ -2830,10 +2981,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         34 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -2947,10 +3102,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         43 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -3059,10 +3218,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         35 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -3199,10 +3362,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         38 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -3315,10 +3482,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         43 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -3427,10 +3598,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         44 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -3546,10 +3721,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         54 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -3566,6 +3745,7 @@
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Go</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Tekton Deps</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">External Deps</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">CVEs</th>
                             <th class="text-right py-3 px-4 text-gray-400 font-medium">Total</th>
                         </tr>
                     </thead>
@@ -3619,6 +3799,11 @@
                                     </span>
                                     
                                 </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">34</td>
@@ -3680,6 +3865,11 @@
                                 </div>
                                 
                             </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
                             <td class="py-3 px-4 text-right text-gray-500">43</td>
                         </tr>
                         
@@ -3731,6 +3921,11 @@
                                     </span>
                                     
                                 </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">35</td>
@@ -3794,6 +3989,11 @@
                                 </div>
                                 
                             </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
                             <td class="py-3 px-4 text-right text-gray-500">38</td>
                         </tr>
                         
@@ -3845,6 +4045,11 @@
                                     </span>
                                     
                                 </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">43</td>
@@ -3900,6 +4105,11 @@
                                 </div>
                                 
                             </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
                             <td class="py-3 px-4 text-right text-gray-500">44</td>
                         </tr>
                         
@@ -3951,6 +4161,11 @@
                                     </span>
                                     
                                 </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">54</td>
@@ -4081,10 +4296,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         32 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -4198,10 +4417,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         45 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -4301,10 +4524,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         33 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -4437,10 +4664,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         38 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -4549,10 +4780,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         43 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -4661,10 +4896,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         44 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -4776,10 +5015,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         56 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -4796,6 +5039,7 @@
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Go</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Tekton Deps</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">External Deps</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">CVEs</th>
                             <th class="text-right py-3 px-4 text-gray-400 font-medium">Total</th>
                         </tr>
                     </thead>
@@ -4849,6 +5093,11 @@
                                     </span>
                                     
                                 </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">32</td>
@@ -4910,6 +5159,11 @@
                                 </div>
                                 
                             </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
                             <td class="py-3 px-4 text-right text-gray-500">45</td>
                         </tr>
                         
@@ -4957,6 +5211,11 @@
                                     </span>
                                     
                                 </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">33</td>
@@ -5020,6 +5279,11 @@
                                 </div>
                                 
                             </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
                             <td class="py-3 px-4 text-right text-gray-500">38</td>
                         </tr>
                         
@@ -5071,6 +5335,11 @@
                                     </span>
                                     
                                 </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">43</td>
@@ -5126,6 +5395,11 @@
                                 </div>
                                 
                             </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
                             <td class="py-3 px-4 text-right text-gray-500">44</td>
                         </tr>
                         
@@ -5177,6 +5451,11 @@
                                     </span>
                                     
                                 </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">56</td>
@@ -5319,10 +5598,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         32 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -5436,10 +5719,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         49 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -5539,10 +5826,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         33 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -5675,10 +5966,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         38 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -5791,10 +6086,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         44 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -5903,10 +6202,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         42 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -6022,10 +6325,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         48 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -6042,6 +6349,7 @@
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Go</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Tekton Deps</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">External Deps</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">CVEs</th>
                             <th class="text-right py-3 px-4 text-gray-400 font-medium">Total</th>
                         </tr>
                     </thead>
@@ -6095,6 +6403,11 @@
                                     </span>
                                     
                                 </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">32</td>
@@ -6156,6 +6469,11 @@
                                 </div>
                                 
                             </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
                             <td class="py-3 px-4 text-right text-gray-500">49</td>
                         </tr>
                         
@@ -6203,6 +6521,11 @@
                                     </span>
                                     
                                 </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">33</td>
@@ -6266,6 +6589,11 @@
                                 </div>
                                 
                             </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
                             <td class="py-3 px-4 text-right text-gray-500">38</td>
                         </tr>
                         
@@ -6317,6 +6645,11 @@
                                     </span>
                                     
                                 </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">44</td>
@@ -6372,6 +6705,11 @@
                                 </div>
                                 
                             </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
                             <td class="py-3 px-4 text-right text-gray-500">42</td>
                         </tr>
                         
@@ -6423,6 +6761,11 @@
                                     </span>
                                     
                                 </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">48</td>
@@ -6557,10 +6900,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         32 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -6674,10 +7021,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         49 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -6777,10 +7128,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         33 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -6913,10 +7268,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         38 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -7020,10 +7379,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         44 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -7132,10 +7495,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         42 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -7255,10 +7622,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         48 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -7275,6 +7646,7 @@
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Go</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Tekton Deps</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">External Deps</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">CVEs</th>
                             <th class="text-right py-3 px-4 text-gray-400 font-medium">Total</th>
                         </tr>
                     </thead>
@@ -7328,6 +7700,11 @@
                                     </span>
                                     
                                 </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">32</td>
@@ -7389,6 +7766,11 @@
                                 </div>
                                 
                             </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
                             <td class="py-3 px-4 text-right text-gray-500">49</td>
                         </tr>
                         
@@ -7436,6 +7818,11 @@
                                     </span>
                                     
                                 </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">33</td>
@@ -7499,6 +7886,11 @@
                                 </div>
                                 
                             </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
                             <td class="py-3 px-4 text-right text-gray-500">38</td>
                         </tr>
                         
@@ -7546,6 +7938,11 @@
                                     </span>
                                     
                                 </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">44</td>
@@ -7601,6 +7998,11 @@
                                 </div>
                                 
                             </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
                             <td class="py-3 px-4 text-right text-gray-500">42</td>
                         </tr>
                         
@@ -7652,6 +8054,11 @@
                                     </span>
                                     
                                 </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">48</td>
@@ -7786,10 +8193,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         32 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -7903,10 +8314,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         49 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -8006,10 +8421,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         33 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -8142,10 +8561,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         38 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -8245,10 +8668,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         44 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -8361,10 +8788,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         42 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -8484,10 +8915,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         48 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -8504,6 +8939,7 @@
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Go</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Tekton Deps</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">External Deps</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">CVEs</th>
                             <th class="text-right py-3 px-4 text-gray-400 font-medium">Total</th>
                         </tr>
                     </thead>
@@ -8557,6 +8993,11 @@
                                     </span>
                                     
                                 </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">32</td>
@@ -8618,6 +9059,11 @@
                                 </div>
                                 
                             </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
                             <td class="py-3 px-4 text-right text-gray-500">49</td>
                         </tr>
                         
@@ -8665,6 +9111,11 @@
                                     </span>
                                     
                                 </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">33</td>
@@ -8728,6 +9179,11 @@
                                 </div>
                                 
                             </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
                             <td class="py-3 px-4 text-right text-gray-500">38</td>
                         </tr>
                         
@@ -8775,6 +9231,11 @@
                                     </span>
                                     
                                 </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">44</td>
@@ -8830,6 +9291,11 @@
                                 </div>
                                 
                             </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
                             <td class="py-3 px-4 text-right text-gray-500">42</td>
                         </tr>
                         
@@ -8881,6 +9347,11 @@
                                     </span>
                                     
                                 </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">48</td>
@@ -9019,10 +9490,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         32 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -9136,10 +9611,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         50 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -9239,10 +9718,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         33 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -9375,10 +9858,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         38 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -9482,10 +9969,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         44 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -9598,10 +10089,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         39 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -9721,10 +10216,14 @@
 
                 
 
+                <!-- CVEs -->
+                
+
                 <!-- Footer -->
                 <div class="mt-4 pt-4 border-t border-white/5">
                     <p class="text-xs text-gray-500">
                         46 total dependencies
+                        
                     </p>
                 </div>
             </div>
@@ -9741,6 +10240,7 @@
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Go</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Tekton Deps</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">External Deps</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">CVEs</th>
                             <th class="text-right py-3 px-4 text-gray-400 font-medium">Total</th>
                         </tr>
                     </thead>
@@ -9794,6 +10294,11 @@
                                     </span>
                                     
                                 </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">32</td>
@@ -9855,6 +10360,11 @@
                                 </div>
                                 
                             </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
                             <td class="py-3 px-4 text-right text-gray-500">50</td>
                         </tr>
                         
@@ -9902,6 +10412,11 @@
                                     </span>
                                     
                                 </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">33</td>
@@ -9965,6 +10480,11 @@
                                 </div>
                                 
                             </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
                             <td class="py-3 px-4 text-right text-gray-500">38</td>
                         </tr>
                         
@@ -10012,6 +10532,11 @@
                                     </span>
                                     
                                 </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">44</td>
@@ -10067,6 +10592,11 @@
                                 </div>
                                 
                             </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
+                                
+                            </td>
                             <td class="py-3 px-4 text-right text-gray-500">39</td>
                         </tr>
                         
@@ -10118,6 +10648,11 @@
                                     </span>
                                     
                                 </div>
+                                
+                            </td>
+                            <td class="py-3 px-4">
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4 text-right text-gray-500">46</td>

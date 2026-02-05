@@ -73,6 +73,7 @@ def generate_html(
     output_path: Path | str,
     template_dir: Path | str | None = None,
     bundled_versions: dict[str, dict[str, str]] | None = None,
+    cve_data: dict[str, dict[str, list]] | None = None,
 ) -> None:
     """Generate the dashboard HTML.
 
@@ -82,6 +83,7 @@ def generate_html(
         output_path: Where to write the generated HTML
         template_dir: Directory containing templates (defaults to templates/)
         bundled_versions: Dict of OSP version -> {component: version} for staleness check
+        cve_data: Dict of OSP version -> {component: [Advisory, ...]} for CVE display
     """
     if template_dir is None:
         template_dir = Path(__file__).parent / "templates"
@@ -110,6 +112,9 @@ def generate_html(
 
         # Get bundled versions for this OSP release (for staleness check)
         bundled = bundled_versions.get(osp_version, {}) if bundled_versions else {}
+
+        # Get CVE data for this version
+        version_cves = cve_data.get(osp_version, {}) if cve_data else {}
 
         for comp in components:
             # Check if this component's Go version differs from expected
@@ -150,6 +155,20 @@ def generate_html(
                     "bundled_version": bundled_version,
                 })
 
+            # Get CVEs for this component
+            component_key = f"{comp.owner}/{comp.repo}"
+            comp_cves = version_cves.get(component_key, [])
+            cve_list = [
+                {
+                    "id": adv.cve_id or adv.ghsa_id,
+                    "summary": adv.summary,
+                    "severity": adv.severity,
+                    "cvss_score": adv.cvss_score,
+                    "url": adv.url,
+                }
+                for adv in comp_cves
+            ]
+
             versions_data[osp_version].append({
                 "owner": comp.owner,
                 "repo": comp.repo,
@@ -161,12 +180,17 @@ def generate_html(
                     {"path": d.path, "version": d.version} for d in external_deps
                 ],
                 "total_deps": len(comp.dependencies),
+                "cves": cve_list,
             })
+
+        # Count total CVEs for this version
+        total_cves = sum(len(cves) for cves in version_cves.values())
 
         # Store version-level stats
         version_stats[osp_version] = {
             "has_go_mismatch": has_go_mismatch,
             "go_versions": sorted([f"{v[0]}.{v[1]}" for v in go_versions], reverse=True),
+            "total_cves": total_cves,
         }
 
     # Sort OSP versions descending (newest first)

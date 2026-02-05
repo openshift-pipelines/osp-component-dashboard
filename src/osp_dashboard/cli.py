@@ -4,7 +4,7 @@ import argparse
 import sys
 from pathlib import Path
 
-from .collector import collect_component_data
+from .collector import collect_component_data, get_advisories_for_version
 from .config import load_config, parse_component
 from .web import generate_html
 
@@ -18,10 +18,12 @@ def collect_command(args: argparse.Namespace) -> int:
     config = load_config(config_path)
 
     all_data = {}
+    all_cves = {}  # {osp_version: {component_key: [Advisory, ...]}}
 
     for osp_version, components in config.versions.items():
         print(f"\nCollecting data for OSP {osp_version}...")
         version_data = []
+        version_cves = {}
 
         for component, ref in components.items():
             owner, repo = parse_component(component)
@@ -30,10 +32,18 @@ def collect_command(args: argparse.Namespace) -> int:
                 data = collect_component_data(owner, repo, ref)
                 version_data.append(data)
                 print(f"    Go {data.go_version}, {len(data.dependencies)} deps")
+
+                # Fetch CVEs for this component
+                package = f"github.com/{owner}/{repo}"
+                advisories = get_advisories_for_version(package, ref)
+                if advisories:
+                    version_cves[component] = advisories
+                    print(f"    {len(advisories)} CVE(s) affecting this version")
             except Exception as e:
                 print(f"    Error: {e}", file=sys.stderr)
 
         all_data[osp_version] = version_data
+        all_cves[osp_version] = version_cves
 
     print(f"\nGenerating HTML to {output_path}...")
     generate_html(
@@ -41,6 +51,7 @@ def collect_command(args: argparse.Namespace) -> int:
         config.highlight_dependencies,
         output_path,
         bundled_versions=config.versions,
+        cve_data=all_cves,
     )
     print("Done!")
 
