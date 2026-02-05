@@ -40,6 +40,8 @@ jobs:
         run: uv sync
 
       - name: Generate dashboard
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # Use cached vuln scan results if available
           if [ -f data/vulns.json ]; then
