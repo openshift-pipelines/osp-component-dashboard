@@ -51,13 +51,22 @@ def collect_command(args: argparse.Namespace) -> int:
         version_data = []
         version_cves = {}
 
+        # Check release branches for all versions except "main"
+        check_releases = osp_version != "main"
+
         for component, ref in components.items():
             owner, repo = parse_component(component)
             print(f"  Fetching {owner}/{repo} @ {ref}...")
             try:
-                data = collect_component_data(owner, repo, ref)
+                data = collect_component_data(owner, repo, ref, check_release=check_releases)
                 version_data.append(data)
-                print(f"    Go {data.go_version}, {len(data.dependencies)} deps")
+                status_info = ""
+                if data.release_status.branch_exists:
+                    if data.release_status.update_available:
+                        status_info = f", update: {data.release_status.latest_version}"
+                    elif data.release_status.has_unreleased:
+                        status_info = ", unreleased commits"
+                print(f"    Go {data.go_version}, {len(data.dependencies)} deps{status_info}")
 
                 # Fetch CVEs for this component
                 package = f"github.com/{owner}/{repo}"

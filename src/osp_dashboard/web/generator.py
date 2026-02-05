@@ -288,6 +288,14 @@ def generate_html(
                 "total_deps": len(comp.dependencies),
                 "cves": cve_list,
                 "vulns": vuln_list,
+                "release_status": {
+                    "branch_exists": comp.release_status.branch_exists,
+                    "branch_name": comp.release_status.branch_name,
+                    "current_version": comp.release_status.current_version,
+                    "latest_version": comp.release_status.latest_version,
+                    "has_unreleased": comp.release_status.has_unreleased,
+                    "update_available": comp.release_status.update_available,
+                },
             })
 
         # Count total CVEs for this version and track affected components

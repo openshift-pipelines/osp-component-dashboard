@@ -240,6 +240,7 @@
                         <tr class="border-b border-white/10">
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Component</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Ref</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Release</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Go</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Stale Deps</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Mismatched Deps</th>
@@ -259,6 +260,21 @@
                                 <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-xs font-medium">
                                     {{ comp.ref }}
                                 </span>
+                            </td>
+                            <td class="py-3 px-4">
+                                {% if not comp.release_status.branch_exists %}
+                                <span class="text-gray-600 text-xs">n/a</span>
+                                {% elif comp.release_status.update_available %}
+                                <span class="text-orange-400 font-mono text-xs" title="Update available on {{ comp.release_status.branch_name }}">
+                                    → {{ comp.release_status.latest_version }}
+                                </span>
+                                {% elif comp.release_status.has_unreleased %}
+                                <span class="text-yellow-400 text-xs" title="Unreleased commits on {{ comp.release_status.branch_name }}">
+                                    unreleased
+                                </span>
+                                {% else %}
+                                <span class="text-green-500 text-xs">✓</span>
+                                {% endif %}
                             </td>
                             <td class="py-3 px-4">
                                 <span class="{% if comp.go_version_mismatch %}text-yellow-400{% else %}text-gray-200{% endif %} font-mono text-xs">
