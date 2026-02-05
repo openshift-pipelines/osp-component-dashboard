@@ -65,38 +65,6 @@ versions:
     openshift-pipelines/pipelines-as-code: "v0.27.0"
     tektoncd/chains: "v0.20.0"
     tektoncd/results: "v0.10.0"
-  "1.14":
-    tektoncd/operator: "v0.70.0"
-    tektoncd/pipeline: "v0.56.0"
-    tektoncd/triggers: "v0.26.0"
-    tektoncd/cli: "v0.35.0"
-    openshift-pipelines/pipelines-as-code: "v0.24.0"
-    tektoncd/chains: "v0.20.0"
-    tektoncd/results: "v0.9.0"
-  "1.13":
-    tektoncd/operator: "v0.69.1"
-    tektoncd/pipeline: "v0.53.0"
-    tektoncd/triggers: "v0.25.0"
-    tektoncd/cli: "v0.33.0"
-    openshift-pipelines/pipelines-as-code: "v0.22.0"
-    tektoncd/chains: "v0.19.0"
-    tektoncd/results: "v0.8.0"
-  "1.12":
-    tektoncd/operator: "v0.68.0"
-    tektoncd/pipeline: "v0.50.0"
-    tektoncd/triggers: "v0.25.0"
-    tektoncd/cli: "v0.32.0"
-    openshift-pipelines/pipelines-as-code: "v0.21.0"
-    tektoncd/chains: "v0.17.0"
-    tektoncd/results: "v0.8.0"
-  "1.11":
-    tektoncd/operator: "v0.67.0"
-    tektoncd/pipeline: "v0.47.0"
-    tektoncd/triggers: "v0.24.0"
-    tektoncd/cli: "v0.31.0"
-    openshift-pipelines/pipelines-as-code: "v0.19.0"
-    tektoncd/chains: "v0.16.0"
-    tektoncd/results: "v0.6.0"
 
 # Key dependencies to highlight
 highlight_dependencies:
@@ -114,3 +82,13 @@ highlight_dependencies:
   - knative.dev/pkg
   - github.com/google/go-github
   - sigs.k8s.io/controller-runtime
+  # Supply chain & security
+  - github.com/sigstore/sigstore
+  # Container registry
+  - github.com/google/go-containerregistry
+  # Expression evaluation
+  - github.com/google/cel-go
+  # SCM abstraction
+  - github.com/jenkins-x/go-scm
+  # Observability
+  - go.opentelemetry.io/otel
