@@ -1306,8 +1306,8 @@
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Component</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Ref</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Go</th>
-                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Tekton Deps</th>
-                            <th class="text-left py-3 px-4 text-gray-400 font-medium">External Deps</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Stale Deps</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Mismatched Deps</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">CVEs</th>
                             <th class="text-right py-3 px-4 text-gray-400 font-medium">Total</th>
                         </tr>
@@ -1328,18 +1328,15 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/openshift-pipelines/pipelines-as-code (bundled: v0.41.1)">
-                                        <span class="text-red-300">pipelines-as-code</span><span class="text-red-500">@v0.39.2</span><span class="text-red-400">!</span>
+                                        <span class="text-red-300">pipelines-as-code</span><span class="text-red-500">@v0.39.2</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v1.9.0)">
-                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v1.6.0</span><span class="text-red-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/triggers">
-                                        <span class="text-orange-300">triggers</span><span class="text-orange-500">@v0.34.0</span>
+                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v1.6.0</span>
                                     </span>
                                     
                                 </div>
@@ -1347,18 +1344,11 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="k8s.io/api">
-                                        <span class="text-purple-300">api</span><span class="text-purple-500">@v0.34.1</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="k8s.io/client-go">
-                                        <span class="text-purple-300">client-go</span><span class="text-purple-500">@v1.5.2</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="knative.dev/pkg (expected: v0.0.0-20250415155312-ed3e2158b883)">
-                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20250915135827-db4c336acdbe</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20250915135827-db4c336acdbe</span>
                                     </span>
                                     
                                 </div>
@@ -1386,43 +1376,29 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/google/cel-go (expected: v0.26.1)">
-                                        <span class="text-yellow-300">cel-go</span><span class="text-yellow-500">@v0.27.0</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/google/go-containerregistry">
-                                        <span class="text-purple-300">go-containerregistry</span><span class="text-purple-500">@v0.20.6</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/jenkins-x/go-scm">
-                                        <span class="text-purple-300">go-scm</span><span class="text-purple-500">@v1.15.16</span>
+                                        <span class="text-yellow-300">cel-go</span><span class="text-yellow-500">@v0.27.0</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="github.com/sigstore/sigstore (expected: v1.9.6-0.20250729224751-181c5d3339b3)">
-                                        <span class="text-yellow-300">sigstore</span><span class="text-yellow-500">@v1.9.5</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="go.opentelemetry.io/otel">
-                                        <span class="text-purple-300">otel</span><span class="text-purple-500">@v1.39.0</span>
+                                        <span class="text-yellow-300">sigstore</span><span class="text-yellow-500">@v1.9.5</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.34.1)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.32.11</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.32.11</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v1.5.2)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.32.11</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20250415155312-ed3e2158b883</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.32.11</span>
                                     </span>
                                     
                                 </div>
@@ -1450,10 +1426,11 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v1.9.0)">
-                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v1.6.0</span><span class="text-red-400">!</span>
+                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v1.6.0</span>
                                     </span>
                                     
                                 </div>
@@ -1461,26 +1438,19 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/google/cel-go">
-                                        <span class="text-purple-300">cel-go</span><span class="text-purple-500">@v0.26.1</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="go.opentelemetry.io/otel (expected: v1.39.0)">
-                                        <span class="text-yellow-300">otel</span><span class="text-yellow-500">@v1.38.0</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">otel</span><span class="text-yellow-500">@v1.38.0</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.34.1)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.32.9</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.32.9</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v1.5.2)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.32.9</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20250415155312-ed3e2158b883</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.32.9</span>
                                     </span>
                                     
                                 </div>
@@ -1508,18 +1478,11 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/chains">
-                                        <span class="text-orange-300">chains</span><span class="text-orange-500">@v0.26.0</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v1.9.0)">
-                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v1.6.0</span><span class="text-red-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/triggers">
-                                        <span class="text-orange-300">triggers</span><span class="text-orange-500">@v0.34.0</span>
+                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v1.6.0</span>
                                     </span>
                                     
                                 </div>
@@ -1527,26 +1490,15 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/google/go-containerregistry">
-                                        <span class="text-purple-300">go-containerregistry</span><span class="text-purple-500">@v0.20.6</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/sigstore/sigstore">
-                                        <span class="text-purple-300">sigstore</span><span class="text-purple-500">@v1.9.6-0.20250729224751-181c5d3339b3</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.34.1)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.34.2</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.34.2</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v1.5.2)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.34.2</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20250415155312-ed3e2158b883</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.34.2</span>
                                     </span>
                                     
                                 </div>
@@ -1574,10 +1526,11 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v1.9.0)">
-                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v1.7.0</span><span class="text-red-400">!</span>
+                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v1.7.0</span>
                                     </span>
                                     
                                 </div>
@@ -1585,26 +1538,15 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/google/cel-go">
-                                        <span class="text-purple-300">cel-go</span><span class="text-purple-500">@v0.26.1</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/jenkins-x/go-scm">
-                                        <span class="text-purple-300">go-scm</span><span class="text-purple-500">@v1.15.16</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.34.1)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.35.0</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="k8s.io/client-go">
-                                        <span class="text-purple-300">client-go</span><span class="text-purple-500">@v1.5.2</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.35.0</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="knative.dev/pkg (expected: v0.0.0-20250415155312-ed3e2158b883)">
-                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20260114161248-8c840449eed2</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20260114161248-8c840449eed2</span>
                                     </span>
                                     
                                 </div>
@@ -1632,10 +1574,11 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v1.9.0)">
-                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v1.3.1</span><span class="text-red-400">!</span>
+                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v1.3.1</span>
                                     </span>
                                     
                                 </div>
@@ -1643,26 +1586,11 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/google/go-containerregistry">
-                                        <span class="text-purple-300">go-containerregistry</span><span class="text-purple-500">@v0.20.6</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/sigstore/sigstore">
-                                        <span class="text-purple-300">sigstore</span><span class="text-purple-500">@v1.9.6-0.20250729224751-181c5d3339b3</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="k8s.io/api">
-                                        <span class="text-purple-300">api</span><span class="text-purple-500">@v0.34.1</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v1.5.2)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.34.1</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20250415155312-ed3e2158b883</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.34.1</span>
                                     </span>
                                     
                                 </div>
@@ -1690,14 +1618,15 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/tektoncd/cli (bundled: v0.43.0)">
-                                        <span class="text-red-300">cli</span><span class="text-red-500">@v0.41.1</span><span class="text-red-400">!</span>
+                                        <span class="text-red-300">cli</span><span class="text-red-500">@v0.41.1</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v1.9.0)">
-                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v1.6.0</span><span class="text-red-400">!</span>
+                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v1.6.0</span>
                                     </span>
                                     
                                 </div>
@@ -1705,22 +1634,15 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/google/cel-go">
-                                        <span class="text-purple-300">cel-go</span><span class="text-purple-500">@v0.26.1</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.34.1)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.32.9</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.32.9</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v1.5.2)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.32.9</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20250415155312-ed3e2158b883</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.32.9</span>
                                     </span>
                                     
                                 </div>
@@ -2819,8 +2741,8 @@
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Component</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Ref</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Go</th>
-                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Tekton Deps</th>
-                            <th class="text-left py-3 px-4 text-gray-400 font-medium">External Deps</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Stale Deps</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Mismatched Deps</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">CVEs</th>
                             <th class="text-right py-3 px-4 text-gray-400 font-medium">Total</th>
                         </tr>
@@ -2841,37 +2763,17 @@
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    <span class="font-mono text-xs" title="github.com/openshift-pipelines/pipelines-as-code">
-                                        <span class="text-orange-300">pipelines-as-code</span><span class="text-orange-500">@v0.39.2</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline">
-                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v1.6.0</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/triggers">
-                                        <span class="text-orange-300">triggers</span><span class="text-orange-500">@v0.34.0</span>
-                                    </span>
-                                    
-                                </div>
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="k8s.io/api">
-                                        <span class="text-purple-300">api</span><span class="text-purple-500">@v0.34.1</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="k8s.io/client-go">
-                                        <span class="text-purple-300">client-go</span><span class="text-purple-500">@v1.5.2</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="knative.dev/pkg (expected: v0.0.0-20250415155312-ed3e2158b883)">
-                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20250915135827-db4c336acdbe</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20250915135827-db4c336acdbe</span>
                                     </span>
                                     
                                 </div>
@@ -2899,43 +2801,37 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/google/cel-go (expected: v0.26.1)">
-                                        <span class="text-yellow-300">cel-go</span><span class="text-yellow-500">@v0.26.0</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/google/go-containerregistry">
-                                        <span class="text-purple-300">go-containerregistry</span><span class="text-purple-500">@v0.20.6</span>
+                                        <span class="text-yellow-300">cel-go</span><span class="text-yellow-500">@v0.26.0</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="github.com/jenkins-x/go-scm (expected: v1.15.16)">
-                                        <span class="text-yellow-300">go-scm</span><span class="text-yellow-500">@v1.15.4</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">go-scm</span><span class="text-yellow-500">@v1.15.4</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="github.com/sigstore/sigstore (expected: v1.9.6-0.20250729224751-181c5d3339b3)">
-                                        <span class="text-yellow-300">sigstore</span><span class="text-yellow-500">@v1.9.5</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">sigstore</span><span class="text-yellow-500">@v1.9.5</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="go.opentelemetry.io/otel (expected: v1.38.0)">
-                                        <span class="text-yellow-300">otel</span><span class="text-yellow-500">@v1.37.0</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">otel</span><span class="text-yellow-500">@v1.37.0</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.34.1)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.32.8</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.32.8</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v1.5.2)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.32.8</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20250415155312-ed3e2158b883</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.32.8</span>
                                     </span>
                                     
                                 </div>
@@ -2963,37 +2859,21 @@
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline">
-                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v1.6.0</span>
-                                    </span>
-                                    
-                                </div>
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/google/cel-go">
-                                        <span class="text-purple-300">cel-go</span><span class="text-purple-500">@v0.26.1</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="go.opentelemetry.io/otel">
-                                        <span class="text-purple-300">otel</span><span class="text-purple-500">@v1.38.0</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.34.1)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.32.9</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.32.9</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v1.5.2)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.32.9</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20250415155312-ed3e2158b883</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.32.9</span>
                                     </span>
                                     
                                 </div>
@@ -3021,45 +2901,21 @@
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/chains">
-                                        <span class="text-orange-300">chains</span><span class="text-orange-500">@v0.26.0</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline">
-                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v1.6.0</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/triggers">
-                                        <span class="text-orange-300">triggers</span><span class="text-orange-500">@v0.34.0</span>
-                                    </span>
-                                    
-                                </div>
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/google/go-containerregistry">
-                                        <span class="text-purple-300">go-containerregistry</span><span class="text-purple-500">@v0.20.6</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/sigstore/sigstore">
-                                        <span class="text-purple-300">sigstore</span><span class="text-purple-500">@v1.9.6-0.20250729224751-181c5d3339b3</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.34.1)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.34.2</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.34.2</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v1.5.2)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.34.2</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20250415155312-ed3e2158b883</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.34.2</span>
                                     </span>
                                     
                                 </div>
@@ -3087,10 +2943,11 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v1.6.0)">
-                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v1.4.0</span><span class="text-red-400">!</span>
+                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v1.4.0</span>
                                     </span>
                                     
                                 </div>
@@ -3098,26 +2955,11 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/google/cel-go">
-                                        <span class="text-purple-300">cel-go</span><span class="text-purple-500">@v0.26.1</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/jenkins-x/go-scm">
-                                        <span class="text-purple-300">go-scm</span><span class="text-purple-500">@v1.15.16</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="k8s.io/api">
-                                        <span class="text-purple-300">api</span><span class="text-purple-500">@v0.34.1</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="k8s.io/client-go">
-                                        <span class="text-purple-300">client-go</span><span class="text-purple-500">@v1.5.2</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="knative.dev/pkg (expected: v0.0.0-20250415155312-ed3e2158b883)">
-                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20250915135827-db4c336acdbe</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20250915135827-db4c336acdbe</span>
                                     </span>
                                     
                                 </div>
@@ -3145,10 +2987,11 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v1.6.0)">
-                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v1.3.1</span><span class="text-red-400">!</span>
+                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v1.3.1</span>
                                     </span>
                                     
                                 </div>
@@ -3156,26 +2999,11 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/google/go-containerregistry">
-                                        <span class="text-purple-300">go-containerregistry</span><span class="text-purple-500">@v0.20.6</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/sigstore/sigstore">
-                                        <span class="text-purple-300">sigstore</span><span class="text-purple-500">@v1.9.6-0.20250729224751-181c5d3339b3</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="k8s.io/api">
-                                        <span class="text-purple-300">api</span><span class="text-purple-500">@v0.34.1</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v1.5.2)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.34.1</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20250415155312-ed3e2158b883</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.34.1</span>
                                     </span>
                                     
                                 </div>
@@ -3203,14 +3031,11 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/tektoncd/cli (bundled: v0.43.0)">
-                                        <span class="text-red-300">cli</span><span class="text-red-500">@v0.41.1</span><span class="text-red-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline">
-                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v1.6.0</span>
+                                        <span class="text-red-300">cli</span><span class="text-red-500">@v0.41.1</span>
                                     </span>
                                     
                                 </div>
@@ -3218,22 +3043,15 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/google/cel-go">
-                                        <span class="text-purple-300">cel-go</span><span class="text-purple-500">@v0.26.1</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.34.1)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.32.9</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.32.9</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v1.5.2)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.32.9</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20250415155312-ed3e2158b883</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.32.9</span>
                                     </span>
                                     
                                 </div>
@@ -4348,8 +4166,8 @@
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Component</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Ref</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Go</th>
-                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Tekton Deps</th>
-                            <th class="text-left py-3 px-4 text-gray-400 font-medium">External Deps</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Stale Deps</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Mismatched Deps</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">CVEs</th>
                             <th class="text-right py-3 px-4 text-gray-400 font-medium">Total</th>
                         </tr>
@@ -4370,18 +4188,15 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/openshift-pipelines/pipelines-as-code (bundled: v0.37.0)">
-                                        <span class="text-red-300">pipelines-as-code</span><span class="text-red-500">@v0.36.0</span><span class="text-red-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline">
-                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v1.3.1</span>
+                                        <span class="text-red-300">pipelines-as-code</span><span class="text-red-500">@v0.36.0</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="github.com/tektoncd/triggers (bundled: v0.33.0)">
-                                        <span class="text-red-300">triggers</span><span class="text-red-500">@v0.32.0</span><span class="text-red-400">!</span>
+                                        <span class="text-red-300">triggers</span><span class="text-red-500">@v0.32.0</span>
                                     </span>
                                     
                                 </div>
@@ -4389,18 +4204,19 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.32.7)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.33.1</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.33.1</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v0.32.7)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v1.5.2</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v1.5.2</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="knative.dev/pkg (expected: v0.0.0-20250415155312-ed3e2158b883)">
-                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20250424013628-d5e74d29daa3</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20250424013628-d5e74d29daa3</span>
                                     </span>
                                     
                                 </div>
@@ -4428,43 +4244,17 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/google/cel-go">
-                                        <span class="text-purple-300">cel-go</span><span class="text-purple-500">@v0.26.0</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/google/go-containerregistry">
-                                        <span class="text-purple-300">go-containerregistry</span><span class="text-purple-500">@v0.20.6</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="github.com/jenkins-x/go-scm (expected: v1.15.10)">
-                                        <span class="text-yellow-300">go-scm</span><span class="text-yellow-500">@v1.15.4</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/sigstore/sigstore">
-                                        <span class="text-purple-300">sigstore</span><span class="text-purple-500">@v1.9.5</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="go.opentelemetry.io/otel">
-                                        <span class="text-purple-300">otel</span><span class="text-purple-500">@v1.37.0</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="k8s.io/api">
-                                        <span class="text-purple-300">api</span><span class="text-purple-500">@v0.32.7</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="k8s.io/client-go">
-                                        <span class="text-purple-300">client-go</span><span class="text-purple-500">@v0.32.7</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20250415155312-ed3e2158b883</span>
+                                        <span class="text-yellow-300">go-scm</span><span class="text-yellow-500">@v1.15.4</span>
                                     </span>
                                     
                                 </div>
@@ -4492,40 +4282,14 @@
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline">
-                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v1.3.1</span>
-                                    </span>
-                                    
-                                </div>
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    <span class="font-mono text-xs" title="github.com/google/cel-go">
-                                        <span class="text-purple-300">cel-go</span><span class="text-purple-500">@v0.26.0</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="go.opentelemetry.io/otel">
-                                        <span class="text-purple-300">otel</span><span class="text-purple-500">@v1.37.0</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="k8s.io/api">
-                                        <span class="text-purple-300">api</span><span class="text-purple-500">@v0.32.7</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="k8s.io/client-go">
-                                        <span class="text-purple-300">client-go</span><span class="text-purple-500">@v0.32.7</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20250415155312-ed3e2158b883</span>
-                                    </span>
-                                    
-                                </div>
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
@@ -4550,18 +4314,11 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/tektoncd/chains (bundled: v0.26.0)">
-                                        <span class="text-red-300">chains</span><span class="text-red-500">@v0.25.1</span><span class="text-red-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline">
-                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v1.3.1</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/triggers">
-                                        <span class="text-orange-300">triggers</span><span class="text-orange-500">@v0.33.0</span>
+                                        <span class="text-red-300">chains</span><span class="text-red-500">@v0.25.1</span>
                                     </span>
                                     
                                 </div>
@@ -4569,26 +4326,15 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/google/go-containerregistry">
-                                        <span class="text-purple-300">go-containerregistry</span><span class="text-purple-500">@v0.20.6</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/sigstore/sigstore">
-                                        <span class="text-purple-300">sigstore</span><span class="text-purple-500">@v1.9.5</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.32.7)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.33.4</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.33.4</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v0.32.7)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.33.4</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20250415155312-ed3e2158b883</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.33.4</span>
                                     </span>
                                     
                                 </div>
@@ -4616,10 +4362,11 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v1.3.0)">
-                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v1.0.0</span><span class="text-red-400">!</span>
+                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v1.0.0</span>
                                     </span>
                                     
                                 </div>
@@ -4627,26 +4374,23 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/google/cel-go (expected: v0.26.0)">
-                                        <span class="text-yellow-300">cel-go</span><span class="text-yellow-500">@v0.25.0</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/jenkins-x/go-scm">
-                                        <span class="text-purple-300">go-scm</span><span class="text-purple-500">@v1.15.10</span>
+                                        <span class="text-yellow-300">cel-go</span><span class="text-yellow-500">@v0.25.0</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.32.7)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.32.4</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.32.4</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v0.32.7)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.32.4</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.32.4</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="knative.dev/pkg (expected: v0.0.0-20250415155312-ed3e2158b883)">
-                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20250424013628-d5e74d29daa3</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20250424013628-d5e74d29daa3</span>
                                     </span>
                                     
                                 </div>
@@ -4674,37 +4418,25 @@
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline">
-                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v1.3.1</span>
-                                    </span>
-                                    
-                                </div>
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/google/go-containerregistry">
-                                        <span class="text-purple-300">go-containerregistry</span><span class="text-purple-500">@v0.20.6</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="github.com/sigstore/sigstore (expected: v1.9.5)">
-                                        <span class="text-yellow-300">sigstore</span><span class="text-yellow-500">@v1.9.6-0.20250729224751-181c5d3339b3</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">sigstore</span><span class="text-yellow-500">@v1.9.6-0.20250729224751-181c5d3339b3</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.32.7)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.34.1</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.34.1</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v0.32.7)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.34.1</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20250415155312-ed3e2158b883</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.34.1</span>
                                     </span>
                                     
                                 </div>
@@ -4732,14 +4464,11 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/tektoncd/cli (bundled: v0.42.0)">
-                                        <span class="text-red-300">cli</span><span class="text-red-500">@v0.41.1</span><span class="text-red-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline">
-                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v1.3.1</span>
+                                        <span class="text-red-300">cli</span><span class="text-red-500">@v0.41.1</span>
                                     </span>
                                     
                                 </div>
@@ -4747,22 +4476,15 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/google/cel-go">
-                                        <span class="text-purple-300">cel-go</span><span class="text-purple-500">@v0.26.0</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.32.7)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.32.8</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.32.8</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v0.32.7)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.32.8</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20250415155312-ed3e2158b883</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.32.8</span>
                                     </span>
                                     
                                 </div>
@@ -5829,8 +5551,8 @@
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Component</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Ref</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Go</th>
-                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Tekton Deps</th>
-                            <th class="text-left py-3 px-4 text-gray-400 font-medium">External Deps</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Stale Deps</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Mismatched Deps</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">CVEs</th>
                             <th class="text-right py-3 px-4 text-gray-400 font-medium">Total</th>
                         </tr>
@@ -5851,37 +5573,21 @@
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    <span class="font-mono text-xs" title="github.com/openshift-pipelines/pipelines-as-code">
-                                        <span class="text-orange-300">pipelines-as-code</span><span class="text-orange-500">@v0.35.0</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline">
-                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v1.0.0</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/triggers">
-                                        <span class="text-orange-300">triggers</span><span class="text-orange-500">@v0.32.0</span>
-                                    </span>
-                                    
-                                </div>
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="k8s.io/api">
-                                        <span class="text-purple-300">api</span><span class="text-purple-500">@v0.32.5</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v0.32.5)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v1.5.2</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v1.5.2</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="knative.dev/pkg (expected: v0.0.0-20250415155312-ed3e2158b883)">
-                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20250424013628-d5e74d29daa3</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20250424013628-d5e74d29daa3</span>
                                     </span>
                                     
                                 </div>
@@ -5909,43 +5615,29 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/google/cel-go (expected: v0.25.0)">
-                                        <span class="text-yellow-300">cel-go</span><span class="text-yellow-500">@v0.24.1</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/google/go-containerregistry">
-                                        <span class="text-purple-300">go-containerregistry</span><span class="text-purple-500">@v0.20.3</span>
+                                        <span class="text-yellow-300">cel-go</span><span class="text-yellow-500">@v0.24.1</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="github.com/jenkins-x/go-scm (expected: v1.14.58)">
-                                        <span class="text-yellow-300">go-scm</span><span class="text-yellow-500">@v1.14.56</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/sigstore/sigstore">
-                                        <span class="text-purple-300">sigstore</span><span class="text-purple-500">@v1.9.4</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="go.opentelemetry.io/otel">
-                                        <span class="text-purple-300">otel</span><span class="text-purple-500">@v1.35.0</span>
+                                        <span class="text-yellow-300">go-scm</span><span class="text-yellow-500">@v1.14.56</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.32.5)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.32.2</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.32.2</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v0.32.5)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.32.2</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20250415155312-ed3e2158b883</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.32.2</span>
                                     </span>
                                     
                                 </div>
@@ -5973,33 +5665,21 @@
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline">
-                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v1.0.0</span>
-                                    </span>
-                                    
-                                </div>
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/google/cel-go">
-                                        <span class="text-purple-300">cel-go</span><span class="text-purple-500">@v0.25.0</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.32.5)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.32.4</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.32.4</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v0.32.5)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.32.4</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20250415155312-ed3e2158b883</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.32.4</span>
                                     </span>
                                     
                                 </div>
@@ -6027,48 +5707,14 @@
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/chains">
-                                        <span class="text-orange-300">chains</span><span class="text-orange-500">@v0.25.1</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline">
-                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v1.0.0</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/triggers">
-                                        <span class="text-orange-300">triggers</span><span class="text-orange-500">@v0.32.0</span>
-                                    </span>
-                                    
-                                </div>
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    <span class="font-mono text-xs" title="github.com/google/go-containerregistry">
-                                        <span class="text-purple-300">go-containerregistry</span><span class="text-purple-500">@v0.20.3</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/sigstore/sigstore">
-                                        <span class="text-purple-300">sigstore</span><span class="text-purple-500">@v1.9.4</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="k8s.io/api">
-                                        <span class="text-purple-300">api</span><span class="text-purple-500">@v0.32.5</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="k8s.io/client-go">
-                                        <span class="text-purple-300">client-go</span><span class="text-purple-500">@v0.32.5</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20250415155312-ed3e2158b883</span>
-                                    </span>
-                                    
-                                </div>
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
@@ -6093,37 +5739,25 @@
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline">
-                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v1.0.0</span>
-                                    </span>
-                                    
-                                </div>
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/google/cel-go">
-                                        <span class="text-purple-300">cel-go</span><span class="text-purple-500">@v0.25.0</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/jenkins-x/go-scm">
-                                        <span class="text-purple-300">go-scm</span><span class="text-purple-500">@v1.14.58</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.32.5)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.32.4</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.32.4</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v0.32.5)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.32.4</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.32.4</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="knative.dev/pkg (expected: v0.0.0-20250415155312-ed3e2158b883)">
-                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20250424013628-d5e74d29daa3</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20250424013628-d5e74d29daa3</span>
                                     </span>
                                     
                                 </div>
@@ -6151,37 +5785,21 @@
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline">
-                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v1.0.0</span>
-                                    </span>
-                                    
-                                </div>
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/google/go-containerregistry">
-                                        <span class="text-purple-300">go-containerregistry</span><span class="text-purple-500">@v0.20.3</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/sigstore/sigstore">
-                                        <span class="text-purple-300">sigstore</span><span class="text-purple-500">@v1.9.4</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.32.5)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.32.2</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.32.2</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v0.32.5)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.32.2</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20250415155312-ed3e2158b883</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.32.2</span>
                                     </span>
                                     
                                 </div>
@@ -6209,40 +5827,14 @@
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/cli">
-                                        <span class="text-orange-300">cli</span><span class="text-orange-500">@v0.41.0</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline">
-                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v1.0.0</span>
-                                    </span>
-                                    
-                                </div>
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    <span class="font-mono text-xs" title="github.com/google/cel-go">
-                                        <span class="text-purple-300">cel-go</span><span class="text-purple-500">@v0.25.0</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="k8s.io/api">
-                                        <span class="text-purple-300">api</span><span class="text-purple-500">@v0.32.5</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="k8s.io/client-go">
-                                        <span class="text-purple-300">client-go</span><span class="text-purple-500">@v0.32.5</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20250415155312-ed3e2158b883</span>
-                                    </span>
-                                    
-                                </div>
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
@@ -7334,8 +6926,8 @@
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Component</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Ref</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Go</th>
-                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Tekton Deps</th>
-                            <th class="text-left py-3 px-4 text-gray-400 font-medium">External Deps</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Stale Deps</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Mismatched Deps</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">CVEs</th>
                             <th class="text-right py-3 px-4 text-gray-400 font-medium">Total</th>
                         </tr>
@@ -7356,18 +6948,11 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/openshift-pipelines/pipelines-as-code (bundled: v0.33.0)">
-                                        <span class="text-red-300">pipelines-as-code</span><span class="text-red-500">@v0.27.2</span><span class="text-red-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline">
-                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v0.68.0</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/triggers">
-                                        <span class="text-orange-300">triggers</span><span class="text-orange-500">@v0.31.0</span>
+                                        <span class="text-red-300">pipelines-as-code</span><span class="text-red-500">@v0.27.2</span>
                                     </span>
                                     
                                 </div>
@@ -7375,18 +6960,15 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.29.13)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.30.0</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.30.0</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v0.29.13)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v1.5.2</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20240416145024-0f34a8815650</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v1.5.2</span>
                                     </span>
                                     
                                 </div>
@@ -7414,43 +6996,25 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/google/cel-go (expected: v0.23.2)">
-                                        <span class="text-yellow-300">cel-go</span><span class="text-yellow-500">@v0.23.1</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">cel-go</span><span class="text-yellow-500">@v0.23.1</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="github.com/google/go-containerregistry (expected: v0.20.3)">
-                                        <span class="text-yellow-300">go-containerregistry</span><span class="text-yellow-500">@v0.20.2</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">go-containerregistry</span><span class="text-yellow-500">@v0.20.2</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="github.com/jenkins-x/go-scm (expected: v1.14.55)">
-                                        <span class="text-yellow-300">go-scm</span><span class="text-yellow-500">@v1.14.37</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/sigstore/sigstore">
-                                        <span class="text-purple-300">sigstore</span><span class="text-purple-500">@v1.8.12</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="go.opentelemetry.io/otel">
-                                        <span class="text-purple-300">otel</span><span class="text-purple-500">@v1.34.0</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="k8s.io/api">
-                                        <span class="text-purple-300">api</span><span class="text-purple-500">@v0.29.13</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="k8s.io/client-go">
-                                        <span class="text-purple-300">client-go</span><span class="text-purple-500">@v0.29.13</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20240416145024-0f34a8815650</span>
+                                        <span class="text-yellow-300">go-scm</span><span class="text-yellow-500">@v1.14.37</span>
                                     </span>
                                     
                                 </div>
@@ -7478,36 +7042,14 @@
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline">
-                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v0.68.0</span>
-                                    </span>
-                                    
-                                </div>
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    <span class="font-mono text-xs" title="github.com/google/cel-go">
-                                        <span class="text-purple-300">cel-go</span><span class="text-purple-500">@v0.23.2</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="k8s.io/api">
-                                        <span class="text-purple-300">api</span><span class="text-purple-500">@v0.29.13</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="k8s.io/client-go">
-                                        <span class="text-purple-300">client-go</span><span class="text-purple-500">@v0.29.13</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20240416145024-0f34a8815650</span>
-                                    </span>
-                                    
-                                </div>
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
@@ -7532,45 +7074,25 @@
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/chains">
-                                        <span class="text-orange-300">chains</span><span class="text-orange-500">@v0.24.0</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline">
-                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v0.68.0</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/triggers">
-                                        <span class="text-orange-300">triggers</span><span class="text-orange-500">@v0.31.0</span>
-                                    </span>
-                                    
-                                </div>
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/google/go-containerregistry">
-                                        <span class="text-purple-300">go-containerregistry</span><span class="text-purple-500">@v0.20.3</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="github.com/sigstore/sigstore (expected: v1.8.12)">
-                                        <span class="text-yellow-300">sigstore</span><span class="text-yellow-500">@v1.8.15</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">sigstore</span><span class="text-yellow-500">@v1.8.15</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.29.13)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.32.2</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.32.2</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v0.29.13)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.32.2</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20240416145024-0f34a8815650</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.32.2</span>
                                     </span>
                                     
                                 </div>
@@ -7598,10 +7120,11 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v0.68.0)">
-                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v0.65.1</span><span class="text-red-400">!</span>
+                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v0.65.1</span>
                                     </span>
                                     
                                 </div>
@@ -7609,26 +7132,23 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/google/cel-go (expected: v0.23.2)">
-                                        <span class="text-yellow-300">cel-go</span><span class="text-yellow-500">@v0.21.0</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/jenkins-x/go-scm">
-                                        <span class="text-purple-300">go-scm</span><span class="text-purple-500">@v1.14.55</span>
+                                        <span class="text-yellow-300">cel-go</span><span class="text-yellow-500">@v0.21.0</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.29.13)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.31.2</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.31.2</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v0.29.13)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.31.2</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.31.2</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="knative.dev/pkg (expected: v0.0.0-20240416145024-0f34a8815650)">
-                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20241106013442-0a99635c789e</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20241106013442-0a99635c789e</span>
                                     </span>
                                     
                                 </div>
@@ -7656,37 +7176,21 @@
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline">
-                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v0.68.0</span>
-                                    </span>
-                                    
-                                </div>
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/google/go-containerregistry">
-                                        <span class="text-purple-300">go-containerregistry</span><span class="text-purple-500">@v0.20.3</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/sigstore/sigstore">
-                                        <span class="text-purple-300">sigstore</span><span class="text-purple-500">@v1.8.12</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.29.13)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.32.1</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.32.1</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v0.29.13)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.32.1</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20240416145024-0f34a8815650</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.32.1</span>
                                     </span>
                                     
                                 </div>
@@ -7714,14 +7218,11 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/tektoncd/cli (bundled: v0.40.0)">
-                                        <span class="text-red-300">cli</span><span class="text-red-500">@v0.37.0</span><span class="text-red-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline">
-                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v0.68.0</span>
+                                        <span class="text-red-300">cli</span><span class="text-red-500">@v0.37.0</span>
                                     </span>
                                     
                                 </div>
@@ -7729,22 +7230,11 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/google/cel-go">
-                                        <span class="text-purple-300">cel-go</span><span class="text-purple-500">@v0.23.2</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="k8s.io/api">
-                                        <span class="text-purple-300">api</span><span class="text-purple-500">@v0.29.13</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="k8s.io/client-go">
-                                        <span class="text-purple-300">client-go</span><span class="text-purple-500">@v0.29.13</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="knative.dev/pkg (expected: v0.0.0-20240416145024-0f34a8815650)">
-                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20240614135239-339c22b8218c</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20240614135239-339c22b8218c</span>
                                     </span>
                                     
                                 </div>
@@ -8827,8 +8317,8 @@
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Component</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Ref</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Go</th>
-                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Tekton Deps</th>
-                            <th class="text-left py-3 px-4 text-gray-400 font-medium">External Deps</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Stale Deps</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Mismatched Deps</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">CVEs</th>
                             <th class="text-right py-3 px-4 text-gray-400 font-medium">Total</th>
                         </tr>
@@ -8849,18 +8339,11 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/openshift-pipelines/pipelines-as-code (bundled: v0.29.0)">
-                                        <span class="text-red-300">pipelines-as-code</span><span class="text-red-500">@v0.27.2</span><span class="text-red-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline">
-                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v0.65.1</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/triggers">
-                                        <span class="text-orange-300">triggers</span><span class="text-orange-500">@v0.30.0</span>
+                                        <span class="text-red-300">pipelines-as-code</span><span class="text-red-500">@v0.27.2</span>
                                     </span>
                                     
                                 </div>
@@ -8868,18 +8351,15 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.29.6)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.30.0</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.30.0</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v0.29.6)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v1.5.2</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20240416145024-0f34a8815650</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v1.5.2</span>
                                     </span>
                                     
                                 </div>
@@ -8907,43 +8387,25 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/google/cel-go (expected: v0.21.0)">
-                                        <span class="text-yellow-300">cel-go</span><span class="text-yellow-500">@v0.20.1</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">cel-go</span><span class="text-yellow-500">@v0.20.1</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="github.com/google/go-containerregistry (expected: v0.20.2)">
-                                        <span class="text-yellow-300">go-containerregistry</span><span class="text-yellow-500">@v0.19.2</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/jenkins-x/go-scm">
-                                        <span class="text-purple-300">go-scm</span><span class="text-purple-500">@v1.14.37</span>
+                                        <span class="text-yellow-300">go-containerregistry</span><span class="text-yellow-500">@v0.19.2</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="github.com/sigstore/sigstore (expected: v1.8.10)">
-                                        <span class="text-yellow-300">sigstore</span><span class="text-yellow-500">@v1.8.4</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="go.opentelemetry.io/otel">
-                                        <span class="text-purple-300">otel</span><span class="text-purple-500">@v1.28.0</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="k8s.io/api">
-                                        <span class="text-purple-300">api</span><span class="text-purple-500">@v0.29.6</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="k8s.io/client-go">
-                                        <span class="text-purple-300">client-go</span><span class="text-purple-500">@v0.29.6</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20240416145024-0f34a8815650</span>
+                                        <span class="text-yellow-300">sigstore</span><span class="text-yellow-500">@v1.8.4</span>
                                     </span>
                                     
                                 </div>
@@ -8971,36 +8433,14 @@
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline">
-                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v0.65.0</span>
-                                    </span>
-                                    
-                                </div>
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    <span class="font-mono text-xs" title="github.com/google/cel-go">
-                                        <span class="text-purple-300">cel-go</span><span class="text-purple-500">@v0.21.0</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="k8s.io/api">
-                                        <span class="text-purple-300">api</span><span class="text-purple-500">@v0.29.6</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="k8s.io/client-go">
-                                        <span class="text-purple-300">client-go</span><span class="text-purple-500">@v0.29.6</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20240416145024-0f34a8815650</span>
-                                    </span>
-                                    
-                                </div>
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
@@ -9025,45 +8465,21 @@
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/chains">
-                                        <span class="text-orange-300">chains</span><span class="text-orange-500">@v0.23.0</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline">
-                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v0.65.2</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/triggers">
-                                        <span class="text-orange-300">triggers</span><span class="text-orange-500">@v0.30.0</span>
-                                    </span>
-                                    
-                                </div>
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/google/go-containerregistry">
-                                        <span class="text-purple-300">go-containerregistry</span><span class="text-purple-500">@v0.20.2</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/sigstore/sigstore">
-                                        <span class="text-purple-300">sigstore</span><span class="text-purple-500">@v1.8.10</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.29.6)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.31.3</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.31.3</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v0.29.6)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.31.3</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20240416145024-0f34a8815650</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.31.3</span>
                                     </span>
                                     
                                 </div>
@@ -9091,10 +8507,11 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v0.65.0)">
-                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v0.63.0</span><span class="text-red-400">!</span>
+                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v0.63.0</span>
                                     </span>
                                     
                                 </div>
@@ -9102,22 +8519,19 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/google/cel-go">
-                                        <span class="text-purple-300">cel-go</span><span class="text-purple-500">@v0.21.0</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.29.6)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.31.0</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.31.0</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v0.29.6)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.31.0</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.31.0</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="knative.dev/pkg (expected: v0.0.0-20240416145024-0f34a8815650)">
-                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20240815051656-89743d9bbf7c</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20240815051656-89743d9bbf7c</span>
                                     </span>
                                     
                                 </div>
@@ -9145,37 +8559,21 @@
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline">
-                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v0.65.0</span>
-                                    </span>
-                                    
-                                </div>
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/google/go-containerregistry">
-                                        <span class="text-purple-300">go-containerregistry</span><span class="text-purple-500">@v0.20.2</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/sigstore/sigstore">
-                                        <span class="text-purple-300">sigstore</span><span class="text-purple-500">@v1.8.10</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.29.6)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.31.2</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.31.2</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v0.29.6)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.31.2</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20240416145024-0f34a8815650</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.31.2</span>
                                     </span>
                                     
                                 </div>
@@ -9203,14 +8601,15 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/tektoncd/cli (bundled: v0.39.0)">
-                                        <span class="text-red-300">cli</span><span class="text-red-500">@v0.37.0</span><span class="text-red-400">!</span>
+                                        <span class="text-red-300">cli</span><span class="text-red-500">@v0.37.0</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v0.65.0)">
-                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v0.60.2</span><span class="text-red-400">!</span>
+                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v0.60.2</span>
                                     </span>
                                     
                                 </div>
@@ -9218,22 +8617,23 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/google/cel-go (expected: v0.21.0)">
-                                        <span class="text-yellow-300">cel-go</span><span class="text-yellow-500">@v0.20.1</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">cel-go</span><span class="text-yellow-500">@v0.20.1</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.29.6)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.29.2</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.29.2</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v0.29.6)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.29.2</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.29.2</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="knative.dev/pkg (expected: v0.0.0-20240416145024-0f34a8815650)">
-                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20240614135239-339c22b8218c</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20240614135239-339c22b8218c</span>
                                     </span>
                                     
                                 </div>
@@ -10324,8 +9724,8 @@
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Component</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Ref</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Go</th>
-                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Tekton Deps</th>
-                            <th class="text-left py-3 px-4 text-gray-400 font-medium">External Deps</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Stale Deps</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Mismatched Deps</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">CVEs</th>
                             <th class="text-right py-3 px-4 text-gray-400 font-medium">Total</th>
                         </tr>
@@ -10346,18 +9746,11 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/openshift-pipelines/pipelines-as-code (bundled: v0.28.0)">
-                                        <span class="text-red-300">pipelines-as-code</span><span class="text-red-500">@v0.27.2</span><span class="text-red-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline">
-                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v0.62.2</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/triggers">
-                                        <span class="text-orange-300">triggers</span><span class="text-orange-500">@v0.29.0</span>
+                                        <span class="text-red-300">pipelines-as-code</span><span class="text-red-500">@v0.27.2</span>
                                     </span>
                                     
                                 </div>
@@ -10365,18 +9758,15 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.29.6)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.30.0</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.30.0</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v0.29.6)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v1.5.2</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20240416145024-0f34a8815650</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v1.5.2</span>
                                     </span>
                                     
                                 </div>
@@ -10404,43 +9794,21 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/google/cel-go">
-                                        <span class="text-purple-300">cel-go</span><span class="text-purple-500">@v0.20.1</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="github.com/google/go-containerregistry (expected: v0.20.2)">
-                                        <span class="text-yellow-300">go-containerregistry</span><span class="text-yellow-500">@v0.19.2</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/jenkins-x/go-scm">
-                                        <span class="text-purple-300">go-scm</span><span class="text-purple-500">@v1.14.37</span>
+                                        <span class="text-yellow-300">go-containerregistry</span><span class="text-yellow-500">@v0.19.2</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="github.com/sigstore/sigstore (expected: v1.8.8)">
-                                        <span class="text-yellow-300">sigstore</span><span class="text-yellow-500">@v1.8.4</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="go.opentelemetry.io/otel">
-                                        <span class="text-purple-300">otel</span><span class="text-purple-500">@v1.28.0</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="k8s.io/api">
-                                        <span class="text-purple-300">api</span><span class="text-purple-500">@v0.29.6</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="k8s.io/client-go">
-                                        <span class="text-purple-300">client-go</span><span class="text-purple-500">@v0.29.6</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20240416145024-0f34a8815650</span>
+                                        <span class="text-yellow-300">sigstore</span><span class="text-yellow-500">@v1.8.4</span>
                                     </span>
                                     
                                 </div>
@@ -10468,36 +9836,14 @@
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline">
-                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v0.62.1</span>
-                                    </span>
-                                    
-                                </div>
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    <span class="font-mono text-xs" title="github.com/google/cel-go">
-                                        <span class="text-purple-300">cel-go</span><span class="text-purple-500">@v0.20.1</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="k8s.io/api">
-                                        <span class="text-purple-300">api</span><span class="text-purple-500">@v0.29.6</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="k8s.io/client-go">
-                                        <span class="text-purple-300">client-go</span><span class="text-purple-500">@v0.29.6</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20240416145024-0f34a8815650</span>
-                                    </span>
-                                    
-                                </div>
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
@@ -10522,45 +9868,21 @@
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/chains">
-                                        <span class="text-orange-300">chains</span><span class="text-orange-500">@v0.22.0</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline">
-                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v0.62.1</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/triggers">
-                                        <span class="text-orange-300">triggers</span><span class="text-orange-500">@v0.29.0</span>
-                                    </span>
-                                    
-                                </div>
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/google/go-containerregistry">
-                                        <span class="text-purple-300">go-containerregistry</span><span class="text-purple-500">@v0.20.2</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/sigstore/sigstore">
-                                        <span class="text-purple-300">sigstore</span><span class="text-purple-500">@v1.8.8</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.29.6)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.29.8</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.29.8</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v0.29.6)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.29.8</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20240416145024-0f34a8815650</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.29.8</span>
                                     </span>
                                     
                                 </div>
@@ -10588,33 +9910,29 @@
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline">
-                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v0.63.0</span>
-                                    </span>
-                                    
-                                </div>
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/google/cel-go (expected: v0.20.1)">
-                                        <span class="text-yellow-300">cel-go</span><span class="text-yellow-500">@v0.21.0</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">cel-go</span><span class="text-yellow-500">@v0.21.0</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.29.6)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.31.0</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.31.0</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v0.29.6)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.31.0</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.31.0</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="knative.dev/pkg (expected: v0.0.0-20240416145024-0f34a8815650)">
-                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20240815051656-89743d9bbf7c</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20240815051656-89743d9bbf7c</span>
                                     </span>
                                     
                                 </div>
@@ -10642,10 +9960,11 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v0.62.0)">
-                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v0.58.0</span><span class="text-red-400">!</span>
+                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v0.58.0</span>
                                     </span>
                                     
                                 </div>
@@ -10653,26 +9972,27 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/google/go-containerregistry (expected: v0.20.2)">
-                                        <span class="text-yellow-300">go-containerregistry</span><span class="text-yellow-500">@v0.19.1</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">go-containerregistry</span><span class="text-yellow-500">@v0.19.1</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="github.com/sigstore/sigstore (expected: v1.8.8)">
-                                        <span class="text-yellow-300">sigstore</span><span class="text-yellow-500">@v1.8.3</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">sigstore</span><span class="text-yellow-500">@v1.8.3</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.29.6)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.28.3</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.28.3</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v0.29.6)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.28.3</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.28.3</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="knative.dev/pkg (expected: v0.0.0-20240416145024-0f34a8815650)">
-                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20231023150739-56bfe0dd9626</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20231023150739-56bfe0dd9626</span>
                                     </span>
                                     
                                 </div>
@@ -10700,14 +10020,15 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/tektoncd/cli (bundled: v0.38.0)">
-                                        <span class="text-red-300">cli</span><span class="text-red-500">@v0.37.0</span><span class="text-red-400">!</span>
+                                        <span class="text-red-300">cli</span><span class="text-red-500">@v0.37.0</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v0.62.0)">
-                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v0.60.2</span><span class="text-red-400">!</span>
+                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v0.60.2</span>
                                     </span>
                                     
                                 </div>
@@ -10715,22 +10036,19 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/google/cel-go">
-                                        <span class="text-purple-300">cel-go</span><span class="text-purple-500">@v0.20.1</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.29.6)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.29.2</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.29.2</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v0.29.6)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.29.2</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.29.2</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="knative.dev/pkg (expected: v0.0.0-20240416145024-0f34a8815650)">
-                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20240614135239-339c22b8218c</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20240614135239-339c22b8218c</span>
                                     </span>
                                     
                                 </div>
@@ -11825,8 +11143,8 @@
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Component</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Ref</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Go</th>
-                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Tekton Deps</th>
-                            <th class="text-left py-3 px-4 text-gray-400 font-medium">External Deps</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Stale Deps</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Mismatched Deps</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">CVEs</th>
                             <th class="text-right py-3 px-4 text-gray-400 font-medium">Total</th>
                         </tr>
@@ -11847,37 +11165,17 @@
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    <span class="font-mono text-xs" title="github.com/openshift-pipelines/pipelines-as-code">
-                                        <span class="text-orange-300">pipelines-as-code</span><span class="text-orange-500">@v0.27.0</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline">
-                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v0.59.0</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/triggers">
-                                        <span class="text-orange-300">triggers</span><span class="text-orange-500">@v0.27.0</span>
-                                    </span>
-                                    
-                                </div>
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="k8s.io/api">
-                                        <span class="text-purple-300">api</span><span class="text-purple-500">@v0.29.3</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="k8s.io/client-go">
-                                        <span class="text-purple-300">client-go</span><span class="text-purple-500">@v1.5.2</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="knative.dev/pkg (expected: v0.0.0-20240116073220-b488e7be5902)">
-                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20240404013351-5d4af76051e4</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20240404013351-5d4af76051e4</span>
                                     </span>
                                     
                                 </div>
@@ -11905,43 +11203,21 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/google/cel-go">
-                                        <span class="text-purple-300">cel-go</span><span class="text-purple-500">@v0.20.1</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/google/go-containerregistry">
-                                        <span class="text-purple-300">go-containerregistry</span><span class="text-purple-500">@v0.19.1</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/jenkins-x/go-scm">
-                                        <span class="text-purple-300">go-scm</span><span class="text-purple-500">@v1.14.30</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/sigstore/sigstore">
-                                        <span class="text-purple-300">sigstore</span><span class="text-purple-500">@v1.8.3</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="go.opentelemetry.io/otel">
-                                        <span class="text-purple-300">otel</span><span class="text-purple-500">@v1.26.0</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.29.3)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.28.5</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.28.5</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v1.5.2)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.28.5</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20240116073220-b488e7be5902</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.28.5</span>
                                     </span>
                                     
                                 </div>
@@ -11969,33 +11245,21 @@
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline">
-                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v0.59.0</span>
-                                    </span>
-                                    
-                                </div>
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/google/cel-go">
-                                        <span class="text-purple-300">cel-go</span><span class="text-purple-500">@v0.20.1</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.29.3)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.28.5</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.28.5</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v1.5.2)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.28.5</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20240116073220-b488e7be5902</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.28.5</span>
                                     </span>
                                     
                                 </div>
@@ -12023,45 +11287,21 @@
                             </td>
                             <td class="py-3 px-4">
                                 
-                                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/chains">
-                                        <span class="text-orange-300">chains</span><span class="text-orange-500">@v0.20.1</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/pipeline">
-                                        <span class="text-orange-300">pipeline</span><span class="text-orange-500">@v0.59.0</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/tektoncd/triggers">
-                                        <span class="text-orange-300">triggers</span><span class="text-orange-500">@v0.27.0</span>
-                                    </span>
-                                    
-                                </div>
+                                
+                                <span class="text-gray-600">-</span>
                                 
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/google/go-containerregistry">
-                                        <span class="text-purple-300">go-containerregistry</span><span class="text-purple-500">@v0.19.1</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="github.com/sigstore/sigstore">
-                                        <span class="text-purple-300">sigstore</span><span class="text-purple-500">@v1.8.3</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.29.3)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.28.9</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.28.9</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v1.5.2)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.28.9</span><span class="text-yellow-400">!</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="knative.dev/pkg">
-                                        <span class="text-purple-300">pkg</span><span class="text-purple-500">@v0.0.0-20240116073220-b488e7be5902</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.28.9</span>
                                     </span>
                                     
                                 </div>
@@ -12089,10 +11329,11 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v0.59.0)">
-                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v0.58.0</span><span class="text-red-400">!</span>
+                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v0.58.0</span>
                                     </span>
                                     
                                 </div>
@@ -12100,22 +11341,11 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
-                                    <span class="font-mono text-xs" title="github.com/google/cel-go">
-                                        <span class="text-purple-300">cel-go</span><span class="text-purple-500">@v0.20.1</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="k8s.io/api">
-                                        <span class="text-purple-300">api</span><span class="text-purple-500">@v0.29.3</span>
-                                    </span>
-                                    
-                                    <span class="font-mono text-xs" title="k8s.io/client-go">
-                                        <span class="text-purple-300">client-go</span><span class="text-purple-500">@v1.5.2</span>
-                                    </span>
-                                    
                                     <span class="font-mono text-xs" title="knative.dev/pkg (expected: v0.0.0-20240116073220-b488e7be5902)">
-                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20240404013351-5d4af76051e4</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20240404013351-5d4af76051e4</span>
                                     </span>
                                     
                                 </div>
@@ -12143,10 +11373,11 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v0.59.0)">
-                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v0.56.0</span><span class="text-red-400">!</span>
+                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v0.56.0</span>
                                     </span>
                                     
                                 </div>
@@ -12154,26 +11385,27 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/google/go-containerregistry (expected: v0.19.1)">
-                                        <span class="text-yellow-300">go-containerregistry</span><span class="text-yellow-500">@v0.18.0</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">go-containerregistry</span><span class="text-yellow-500">@v0.18.0</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="github.com/sigstore/sigstore (expected: v1.8.3)">
-                                        <span class="text-yellow-300">sigstore</span><span class="text-yellow-500">@v1.8.1</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">sigstore</span><span class="text-yellow-500">@v1.8.1</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.29.3)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.28.3</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.28.3</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v1.5.2)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.28.3</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.28.3</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="knative.dev/pkg (expected: v0.0.0-20240116073220-b488e7be5902)">
-                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20231023150739-56bfe0dd9626</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20231023150739-56bfe0dd9626</span>
                                     </span>
                                     
                                 </div>
@@ -12201,14 +11433,15 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/tektoncd/cli (bundled: v0.37.0)">
-                                        <span class="text-red-300">cli</span><span class="text-red-500">@v0.29.0</span><span class="text-red-400">!</span>
+                                        <span class="text-red-300">cli</span><span class="text-red-500">@v0.29.0</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="github.com/tektoncd/pipeline (bundled: v0.59.0)">
-                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v0.42.0</span><span class="text-red-400">!</span>
+                                        <span class="text-red-300">pipeline</span><span class="text-red-500">@v0.42.0</span>
                                     </span>
                                     
                                 </div>
@@ -12216,22 +11449,23 @@
                             </td>
                             <td class="py-3 px-4">
                                 
+                                
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     
                                     <span class="font-mono text-xs" title="github.com/google/cel-go (expected: v0.20.1)">
-                                        <span class="text-yellow-300">cel-go</span><span class="text-yellow-500">@v0.17.6</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">cel-go</span><span class="text-yellow-500">@v0.17.6</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/api (expected: v0.29.3)">
-                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.25.13</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">api</span><span class="text-yellow-500">@v0.25.13</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="k8s.io/client-go (expected: v1.5.2)">
-                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.25.13</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">client-go</span><span class="text-yellow-500">@v0.25.13</span>
                                     </span>
                                     
                                     <span class="font-mono text-xs" title="knative.dev/pkg (expected: v0.0.0-20240116073220-b488e7be5902)">
-                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20221221230956-4fd6eb8652b7</span><span class="text-yellow-400">!</span>
+                                        <span class="text-yellow-300">pkg</span><span class="text-yellow-500">@v0.0.0-20221221230956-4fd6eb8652b7</span>
                                     </span>
                                     
                                 </div>

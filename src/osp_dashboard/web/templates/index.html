@@ -281,8 +281,8 @@
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Component</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Ref</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Go</th>
-                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Tekton Deps</th>
-                            <th class="text-left py-3 px-4 text-gray-400 font-medium">External Deps</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Stale Deps</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Mismatched Deps</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">CVEs</th>
                             <th class="text-right py-3 px-4 text-gray-400 font-medium">Total</th>
                         </tr>
@@ -302,11 +302,12 @@
                                 </span>
                             </td>
                             <td class="py-3 px-4">
-                                {% if comp.internal_deps %}
+                                {% set stale_deps = comp.internal_deps | selectattr('is_stale') | list %}
+                                {% if stale_deps %}
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    {% for dep in comp.internal_deps %}
-                                    <span class="font-mono text-xs" title="{{ dep.path }}{% if dep.is_stale %} (bundled: {{ dep.bundled_version }}){% endif %}">
-                                        <span class="{% if dep.is_stale %}text-red-300{% else %}text-orange-300{% endif %}">{{ dep.path.split('/')[-1] }}</span><span class="{% if dep.is_stale %}text-red-500{% else %}text-orange-500{% endif %}">@{{ dep.version }}</span>{% if dep.is_stale %}<span class="text-red-400">!</span>{% endif %}
+                                    {% for dep in stale_deps %}
+                                    <span class="font-mono text-xs" title="{{ dep.path }} (bundled: {{ dep.bundled_version }})">
+                                        <span class="text-red-300">{{ dep.path.split('/')[-1] }}</span><span class="text-red-500">@{{ dep.version }}</span>
                                     </span>
                                     {% endfor %}
                                 </div>
@@ -315,11 +316,12 @@
                                 {% endif %}
                             </td>
                             <td class="py-3 px-4">
-                                {% if comp.external_deps %}
+                                {% set mismatched_deps = comp.external_deps | selectattr('version_differs') | list %}
+                                {% if mismatched_deps %}
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                    {% for dep in comp.external_deps %}
-                                    <span class="font-mono text-xs" title="{{ dep.path }}{% if dep.version_differs %} (expected: {{ dep.expected_version }}){% endif %}">
-                                        <span class="{% if dep.version_differs %}text-yellow-300{% else %}text-purple-300{% endif %}">{{ dep.path.split('/')[-1] }}</span><span class="{% if dep.version_differs %}text-yellow-500{% else %}text-purple-500{% endif %}">@{{ dep.version }}</span>{% if dep.version_differs %}<span class="text-yellow-400">!</span>{% endif %}
+                                    {% for dep in mismatched_deps %}
+                                    <span class="font-mono text-xs" title="{{ dep.path }} (expected: {{ dep.expected_version }})">
+                                        <span class="text-yellow-300">{{ dep.path.split('/')[-1] }}</span><span class="text-yellow-500">@{{ dep.version }}</span>
                                     </span>
                                     {% endfor %}
                                 </div>
