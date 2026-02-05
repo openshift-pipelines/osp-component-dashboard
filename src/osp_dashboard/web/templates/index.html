@@ -60,7 +60,7 @@
         </header>
 
         <!-- Version Selector -->
-        <div class="flex justify-center flex-wrap gap-3 mb-10">
+        <div class="flex justify-center flex-wrap gap-3 mb-6">
             {% for version in versions %}
             <button
                 class="version-pill px-6 py-2 rounded-full glass text-sm font-medium transition-all duration-200 hover:scale-105 {% if loop.first %}active text-white{% else %}text-gray-300 hover:text-white{% endif %}"
@@ -73,6 +73,24 @@
                 {% endif %}
             </button>
             {% endfor %}
+        </div>
+
+        <!-- View Toggle -->
+        <div class="flex justify-center gap-2 mb-10">
+            <button
+                id="view-cards"
+                class="view-toggle px-4 py-1.5 rounded-lg text-sm font-medium transition-all duration-200 active bg-white/10 text-white"
+                onclick="setView('cards')"
+            >
+                Cards
+            </button>
+            <button
+                id="view-table"
+                class="view-toggle px-4 py-1.5 rounded-lg text-sm font-medium transition-all duration-200 text-gray-400 hover:text-white hover:bg-white/5"
+                onclick="setView('table')"
+            >
+                Table
+            </button>
         </div>
 
         <!-- Component Cards Container -->
@@ -92,7 +110,8 @@
             </div>
             {% endif %}
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Cards View -->
+            <div class="cards-view grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {% for comp in versions_data[version] %}
             <div class="glass glass-hover rounded-xl p-6 transition-all duration-200">
                 <!-- Component Header -->
@@ -177,6 +196,66 @@
             </div>
             {% endfor %}
             </div>
+
+            <!-- Table View -->
+            <div class="table-view hidden overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="border-b border-white/10">
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Component</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Ref</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Go</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Tekton Deps</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">External Deps</th>
+                            <th class="text-right py-3 px-4 text-gray-400 font-medium">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for comp in versions_data[version] %}
+                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                            <td class="py-3 px-4">
+                                <a href="https://github.com/{{ comp.owner }}/{{ comp.repo }}" target="_blank" class="text-white hover:text-blue-400 transition-colors font-medium">
+                                    {{ comp.repo }}
+                                </a>
+                            </td>
+                            <td class="py-3 px-4 text-gray-500 font-mono text-xs">{{ comp.ref }}</td>
+                            <td class="py-3 px-4">
+                                <span class="{% if comp.go_version_mismatch %}text-yellow-400{% else %}text-cyan-400{% endif %} font-mono text-xs">
+                                    {{ comp.go_version }}{% if comp.go_version_mismatch %} ⚠{% endif %}
+                                </span>
+                            </td>
+                            <td class="py-3 px-4">
+                                {% if comp.internal_deps %}
+                                <div class="flex flex-wrap gap-1">
+                                    {% for dep in comp.internal_deps %}
+                                    <span class="{% if dep.is_stale %}text-red-400{% else %}text-orange-400{% endif %} font-mono text-xs" title="{{ dep.path }} {{ dep.version }}{% if dep.is_stale %} (bundled: {{ dep.bundled_version }}){% endif %}">
+                                        {{ dep.path.split('/')[-1] if '/' in dep.path else dep.path }}{% if dep.is_stale %}!{% endif %}
+                                    </span>
+                                    {% endfor %}
+                                </div>
+                                {% else %}
+                                <span class="text-gray-600">-</span>
+                                {% endif %}
+                            </td>
+                            <td class="py-3 px-4">
+                                {% if comp.external_deps %}
+                                <div class="flex flex-wrap gap-1">
+                                    {% for dep in comp.external_deps %}
+                                    <span class="text-purple-400 font-mono text-xs" title="{{ dep.path }} {{ dep.version }}">
+                                        {{ dep.path.split('/')[-1] if '/' in dep.path else dep.path }}
+                                    </span>
+                                    {% endfor %}
+                                </div>
+                                {% else %}
+                                <span class="text-gray-600">-</span>
+                                {% endif %}
+                            </td>
+                            <td class="py-3 px-4 text-right text-gray-500">{{ comp.total_deps }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
         </div>
         {% endfor %}
 
@@ -195,6 +274,8 @@
     </div>
 
     <script>
+        let currentView = 'cards';
+
         function showVersion(version) {
             // Hide all version content
             document.querySelectorAll('.version-content').forEach(el => {
@@ -213,6 +294,26 @@
                     pill.classList.remove('active', 'text-white');
                     pill.classList.add('text-gray-300');
                 }
+            });
+        }
+
+        function setView(view) {
+            currentView = view;
+
+            // Update toggle buttons
+            document.querySelectorAll('.view-toggle').forEach(btn => {
+                btn.classList.remove('active', 'bg-white/10', 'text-white');
+                btn.classList.add('text-gray-400');
+            });
+            document.getElementById('view-' + view).classList.add('active', 'bg-white/10', 'text-white');
+            document.getElementById('view-' + view).classList.remove('text-gray-400');
+
+            // Toggle view visibility
+            document.querySelectorAll('.cards-view').forEach(el => {
+                el.classList.toggle('hidden', view !== 'cards');
+            });
+            document.querySelectorAll('.table-view').forEach(el => {
+                el.classList.toggle('hidden', view !== 'table');
             });
         }
     </script>

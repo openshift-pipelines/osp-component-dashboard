@@ -1,6 +1,14 @@
 # OSP version -> upstream component versions
 # Source: https://spaces.redhat.com/pages/viewpage.action?pageId=... (component-matrix)
 versions:
+  "next":
+    tektoncd/operator: "v0.78.1"
+    tektoncd/pipeline: "v1.9.0"
+    tektoncd/triggers: "v0.34.0"
+    tektoncd/cli: "v0.43.0"
+    openshift-pipelines/pipelines-as-code: "v0.41.1"
+    tektoncd/chains: "v0.26.0"
+    tektoncd/results: "v0.17.2"
   "1.21":
     tektoncd/operator: "v0.78.0"
     tektoncd/pipeline: "v1.6.0"
