@@ -217,16 +217,21 @@
                     <div class="space-y-1.5">
                         {% for dep in comp.external_deps %}
                         <div class="flex items-center justify-between text-sm">
-                            <span class="{% if dep.version_differs %}text-yellow-300{% else %}text-gray-300{% endif %} truncate max-w-[50%]" title="{{ dep.path }}">
+                            <span class="{% if dep.cves %}text-red-300{% elif dep.version_differs %}text-yellow-300{% else %}text-gray-300{% endif %} truncate max-w-[40%]" title="{{ dep.path }}">
                                 {{ dep.path.split('/')[-1] if '/' in dep.path else dep.path }}
                             </span>
                             <div class="flex items-center gap-2">
+                                {% for cve in dep.cves %}
+                                <a href="{{ cve.url }}" target="_blank" class="cve-badge-{{ cve.severity }} px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="{{ cve.id }}">
+                                    {{ cve.severity[:1] | upper }}
+                                </a>
+                                {% endfor %}
                                 {% if dep.version_differs %}
                                 <span class="mismatch-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="Version mismatch: expected {{ dep.expected_version }}">
                                     MISMATCH
                                 </span>
                                 {% endif %}
-                                <span class="{% if dep.version_differs %}text-yellow-400{% else %}text-purple-400{% endif %} font-mono text-xs" {% if dep.version_differs %}title="Expected: {{ dep.expected_version }}"{% endif %}>
+                                <span class="{% if dep.cves %}text-red-400{% elif dep.version_differs %}text-yellow-400{% else %}text-purple-400{% endif %} font-mono text-xs" {% if dep.version_differs %}title="Expected: {{ dep.expected_version }}"{% endif %}>
                                     {{ dep.version }}
                                 </span>
                             </div>

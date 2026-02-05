@@ -67,6 +67,40 @@ def dep_path_to_component_key(path: str) -> str | None:
     return None
 
 
+def version_in_range(version: str, range_str: str) -> bool:
+    """Check if a version falls within a vulnerability range."""
+    if not range_str:
+        return False
+
+    v = parse_semver(version)
+    constraints = [c.strip() for c in range_str.split(",")]
+
+    for constraint in constraints:
+        constraint = constraint.strip()
+        if constraint.startswith(">="):
+            min_v = parse_semver(constraint[2:].strip())
+            if v < min_v:
+                return False
+        elif constraint.startswith(">"):
+            min_v = parse_semver(constraint[1:].strip())
+            if v <= min_v:
+                return False
+        elif constraint.startswith("<="):
+            max_v = parse_semver(constraint[2:].strip())
+            if v > max_v:
+                return False
+        elif constraint.startswith("<"):
+            max_v = parse_semver(constraint[1:].strip())
+            if v >= max_v:
+                return False
+        elif constraint.startswith("="):
+            eq_v = parse_semver(constraint[1:].strip())
+            if v != eq_v:
+                return False
+
+    return True
+
+
 def generate_html(
     data: dict[str, list[ComponentData]],
     highlight_deps: list[str],
@@ -74,6 +108,7 @@ def generate_html(
     template_dir: Path | str | None = None,
     bundled_versions: dict[str, dict[str, str]] | None = None,
     cve_data: dict[str, dict[str, list]] | None = None,
+    dep_advisories: dict[str, list] | None = None,
 ) -> None:
     """Generate the dashboard HTML.
 
@@ -84,6 +119,7 @@ def generate_html(
         template_dir: Directory containing templates (defaults to templates/)
         bundled_versions: Dict of OSP version -> {component: version} for staleness check
         cve_data: Dict of OSP version -> {component: [Advisory, ...]} for CVE display
+        dep_advisories: Dict of dep_path -> [Advisory, ...] for dependency CVE checking
     """
     if template_dir is None:
         template_dir = Path(__file__).parent / "templates"
@@ -200,12 +236,24 @@ def generate_html(
                 expected_version = expected_dep_versions.get(dep.path)
                 version_differs = is_mismatched and dep.version != expected_version
 
+                # Check for CVEs affecting this dependency version
+                dep_cves = []
+                if dep_advisories and dep.path in dep_advisories:
+                    for adv in dep_advisories[dep.path]:
+                        if adv.vulnerable_range and version_in_range(dep.version, adv.vulnerable_range):
+                            dep_cves.append({
+                                "id": adv.cve_id or adv.ghsa_id,
+                                "severity": adv.severity,
+                                "url": adv.url,
+                            })
+
                 external_deps_data.append({
                     "path": dep.path,
                     "version": dep.version,
                     "is_mismatched": is_mismatched,
                     "version_differs": version_differs,
                     "expected_version": expected_version,
+                    "cves": dep_cves,
                 })
 
             versions_data[osp_version].append({

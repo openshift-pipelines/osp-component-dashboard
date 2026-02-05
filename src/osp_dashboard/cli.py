@@ -4,7 +4,7 @@ import argparse
 import sys
 from pathlib import Path
 
-from .collector import collect_component_data, get_advisories_for_version
+from .collector import collect_component_data, get_advisories_for_version, fetch_advisories
 from .config import load_config, parse_component
 from .web import generate_html
 
@@ -16,6 +16,15 @@ def collect_command(args: argparse.Namespace) -> int:
 
     print(f"Loading config from {config_path}")
     config = load_config(config_path)
+
+    # Pre-fetch CVE advisories for all tracked dependencies (to avoid repeated API calls)
+    print("\nFetching CVE advisories for tracked dependencies...")
+    dep_advisories = {}
+    for dep_path in config.highlight_dependencies:
+        advs = fetch_advisories(dep_path)
+        if advs:
+            dep_advisories[dep_path] = advs
+            print(f"  {dep_path}: {len(advs)} advisory(ies)")
 
     all_data = {}
     all_cves = {}  # {osp_version: {component_key: [Advisory, ...]}}
@@ -52,6 +61,7 @@ def collect_command(args: argparse.Namespace) -> int:
         output_path,
         bundled_versions=config.versions,
         cve_data=all_cves,
+        dep_advisories=dep_advisories,
     )
     print("Done!")
 
