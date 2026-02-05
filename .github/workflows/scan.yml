@@ -12,7 +12,7 @@ permissions:
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 120  # govulncheck can be slow
+    timeout-minutes: 360  # 6 hours - scanning 63 component/version combos
     steps:
       - uses: actions/checkout@v4
 
