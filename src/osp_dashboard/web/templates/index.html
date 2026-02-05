@@ -55,14 +55,8 @@
             opacity: 1;
             filter: saturate(1);
         }
-        .go-badge {
-            background: linear-gradient(135deg, #00add8 0%, #00a29c 100%);
-        }
-        .go-badge-warn {
-            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-        }
         .stale-badge {
-            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%);
         }
         .cve-badge-critical {
             background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
@@ -80,7 +74,7 @@
             background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
         }
         .mismatch-badge {
-            background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%);
+            background: rgba(255, 255, 255, 0.2);
         }
         .version-pill.dev-main {
             background: linear-gradient(135deg, #10b981 0%, #059669 100%);
@@ -173,23 +167,6 @@
             </div>
         </div>
 
-        <!-- View Toggle -->
-        <div class="flex justify-center gap-2 mb-10">
-            <button
-                id="view-cards"
-                class="view-toggle px-4 py-1.5 rounded-lg text-sm font-medium transition-all duration-200 text-gray-400 hover:text-white hover:bg-white/5"
-                onclick="setView('cards')"
-            >
-                Cards
-            </button>
-            <button
-                id="view-table"
-                class="view-toggle px-4 py-1.5 rounded-lg text-sm font-medium transition-all duration-200 active bg-white/10 text-white"
-                onclick="setView('table')"
-            >
-                Table
-            </button>
-        </div>
 
         <!-- Component Cards Container -->
         {% for version in versions %}
@@ -256,160 +233,6 @@
             </div>
             {% endif %}
 
-            <!-- Cards View -->
-            <div class="cards-view hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {% for comp in versions_data[version] %}
-            <div class="glass glass-hover rounded-xl p-6 transition-all duration-200">
-                <!-- Component Header -->
-                <div class="flex items-start justify-between mb-4">
-                    <div>
-                        <a
-                            href="https://github.com/{{ comp.owner }}/{{ comp.repo }}"
-                            target="_blank"
-                            class="text-lg font-semibold text-white hover:text-blue-400 transition-colors"
-                        >
-                            {{ comp.owner }}/{{ comp.repo }}
-                        </a>
-                        <div class="flex items-center gap-2 mt-1">
-                            <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-sm font-medium">
-                                {{ comp.ref }}
-                            </span>
-                            <span class="{% if comp.go_version_mismatch %}go-badge-warn{% else %}go-badge{% endif %} px-2 py-0.5 rounded-full text-xs font-bold text-white" {% if comp.go_version_mismatch %}title="Different from other components in this release"{% endif %}>
-                                Go {{ comp.go_version }}{% if comp.go_version_mismatch %} ⚠{% endif %}
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Internal Dependencies (Cross-dependencies) -->
-                {% if comp.internal_deps %}
-                <div class="mb-4">
-                    <p class="text-xs text-orange-400 uppercase tracking-wider mb-2 flex items-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-orange-400"></span>
-                        Tekton Dependencies
-                    </p>
-                    <div class="space-y-1.5">
-                        {% for dep in comp.internal_deps %}
-                        <div class="flex items-center justify-between text-sm">
-                            <span class="{% if dep.is_stale %}text-red-300{% else %}text-orange-200{% endif %} truncate max-w-[50%]" title="{{ dep.path }}">
-                                {{ dep.path.split('/')[-1] if '/' in dep.path else dep.path }}
-                            </span>
-                            <div class="flex items-center gap-2">
-                                {% if dep.is_stale %}
-                                <span class="stale-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="Stale: bundled version is {{ dep.bundled_version }}">
-                                    STALE
-                                </span>
-                                {% endif %}
-                                <span class="{% if dep.is_stale %}text-red-400{% else %}text-orange-400{% endif %} font-mono text-xs" {% if dep.is_stale %}title="Bundled: {{ dep.bundled_version }}"{% endif %}>
-                                    {{ dep.version }}
-                                </span>
-                            </div>
-                        </div>
-                        {% endfor %}
-                    </div>
-                </div>
-                {% endif %}
-
-                <!-- External Dependencies -->
-                {% if comp.external_deps %}
-                <div class="space-y-2">
-                    <p class="text-xs text-gray-500 uppercase tracking-wider mb-2 flex items-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-purple-400"></span>
-                        External Dependencies
-                    </p>
-                    <div class="space-y-1.5">
-                        {% for dep in comp.external_deps %}
-                        <div class="flex items-center justify-between text-sm">
-                            <span class="{% if dep.cves %}text-red-300{% elif dep.version_differs %}text-yellow-300{% else %}text-gray-300{% endif %} truncate max-w-[40%]" title="{{ dep.path }}">
-                                {{ dep.path.split('/')[-1] if '/' in dep.path else dep.path }}
-                            </span>
-                            <div class="flex items-center gap-2">
-                                {% for cve in dep.cves %}
-                                <a href="{{ cve.url }}" target="_blank" class="inline-flex items-center gap-0.5" title="{{ cve.id }}">
-                                    <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300 text-[10px] font-bold">GH</span>
-                                </a>
-                                {% endfor %}
-                                {% if dep.version_differs %}
-                                <span class="mismatch-badge px-1.5 py-0.5 rounded text-[10px] font-bold text-white" title="Version mismatch: expected {{ dep.expected_version }}">
-                                    MISMATCH
-                                </span>
-                                {% endif %}
-                                <span class="{% if dep.cves %}text-red-400{% elif dep.version_differs %}text-yellow-400{% else %}text-purple-400{% endif %} font-mono text-xs" {% if dep.version_differs %}title="Expected: {{ dep.expected_version }}"{% endif %}>
-                                    {{ dep.version }}
-                                </span>
-                            </div>
-                        </div>
-                        {% endfor %}
-                    </div>
-                </div>
-                {% endif %}
-
-                {% if not comp.internal_deps and not comp.external_deps %}
-                <p class="text-gray-500 text-sm italic">No highlighted dependencies</p>
-                {% endif %}
-
-                <!-- CVEs from GitHub Advisory -->
-                {% if comp.cves %}
-                <div class="mt-4">
-                    <p class="text-xs text-red-400 uppercase tracking-wider mb-2 flex items-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-red-400"></span>
-                        GitHub Advisory CVEs ({{ comp.cves | length }})
-                    </p>
-                    <div class="space-y-1.5">
-                        {% for cve in comp.cves %}
-                        <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center gap-2">
-                                <span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300 text-[10px] font-bold">GH</span>
-                                <a href="{{ cve.url }}" target="_blank" class="text-red-300 hover:text-red-200 truncate" title="{{ cve.summary }}">
-                                    {{ cve.id }}
-                                </a>
-                            </div>
-                            <span class="cve-badge-{{ cve.severity }} px-1.5 py-0.5 rounded text-[10px] font-bold text-white uppercase">
-                                {{ cve.severity }}
-                            </span>
-                        </div>
-                        {% endfor %}
-                    </div>
-                </div>
-                {% endif %}
-
-                <!-- Vulns from govulncheck -->
-                {% if comp.vulns %}
-                <div class="mt-4">
-                    <p class="text-xs text-purple-400 uppercase tracking-wider mb-2 flex items-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-purple-400"></span>
-                        govulncheck Findings ({{ comp.vulns | length }})
-                    </p>
-                    <div class="space-y-1.5">
-                        {% for vuln in comp.vulns %}
-                        <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center gap-2">
-                                <span class="px-1 py-0.5 rounded {% if vuln.is_called %}bg-purple-500/30 text-purple-200{% else %}bg-purple-500/20 text-purple-300{% endif %} text-[10px] font-bold">VC{% if vuln.is_called %}!{% endif %}</span>
-                                <span class="{% if vuln.is_called %}text-purple-200{% else %}text-purple-300{% endif %} truncate" title="{{ vuln.summary }}">
-                                    {{ vuln.id }}
-                                </span>
-                            </div>
-                            <span class="text-purple-400 font-mono text-xs">
-                                {{ vuln.module }}
-                            </span>
-                        </div>
-                        {% endfor %}
-                    </div>
-                </div>
-                {% endif %}
-
-                <!-- Footer -->
-                <div class="mt-4 pt-4 border-t border-white/5">
-                    <p class="text-xs text-gray-500">
-                        {{ comp.total_deps }} total dependencies
-                        {% if comp.cves %} · <span class="text-red-400">{{ comp.cves | length }} GH CVE(s)</span>{% endif %}
-                        {% if comp.vulns %} · <span class="text-purple-400">{{ comp.vulns | length }} VC finding(s)</span>{% endif %}
-                    </p>
-                </div>
-            </div>
-            {% endfor %}
-            </div>
-
             <!-- Table View -->
             <div class="table-view overflow-x-auto">
                 <table class="w-full text-sm">
@@ -438,7 +261,7 @@
                                 </span>
                             </td>
                             <td class="py-3 px-4">
-                                <span class="{% if comp.go_version_mismatch %}text-yellow-400{% else %}text-cyan-400{% endif %} font-mono text-xs">
+                                <span class="{% if comp.go_version_mismatch %}text-yellow-400{% else %}text-gray-200{% endif %} font-mono text-xs">
                                     {{ comp.go_version }}{% if comp.go_version_mismatch %} ⚠{% endif %}
                                 </span>
                             </td>
@@ -448,7 +271,7 @@
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     {% for dep in stale_deps %}
                                     <span class="font-mono text-xs" title="{{ dep.path }} (bundled: {{ dep.bundled_version }})">
-                                        <span class="text-red-300">{{ dep.path.split('/')[-1] }}</span><span class="text-red-500">@{{ dep.version }}</span>
+                                        <span class="text-yellow-300">{{ dep.path.split('/')[-1] }}</span><span class="text-yellow-500">@{{ dep.version }}</span>
                                     </span>
                                     {% endfor %}
                                 </div>
@@ -462,7 +285,7 @@
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     {% for dep in mismatched_deps %}
                                     <span class="font-mono text-xs" title="{{ dep.path }} (expected: {{ dep.expected_version }})">
-                                        <span class="text-yellow-300">{{ dep.path.split('/')[-1] }}</span><span class="text-yellow-500">@{{ dep.version }}</span>
+                                        <span class="text-gray-300">{{ dep.path.split('/')[-1] }}</span><span class="text-gray-400">@{{ dep.version }}</span>
                                     </span>
                                     {% endfor %}
                                 </div>
@@ -616,7 +439,6 @@
     </div>
 
     <script>
-        let currentView = 'table';
 
         function showVersion(version) {
             // Hide all version content
@@ -643,26 +465,6 @@
                         pill.classList.add('text-gray-300');
                     }
                 }
-            });
-        }
-
-        function setView(view) {
-            currentView = view;
-
-            // Update toggle buttons
-            document.querySelectorAll('.view-toggle').forEach(btn => {
-                btn.classList.remove('active', 'bg-white/10', 'text-white');
-                btn.classList.add('text-gray-400');
-            });
-            document.getElementById('view-' + view).classList.add('active', 'bg-white/10', 'text-white');
-            document.getElementById('view-' + view).classList.remove('text-gray-400');
-
-            // Toggle view visibility
-            document.querySelectorAll('.cards-view').forEach(el => {
-                el.classList.toggle('hidden', view !== 'cards');
-            });
-            document.querySelectorAll('.table-view').forEach(el => {
-                el.classList.toggle('hidden', view !== 'table');
             });
         }
 
