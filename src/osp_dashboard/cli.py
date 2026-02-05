@@ -105,15 +105,25 @@ def scan_command(args: argparse.Namespace) -> int:
         print("  go install golang.org/x/vuln/cmd/govulncheck@latest", file=sys.stderr)
         return 1
 
+    # Filter to single version if specified
+    versions_to_scan = config.versions
+    if args.version:
+        if args.version not in config.versions:
+            print(f"Error: Version '{args.version}' not found in config", file=sys.stderr)
+            print(f"Available versions: {', '.join(config.versions.keys())}", file=sys.stderr)
+            return 1
+        versions_to_scan = {args.version: config.versions[args.version]}
+        print(f"Scanning only version: {args.version}")
+
     # Count total scans
-    total_scans = sum(len(components) for components in config.versions.values())
+    total_scans = sum(len(components) for components in versions_to_scan.values())
     current_scan = 0
     start_time = time.time()
 
     all_vulns = {}
     total_findings = 0
 
-    for osp_version, components in config.versions.items():
+    for osp_version, components in versions_to_scan.items():
         print(f"\n{'='*60}")
         print(f"Scanning OSP {osp_version} ({len(components)} components)")
         print(f"{'='*60}")
@@ -147,6 +157,29 @@ def scan_command(args: argparse.Namespace) -> int:
     print(f"\nSaving results to {output_path}...")
     save_scan_results(all_vulns, output_path)
     print("Done!")
+
+    return 0
+
+
+def merge_command(args: argparse.Namespace) -> int:
+    """Merge multiple vuln scan results into one file."""
+    import json
+    output_path = Path(args.output)
+
+    merged = {}
+    for input_file in args.inputs:
+        input_path = Path(input_file)
+        if not input_path.exists():
+            print(f"Warning: {input_path} not found, skipping", file=sys.stderr)
+            continue
+
+        print(f"Loading {input_path}...")
+        data = json.loads(input_path.read_text())
+        merged.update(data)
+
+    print(f"Merged {len(merged)} versions into {output_path}")
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(json.dumps(merged, indent=2))
 
     return 0
 
@@ -195,7 +228,28 @@ def main() -> int:
         default="data/vulns.json",
         help="Output JSON path (default: data/vulns.json)",
     )
+    scan_parser.add_argument(
+        "-v", "--version",
+        help="Scan only a specific OSP version (e.g., '1.21', 'main')",
+    )
     scan_parser.set_defaults(func=scan_command)
+
+    # Merge command
+    merge_parser = subparsers.add_parser(
+        "merge",
+        help="Merge multiple vuln scan results into one file",
+    )
+    merge_parser.add_argument(
+        "inputs",
+        nargs="+",
+        help="Input JSON files to merge",
+    )
+    merge_parser.add_argument(
+        "-o", "--output",
+        default="data/vulns.json",
+        help="Output JSON path (default: data/vulns.json)",
+    )
+    merge_parser.set_defaults(func=merge_command)
 
     args = parser.parse_args()
     return args.func(args)

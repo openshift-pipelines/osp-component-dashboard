@@ -14,9 +14,31 @@ permissions:
   contents: write
 
 jobs:
-  scan:
+  # First job: get list of versions from config
+  get-versions:
     runs-on: ubuntu-latest
-    timeout-minutes: 360  # 6 hours - scanning 63 component/version combos
+    outputs:
+      versions: ${{ steps.versions.outputs.versions }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Extract versions from config
+        id: versions
+        run: |
+          # Extract version keys from config.yaml
+          versions=$(grep -E '^\s+"[^"]+":$' config.yaml | head -20 | sed 's/.*"\([^"]*\)".*/\1/' | jq -R -s -c 'split("\n") | map(select(length > 0))')
+          echo "versions=$versions" >> $GITHUB_OUTPUT
+          echo "Found versions: $versions"
+
+  # Matrix job: scan each version in parallel
+  scan:
+    needs: get-versions
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        version: ${{ fromJson(needs.get-versions.outputs.versions) }}
     steps:
       - uses: actions/checkout@v4
 
@@ -39,8 +61,45 @@ jobs:
       - name: Install dependencies
         run: uv sync
 
-      - name: Run vulnerability scan
-        run: uv run osp-dashboard scan -o data/vulns.json
+      - name: Scan version ${{ matrix.version }}
+        run: uv run osp-dashboard scan -v "${{ matrix.version }}" -o "vulns-${{ matrix.version }}.json"
+
+      - name: Upload partial results
+        uses: actions/upload-artifact@v4
+        with:
+          name: vulns-${{ matrix.version }}
+          path: vulns-${{ matrix.version }}.json
+          retention-days: 1
+
+  # Final job: merge results and commit
+  merge:
+    needs: scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+        with:
+          version: "latest"
+
+      - name: Set up Python
+        run: uv python install 3.12
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+          pattern: vulns-*
+
+      - name: Merge scan results
+        run: |
+          # Find all partial result files
+          find artifacts -name "*.json" -type f
+          uv run osp-dashboard merge artifacts/*/vulns-*.json -o data/vulns.json
 
       - name: Commit scan results
         run: |
