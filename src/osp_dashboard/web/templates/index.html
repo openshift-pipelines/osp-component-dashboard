@@ -265,7 +265,7 @@
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Component</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Ref</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Release</th>
-                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Go</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Runtime</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Stale Deps</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Mismatched Deps</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">CVEs</th>
@@ -301,9 +301,15 @@
                                 {% endif %}
                             </td>
                             <td class="py-3 px-4">
+                                {% if comp.language == 'npm' %}
+                                <span class="text-green-300 font-mono text-xs" title="Node.js{% if comp.package_manager %} ({{ comp.package_manager }}){% endif %}">
+                                    <span class="text-green-500">Node</span> {{ comp.node_version or '?' }}
+                                </span>
+                                {% else %}
                                 <span class="{% if comp.go_version_mismatch %}text-yellow-400{% else %}text-gray-200{% endif %} font-mono text-xs">
                                     {{ comp.go_version }}{% if comp.go_version_mismatch %} ⚠{% endif %}
                                 </span>
+                                {% endif %}
                             </td>
                             <td class="py-3 px-4">
                                 {% set stale_deps = comp.internal_deps | selectattr('is_stale') | list %}
@@ -325,7 +331,11 @@
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
                                     {% for dep in mismatched_deps %}
                                     <span class="font-mono text-xs" title="{{ dep.path }} (expected: {{ dep.expected_version }})">
+                                        {% if comp.language == 'npm' %}
+                                        <span class="text-yellow-300">{{ dep.path.split('/')[-1] }}</span><span class="text-yellow-500">@{{ dep.version }}</span>
+                                        {% else %}
                                         <span class="text-gray-300">{{ dep.path.split('/')[-1] }}</span><span class="text-gray-400">@{{ dep.version }}</span>
+                                        {% endif %}
                                     </span>
                                     {% endfor %}
                                 </div>
@@ -334,10 +344,11 @@
                                 {% endif %}
                             </td>
                             <td class="py-3 px-4">
-                                {% set ns = namespace(has_cves=false, has_vulns=false) %}
+                                {% set ns = namespace(has_cves=false, has_vulns=false, has_npm_vulns=false) %}
                                 {% for dep in comp.external_deps %}{% if dep.cves %}{% set ns.has_cves = true %}{% endif %}{% endfor %}
                                 {% if comp.vulns %}{% set ns.has_vulns = true %}{% endif %}
-                                {% if ns.has_cves or ns.has_vulns or comp.cves %}
+                                {% if comp.npm_vulns %}{% set ns.has_npm_vulns = true %}{% endif %}
+                                {% if ns.has_cves or ns.has_vulns or ns.has_npm_vulns or comp.cves %}
                                 <div class="flex flex-wrap gap-x-2 gap-y-1">
                                     {# Component CVEs from GitHub Advisory #}
                                     {% for cve in comp.cves %}
@@ -362,6 +373,13 @@
                                     <span class="inline-flex items-center gap-1 font-mono text-xs" title="{{ vuln.id }}: {{ vuln.summary }}{% if vuln.is_called %} (CALLED){% endif %}">
                                         <span class="px-1 py-0.5 rounded {% if vuln.is_called %}bg-purple-500/30 text-purple-200{% else %}bg-purple-500/20 text-purple-300{% endif %}">VC{% if vuln.is_called %}!{% endif %}</span>
                                         <span class="{% if vuln.is_called %}text-purple-200{% else %}text-purple-400{% endif %}">{{ vuln.module }}</span>
+                                    </span>
+                                    {% endfor %}
+                                    {# Vulns from npm audit #}
+                                    {% for vuln in comp.npm_vulns %}
+                                    <span class="inline-flex items-center gap-1 font-mono text-xs" title="{{ vuln.id }}: {{ vuln.title }} ({{ vuln.severity }}){% if vuln.is_direct %} [DIRECT]{% endif %}">
+                                        <span class="px-1 py-0.5 rounded {% if vuln.is_direct %}bg-green-500/30 text-green-200{% else %}bg-green-500/20 text-green-300{% endif %}">NA{% if vuln.is_direct %}!{% endif %}</span>
+                                        <span class="{% if vuln.is_direct %}text-green-200{% else %}text-green-400{% endif %}">{{ vuln.package }}</span>
                                     </span>
                                     {% endfor %}
                                 </div>
@@ -437,10 +455,11 @@
                     </div>
                 </div>
                 <div>
-                    <h4 class="text-gray-300 font-medium mb-2">Go</h4>
+                    <h4 class="text-gray-300 font-medium mb-2">Runtime</h4>
                     <div class="space-y-1.5 text-gray-400">
                         <div><span class="text-gray-200">1.24.0</span> — Go version used</div>
                         <div><span class="text-yellow-400">1.24.0 ⚠</span> — Different from other components</div>
+                        <div><span class="text-green-500">Node</span> <span class="text-green-300">20.x</span> — npm component (Node.js)</div>
                     </div>
                 </div>
                 <div>
@@ -452,7 +471,8 @@
                 <div>
                     <h4 class="text-gray-300 font-medium mb-2">Mismatched Deps</h4>
                     <div class="space-y-1.5 text-gray-400">
-                        <div><span class="text-gray-300">client-go</span><span class="text-gray-400">@v0.30.0</span> — Different version than other components</div>
+                        <div><span class="text-gray-300">client-go</span><span class="text-gray-400">@v0.30.0</span> — Go: Different version than other components</div>
+                        <div><span class="text-yellow-300">react</span><span class="text-yellow-500">@^17.0.1</span> — npm: Outdated vs npm registry (major version behind)</div>
                     </div>
                 </div>
                 <div>
@@ -461,6 +481,8 @@
                         <div><span class="px-1 py-0.5 rounded bg-red-500/20 text-red-300 text-xs">GH</span> — GitHub Advisory (may not be exploitable)</div>
                         <div><span class="px-1 py-0.5 rounded bg-purple-500/20 text-purple-300 text-xs">VC</span> — govulncheck detected (not called)</div>
                         <div><span class="px-1 py-0.5 rounded bg-purple-500/30 text-purple-200 text-xs">VC!</span> — govulncheck (called, action required)</div>
+                        <div><span class="px-1 py-0.5 rounded bg-green-500/20 text-green-300 text-xs">NA</span> — npm audit (transitive)</div>
+                        <div><span class="px-1 py-0.5 rounded bg-green-500/30 text-green-200 text-xs">NA!</span> — npm audit (direct dep, action required)</div>
                     </div>
                 </div>
                 <div>

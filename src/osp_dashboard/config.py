@@ -22,9 +22,18 @@ class Config:
     # Support status for each version (full, maintenance, security, unsupported, upcoming, development)
     support_status: dict[str, str] = field(default_factory=dict)
 
+    # npm-based components (manually tracked, not in operator's components.yaml)
+    # {component: {osp_version: ref}}
+    npm_components: dict[str, dict[str, str]] = field(default_factory=dict)
+    # npm dependencies to highlight in the UI
+    highlight_npm_dependencies: list[str] = field(default_factory=list)
+
     # Computed: OSP version -> {component_name: version}
     # Populated by resolve_versions()
     versions: dict[str, dict[str, str]] = field(default_factory=dict)
+    # Computed: OSP version -> {npm_component: ref}
+    # Populated by resolve_npm_versions()
+    npm_versions: dict[str, dict[str, str]] = field(default_factory=dict)
 
 
 def load_config(path: Path | str) -> Config:
@@ -50,6 +59,8 @@ def load_config(path: Path | str) -> Config:
         skip_components=data.get("skip_components", []),
         highlight_dependencies=data.get("highlight_dependencies", []),
         support_status=data.get("support_status", {}),
+        npm_components=data.get("npm_components", {}),
+        highlight_npm_dependencies=data.get("highlight_npm_dependencies", []),
     )
 
 
@@ -109,6 +120,33 @@ def resolve_versions(config: Config, verbose: bool = False) -> None:
 
         if verbose:
             print(f"    Resolved {len(components)} components for {osp_version}")
+
+
+def resolve_npm_versions(config: Config, verbose: bool = False) -> None:
+    """Resolve npm component versions from config.
+
+    Populates config.npm_versions from config.npm_components.
+
+    Args:
+        config: Config object to populate
+        verbose: Print progress messages
+    """
+    if verbose and config.npm_components:
+        print("  Resolving npm component versions...")
+
+    # Build npm_versions from npm_components
+    # npm_components is {component: {osp_version: ref}}
+    # npm_versions should be {osp_version: {component: ref}}
+    for component, version_map in config.npm_components.items():
+        for osp_version, ref in version_map.items():
+            if osp_version not in config.npm_versions:
+                config.npm_versions[osp_version] = {}
+            config.npm_versions[osp_version][component] = ref
+
+    if verbose:
+        total_npm = sum(len(v) for v in config.npm_versions.values())
+        if total_npm:
+            print(f"    Resolved {len(config.npm_components)} npm components across {len(config.npm_versions)} versions")
 
 
 def parse_component(component: str) -> tuple[str, str]:

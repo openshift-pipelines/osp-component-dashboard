@@ -6,17 +6,85 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
 
 from ..collector.gomod import ComponentData
+from ..collector.npm import NpmComponentData
 
-# Internal Tekton/OSP dependency prefixes
+# Internal Tekton/OSP dependency prefixes (Go)
 INTERNAL_PREFIXES = (
     "github.com/tektoncd/",
     "github.com/openshift-pipelines/",
+)
+
+# Internal npm package scopes
+INTERNAL_NPM_SCOPES = (
+    "@openshift-pipelines/",
+    "@tektoncd/",
 )
 
 
 def is_internal_dep(path: str) -> bool:
     """Check if a dependency is an internal OSP/Tekton component."""
     return any(path.startswith(prefix) for prefix in INTERNAL_PREFIXES)
+
+
+def is_npm_internal_dep(name: str) -> bool:
+    """Check if an npm dependency is an internal OSP/Tekton package."""
+    return any(name.startswith(scope) for scope in INTERNAL_NPM_SCOPES)
+
+
+def normalize_node_version(version: str | None) -> tuple[int, int]:
+    """Extract major.minor from Node version string for comparison.
+
+    Args:
+        version: Node version like "20", "20.x", "18.17.0"
+
+    Returns:
+        Tuple of (major, minor) for comparison
+    """
+    if not version:
+        return (0, 0)
+    match = re.match(r"(\d+)(?:\.(\d+|x))?", version)
+    if match:
+        major = int(match.group(1))
+        minor_str = match.group(2)
+        minor = int(minor_str) if minor_str and minor_str != "x" else 0
+        return (major, minor)
+    return (0, 0)
+
+
+def parse_npm_version(version: str) -> tuple[int, int, int]:
+    """Parse npm version string to tuple, handling common prefixes.
+
+    Args:
+        version: Version like "5.2.1", "^5.2.1", "~5.2.0", ">=5.0.0"
+
+    Returns:
+        Tuple of (major, minor, patch)
+    """
+    # Strip common version prefixes
+    v = re.sub(r"^[\^~>=<]+", "", version.strip())
+    match = re.match(r"(\d+)(?:\.(\d+))?(?:\.(\d+))?", v)
+    if match:
+        major = int(match.group(1))
+        minor = int(match.group(2)) if match.group(2) else 0
+        patch = int(match.group(3)) if match.group(3) else 0
+        return (major, minor, patch)
+    return (0, 0, 0)
+
+
+def is_npm_version_outdated(current: str, latest: str) -> bool:
+    """Check if an npm package version is outdated.
+
+    Args:
+        current: Current version (may have ^ or ~ prefix)
+        latest: Latest version from registry
+
+    Returns:
+        True if current is older than latest (major version difference)
+    """
+    current_v = parse_npm_version(current)
+    latest_v = parse_npm_version(latest)
+    # Consider outdated if major version is behind
+    return current_v[0] < latest_v[0]
 
 
 def normalize_go_version(version: str) -> tuple[int, int]:
@@ -135,6 +203,10 @@ def generate_html(
     dep_advisories: dict[str, list] | None = None,
     vuln_data: dict[str, dict[str, list]] | None = None,
     support_status: dict[str, str] | None = None,
+    npm_data: dict[str, list[NpmComponentData]] | None = None,
+    highlight_npm_deps: list[str] | None = None,
+    npm_vuln_data: dict[str, dict[str, list]] | None = None,
+    npm_latest_versions: dict[str, str] | None = None,
 ) -> None:
     """Generate the dashboard HTML.
 
@@ -147,6 +219,10 @@ def generate_html(
         cve_data: Dict of OSP version -> {component: [Advisory, ...]} for CVE display
         dep_advisories: Dict of dep_path -> [Advisory, ...] for dependency CVE checking
         vuln_data: Dict of OSP version -> {component: [VulnFinding, ...]} from govulncheck
+        npm_data: Dict of OSP version -> list of NpmComponentData
+        highlight_npm_deps: List of npm package names to highlight
+        npm_vuln_data: Dict of OSP version -> {component: [NpmVulnFinding, ...]} from npm audit
+        npm_latest_versions: Dict of npm package name -> latest version from registry
     """
     if template_dir is None:
         template_dir = Path(__file__).parent / "templates"
@@ -392,7 +468,135 @@ def generate_html(
             "called_vulns": called_vulns,
             "vuln_details": vuln_details,
             "has_vuln_data": vuln_data is not None,
+            # npm stats (to be populated below)
+            "has_npm_components": False,
+            "npm_vulns_total": 0,
+            "npm_vulns_direct": 0,
         }
+
+    # Process npm components
+    highlight_npm = highlight_npm_deps or []
+    if npm_data:
+        for osp_version, npm_components in npm_data.items():
+            if not npm_components:
+                continue
+
+            # Ensure version exists in versions_data
+            if osp_version not in versions_data:
+                versions_data[osp_version] = []
+            if osp_version not in version_stats:
+                version_stats[osp_version] = {
+                    "has_go_mismatch": False,
+                    "go_versions": [],
+                    "total_cves": 0,
+                    "cve_details": [],
+                    "has_dep_mismatch": False,
+                    "mismatched_deps": [],
+                    "dep_cve_details": [],
+                    "total_dep_cves": 0,
+                    "total_vulns": 0,
+                    "called_vulns": 0,
+                    "vuln_details": [],
+                    "has_vuln_data": False,
+                    "has_npm_components": False,
+                    "npm_vulns_total": 0,
+                    "npm_vulns_direct": 0,
+                }
+
+            version_stats[osp_version]["has_npm_components"] = True
+
+            # Get npm vuln data for this version
+            version_npm_vulns = npm_vuln_data.get(osp_version, {}) if npm_vuln_data else {}
+
+            for comp in npm_components:
+                # Filter to highlighted npm dependencies
+                highlighted_deps = [
+                    d for d in comp.dependencies
+                    if d.name in highlight_npm and not is_npm_internal_dep(d.name)
+                ]
+                internal_deps = [
+                    d for d in comp.dependencies
+                    if d.name in highlight_npm and is_npm_internal_dep(d.name)
+                ]
+
+                # Sort by name
+                highlighted_deps.sort(key=lambda d: d.name)
+                internal_deps.sort(key=lambda d: d.name)
+
+                # Get npm audit findings for this component
+                component_key = f"{comp.owner}/{comp.repo}"
+                comp_npm_vulns = version_npm_vulns.get(component_key, [])
+
+                npm_vuln_list = [
+                    {
+                        "id": v.vuln_id,
+                        "aliases": v.aliases,
+                        "title": v.title,
+                        "severity": v.severity,
+                        "package": v.package_name,
+                        "vulnerable_range": v.vulnerable_range,
+                        "patched_version": v.patched_version,
+                        "is_direct": v.is_direct,
+                    }
+                    for v in comp_npm_vulns
+                ]
+
+                # Update version stats
+                version_stats[osp_version]["npm_vulns_total"] += len(comp_npm_vulns)
+                version_stats[osp_version]["npm_vulns_direct"] += sum(1 for v in comp_npm_vulns if v.is_direct)
+
+                # Check for outdated npm dependencies
+                npm_latest = npm_latest_versions or {}
+                external_deps_data = []
+                for d in highlighted_deps:
+                    latest = npm_latest.get(d.name)
+                    is_outdated = False
+                    if latest:
+                        is_outdated = is_npm_version_outdated(d.version, latest)
+                    external_deps_data.append({
+                        "path": d.name,
+                        "version": d.version,
+                        "is_mismatched": is_outdated,
+                        "version_differs": is_outdated,
+                        "expected_version": latest,
+                        "cves": [],
+                    })
+
+                versions_data[osp_version].append({
+                    "owner": comp.owner,
+                    "repo": comp.repo,
+                    "ref": comp.ref,
+                    "language": "npm",  # Distinguish from Go components
+                    "node_version": comp.node_version,
+                    "package_manager": comp.package_manager,
+                    "go_version": None,
+                    "go_version_mismatch": False,
+                    "internal_deps": [
+                        {"path": d.name, "version": d.version, "is_stale": False, "bundled_version": None}
+                        for d in internal_deps
+                    ],
+                    "external_deps": external_deps_data,
+                    "total_deps": len(comp.dependencies),
+                    "cves": [],
+                    "vulns": [],
+                    "npm_vulns": npm_vuln_list,
+                    "is_primary": False,
+                    "release_status": {
+                        "branch_exists": comp.release_status.branch_exists,
+                        "branch_name": comp.release_status.branch_name,
+                        "current_version": comp.release_status.current_version,
+                        "latest_version": comp.release_status.latest_version,
+                        "has_unreleased": comp.release_status.has_unreleased,
+                        "commits_ahead": comp.release_status.commits_ahead,
+                        "update_available": comp.release_status.update_available,
+                    },
+                })
+
+    # Add language="go" to all existing Go components
+    for osp_version in versions_data:
+        for comp in versions_data[osp_version]:
+            if "language" not in comp:
+                comp["language"] = "go"
 
     # Sort OSP versions descending (newest first)
     sorted_versions = sorted(versions_data.keys(), reverse=True)

@@ -66,6 +66,44 @@ skip_components:
   - dashboard
   - hub
 
+# npm-based components (manually tracked, not in operator's components.yaml)
+# Note: console-plugin uses release branches like "release-v1.20.x"
+npm_components:
+  openshift-pipelines/console-plugin:
+    "main": "main"
+    "next": "main"
+    "1.22": "release-v1.22.x"
+    "1.21": "release-v1.21.x"
+    "1.20": "release-v1.20.x"
+    "1.19": "release-v1.19.x"
+    "1.18": "release-v1.18.x"
+    "1.17": "release-v1.17.x"
+    "1.16": "release-v1.16.x"
+    "1.15": "release-v1.15.x"
+
+# npm packages to highlight
+# Key dependencies for console-plugin and similar OpenShift console plugins
+highlight_npm_dependencies:
+  # OpenShift Console SDK - must match console version
+  - "@openshift-console/dynamic-plugin-sdk"
+  - "@openshift-console/dynamic-plugin-sdk-webpack"
+  # PatternFly UI framework - design system
+  - "@patternfly/react-core"
+  - "@patternfly/react-table"
+  - "@patternfly/react-charts"
+  - "@patternfly/react-topology"  # Pipeline graph visualization
+  # Core React ecosystem
+  - "react"
+  - "react-dom"
+  - "react-router-dom"
+  - "react-redux"
+  # Build tooling
+  - "typescript"
+  - "webpack"
+  # i18n
+  - "i18next"
+  - "react-i18next"
+
 # Key dependencies to highlight
 highlight_dependencies:
   # Internal OSP/Tekton cross-dependencies

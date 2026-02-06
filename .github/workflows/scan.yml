@@ -71,9 +71,47 @@ jobs:
           path: vulns-${{ matrix.version }}.json
           retention-days: 1
 
+  # npm scanning job: scan npm components in parallel
+  scan-npm:
+    needs: get-versions
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        version: ${{ fromJson(needs.get-versions.outputs.versions) }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+        with:
+          version: "latest"
+
+      - name: Set up Python
+        run: uv python install 3.12
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Scan npm version ${{ matrix.version }}
+        run: uv run osp-dashboard scan-npm -v "${{ matrix.version }}" -o "npm-vulns-${{ matrix.version }}.json"
+
+      - name: Upload partial results
+        uses: actions/upload-artifact@v4
+        with:
+          name: npm-vulns-${{ matrix.version }}
+          path: npm-vulns-${{ matrix.version }}.json
+          retention-days: 1
+
   # Final job: merge results and commit
   merge:
-    needs: scan
+    needs: [scan, scan-npm]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -89,26 +127,44 @@ jobs:
       - name: Install dependencies
         run: uv sync
 
-      - name: Download all artifacts
+      - name: Download Go vuln artifacts
         uses: actions/download-artifact@v4
         with:
-          path: artifacts
+          path: artifacts/go
           pattern: vulns-*
+
+      - name: Download npm vuln artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts/npm
+          pattern: npm-vulns-*
 
       - name: Merge scan results
         run: |
           # Find all partial result files
-          find artifacts -name "*.json" -type f
-          uv run osp-dashboard merge artifacts/*/vulns-*.json -o data/vulns.json
+          echo "Go vulns:"
+          find artifacts/go -name "*.json" -type f 2>/dev/null || echo "  (none)"
+          echo "npm vulns:"
+          find artifacts/npm -name "*.json" -type f 2>/dev/null || echo "  (none)"
+
+          # Merge Go vulns
+          if ls artifacts/go/*/vulns-*.json 1> /dev/null 2>&1; then
+            uv run osp-dashboard merge artifacts/go/*/vulns-*.json -o data/vulns.json
+          fi
+
+          # Merge npm vulns
+          if ls artifacts/npm/*/npm-vulns-*.json 1> /dev/null 2>&1; then
+            uv run osp-dashboard merge artifacts/npm/*/npm-vulns-*.json -o data/npm-vulns.json
+          fi
 
       - name: Commit scan results
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add data/vulns.json
+          git add data/vulns.json data/npm-vulns.json
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore: Update govulncheck scan results"
+            git commit -m "chore: Update vulnerability scan results"
             git push
           fi
