@@ -168,7 +168,7 @@
         "title": "Undici has an unbounded decompression chain in HTTP responses on Node.js Fetch API via Content-Encoding leads to resource exhaustion",
         "package_name": "undici",
         "vulnerable_range": "<6.23.0",
-        "patched_version": "7.10.1",
+        "patched_version": "7.12.0",
         "is_direct": false
       },
       {
@@ -402,7 +402,7 @@
         "title": "Undici has an unbounded decompression chain in HTTP responses on Node.js Fetch API via Content-Encoding leads to resource exhaustion",
         "package_name": "undici",
         "vulnerable_range": "<6.23.0",
-        "patched_version": "7.10.1",
+        "patched_version": "7.12.0",
         "is_direct": false
       },
       {
@@ -616,7 +616,7 @@
         "title": "Undici has an unbounded decompression chain in HTTP responses on Node.js Fetch API via Content-Encoding leads to resource exhaustion",
         "package_name": "undici",
         "vulnerable_range": "<6.23.0",
-        "patched_version": "7.10.1",
+        "patched_version": "7.12.0",
         "is_direct": false
       },
       {
@@ -850,7 +850,7 @@
         "title": "Undici has an unbounded decompression chain in HTTP responses on Node.js Fetch API via Content-Encoding leads to resource exhaustion",
         "package_name": "undici",
         "vulnerable_range": "<6.23.0",
-        "patched_version": "7.10.1",
+        "patched_version": "7.12.0",
         "is_direct": false
       },
       {
@@ -1084,7 +1084,7 @@
         "title": "Undici has an unbounded decompression chain in HTTP responses on Node.js Fetch API via Content-Encoding leads to resource exhaustion",
         "package_name": "undici",
         "vulnerable_range": "<6.23.0",
-        "patched_version": "7.10.1",
+        "patched_version": "7.12.0",
         "is_direct": false
       },
       {
@@ -1318,7 +1318,7 @@
         "title": "Undici has an unbounded decompression chain in HTTP responses on Node.js Fetch API via Content-Encoding leads to resource exhaustion",
         "package_name": "undici",
         "vulnerable_range": "<6.23.0",
-        "patched_version": "7.10.1",
+        "patched_version": "7.12.0",
         "is_direct": false
       },
       {
@@ -1552,7 +1552,7 @@
         "title": "Undici has an unbounded decompression chain in HTTP responses on Node.js Fetch API via Content-Encoding leads to resource exhaustion",
         "package_name": "undici",
         "vulnerable_range": "<6.23.0",
-        "patched_version": "7.10.1",
+        "patched_version": "7.12.0",
         "is_direct": false
       },
       {
@@ -1666,7 +1666,7 @@
         "title": "Undici has an unbounded decompression chain in HTTP responses on Node.js Fetch API via Content-Encoding leads to resource exhaustion",
         "package_name": "undici",
         "vulnerable_range": "<6.23.0",
-        "patched_version": "7.10.1",
+        "patched_version": "7.12.0",
         "is_direct": false
       },
       {
@@ -1780,7 +1780,7 @@
         "title": "Undici has an unbounded decompression chain in HTTP responses on Node.js Fetch API via Content-Encoding leads to resource exhaustion",
         "package_name": "undici",
         "vulnerable_range": "<6.23.0",
-        "patched_version": "7.10.1",
+        "patched_version": "7.12.0",
         "is_direct": false
       },
       {
@@ -1894,7 +1894,7 @@
         "title": "Undici has an unbounded decompression chain in HTTP responses on Node.js Fetch API via Content-Encoding leads to resource exhaustion",
         "package_name": "undici",
         "vulnerable_range": "<6.23.0",
-        "patched_version": "7.10.1",
+        "patched_version": "7.12.0",
         "is_direct": false
       },
       {
