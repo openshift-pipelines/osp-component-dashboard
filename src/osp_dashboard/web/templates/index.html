@@ -521,7 +521,7 @@
 
     <script>
 
-        function showVersion(version) {
+        function showVersion(version, updateHash = true) {
             // Hide all version content
             document.querySelectorAll('.version-content').forEach(el => {
                 el.classList.add('hidden');
@@ -547,6 +547,11 @@
                     }
                 }
             });
+
+            // Update URL hash for shareable links
+            if (updateHash && window.location.hash !== '#' + version) {
+                history.replaceState(null, '', '#' + version);
+            }
         }
 
         function toggleDeps(id) {
@@ -561,11 +566,27 @@
             }
         }
 
-        // On page load, default to 'next' version
+        // Get version from URL hash or default
+        function getVersionFromHash(versions) {
+            const hash = window.location.hash.slice(1); // Remove '#'
+            return versions.includes(hash) ? hash : null;
+        }
+
+        // On page load, use hash or default to 'next' version
         document.addEventListener('DOMContentLoaded', function() {
             const versions = [{% for v in versions %}'{{ v }}'{% if not loop.last %}, {% endif %}{% endfor %}];
+            const hashVersion = getVersionFromHash(versions);
             const defaultVersion = versions.includes('next') ? 'next' : versions[0];
-            showVersion(defaultVersion);
+            showVersion(hashVersion || defaultVersion, !hashVersion);
+        });
+
+        // Handle browser back/forward navigation
+        window.addEventListener('hashchange', function() {
+            const versions = [{% for v in versions %}'{{ v }}'{% if not loop.last %}, {% endif %}{% endfor %}];
+            const hashVersion = getVersionFromHash(versions);
+            if (hashVersion) {
+                showVersion(hashVersion, false);
+            }
         });
     </script>
 </body>
