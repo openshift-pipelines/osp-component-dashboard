@@ -2,16 +2,6 @@
   "1.15": {
     "openshift-pipelines/console-plugin": [
       {
-        "vuln_id": "GHSA-p8p7-x288-28g6",
-        "aliases": [],
-        "severity": "critical",
-        "title": "Server-Side Request Forgery in Request",
-        "package_name": "@cypress/request",
-        "vulnerable_range": "<=2.88.12",
-        "patched_version": "15.10.0",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-2w69-qvjg-hvjx",
         "aliases": [],
         "severity": "high",
@@ -22,52 +12,12 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-v6h2-p8h4-qcjw",
-        "aliases": [],
-        "severity": "low",
-        "title": "brace-expansion Regular Expression Denial of Service vulnerability",
-        "package_name": "brace-expansion",
-        "vulnerable_range": ">=1.0.0 <=1.1.11",
-        "patched_version": null,
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-73rr-hh4g-fpgx",
-        "aliases": [],
-        "severity": "low",
-        "title": "jsdiff has a Denial of Service vulnerability in parsePatch and applyPatch",
-        "package_name": "diff",
-        "vulnerable_range": ">=4.0.0 <4.0.4",
-        "patched_version": null,
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-fjxv-7rqg-78g4",
-        "aliases": [],
-        "severity": "critical",
-        "title": "form-data uses unsafe random function in form-data for choosing boundary",
-        "package_name": "form-data",
-        "vulnerable_range": ">=4.0.0 <4.0.4",
-        "patched_version": "15.10.0",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-5j98-mcp5-4vw2",
-        "aliases": [],
-        "severity": "high",
-        "title": "glob CLI: Command injection via -c/--cmd executes matches with shell:true",
-        "package_name": "glob",
-        "vulnerable_range": ">=10.2.0 <10.5.0",
-        "patched_version": null,
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
         "severity": "moderate",
         "title": "js-yaml has prototype pollution in merge (<<)",
         "package_name": "js-yaml",
-        "vulnerable_range": "<3.14.2",
+        "vulnerable_range": ">=4.0.0 <4.1.1",
         "patched_version": "9.3.0",
         "is_direct": false
       },
@@ -78,67 +28,7 @@
         "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
         "package_name": "lodash",
         "vulnerable_range": ">=4.0.0 <=4.17.22",
-        "patched_version": null,
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-xxjr-mmjv-4gpg",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
-        "package_name": "lodash-es",
-        "vulnerable_range": ">=4.0.0 <=4.17.22",
-        "patched_version": null,
-        "is_direct": true
-      },
-      {
-        "vuln_id": "GHSA-554w-wpv2-vw27",
-        "aliases": [],
-        "severity": "high",
-        "title": "node-forge has ASN.1 Unbounded Recursion",
-        "package_name": "node-forge",
-        "vulnerable_range": "<1.3.2",
-        "patched_version": null,
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-5gfm-wpxj-wjgq",
-        "aliases": [],
-        "severity": "high",
-        "title": "node-forge has an Interpretation Conflict vulnerability via its ASN.1 Validator Desynchronization",
-        "package_name": "node-forge",
-        "vulnerable_range": "<1.3.2",
-        "patched_version": null,
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-65ch-62r8-g69g",
-        "aliases": [],
-        "severity": "high",
-        "title": "node-forge is vulnerable to ASN.1 OID Integer Truncation",
-        "package_name": "node-forge",
-        "vulnerable_range": "<1.3.2",
-        "patched_version": null,
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-76c9-3jph-rj3q",
-        "aliases": [],
-        "severity": "low",
-        "title": "on-headers is vulnerable to http response header manipulation",
-        "package_name": "on-headers",
-        "vulnerable_range": "<1.1.0",
-        "patched_version": null,
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-6rw7-vpxm-498p",
-        "aliases": [],
-        "severity": "high",
-        "title": "qs's arrayLimit bypass in its bracket notation allows DoS via memory exhaustion",
-        "package_name": "qs",
-        "vulnerable_range": "<6.14.1",
-        "patched_version": "15.10.0",
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -148,16 +38,6 @@
         "title": "React Router has unexpected external redirect via untrusted paths",
         "package_name": "react-router",
         "vulnerable_range": ">=6.0.0 <6.30.2",
-        "patched_version": null,
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-52f5-9888-hmc6",
-        "aliases": [],
-        "severity": "low",
-        "title": "tmp allows arbitrary temporary file / directory write via symbolic link `dir` parameter",
-        "package_name": "tmp",
-        "vulnerable_range": "<=0.2.3",
         "patched_version": null,
         "is_direct": false
       },
@@ -172,26 +52,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-9965-vmph-33xx",
-        "aliases": [],
-        "severity": "high",
-        "title": "validator.js has a URL validation bypass vulnerability in its isURL function",
-        "package_name": "validator",
-        "vulnerable_range": "<13.15.20",
-        "patched_version": null,
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-vghf-hv5q-vc2g",
-        "aliases": [],
-        "severity": "high",
-        "title": "Validator is Vulnerable to Incomplete Filtering of One or More Instances of Special Elements",
-        "package_name": "validator",
-        "vulnerable_range": "<13.15.22",
-        "patched_version": null,
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-g3ch-rx76-35fx",
         "aliases": [],
         "severity": "moderate",
@@ -202,24 +62,44 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-hc6q-2mpp-qw7j",
+        "aliases": [],
+        "severity": "critical",
+        "title": "Cross-realm object access in Webpack 5",
+        "package_name": "webpack",
+        "vulnerable_range": ">=5.0.0 <5.76.0",
+        "patched_version": "1.3.0",
+        "is_direct": true
+      },
+      {
+        "vuln_id": "GHSA-4vvj-4cpr-p986",
+        "aliases": [],
+        "severity": "critical",
+        "title": "Webpack's AutoPublicPathRuntimeModule has a DOM Clobbering Gadget that leads to XSS",
+        "package_name": "webpack",
+        "vulnerable_range": ">=5.0.0-alpha.0 <5.94.0",
+        "patched_version": "1.3.0",
+        "is_direct": true
+      },
+      {
         "vuln_id": "GHSA-8fgc-7cc6-rx7x",
         "aliases": [],
-        "severity": "low",
+        "severity": "critical",
         "title": "webpack buildHttp: allowedUris allow-list bypass via URL userinfo (@) leading to build-time SSRF behavior",
         "package_name": "webpack",
         "vulnerable_range": ">=5.49.0 <=5.104.0",
         "patched_version": "1.3.0",
-        "is_direct": false
+        "is_direct": true
       },
       {
         "vuln_id": "GHSA-38r7-794h-5758",
         "aliases": [],
-        "severity": "low",
+        "severity": "critical",
         "title": "webpack buildHttp HttpUriPlugin allowedUris bypass via HTTP redirects \u2192 SSRF + cache persistence",
         "package_name": "webpack",
         "vulnerable_range": ">=5.49.0 <5.104.0",
         "patched_version": "1.3.0",
-        "is_direct": false
+        "is_direct": true
       }
     ]
   },
@@ -372,6 +252,16 @@
         "title": "qs's arrayLimit bypass in its bracket notation allows DoS via memory exhaustion",
         "package_name": "qs",
         "vulnerable_range": "<6.14.1",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-w7fw-mjwx-w883",
+        "aliases": [],
+        "severity": "high",
+        "title": "qs's arrayLimit bypass in comma parsing allows denial of service",
+        "package_name": "qs",
+        "vulnerable_range": ">=6.7.0 <=6.14.1",
         "patched_version": null,
         "is_direct": false
       },
@@ -586,6 +476,16 @@
         "title": "qs's arrayLimit bypass in its bracket notation allows DoS via memory exhaustion",
         "package_name": "qs",
         "vulnerable_range": "<6.14.1",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-w7fw-mjwx-w883",
+        "aliases": [],
+        "severity": "high",
+        "title": "qs's arrayLimit bypass in comma parsing allows denial of service",
+        "package_name": "qs",
+        "vulnerable_range": ">=6.7.0 <=6.14.1",
         "patched_version": null,
         "is_direct": false
       },
@@ -824,6 +724,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-w7fw-mjwx-w883",
+        "aliases": [],
+        "severity": "high",
+        "title": "qs's arrayLimit bypass in comma parsing allows denial of service",
+        "package_name": "qs",
+        "vulnerable_range": ">=6.7.0 <=6.14.1",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-9jcx-v3wj-wh4m",
         "aliases": [],
         "severity": "high",
@@ -1054,6 +964,16 @@
         "title": "qs's arrayLimit bypass in its bracket notation allows DoS via memory exhaustion",
         "package_name": "qs",
         "vulnerable_range": "<6.14.1",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-w7fw-mjwx-w883",
+        "aliases": [],
+        "severity": "high",
+        "title": "qs's arrayLimit bypass in comma parsing allows denial of service",
+        "package_name": "qs",
+        "vulnerable_range": ">=6.7.0 <=6.14.1",
         "patched_version": null,
         "is_direct": false
       },
@@ -1406,6 +1326,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-w7fw-mjwx-w883",
+        "aliases": [],
+        "severity": "high",
+        "title": "qs's arrayLimit bypass in comma parsing allows denial of service",
+        "package_name": "qs",
+        "vulnerable_range": ">=6.7.0 <=6.14.1",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-9jcx-v3wj-wh4m",
         "aliases": [],
         "severity": "high",
@@ -1567,7 +1497,7 @@
         "package_name": "webpack",
         "vulnerable_range": ">=5.0.0 <5.76.0",
         "patched_version": "1.3.0",
-        "is_direct": false
+        "is_direct": true
       },
       {
         "vuln_id": "GHSA-4vvj-4cpr-p986",
@@ -1577,7 +1507,7 @@
         "package_name": "webpack",
         "vulnerable_range": ">=5.0.0-alpha.0 <5.94.0",
         "patched_version": "1.3.0",
-        "is_direct": false
+        "is_direct": true
       },
       {
         "vuln_id": "GHSA-8fgc-7cc6-rx7x",
@@ -1587,7 +1517,7 @@
         "package_name": "webpack",
         "vulnerable_range": ">=5.49.0 <=5.104.0",
         "patched_version": "1.3.0",
-        "is_direct": false
+        "is_direct": true
       },
       {
         "vuln_id": "GHSA-38r7-794h-5758",
@@ -1597,7 +1527,7 @@
         "package_name": "webpack",
         "vulnerable_range": ">=5.49.0 <5.104.0",
         "patched_version": "1.3.0",
-        "is_direct": false
+        "is_direct": true
       }
     ]
   },
