@@ -8,7 +8,7 @@
         "title": "ajv has ReDoS when using `$data` option",
         "package_name": "ajv",
         "vulnerable_range": "<8.18.0",
-        "patched_version": null,
+        "patched_version": "10.0.0",
         "is_direct": false
       },
       {
@@ -29,6 +29,16 @@
         "package_name": "lodash",
         "vulnerable_range": ">=4.0.0 <=4.17.22",
         "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-3ppc-4f35-3m26",
+        "aliases": [],
+        "severity": "high",
+        "title": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
+        "package_name": "minimatch",
+        "vulnerable_range": "<10.2.1",
+        "patched_version": "10.0.0",
         "is_direct": false
       },
       {
@@ -204,6 +214,16 @@
         "vulnerable_range": ">=4.0.0 <=4.17.22",
         "patched_version": null,
         "is_direct": true
+      },
+      {
+        "vuln_id": "GHSA-3ppc-4f35-3m26",
+        "aliases": [],
+        "severity": "high",
+        "title": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
+        "package_name": "minimatch",
+        "vulnerable_range": "<10.2.1",
+        "patched_version": null,
+        "is_direct": false
       },
       {
         "vuln_id": "GHSA-554w-wpv2-vw27",
@@ -386,7 +406,7 @@
         "title": "jsdiff has a Denial of Service vulnerability in parsePatch and applyPatch",
         "package_name": "diff",
         "vulnerable_range": ">=4.0.0 <4.0.4",
-        "patched_version": null,
+        "patched_version": "4.1.0",
         "is_direct": false
       },
       {
@@ -438,6 +458,16 @@
         "vulnerable_range": ">=4.0.0 <=4.17.22",
         "patched_version": null,
         "is_direct": true
+      },
+      {
+        "vuln_id": "GHSA-3ppc-4f35-3m26",
+        "aliases": [],
+        "severity": "high",
+        "title": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
+        "package_name": "minimatch",
+        "vulnerable_range": "<10.2.1",
+        "patched_version": "17.2.1",
+        "is_direct": false
       },
       {
         "vuln_id": "GHSA-554w-wpv2-vw27",
@@ -694,6 +724,16 @@
         "is_direct": true
       },
       {
+        "vuln_id": "GHSA-3ppc-4f35-3m26",
+        "aliases": [],
+        "severity": "high",
+        "title": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
+        "package_name": "minimatch",
+        "vulnerable_range": "<10.2.1",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-554w-wpv2-vw27",
         "aliases": [],
         "severity": "high",
@@ -948,6 +988,16 @@
         "is_direct": true
       },
       {
+        "vuln_id": "GHSA-3ppc-4f35-3m26",
+        "aliases": [],
+        "severity": "high",
+        "title": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
+        "package_name": "minimatch",
+        "vulnerable_range": "<10.2.1",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-554w-wpv2-vw27",
         "aliases": [],
         "severity": "high",
@@ -1098,7 +1148,7 @@
         "title": "ajv has ReDoS when using `$data` option",
         "package_name": "ajv",
         "vulnerable_range": "<8.18.0",
-        "patched_version": null,
+        "patched_version": "10.0.0",
         "is_direct": false
       },
       {
@@ -1108,7 +1158,7 @@
         "title": "jsdiff has a Denial of Service vulnerability in parsePatch and applyPatch",
         "package_name": "diff",
         "vulnerable_range": ">=6.0.0 <8.0.3",
-        "patched_version": null,
+        "patched_version": "17.2.1",
         "is_direct": false
       },
       {
@@ -1129,6 +1179,16 @@
         "package_name": "lodash",
         "vulnerable_range": ">=4.0.0 <=4.17.22",
         "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-3ppc-4f35-3m26",
+        "aliases": [],
+        "severity": "high",
+        "title": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
+        "package_name": "minimatch",
+        "vulnerable_range": "<10.2.1",
+        "patched_version": "7.22.0",
         "is_direct": false
       },
       {
@@ -1306,6 +1366,16 @@
         "is_direct": true
       },
       {
+        "vuln_id": "GHSA-3ppc-4f35-3m26",
+        "aliases": [],
+        "severity": "high",
+        "title": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
+        "package_name": "minimatch",
+        "vulnerable_range": "<10.2.1",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-554w-wpv2-vw27",
         "aliases": [],
         "severity": "high",
@@ -1456,7 +1526,7 @@
         "title": "ajv has ReDoS when using `$data` option",
         "package_name": "ajv",
         "vulnerable_range": "<8.18.0",
-        "patched_version": null,
+        "patched_version": "10.0.0",
         "is_direct": false
       },
       {
@@ -1466,7 +1536,7 @@
         "title": "jsdiff has a Denial of Service vulnerability in parsePatch and applyPatch",
         "package_name": "diff",
         "vulnerable_range": ">=6.0.0 <8.0.3",
-        "patched_version": null,
+        "patched_version": "20.1.2",
         "is_direct": false
       },
       {
@@ -1487,6 +1557,16 @@
         "package_name": "lodash",
         "vulnerable_range": ">=4.0.0 <=4.17.22",
         "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-3ppc-4f35-3m26",
+        "aliases": [],
+        "severity": "high",
+        "title": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
+        "package_name": "minimatch",
+        "vulnerable_range": "<10.2.1",
+        "patched_version": "7.22.0",
         "is_direct": false
       },
       {
@@ -1560,7 +1640,7 @@
         "title": "ajv has ReDoS when using `$data` option",
         "package_name": "ajv",
         "vulnerable_range": "<8.18.0",
-        "patched_version": null,
+        "patched_version": "10.0.0",
         "is_direct": false
       },
       {
@@ -1570,7 +1650,7 @@
         "title": "jsdiff has a Denial of Service vulnerability in parsePatch and applyPatch",
         "package_name": "diff",
         "vulnerable_range": ">=6.0.0 <8.0.3",
-        "patched_version": null,
+        "patched_version": "17.2.1",
         "is_direct": false
       },
       {
@@ -1591,6 +1671,16 @@
         "package_name": "lodash",
         "vulnerable_range": ">=4.0.0 <=4.17.22",
         "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-3ppc-4f35-3m26",
+        "aliases": [],
+        "severity": "high",
+        "title": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
+        "package_name": "minimatch",
+        "vulnerable_range": "<10.2.1",
+        "patched_version": "10.0.0",
         "is_direct": false
       },
       {
@@ -1664,7 +1754,7 @@
         "title": "ajv has ReDoS when using `$data` option",
         "package_name": "ajv",
         "vulnerable_range": "<8.18.0",
-        "patched_version": null,
+        "patched_version": "10.0.0",
         "is_direct": false
       },
       {
@@ -1674,7 +1764,7 @@
         "title": "jsdiff has a Denial of Service vulnerability in parsePatch and applyPatch",
         "package_name": "diff",
         "vulnerable_range": ">=6.0.0 <8.0.3",
-        "patched_version": null,
+        "patched_version": "20.1.2",
         "is_direct": false
       },
       {
@@ -1695,6 +1785,16 @@
         "package_name": "lodash",
         "vulnerable_range": ">=4.0.0 <=4.17.22",
         "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-3ppc-4f35-3m26",
+        "aliases": [],
+        "severity": "high",
+        "title": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
+        "package_name": "minimatch",
+        "vulnerable_range": "<10.2.1",
+        "patched_version": "10.0.0",
         "is_direct": false
       },
       {
