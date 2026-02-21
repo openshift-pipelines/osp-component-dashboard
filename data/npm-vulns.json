@@ -2,16 +2,6 @@
   "1.15": {
     "openshift-pipelines/console-plugin": [
       {
-        "vuln_id": "GHSA-2g4f-4pwh-qvx6",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "ajv has ReDoS when using `$data` option",
-        "package_name": "ajv",
-        "vulnerable_range": "<8.18.0",
-        "patched_version": "10.0.0",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
         "severity": "moderate",
@@ -38,7 +28,7 @@
         "title": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
         "package_name": "minimatch",
         "vulnerable_range": "<10.2.1",
-        "patched_version": "10.0.0",
+        "patched_version": "7.22.0",
         "is_direct": false
       },
       {
@@ -121,7 +111,7 @@
         "severity": "moderate",
         "title": "ajv has ReDoS when using `$data` option",
         "package_name": "ajv",
-        "vulnerable_range": "<8.18.0",
+        "vulnerable_range": "<6.14.0",
         "patched_version": null,
         "is_direct": false
       },
@@ -162,7 +152,7 @@
         "title": "glob CLI: Command injection via -c/--cmd executes matches with shell:true",
         "package_name": "glob",
         "vulnerable_range": ">=10.2.0 <10.5.0",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -222,7 +212,7 @@
         "title": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
         "package_name": "minimatch",
         "vulnerable_range": "<10.2.1",
-        "patched_version": null,
+        "patched_version": "10.0.1",
         "is_direct": false
       },
       {
@@ -348,21 +338,21 @@
       {
         "vuln_id": "GHSA-8fgc-7cc6-rx7x",
         "aliases": [],
-        "severity": "moderate",
+        "severity": "low",
         "title": "webpack buildHttp: allowedUris allow-list bypass via URL userinfo (@) leading to build-time SSRF behavior",
         "package_name": "webpack",
         "vulnerable_range": ">=5.49.0 <=5.104.0",
-        "patched_version": null,
+        "patched_version": "1.3.0",
         "is_direct": false
       },
       {
         "vuln_id": "GHSA-38r7-794h-5758",
         "aliases": [],
-        "severity": "moderate",
+        "severity": "low",
         "title": "webpack buildHttp HttpUriPlugin allowedUris bypass via HTTP redirects \u2192 SSRF + cache persistence",
         "package_name": "webpack",
         "vulnerable_range": ">=5.49.0 <5.104.0",
-        "patched_version": null,
+        "patched_version": "1.3.0",
         "is_direct": false
       }
     ]
@@ -385,7 +375,7 @@
         "severity": "moderate",
         "title": "ajv has ReDoS when using `$data` option",
         "package_name": "ajv",
-        "vulnerable_range": "<8.18.0",
+        "vulnerable_range": "<6.14.0",
         "patched_version": null,
         "is_direct": false
       },
@@ -426,7 +416,7 @@
         "title": "glob CLI: Command injection via -c/--cmd executes matches with shell:true",
         "package_name": "glob",
         "vulnerable_range": ">=10.2.0 <10.5.0",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -466,7 +456,7 @@
         "title": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
         "package_name": "minimatch",
         "vulnerable_range": "<10.2.1",
-        "patched_version": "17.2.1",
+        "patched_version": "10.0.1",
         "is_direct": false
       },
       {
@@ -592,21 +582,21 @@
       {
         "vuln_id": "GHSA-8fgc-7cc6-rx7x",
         "aliases": [],
-        "severity": "moderate",
+        "severity": "low",
         "title": "webpack buildHttp: allowedUris allow-list bypass via URL userinfo (@) leading to build-time SSRF behavior",
         "package_name": "webpack",
         "vulnerable_range": ">=5.49.0 <=5.104.0",
-        "patched_version": null,
+        "patched_version": "1.3.0",
         "is_direct": false
       },
       {
         "vuln_id": "GHSA-38r7-794h-5758",
         "aliases": [],
-        "severity": "moderate",
+        "severity": "low",
         "title": "webpack buildHttp HttpUriPlugin allowedUris bypass via HTTP redirects \u2192 SSRF + cache persistence",
         "package_name": "webpack",
         "vulnerable_range": ">=5.49.0 <5.104.0",
-        "patched_version": null,
+        "patched_version": "1.3.0",
         "is_direct": false
       }
     ]
@@ -629,7 +619,7 @@
         "severity": "moderate",
         "title": "ajv has ReDoS when using `$data` option",
         "package_name": "ajv",
-        "vulnerable_range": "<8.18.0",
+        "vulnerable_range": "<6.14.0",
         "patched_version": null,
         "is_direct": false
       },
@@ -670,7 +660,7 @@
         "title": "glob CLI: Command injection via -c/--cmd executes matches with shell:true",
         "package_name": "glob",
         "vulnerable_range": ">=10.2.0 <10.5.0",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -730,7 +720,7 @@
         "title": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
         "package_name": "minimatch",
         "vulnerable_range": "<10.2.1",
-        "patched_version": null,
+        "patched_version": "10.0.1",
         "is_direct": false
       },
       {
@@ -856,21 +846,21 @@
       {
         "vuln_id": "GHSA-8fgc-7cc6-rx7x",
         "aliases": [],
-        "severity": "moderate",
+        "severity": "low",
         "title": "webpack buildHttp: allowedUris allow-list bypass via URL userinfo (@) leading to build-time SSRF behavior",
         "package_name": "webpack",
         "vulnerable_range": ">=5.49.0 <=5.104.0",
-        "patched_version": null,
+        "patched_version": "1.3.0",
         "is_direct": false
       },
       {
         "vuln_id": "GHSA-38r7-794h-5758",
         "aliases": [],
-        "severity": "moderate",
+        "severity": "low",
         "title": "webpack buildHttp HttpUriPlugin allowedUris bypass via HTTP redirects \u2192 SSRF + cache persistence",
         "package_name": "webpack",
         "vulnerable_range": ">=5.49.0 <5.104.0",
-        "patched_version": null,
+        "patched_version": "1.3.0",
         "is_direct": false
       }
     ]
@@ -893,7 +883,7 @@
         "severity": "moderate",
         "title": "ajv has ReDoS when using `$data` option",
         "package_name": "ajv",
-        "vulnerable_range": "<8.18.0",
+        "vulnerable_range": "<6.14.0",
         "patched_version": null,
         "is_direct": false
       },
@@ -934,7 +924,7 @@
         "title": "glob CLI: Command injection via -c/--cmd executes matches with shell:true",
         "package_name": "glob",
         "vulnerable_range": ">=10.2.0 <10.5.0",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -994,7 +984,7 @@
         "title": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
         "package_name": "minimatch",
         "vulnerable_range": "<10.2.1",
-        "patched_version": null,
+        "patched_version": "10.0.1",
         "is_direct": false
       },
       {
@@ -1120,37 +1110,27 @@
       {
         "vuln_id": "GHSA-8fgc-7cc6-rx7x",
         "aliases": [],
-        "severity": "moderate",
+        "severity": "low",
         "title": "webpack buildHttp: allowedUris allow-list bypass via URL userinfo (@) leading to build-time SSRF behavior",
         "package_name": "webpack",
         "vulnerable_range": ">=5.49.0 <=5.104.0",
-        "patched_version": null,
+        "patched_version": "1.3.0",
         "is_direct": false
       },
       {
         "vuln_id": "GHSA-38r7-794h-5758",
         "aliases": [],
-        "severity": "moderate",
+        "severity": "low",
         "title": "webpack buildHttp HttpUriPlugin allowedUris bypass via HTTP redirects \u2192 SSRF + cache persistence",
         "package_name": "webpack",
         "vulnerable_range": ">=5.49.0 <5.104.0",
-        "patched_version": null,
+        "patched_version": "1.3.0",
         "is_direct": false
       }
     ]
   },
   "1.20": {
     "openshift-pipelines/console-plugin": [
-      {
-        "vuln_id": "GHSA-2g4f-4pwh-qvx6",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "ajv has ReDoS when using `$data` option",
-        "package_name": "ajv",
-        "vulnerable_range": "<8.18.0",
-        "patched_version": "10.0.0",
-        "is_direct": false
-      },
       {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
@@ -1271,7 +1251,7 @@
         "severity": "moderate",
         "title": "ajv has ReDoS when using `$data` option",
         "package_name": "ajv",
-        "vulnerable_range": "<8.18.0",
+        "vulnerable_range": "<6.14.0",
         "patched_version": null,
         "is_direct": false
       },
@@ -1312,7 +1292,7 @@
         "title": "glob CLI: Command injection via -c/--cmd executes matches with shell:true",
         "package_name": "glob",
         "vulnerable_range": ">=10.2.0 <10.5.0",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -1372,7 +1352,7 @@
         "title": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
         "package_name": "minimatch",
         "vulnerable_range": "<10.2.1",
-        "patched_version": null,
+        "patched_version": "10.0.1",
         "is_direct": false
       },
       {
@@ -1498,37 +1478,27 @@
       {
         "vuln_id": "GHSA-8fgc-7cc6-rx7x",
         "aliases": [],
-        "severity": "moderate",
+        "severity": "low",
         "title": "webpack buildHttp: allowedUris allow-list bypass via URL userinfo (@) leading to build-time SSRF behavior",
         "package_name": "webpack",
         "vulnerable_range": ">=5.49.0 <=5.104.0",
-        "patched_version": null,
+        "patched_version": "1.3.0",
         "is_direct": false
       },
       {
         "vuln_id": "GHSA-38r7-794h-5758",
         "aliases": [],
-        "severity": "moderate",
+        "severity": "low",
         "title": "webpack buildHttp HttpUriPlugin allowedUris bypass via HTTP redirects \u2192 SSRF + cache persistence",
         "package_name": "webpack",
         "vulnerable_range": ">=5.49.0 <5.104.0",
-        "patched_version": null,
+        "patched_version": "1.3.0",
         "is_direct": false
       }
     ]
   },
   "1.22": {
     "openshift-pipelines/console-plugin": [
-      {
-        "vuln_id": "GHSA-2g4f-4pwh-qvx6",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "ajv has ReDoS when using `$data` option",
-        "package_name": "ajv",
-        "vulnerable_range": "<8.18.0",
-        "patched_version": "10.0.0",
-        "is_direct": false
-      },
       {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
@@ -1634,16 +1604,6 @@
   "main": {
     "openshift-pipelines/console-plugin": [
       {
-        "vuln_id": "GHSA-2g4f-4pwh-qvx6",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "ajv has ReDoS when using `$data` option",
-        "package_name": "ajv",
-        "vulnerable_range": "<8.18.0",
-        "patched_version": "10.0.0",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
         "severity": "low",
@@ -1680,7 +1640,7 @@
         "title": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
         "package_name": "minimatch",
         "vulnerable_range": "<10.2.1",
-        "patched_version": "10.0.0",
+        "patched_version": "10.0.1",
         "is_direct": false
       },
       {
@@ -1748,23 +1708,13 @@
   "next": {
     "openshift-pipelines/console-plugin": [
       {
-        "vuln_id": "GHSA-2g4f-4pwh-qvx6",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "ajv has ReDoS when using `$data` option",
-        "package_name": "ajv",
-        "vulnerable_range": "<8.18.0",
-        "patched_version": "10.0.0",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
         "severity": "low",
         "title": "jsdiff has a Denial of Service vulnerability in parsePatch and applyPatch",
         "package_name": "diff",
         "vulnerable_range": ">=6.0.0 <8.0.3",
-        "patched_version": "20.1.2",
+        "patched_version": "17.2.1",
         "is_direct": false
       },
       {
