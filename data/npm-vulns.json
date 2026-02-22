@@ -28,7 +28,7 @@
         "title": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
         "package_name": "minimatch",
         "vulnerable_range": "<10.2.1",
-        "patched_version": "7.22.0",
+        "patched_version": "10.0.1",
         "is_direct": false
       },
       {
@@ -1536,7 +1536,7 @@
         "title": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
         "package_name": "minimatch",
         "vulnerable_range": "<10.2.1",
-        "patched_version": "7.22.0",
+        "patched_version": "10.0.1",
         "is_direct": false
       },
       {
@@ -1610,7 +1610,7 @@
         "title": "jsdiff has a Denial of Service vulnerability in parsePatch and applyPatch",
         "package_name": "diff",
         "vulnerable_range": ">=6.0.0 <8.0.3",
-        "patched_version": "20.1.2",
+        "patched_version": "17.2.1",
         "is_direct": false
       },
       {
@@ -1640,7 +1640,7 @@
         "title": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
         "package_name": "minimatch",
         "vulnerable_range": "<10.2.1",
-        "patched_version": "10.0.1",
+        "patched_version": "7.22.0",
         "is_direct": false
       },
       {
@@ -1714,7 +1714,7 @@
         "title": "jsdiff has a Denial of Service vulnerability in parsePatch and applyPatch",
         "package_name": "diff",
         "vulnerable_range": ">=6.0.0 <8.0.3",
-        "patched_version": "17.2.1",
+        "patched_version": "20.1.2",
         "is_direct": false
       },
       {
@@ -1744,7 +1744,7 @@
         "title": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
         "package_name": "minimatch",
         "vulnerable_range": "<10.2.1",
-        "patched_version": "7.22.0",
+        "patched_version": "10.0.1",
         "is_direct": false
       },
       {
