@@ -96,8 +96,14 @@ def resolve_versions(config: Config, verbose: bool = False) -> None:
         if verbose:
             print(f"  Warning: Failed to list hack releases: {e}")
 
-    for osp_version, operator_ref in config.operator_branches.items():
+    # Build the full set of versions to process:
+    # - All versions from operator_branches (includes "main" and fallback versions)
+    # - All versions discovered from hack (auto-picks up new releases)
+    all_versions = set(config.operator_branches.keys()) | set(hack_versions.keys())
+
+    for osp_version in sorted(all_versions, key=_version_sort_key):
         components: dict[str, str] = {}
+        operator_ref = config.operator_branches.get(osp_version)
 
         # For "main" version, use main branch for all components
         use_main = osp_version == "main"
@@ -108,9 +114,16 @@ def resolve_versions(config: Config, verbose: bool = False) -> None:
             if verbose:
                 print(f"  Using hack release config for {osp_version}...")
             components = parse_hack_release(hack_data, config.skip_components)
+
+            # Auto-add support_status for new hack versions not in config
+            if osp_version not in config.support_status:
+                config.support_status[osp_version] = "upcoming"
+                if verbose:
+                    print(f"    New version from hack, defaulting support_status to 'upcoming'")
+
             if verbose:
                 print(f"    Resolved {len(components)} components from hack")
-        else:
+        elif operator_ref is not None:
             # Fall back to operator's components.yaml
             if use_main:
                 if verbose:
@@ -144,8 +157,8 @@ def resolve_versions(config: Config, verbose: bool = False) -> None:
                 if osp_version in version_map:
                     components[component] = version_map[osp_version]
 
-        # Always add operator itself
-        if "tektoncd/operator" not in components:
+        # Always add operator itself (use hack's ref if available, else fallback)
+        if "tektoncd/operator" not in components and operator_ref:
             components["tektoncd/operator"] = operator_ref
 
         config.versions[osp_version] = components
@@ -179,6 +192,27 @@ def resolve_npm_versions(config: Config, verbose: bool = False) -> None:
         total_npm = sum(len(v) for v in config.npm_versions.values())
         if total_npm:
             print(f"    Resolved {len(config.npm_components)} npm components across {len(config.npm_versions)} versions")
+
+
+def _version_sort_key(version: str) -> tuple[int, float]:
+    """Sort key for OSP version strings.
+
+    Sorts "main" first, then "next", then numeric versions descending.
+
+    Args:
+        version: Version string like "main", "next", "1.22"
+
+    Returns:
+        Tuple for sorting
+    """
+    if version == "main":
+        return (0, 0)
+    if version == "next":
+        return (1, 0)
+    try:
+        return (2, -float(version))
+    except ValueError:
+        return (3, 0)
 
 
 def parse_component(component: str) -> tuple[str, str]:

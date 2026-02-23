@@ -1,5 +1,9 @@
 # OSP Component Dashboard Configuration
-# Components are auto-resolved from operator's components.yaml
+#
+# Component versions are resolved from openshift-pipelines/hack release configs
+# (https://github.com/openshift-pipelines/hack/tree/main/config/downstream/releases)
+# when available. Versions without a hack release file fall back to operator's
+# components.yaml + extra_components below.
 
 # Support status for each version
 # Values: full, maintenance, security, unsupported, upcoming, development
@@ -16,11 +20,11 @@ support_status:
   "1.15": unsupported
 
 # Operator branch/tag for each OSP version
-# Components are fetched from components.yaml at this ref
+# Used as fallback when no hack release file exists for a version.
+# Versions with a hack release file (e.g., 1.22, next) don't need entries here
+# but "main" always uses this since it points all components to main branches.
 operator_branches:
   "main": "main"
-  "next": "main"  # Uses versions from components.yaml (unlike "main" which uses main branches)
-  "1.22": "release-v0.78.x"
   "1.21": "release-v0.78.x"
   "1.20": "release-v0.77.x"
   "1.19": "release-v0.76.x"
@@ -31,11 +35,11 @@ operator_branches:
 
 # Components not tracked in operator's components.yaml
 # Format: {component: {osp_version: ref}}
+# Only needed for versions without a hack release file (fallback).
+# Versions covered by hack (1.22, next, etc.) get their components from there.
 extra_components:
   tektoncd/cli:
     "main": "main"
-    "next": "v0.43.0"
-    "1.22": "v0.43.0"
     "1.21": "v0.43.0"
     "1.20": "v0.42.0"
     "1.19": "v0.41.0"
@@ -45,20 +49,14 @@ extra_components:
     "1.15": "v0.37.0"
   openshift-pipelines/opc:
     "main": "main"
-    "next": "v1.19.0"
-    "1.22": "v1.19.0"
     "1.21": "v1.19.0"
     "1.20": "v1.18.0"
     "1.19": "v1.17.0"
     "1.18": "v1.16.0"
   openshift-pipelines/tekton-caches:
     "main": "main"
-    "next": "v0.3.1"
-    "1.22": "v0.3.1"
   openshift-pipelines/tekton-assist:
     "main": "main"
-    "next": "v0.1.1"
-    "1.22": "v0.1.1"
 
 # Components to skip from operator's components.yaml
 # These are not tracked on the dashboard
