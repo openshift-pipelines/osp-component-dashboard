@@ -65,56 +65,84 @@ def load_config(path: Path | str) -> Config:
 
 
 def resolve_versions(config: Config, verbose: bool = False) -> None:
-    """Resolve component versions from operator's components.yaml.
+    """Resolve component versions from hack repo and operator's components.yaml.
 
-    Fetches components.yaml from the operator at each OSP version's branch,
-    merges with extra_components, and populates config.versions.
+    For versions that have a release file in openshift-pipelines/hack, uses that
+    as the source of truth. Falls back to operator's components.yaml + extra_components
+    for versions without a hack release file.
 
-    For "main" OSP version, uses "main" branch for all components instead of
-    the versions in components.yaml.
+    For "main" OSP version, uses "main" branch for all components.
 
     Args:
         config: Config object to populate
         verbose: Print progress messages
     """
     from .collector import fetch_operator_components
+    from .collector.hack import fetch_hack_release, list_hack_releases, parse_hack_release
+
+    # Discover available hack release files
+    hack_versions: dict[str, dict] = {}
+    try:
+        available = list_hack_releases()
+        if verbose:
+            print(f"  Found hack release configs: {', '.join(available)}")
+        for v in available:
+            try:
+                hack_versions[v] = fetch_hack_release(v)
+            except Exception as e:
+                if verbose:
+                    print(f"    Warning: Failed to fetch hack release {v}: {e}")
+    except Exception as e:
+        if verbose:
+            print(f"  Warning: Failed to list hack releases: {e}")
 
     for osp_version, operator_ref in config.operator_branches.items():
-        if verbose:
-            print(f"  Fetching components.yaml from operator @ {operator_ref}...")
-
-        components = {}
+        components: dict[str, str] = {}
 
         # For "main" version, use main branch for all components
         use_main = osp_version == "main"
 
-        # Fetch from operator's components.yaml
-        try:
-            operator_components = fetch_operator_components(operator_ref)
-
-            for name, info in operator_components.items():
-                # Skip if in skip list
-                if name in config.skip_components:
-                    continue
-
-                github_path = info.get("github", "")
-                version = info.get("version", "")
-
-                if github_path:
-                    # Use "main" for main version, otherwise use specified version
-                    components[github_path] = "main" if use_main else version
-
-        except Exception as e:
+        # Try hack release file first
+        hack_data = hack_versions.get(osp_version)
+        if hack_data and not use_main:
             if verbose:
-                print(f"    Warning: Failed to fetch components.yaml: {e}")
+                print(f"  Using hack release config for {osp_version}...")
+            components = parse_hack_release(hack_data, config.skip_components)
+            if verbose:
+                print(f"    Resolved {len(components)} components from hack")
+        else:
+            # Fall back to operator's components.yaml
+            if verbose:
+                reason = "main version" if use_main else "no hack release file"
+                print(f"  Fetching components.yaml from operator @ {operator_ref} ({reason})...")
 
-        # Add extra components for this version
-        for component, version_map in config.extra_components.items():
-            if osp_version in version_map:
-                components[component] = version_map[osp_version]
+            try:
+                operator_components = fetch_operator_components(operator_ref)
+
+                for name, info in operator_components.items():
+                    # Skip if in skip list
+                    if name in config.skip_components:
+                        continue
+
+                    github_path = info.get("github", "")
+                    version = info.get("version", "")
+
+                    if github_path:
+                        # Use "main" for main version, otherwise use specified version
+                        components[github_path] = "main" if use_main else version
+
+            except Exception as e:
+                if verbose:
+                    print(f"    Warning: Failed to fetch components.yaml: {e}")
+
+            # Add extra components for this version (only when not using hack)
+            for component, version_map in config.extra_components.items():
+                if osp_version in version_map:
+                    components[component] = version_map[osp_version]
 
         # Always add operator itself
-        components["tektoncd/operator"] = operator_ref
+        if "tektoncd/operator" not in components:
+            components["tektoncd/operator"] = operator_ref
 
         config.versions[osp_version] = components
 
