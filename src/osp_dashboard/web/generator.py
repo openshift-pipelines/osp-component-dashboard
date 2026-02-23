@@ -381,10 +381,18 @@ def generate_html(
                     "cves": dep_cves,
                 })
 
+            # Resolve tag version: for branch refs, use the resolved current_version
+            tag_version = ""
+            if comp.release_status.current_version and comp.release_status.current_version != comp.ref:
+                tag_version = comp.release_status.current_version
+            elif comp.ref.startswith("v"):
+                tag_version = comp.ref
+
             versions_data[osp_version].append({
                 "owner": comp.owner,
                 "repo": comp.repo,
                 "ref": comp.ref,
+                "tag_version": tag_version,
                 "go_version": comp.go_version,
                 "go_version_mismatch": go_version_mismatch,
                 "internal_deps": internal_deps_data,

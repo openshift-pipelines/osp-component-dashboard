@@ -265,6 +265,7 @@
                         <tr class="border-b border-white/10">
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Component</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Ref</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Tag</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Release</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Runtime</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Stale Deps</th>
@@ -285,6 +286,15 @@
                                 <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-xs font-medium">
                                     {{ comp.ref }}
                                 </span>
+                            </td>
+                            <td class="py-3 px-4">
+                                {% if comp.tag_version and comp.tag_version != comp.ref %}
+                                <span class="font-mono text-xs text-green-300">{{ comp.tag_version }}</span>
+                                {% elif comp.ref.startswith('v') %}
+                                <span class="font-mono text-xs text-gray-400">{{ comp.ref }}</span>
+                                {% else %}
+                                <span class="text-gray-600 text-xs">-</span>
+                                {% endif %}
                             </td>
                             <td class="py-3 px-4">
                                 {% if not comp.release_status.branch_exists %}
@@ -396,7 +406,7 @@
                         </tr>
                         <!-- Expandable dependencies row -->
                         <tr id="deps-{{ version }}-{{ comp.repo }}" class="deps-row hidden bg-dark-800/50">
-                            <td colspan="7" class="py-3 px-4">
+                            <td colspan="8" class="py-3 px-4">
                                 <div class="grid grid-cols-2 gap-4">
                                     {% if comp.internal_deps %}
                                     <div>
@@ -446,6 +456,14 @@
         <div class="mt-16 glass rounded-xl p-6">
             <h3 class="text-lg font-semibold text-white mb-4">Column Reference</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-sm">
+                <div>
+                    <h4 class="text-gray-300 font-medium mb-2">Tag</h4>
+                    <div class="space-y-1.5 text-gray-400">
+                        <div><span class="text-green-300 font-mono">v0.78.2</span> — Resolved tag from branch ref</div>
+                        <div><span class="text-gray-400 font-mono">v0.62.0</span> — Tag ref (same as ref)</div>
+                        <div><span class="text-gray-600">-</span> — No tag (e.g., main branch)</div>
+                    </div>
+                </div>
                 <div>
                     <h4 class="text-gray-300 font-medium mb-2">Release</h4>
                     <div class="space-y-1.5 text-gray-400">
