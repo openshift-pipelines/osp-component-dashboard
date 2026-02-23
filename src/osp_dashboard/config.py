@@ -112,9 +112,13 @@ def resolve_versions(config: Config, verbose: bool = False) -> None:
                 print(f"    Resolved {len(components)} components from hack")
         else:
             # Fall back to operator's components.yaml
-            if verbose:
-                reason = "main version" if use_main else "no hack release file"
-                print(f"  Fetching components.yaml from operator @ {operator_ref} ({reason})...")
+            if use_main:
+                if verbose:
+                    print(f"  Fetching components.yaml from operator @ {operator_ref} (main version)...")
+            else:
+                print(f"  WARNING: No hack release file for {osp_version}, "
+                      f"falling back to operator components.yaml + config.yaml extra_components. "
+                      f"Consider adding {osp_version}.yaml to openshift-pipelines/hack.")
 
             try:
                 operator_components = fetch_operator_components(operator_ref)
