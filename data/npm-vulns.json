@@ -206,6 +206,26 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-7r86-cg39-jmmj",
+        "aliases": [],
+        "severity": "high",
+        "title": "minimatch has ReDoS: matchOne() combinatorial backtracking via multiple non-adjacent GLOBSTAR segments",
+        "package_name": "minimatch",
+        "vulnerable_range": "<3.1.3",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-23c5-xmqv-rm74",
+        "aliases": [],
+        "severity": "high",
+        "title": "minimatch ReDoS: nested *() extglobs generate catastrophically backtracking regular expressions",
+        "package_name": "minimatch",
+        "vulnerable_range": "<3.1.4",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-554w-wpv2-vw27",
         "aliases": [],
         "severity": "high",
@@ -446,6 +466,26 @@
         "title": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
         "package_name": "minimatch",
         "vulnerable_range": "<3.1.3",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-7r86-cg39-jmmj",
+        "aliases": [],
+        "severity": "high",
+        "title": "minimatch has ReDoS: matchOne() combinatorial backtracking via multiple non-adjacent GLOBSTAR segments",
+        "package_name": "minimatch",
+        "vulnerable_range": "<3.1.3",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-23c5-xmqv-rm74",
+        "aliases": [],
+        "severity": "high",
+        "title": "minimatch ReDoS: nested *() extglobs generate catastrophically backtracking regular expressions",
+        "package_name": "minimatch",
+        "vulnerable_range": "<3.1.4",
         "patched_version": null,
         "is_direct": false
       },
@@ -710,6 +750,26 @@
         "title": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
         "package_name": "minimatch",
         "vulnerable_range": "<3.1.3",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-7r86-cg39-jmmj",
+        "aliases": [],
+        "severity": "high",
+        "title": "minimatch has ReDoS: matchOne() combinatorial backtracking via multiple non-adjacent GLOBSTAR segments",
+        "package_name": "minimatch",
+        "vulnerable_range": "<3.1.3",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-23c5-xmqv-rm74",
+        "aliases": [],
+        "severity": "high",
+        "title": "minimatch ReDoS: nested *() extglobs generate catastrophically backtracking regular expressions",
+        "package_name": "minimatch",
+        "vulnerable_range": "<3.1.4",
         "patched_version": null,
         "is_direct": false
       },
