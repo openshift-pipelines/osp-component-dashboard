@@ -22,6 +22,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-5c6j-r48x-rmvq",
+        "aliases": [],
+        "severity": "high",
+        "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
+        "package_name": "serialize-javascript",
+        "vulnerable_range": "<=7.0.2",
+        "patched_version": "4.2.3",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-g9mf-h72j-4rw9",
         "aliases": [],
         "severity": "moderate",
@@ -296,6 +306,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-5c6j-r48x-rmvq",
+        "aliases": [],
+        "severity": "high",
+        "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
+        "package_name": "serialize-javascript",
+        "vulnerable_range": "<=7.0.2",
+        "patched_version": "4.2.3",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-52f5-9888-hmc6",
         "aliases": [],
         "severity": "low",
@@ -348,7 +368,7 @@
       {
         "vuln_id": "GHSA-8fgc-7cc6-rx7x",
         "aliases": [],
-        "severity": "low",
+        "severity": "high",
         "title": "webpack buildHttp: allowedUris allow-list bypass via URL userinfo (@) leading to build-time SSRF behavior",
         "package_name": "webpack",
         "vulnerable_range": ">=5.49.0 <=5.104.0",
@@ -358,7 +378,7 @@
       {
         "vuln_id": "GHSA-38r7-794h-5758",
         "aliases": [],
-        "severity": "low",
+        "severity": "high",
         "title": "webpack buildHttp HttpUriPlugin allowedUris bypass via HTTP redirects \u2192 SSRF + cache persistence",
         "package_name": "webpack",
         "vulnerable_range": ">=5.49.0 <5.104.0",
@@ -560,6 +580,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-5c6j-r48x-rmvq",
+        "aliases": [],
+        "severity": "high",
+        "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
+        "package_name": "serialize-javascript",
+        "vulnerable_range": "<=7.0.2",
+        "patched_version": "4.2.3",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-52f5-9888-hmc6",
         "aliases": [],
         "severity": "low",
@@ -612,7 +642,7 @@
       {
         "vuln_id": "GHSA-8fgc-7cc6-rx7x",
         "aliases": [],
-        "severity": "low",
+        "severity": "high",
         "title": "webpack buildHttp: allowedUris allow-list bypass via URL userinfo (@) leading to build-time SSRF behavior",
         "package_name": "webpack",
         "vulnerable_range": ">=5.49.0 <=5.104.0",
@@ -622,7 +652,7 @@
       {
         "vuln_id": "GHSA-38r7-794h-5758",
         "aliases": [],
-        "severity": "low",
+        "severity": "high",
         "title": "webpack buildHttp HttpUriPlugin allowedUris bypass via HTTP redirects \u2192 SSRF + cache persistence",
         "package_name": "webpack",
         "vulnerable_range": ">=5.49.0 <5.104.0",
@@ -844,6 +874,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-5c6j-r48x-rmvq",
+        "aliases": [],
+        "severity": "high",
+        "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
+        "package_name": "serialize-javascript",
+        "vulnerable_range": "<=7.0.2",
+        "patched_version": "4.2.3",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-52f5-9888-hmc6",
         "aliases": [],
         "severity": "low",
@@ -896,7 +936,7 @@
       {
         "vuln_id": "GHSA-8fgc-7cc6-rx7x",
         "aliases": [],
-        "severity": "low",
+        "severity": "high",
         "title": "webpack buildHttp: allowedUris allow-list bypass via URL userinfo (@) leading to build-time SSRF behavior",
         "package_name": "webpack",
         "vulnerable_range": ">=5.49.0 <=5.104.0",
@@ -906,7 +946,7 @@
       {
         "vuln_id": "GHSA-38r7-794h-5758",
         "aliases": [],
-        "severity": "low",
+        "severity": "high",
         "title": "webpack buildHttp HttpUriPlugin allowedUris bypass via HTTP redirects \u2192 SSRF + cache persistence",
         "package_name": "webpack",
         "vulnerable_range": ">=5.49.0 <5.104.0",
@@ -945,6 +985,16 @@
         "package_name": "lodash",
         "vulnerable_range": ">=4.0.0 <=4.17.22",
         "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-5c6j-r48x-rmvq",
+        "aliases": [],
+        "severity": "high",
+        "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
+        "package_name": "serialize-javascript",
+        "vulnerable_range": "<=7.0.2",
+        "patched_version": "4.2.3",
         "is_direct": false
       },
       {
@@ -1042,6 +1092,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-5c6j-r48x-rmvq",
+        "aliases": [],
+        "severity": "high",
+        "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
+        "package_name": "serialize-javascript",
+        "vulnerable_range": "<=7.0.2",
+        "patched_version": "4.2.3",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-g9mf-h72j-4rw9",
         "aliases": [],
         "severity": "moderate",
@@ -1133,6 +1193,16 @@
         "package_name": "lodash",
         "vulnerable_range": ">=4.0.0 <=4.17.22",
         "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-5c6j-r48x-rmvq",
+        "aliases": [],
+        "severity": "high",
+        "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
+        "package_name": "serialize-javascript",
+        "vulnerable_range": "<=7.0.2",
+        "patched_version": "4.2.3",
         "is_direct": false
       },
       {
@@ -1230,6 +1300,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-5c6j-r48x-rmvq",
+        "aliases": [],
+        "severity": "high",
+        "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
+        "package_name": "serialize-javascript",
+        "vulnerable_range": "<=7.0.2",
+        "patched_version": "4.2.3",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-g9mf-h72j-4rw9",
         "aliases": [],
         "severity": "moderate",
@@ -1324,6 +1404,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-5c6j-r48x-rmvq",
+        "aliases": [],
+        "severity": "high",
+        "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
+        "package_name": "serialize-javascript",
+        "vulnerable_range": "<=7.0.2",
+        "patched_version": "4.2.3",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-g9mf-h72j-4rw9",
         "aliases": [],
         "severity": "moderate",
@@ -1415,6 +1505,16 @@
         "package_name": "lodash",
         "vulnerable_range": ">=4.0.0 <=4.17.22",
         "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-5c6j-r48x-rmvq",
+        "aliases": [],
+        "severity": "high",
+        "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
+        "package_name": "serialize-javascript",
+        "vulnerable_range": "<=7.0.2",
+        "patched_version": "4.2.3",
         "is_direct": false
       },
       {
