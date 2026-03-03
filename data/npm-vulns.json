@@ -28,7 +28,7 @@
         "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
         "package_name": "serialize-javascript",
         "vulnerable_range": "<=7.0.2",
-        "patched_version": "4.2.3",
+        "patched_version": "14.0.0",
         "is_direct": false
       },
       {
@@ -276,22 +276,22 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-6rw7-vpxm-498p",
+        "vuln_id": "GHSA-w7fw-mjwx-w883",
         "aliases": [],
-        "severity": "high",
-        "title": "qs's arrayLimit bypass in its bracket notation allows DoS via memory exhaustion",
+        "severity": "moderate",
+        "title": "qs's arrayLimit bypass in comma parsing allows denial of service",
         "package_name": "qs",
-        "vulnerable_range": "<6.14.1",
+        "vulnerable_range": ">=6.7.0 <=6.14.1",
         "patched_version": null,
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-w7fw-mjwx-w883",
+        "vuln_id": "GHSA-6rw7-vpxm-498p",
         "aliases": [],
-        "severity": "high",
-        "title": "qs's arrayLimit bypass in comma parsing allows denial of service",
+        "severity": "moderate",
+        "title": "qs's arrayLimit bypass in its bracket notation allows DoS via memory exhaustion",
         "package_name": "qs",
-        "vulnerable_range": ">=6.7.0 <=6.14.1",
+        "vulnerable_range": "<6.14.1",
         "patched_version": null,
         "is_direct": false
       },
@@ -312,7 +312,7 @@
         "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
         "package_name": "serialize-javascript",
         "vulnerable_range": "<=7.0.2",
-        "patched_version": "4.2.3",
+        "patched_version": "14.0.0",
         "is_direct": false
       },
       {
@@ -550,22 +550,22 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-6rw7-vpxm-498p",
+        "vuln_id": "GHSA-w7fw-mjwx-w883",
         "aliases": [],
-        "severity": "high",
-        "title": "qs's arrayLimit bypass in its bracket notation allows DoS via memory exhaustion",
+        "severity": "moderate",
+        "title": "qs's arrayLimit bypass in comma parsing allows denial of service",
         "package_name": "qs",
-        "vulnerable_range": "<6.14.1",
+        "vulnerable_range": ">=6.7.0 <=6.14.1",
         "patched_version": null,
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-w7fw-mjwx-w883",
+        "vuln_id": "GHSA-6rw7-vpxm-498p",
         "aliases": [],
-        "severity": "high",
-        "title": "qs's arrayLimit bypass in comma parsing allows denial of service",
+        "severity": "moderate",
+        "title": "qs's arrayLimit bypass in its bracket notation allows DoS via memory exhaustion",
         "package_name": "qs",
-        "vulnerable_range": ">=6.7.0 <=6.14.1",
+        "vulnerable_range": "<6.14.1",
         "patched_version": null,
         "is_direct": false
       },
@@ -586,7 +586,7 @@
         "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
         "package_name": "serialize-javascript",
         "vulnerable_range": "<=7.0.2",
-        "patched_version": "4.2.3",
+        "patched_version": "14.0.0",
         "is_direct": false
       },
       {
@@ -844,22 +844,22 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-6rw7-vpxm-498p",
+        "vuln_id": "GHSA-w7fw-mjwx-w883",
         "aliases": [],
-        "severity": "high",
-        "title": "qs's arrayLimit bypass in its bracket notation allows DoS via memory exhaustion",
+        "severity": "moderate",
+        "title": "qs's arrayLimit bypass in comma parsing allows denial of service",
         "package_name": "qs",
-        "vulnerable_range": "<6.14.1",
+        "vulnerable_range": ">=6.7.0 <=6.14.1",
         "patched_version": null,
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-w7fw-mjwx-w883",
+        "vuln_id": "GHSA-6rw7-vpxm-498p",
         "aliases": [],
-        "severity": "high",
-        "title": "qs's arrayLimit bypass in comma parsing allows denial of service",
+        "severity": "moderate",
+        "title": "qs's arrayLimit bypass in its bracket notation allows DoS via memory exhaustion",
         "package_name": "qs",
-        "vulnerable_range": ">=6.7.0 <=6.14.1",
+        "vulnerable_range": "<6.14.1",
         "patched_version": null,
         "is_direct": false
       },
@@ -880,7 +880,7 @@
         "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
         "package_name": "serialize-javascript",
         "vulnerable_range": "<=7.0.2",
-        "patched_version": "4.2.3",
+        "patched_version": "14.0.0",
         "is_direct": false
       },
       {
@@ -994,7 +994,7 @@
         "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
         "package_name": "serialize-javascript",
         "vulnerable_range": "<=7.0.2",
-        "patched_version": "4.2.3",
+        "patched_version": "14.0.0",
         "is_direct": false
       },
       {
@@ -1098,7 +1098,7 @@
         "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
         "package_name": "serialize-javascript",
         "vulnerable_range": "<=7.0.2",
-        "patched_version": "4.2.3",
+        "patched_version": "14.0.0",
         "is_direct": false
       },
       {
@@ -1202,7 +1202,7 @@
         "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
         "package_name": "serialize-javascript",
         "vulnerable_range": "<=7.0.2",
-        "patched_version": "4.2.3",
+        "patched_version": "14.0.0",
         "is_direct": false
       },
       {
@@ -1306,7 +1306,7 @@
         "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
         "package_name": "serialize-javascript",
         "vulnerable_range": "<=7.0.2",
-        "patched_version": "4.2.3",
+        "patched_version": "14.0.0",
         "is_direct": false
       },
       {
@@ -1410,7 +1410,7 @@
         "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
         "package_name": "serialize-javascript",
         "vulnerable_range": "<=7.0.2",
-        "patched_version": "4.2.3",
+        "patched_version": "14.0.0",
         "is_direct": false
       },
       {
@@ -1514,7 +1514,7 @@
         "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
         "package_name": "serialize-javascript",
         "vulnerable_range": "<=7.0.2",
-        "patched_version": "4.2.3",
+        "patched_version": "14.0.0",
         "is_direct": false
       },
       {
