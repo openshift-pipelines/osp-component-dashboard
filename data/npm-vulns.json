@@ -368,7 +368,7 @@
       {
         "vuln_id": "GHSA-8fgc-7cc6-rx7x",
         "aliases": [],
-        "severity": "high",
+        "severity": "low",
         "title": "webpack buildHttp: allowedUris allow-list bypass via URL userinfo (@) leading to build-time SSRF behavior",
         "package_name": "webpack",
         "vulnerable_range": ">=5.49.0 <=5.104.0",
@@ -378,7 +378,7 @@
       {
         "vuln_id": "GHSA-38r7-794h-5758",
         "aliases": [],
-        "severity": "high",
+        "severity": "low",
         "title": "webpack buildHttp HttpUriPlugin allowedUris bypass via HTTP redirects \u2192 SSRF + cache persistence",
         "package_name": "webpack",
         "vulnerable_range": ">=5.49.0 <5.104.0",
@@ -642,7 +642,7 @@
       {
         "vuln_id": "GHSA-8fgc-7cc6-rx7x",
         "aliases": [],
-        "severity": "high",
+        "severity": "low",
         "title": "webpack buildHttp: allowedUris allow-list bypass via URL userinfo (@) leading to build-time SSRF behavior",
         "package_name": "webpack",
         "vulnerable_range": ">=5.49.0 <=5.104.0",
@@ -652,7 +652,7 @@
       {
         "vuln_id": "GHSA-38r7-794h-5758",
         "aliases": [],
-        "severity": "high",
+        "severity": "low",
         "title": "webpack buildHttp HttpUriPlugin allowedUris bypass via HTTP redirects \u2192 SSRF + cache persistence",
         "package_name": "webpack",
         "vulnerable_range": ">=5.49.0 <5.104.0",
@@ -936,7 +936,7 @@
       {
         "vuln_id": "GHSA-8fgc-7cc6-rx7x",
         "aliases": [],
-        "severity": "high",
+        "severity": "low",
         "title": "webpack buildHttp: allowedUris allow-list bypass via URL userinfo (@) leading to build-time SSRF behavior",
         "package_name": "webpack",
         "vulnerable_range": ">=5.49.0 <=5.104.0",
@@ -946,7 +946,7 @@
       {
         "vuln_id": "GHSA-38r7-794h-5758",
         "aliases": [],
-        "severity": "high",
+        "severity": "low",
         "title": "webpack buildHttp HttpUriPlugin allowedUris bypass via HTTP redirects \u2192 SSRF + cache persistence",
         "package_name": "webpack",
         "vulnerable_range": ">=5.49.0 <5.104.0",
