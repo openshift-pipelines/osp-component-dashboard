@@ -134,7 +134,9 @@ def collect_command(args: argparse.Namespace) -> int:
         for pkg, version in npm_latest_versions.items():
             print(f"  {pkg}: {version}")
 
+    json_path = output_path.parent / "data.json"
     print(f"\nGenerating HTML to {output_path}...")
+    print(f"Generating JSON to {json_path}...")
     generate_html(
         all_data,
         config.highlight_dependencies,

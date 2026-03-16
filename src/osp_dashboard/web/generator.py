@@ -1,6 +1,8 @@
-"""HTML generator for the dashboard."""
+"""HTML and JSON generator for the dashboard."""
 
+import json
 import re
+from datetime import datetime, timezone
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader
@@ -619,3 +621,105 @@ def generate_html(
     output_path = Path(output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(html)
+
+    # Generate JSON data file alongside the HTML
+    json_path = output_path.parent / "data.json"
+    json_data = _build_json_data(
+        sorted_versions,
+        versions_data,
+        version_stats,
+        support_status or {},
+        bundled_versions or {},
+    )
+    json_path.write_text(json.dumps(json_data, indent=2))
+
+
+def _build_json_data(
+    sorted_versions: list[str],
+    versions_data: dict[str, list[dict]],
+    version_stats: dict[str, dict],
+    support_status: dict[str, str],
+    bundled_versions: dict[str, dict[str, str]],
+) -> dict:
+    """Build a machine-readable JSON structure from the dashboard data.
+
+    The output structure is:
+    {
+      "generated_at": "2026-03-16T12:47:00Z",
+      "versions": {
+        "1.21": {
+          "support_status": "full",
+          "components": {
+            "tektoncd/pipeline": {
+              "ref": "release-v0.62.x",
+              "tag_version": "v0.62.3",
+              "language": "go",
+              "go_version": "1.22",
+              "release_status": { ... },
+              "internal_deps": [ ... ],
+              "external_deps": [ ... ],
+              "cves": [ ... ],
+              "vulns": [ ... ]
+            },
+            ...
+          },
+          "stats": {
+            "go_versions": ["1.22"],
+            "has_go_mismatch": false,
+            "total_cves": 0,
+            "total_vulns": 0,
+            ...
+          }
+        },
+        ...
+      }
+    }
+    """
+    versions = {}
+    for osp_version in sorted_versions:
+        components = {}
+        for comp in versions_data.get(osp_version, []):
+            key = f"{comp['owner']}/{comp['repo']}"
+            entry: dict = {
+                "ref": comp["ref"],
+                "language": comp.get("language", "go"),
+                "release_status": comp["release_status"],
+                "total_deps": comp["total_deps"],
+                "internal_deps": comp["internal_deps"],
+                "external_deps": comp["external_deps"],
+                "cves": comp.get("cves", []),
+                "vulns": comp.get("vulns", []),
+            }
+            # Tag/resolved version
+            if comp.get("tag_version"):
+                entry["tag_version"] = comp["tag_version"]
+            # Go-specific fields
+            if comp.get("language") == "go":
+                entry["go_version"] = comp.get("go_version")
+                entry["go_version_mismatch"] = comp.get("go_version_mismatch", False)
+            # npm-specific fields
+            if comp.get("language") == "npm":
+                entry["node_version"] = comp.get("node_version")
+                entry["package_manager"] = comp.get("package_manager")
+                if comp.get("npm_vulns"):
+                    entry["npm_vulns"] = comp["npm_vulns"]
+
+            components[key] = entry
+
+        stats = version_stats.get(osp_version, {})
+        # Strip internal-only fields from stats
+        clean_stats = {
+            k: v for k, v in stats.items()
+            if k not in ("has_vuln_data",)
+        }
+
+        versions[osp_version] = {
+            "support_status": support_status.get(osp_version, "unknown"),
+            "components": components,
+            "stats": clean_stats,
+        }
+
+    return {
+        "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "versions": versions,
+    }
