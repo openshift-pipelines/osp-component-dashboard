@@ -514,6 +514,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-rf6f-7fwh-wjgh",
+        "aliases": [],
+        "severity": "high",
+        "title": "Prototype Pollution via parse() in NodeJS flatted",
+        "package_name": "flatted",
+        "vulnerable_range": "<=3.4.1",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-fjxv-7rqg-78g4",
         "aliases": [],
         "severity": "critical",
