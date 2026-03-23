@@ -394,6 +394,7 @@ def generate_html(
                 "owner": comp.owner,
                 "repo": comp.repo,
                 "ref": comp.ref,
+                "commit": comp.commit,
                 "tag_version": tag_version,
                 "go_version": comp.go_version,
                 "go_version_mismatch": go_version_mismatch,
@@ -576,6 +577,7 @@ def generate_html(
                     "owner": comp.owner,
                     "repo": comp.repo,
                     "ref": comp.ref,
+                    "commit": comp.commit,
                     "language": "npm",  # Distinguish from Go components
                     "node_version": comp.node_version,
                     "package_manager": comp.package_manager,

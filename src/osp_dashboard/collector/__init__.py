@@ -1,6 +1,6 @@
 """Data collection modules."""
 
-from .gomod import fetch_gomod, parse_gomod, collect_component_data, fetch_operator_components
+from .gomod import fetch_gomod, parse_gomod, collect_component_data, fetch_operator_components, resolve_commit_sha
 from .cve import Advisory, fetch_advisories, get_advisories_for_version
 from .govulncheck import VulnFinding, scan_component, save_scan_results, load_scan_results
 from .npm import NpmDependency, NpmComponentData, collect_npm_component_data, fetch_npm_latest_versions
@@ -18,6 +18,7 @@ __all__ = [
     "parse_gomod",
     "collect_component_data",
     "fetch_operator_components",
+    "resolve_commit_sha",
     # CVE/Advisory
     "Advisory",
     "fetch_advisories",

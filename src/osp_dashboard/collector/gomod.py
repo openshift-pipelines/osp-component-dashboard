@@ -58,7 +58,133 @@ class ComponentData:
     ref: str
     go_version: str
     dependencies: list[Dependency]
+    commit: str = ""
     release_status: ReleaseStatus = field(default_factory=ReleaseStatus)
+
+
+def fetch_downstream_head(
+    downstream_name: str, ref: str, timeout: float = 10.0
+) -> str:
+    """Fetch the upstream commit SHA from a downstream fork's ``head`` file.
+
+    The openshift-pipelines downstream forks (e.g.
+    ``openshift-pipelines/tektoncd-pipeline``) store the upstream commit
+    they were built from in a plain-text ``head`` file at the repo root.
+
+    Args:
+        downstream_name: Downstream repo name under openshift-pipelines
+            (e.g., 'tektoncd-pipeline')
+        ref: Git ref (branch) on the downstream fork
+        timeout: Request timeout in seconds
+
+    Returns:
+        Full commit SHA string, or empty string if not available
+    """
+    url = (
+        f"https://raw.githubusercontent.com/openshift-pipelines/"
+        f"{downstream_name}/{ref}/head"
+    )
+    try:
+        with httpx.Client(timeout=timeout, follow_redirects=True) as client:
+            response = client.get(url)
+            if response.status_code == 200:
+                sha = response.text.strip()
+                # Sanity-check: must look like a hex SHA
+                if len(sha) == 40 and all(c in "0123456789abcdef" for c in sha):
+                    return sha
+    except httpx.HTTPError:
+        pass
+    return ""
+
+
+def _downstream_branch(osp_version: str) -> str:
+    """Map an OSP version to the downstream fork branch name.
+
+    The openshift-pipelines downstream forks use OSP-version-aligned
+    branch names, not the upstream ref names:
+        - ``main``  → ``main``
+        - ``next``  → ``next``
+        - ``1.22``  → ``release-v1.22.x``
+
+    Args:
+        osp_version: OSP version string (e.g., "main", "next", "1.22")
+
+    Returns:
+        Branch name on the downstream fork
+    """
+    if osp_version in ("main", "next"):
+        return osp_version
+    return f"release-v{osp_version}.x"
+
+
+def resolve_commit_sha(
+    owner: str, repo: str, ref: str,
+    osp_version: str = "",
+    timeout: float = 10.0,
+) -> str:
+    """Resolve a git ref to a commit SHA.
+
+    First tries fetching the ``head`` file from the downstream
+    openshift-pipelines fork (which records the upstream commit used).
+    The downstream fork uses OSP-version-aligned branch names
+    (e.g. ``release-v1.22.x``), so the *osp_version* is needed to
+    locate the correct branch.
+
+    Falls back to the GitHub API on the upstream repo.
+
+    Args:
+        owner: Repository owner (e.g., 'tektoncd')
+        repo: Repository name (e.g., 'pipeline')
+        ref: Git ref (tag, branch, or commit) on the *upstream* repo
+        osp_version: OSP version (e.g., "1.22", "next", "main") used
+            to derive the downstream branch name
+        timeout: Request timeout in seconds
+
+    Returns:
+        Full commit SHA string, or empty string if resolution fails
+    """
+    # Build the downstream fork name.
+    # tektoncd/pipeline  → openshift-pipelines/tektoncd-pipeline
+    # konflux-ci/tekton-kueue → openshift-pipelines/tekton-kueue
+    # openshift-pipelines/* repos don't have a head file (they *are* upstream)
+    if owner != "openshift-pipelines" and osp_version:
+        if owner == "tektoncd":
+            downstream_name = f"tektoncd-{repo}"
+        else:
+            downstream_name = repo
+
+        downstream_ref = _downstream_branch(osp_version)
+        sha = fetch_downstream_head(downstream_name, downstream_ref, timeout)
+        if sha:
+            return sha
+
+    # Fallback: resolve via GitHub API on the upstream repo
+    token = get_github_token()
+    headers: dict[str, str] = {}
+    if token:
+        headers["Authorization"] = f"token {token}"
+
+    with httpx.Client(timeout=timeout, headers=headers, follow_redirects=True) as client:
+        for ref_type in ("heads", "tags"):
+            url = f"https://api.github.com/repos/{owner}/{repo}/git/ref/{ref_type}/{ref}"
+            try:
+                response = client.get(url)
+                if response.status_code == 200:
+                    data = response.json()
+                    obj = data.get("object", {})
+                    # For annotated tags, the object type is "tag" and we need
+                    # to dereference to get the commit
+                    if obj.get("type") == "tag":
+                        tag_url = obj.get("url", "")
+                        if tag_url:
+                            tag_resp = client.get(tag_url)
+                            if tag_resp.status_code == 200:
+                                return tag_resp.json().get("object", {}).get("sha", "")
+                    return obj.get("sha", "")
+            except httpx.HTTPError:
+                continue
+
+    return ""
 
 
 def fetch_gomod(owner: str, repo: str, ref: str, timeout: float = 30.0) -> str:
@@ -288,7 +414,8 @@ def fetch_operator_components(
 
 def collect_component_data(
     owner: str, repo: str, ref: str, timeout: float = 30.0,
-    check_release: bool = False
+    check_release: bool = False,
+    osp_version: str = "",
 ) -> ComponentData:
     """Collect all data for a component.
 
@@ -298,12 +425,15 @@ def collect_component_data(
         ref: Git ref (tag, branch, or commit)
         timeout: Request timeout in seconds
         check_release: Whether to check release branch for updates
+        osp_version: OSP version (e.g., "1.22") for downstream commit lookup
 
     Returns:
         ComponentData with parsed go.mod information
     """
     content = fetch_gomod(owner, repo, ref, timeout)
     go_version, dependencies = parse_gomod(content)
+
+    commit = resolve_commit_sha(owner, repo, ref, osp_version=osp_version)
 
     release_status = ReleaseStatus()
     if check_release:
@@ -315,5 +445,6 @@ def collect_component_data(
         ref=ref,
         go_version=go_version,
         dependencies=dependencies,
+        commit=commit,
         release_status=release_status,
     )

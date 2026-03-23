@@ -266,6 +266,7 @@
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Component</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Ref</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Tag</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-medium">Commit</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Release</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Runtime</th>
                             <th class="text-left py-3 px-4 text-gray-400 font-medium">Stale Deps</th>
@@ -292,6 +293,15 @@
                                 <span class="font-mono text-xs text-green-300">{{ comp.tag_version }}</span>
                                 {% elif comp.ref.startswith('v') %}
                                 <span class="font-mono text-xs text-gray-400">{{ comp.ref }}</span>
+                                {% else %}
+                                <span class="text-gray-600 text-xs">-</span>
+                                {% endif %}
+                            </td>
+                            <td class="py-3 px-4">
+                                {% if comp.commit %}
+                                <a href="https://github.com/{{ comp.owner }}/{{ comp.repo }}/commit/{{ comp.commit }}" target="_blank" class="font-mono text-xs text-gray-400 hover:text-blue-400 transition-colors" title="{{ comp.commit }}">
+                                    {{ comp.commit[:7] }}
+                                </a>
                                 {% else %}
                                 <span class="text-gray-600 text-xs">-</span>
                                 {% endif %}
@@ -406,7 +416,7 @@
                         </tr>
                         <!-- Expandable dependencies row -->
                         <tr id="deps-{{ version }}-{{ comp.repo }}" class="deps-row hidden bg-dark-800/50">
-                            <td colspan="8" class="py-3 px-4">
+                            <td colspan="10" class="py-3 px-4">
                                 <div class="grid grid-cols-2 gap-4">
                                     {% if comp.internal_deps %}
                                     <div>
@@ -462,6 +472,13 @@
                         <div><span class="text-green-300 font-mono">v0.78.2</span> — Resolved tag from branch ref</div>
                         <div><span class="text-gray-400 font-mono">v0.62.0</span> — Tag ref (same as ref)</div>
                         <div><span class="text-gray-600">-</span> — No tag (e.g., main branch)</div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-gray-300 font-medium mb-2">Commit</h4>
+                    <div class="space-y-1.5 text-gray-400">
+                        <div><span class="text-gray-400 font-mono">3e729e0</span> — Short SHA of the ref's HEAD commit (click to view)</div>
+                        <div><span class="text-gray-600">-</span> — Could not resolve commit</div>
                     </div>
                 </div>
                 <div>

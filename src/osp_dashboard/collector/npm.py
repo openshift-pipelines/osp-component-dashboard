@@ -6,7 +6,7 @@ from dataclasses import dataclass, field
 
 import httpx
 
-from .gomod import ReleaseStatus, get_github_token, check_release_status
+from .gomod import ReleaseStatus, get_github_token, check_release_status, resolve_commit_sha
 
 
 def fetch_npm_latest_versions(package_names: list[str], timeout: float = 30.0) -> dict[str, str]:
@@ -56,6 +56,7 @@ class NpmComponentData:
     node_version: str | None  # from package.json engines or .nvmrc
     package_manager: str | None  # yarn, npm, pnpm (from packageManager field)
     dependencies: list[NpmDependency]
+    commit: str = ""
     release_status: ReleaseStatus = field(default_factory=ReleaseStatus)
 
 
@@ -224,7 +225,8 @@ def parse_package_json(content: str) -> tuple[str | None, str | None, list[NpmDe
 
 def collect_npm_component_data(
     owner: str, repo: str, ref: str, timeout: float = 30.0,
-    check_release: bool = False
+    check_release: bool = False,
+    osp_version: str = "",
 ) -> NpmComponentData:
     """Collect all data for an npm component.
 
@@ -234,6 +236,7 @@ def collect_npm_component_data(
         ref: Git ref (tag, branch, or commit)
         timeout: Request timeout in seconds
         check_release: Whether to check release branch for updates
+        osp_version: OSP version (e.g., "1.22") for downstream commit lookup
 
     Returns:
         NpmComponentData with parsed package.json information
@@ -246,6 +249,8 @@ def collect_npm_component_data(
     if not node_version:
         node_version = engines_node
 
+    commit = resolve_commit_sha(owner, repo, ref, osp_version=osp_version)
+
     release_status = ReleaseStatus()
     if check_release:
         release_status = check_release_status(owner, repo, ref)
@@ -257,5 +262,6 @@ def collect_npm_component_data(
         node_version=node_version,
         package_manager=package_manager,
         dependencies=dependencies,
+        commit=commit,
         release_status=release_status,
     )

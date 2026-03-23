@@ -80,7 +80,7 @@ def collect_command(args: argparse.Namespace) -> int:
             owner, repo = parse_component(component)
             print(f"  Fetching {owner}/{repo} @ {ref}...")
             try:
-                data = collect_component_data(owner, repo, ref, check_release=check_releases)
+                data = collect_component_data(owner, repo, ref, check_release=check_releases, osp_version=osp_version)
                 version_data.append(data)
                 status_info = ""
                 if data.release_status.branch_exists:
@@ -88,7 +88,8 @@ def collect_command(args: argparse.Namespace) -> int:
                         status_info = f", update: {data.release_status.latest_version}"
                     elif data.release_status.has_unreleased:
                         status_info = f", +{data.release_status.commits_ahead} ahead"
-                print(f"    Go {data.go_version}, {len(data.dependencies)} deps{status_info}")
+                commit_info = f", commit {data.commit[:7]}" if data.commit else ""
+                print(f"    Go {data.go_version}, {len(data.dependencies)} deps{commit_info}{status_info}")
 
                 # Fetch CVEs for this component
                 package = f"github.com/{owner}/{repo}"
@@ -116,7 +117,7 @@ def collect_command(args: argparse.Namespace) -> int:
                 owner, repo = parse_component(component)
                 print(f"  Fetching {owner}/{repo} @ {ref}...")
                 try:
-                    data = collect_npm_component_data(owner, repo, ref, check_release=check_releases)
+                    data = collect_npm_component_data(owner, repo, ref, check_release=check_releases, osp_version=osp_version)
                     version_npm_data.append(data)
                     node_info = f"Node {data.node_version}" if data.node_version else "Node ?"
                     pm_info = f", {data.package_manager}" if data.package_manager else ""
