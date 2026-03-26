@@ -674,6 +674,26 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-c2c7-rcm5-vvqj",
+        "aliases": [],
+        "severity": "high",
+        "title": "Picomatch has a ReDoS vulnerability via extglob quantifiers",
+        "package_name": "picomatch",
+        "vulnerable_range": "<2.3.2",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-3v7f-55p6-f55p",
+        "aliases": [],
+        "severity": "high",
+        "title": "Picomatch: Method Injection in POSIX Character Classes causes incorrect Glob Matching",
+        "package_name": "picomatch",
+        "vulnerable_range": "<2.3.2",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-w7fw-mjwx-w883",
         "aliases": [],
         "severity": "moderate",
@@ -831,6 +851,16 @@
         "package_name": "webpack",
         "vulnerable_range": ">=5.49.0 <5.104.0",
         "patched_version": "1.3.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-48c2-rrv3-qjmp",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "yaml is vulnerable to Stack Overflow via deeply nested YAML collections",
+        "package_name": "yaml",
+        "vulnerable_range": ">=2.0.0 <2.8.3",
+        "patched_version": null,
         "is_direct": false
       }
     ]
