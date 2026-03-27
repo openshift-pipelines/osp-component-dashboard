@@ -12,6 +12,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-f886-m6hf-6m8v",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "brace-expansion: Zero-step sequence causes process hang and memory exhaustion",
+        "package_name": "brace-expansion",
+        "vulnerable_range": "<5.0.5",
+        "patched_version": "7.22.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
         "severity": "moderate",
@@ -153,6 +163,16 @@
         "package_name": "@tootallnate/once",
         "vulnerable_range": "<3.0.1",
         "patched_version": "30.3.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f886-m6hf-6m8v",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "brace-expansion: Zero-step sequence causes process hang and memory exhaustion",
+        "package_name": "brace-expansion",
+        "vulnerable_range": "<5.0.5",
+        "patched_version": "7.22.0",
         "is_direct": false
       },
       {
@@ -307,6 +327,16 @@
         "package_name": "@tootallnate/once",
         "vulnerable_range": "<3.0.1",
         "patched_version": "30.3.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f886-m6hf-6m8v",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "brace-expansion: Zero-step sequence causes process hang and memory exhaustion",
+        "package_name": "brace-expansion",
+        "vulnerable_range": "<5.0.5",
+        "patched_version": "7.22.0",
         "is_direct": false
       },
       {
@@ -486,10 +516,20 @@
       {
         "vuln_id": "GHSA-v6h2-p8h4-qcjw",
         "aliases": [],
-        "severity": "low",
+        "severity": "moderate",
         "title": "brace-expansion Regular Expression Denial of Service vulnerability",
         "package_name": "brace-expansion",
         "vulnerable_range": ">=1.0.0 <=1.1.11",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f886-m6hf-6m8v",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "brace-expansion: Zero-step sequence causes process hang and memory exhaustion",
+        "package_name": "brace-expansion",
+        "vulnerable_range": "<5.0.5",
         "patched_version": null,
         "is_direct": false
       },
@@ -660,6 +700,46 @@
         "title": "node-forge is vulnerable to ASN.1 OID Integer Truncation",
         "package_name": "node-forge",
         "vulnerable_range": "<1.3.2",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-5m6q-g25r-mvwx",
+        "aliases": [],
+        "severity": "high",
+        "title": "Forge has Denial of Service via Infinite Loop in BigInteger.modInverse() with Zero Input",
+        "package_name": "node-forge",
+        "vulnerable_range": "<1.4.0",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-2328-f5f3-gj25",
+        "aliases": [],
+        "severity": "high",
+        "title": "Forge has a basicConstraints bypass in its certificate chain verification (RFC 5280 violation)",
+        "package_name": "node-forge",
+        "vulnerable_range": "<=1.3.3",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-q67f-28xg-22rw",
+        "aliases": [],
+        "severity": "high",
+        "title": "Forge has signature forgery in Ed25519 due to missing S > L check",
+        "package_name": "node-forge",
+        "vulnerable_range": "<1.4.0",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-ppp5-5v6c-4jwp",
+        "aliases": [],
+        "severity": "high",
+        "title": "Forge has signature forgery in RSA-PKCS due to ASN.1 extra field  ",
+        "package_name": "node-forge",
+        "vulnerable_range": "<1.4.0",
         "patched_version": null,
         "is_direct": false
       },
@@ -878,6 +958,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-f886-m6hf-6m8v",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "brace-expansion: Zero-step sequence causes process hang and memory exhaustion",
+        "package_name": "brace-expansion",
+        "vulnerable_range": "<5.0.5",
+        "patched_version": "7.22.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
         "severity": "low",
@@ -1029,6 +1119,16 @@
         "package_name": "@tootallnate/once",
         "vulnerable_range": "<3.0.1",
         "patched_version": "30.3.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f886-m6hf-6m8v",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "brace-expansion: Zero-step sequence causes process hang and memory exhaustion",
+        "package_name": "brace-expansion",
+        "vulnerable_range": "<5.0.5",
+        "patched_version": "7.22.0",
         "is_direct": false
       },
       {
@@ -1186,6 +1286,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-f886-m6hf-6m8v",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "brace-expansion: Zero-step sequence causes process hang and memory exhaustion",
+        "package_name": "brace-expansion",
+        "vulnerable_range": "<5.0.5",
+        "patched_version": "7.22.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
         "severity": "low",
@@ -1337,6 +1447,16 @@
         "package_name": "@tootallnate/once",
         "vulnerable_range": "<3.0.1",
         "patched_version": "30.3.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f886-m6hf-6m8v",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "brace-expansion: Zero-step sequence causes process hang and memory exhaustion",
+        "package_name": "brace-expansion",
+        "vulnerable_range": "<5.0.5",
+        "patched_version": "7.22.0",
         "is_direct": false
       },
       {
@@ -1494,6 +1614,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-f886-m6hf-6m8v",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "brace-expansion: Zero-step sequence causes process hang and memory exhaustion",
+        "package_name": "brace-expansion",
+        "vulnerable_range": "<5.0.5",
+        "patched_version": "7.22.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
         "severity": "low",
@@ -1645,6 +1775,16 @@
         "package_name": "@tootallnate/once",
         "vulnerable_range": "<3.0.1",
         "patched_version": "30.3.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f886-m6hf-6m8v",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "brace-expansion: Zero-step sequence causes process hang and memory exhaustion",
+        "package_name": "brace-expansion",
+        "vulnerable_range": "<5.0.5",
+        "patched_version": "10.1.0",
         "is_direct": false
       },
       {
