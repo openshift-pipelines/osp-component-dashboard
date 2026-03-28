@@ -12,16 +12,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-f886-m6hf-6m8v",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "brace-expansion: Zero-step sequence causes process hang and memory exhaustion",
-        "package_name": "brace-expansion",
-        "vulnerable_range": "<5.0.5",
-        "patched_version": "7.22.0",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
         "severity": "moderate",
@@ -48,6 +38,16 @@
         "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
         "package_name": "serialize-javascript",
         "vulnerable_range": "<=7.0.2",
+        "patched_version": "14.0.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-qj8w-gfj5-8c6v",
+        "aliases": [],
+        "severity": "high",
+        "title": "Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects",
+        "package_name": "serialize-javascript",
+        "vulnerable_range": "<7.0.5",
         "patched_version": "14.0.0",
         "is_direct": false
       },
@@ -166,16 +166,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-f886-m6hf-6m8v",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "brace-expansion: Zero-step sequence causes process hang and memory exhaustion",
-        "package_name": "brace-expansion",
-        "vulnerable_range": "<5.0.5",
-        "patched_version": "7.22.0",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
         "severity": "low",
@@ -212,6 +202,16 @@
         "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
         "package_name": "serialize-javascript",
         "vulnerable_range": "<=7.0.2",
+        "patched_version": "14.0.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-qj8w-gfj5-8c6v",
+        "aliases": [],
+        "severity": "high",
+        "title": "Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects",
+        "package_name": "serialize-javascript",
+        "vulnerable_range": "<7.0.5",
         "patched_version": "14.0.0",
         "is_direct": false
       },
@@ -330,16 +330,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-f886-m6hf-6m8v",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "brace-expansion: Zero-step sequence causes process hang and memory exhaustion",
-        "package_name": "brace-expansion",
-        "vulnerable_range": "<5.0.5",
-        "patched_version": "7.22.0",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
         "severity": "low",
@@ -376,6 +366,16 @@
         "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
         "package_name": "serialize-javascript",
         "vulnerable_range": "<=7.0.2",
+        "patched_version": "14.0.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-qj8w-gfj5-8c6v",
+        "aliases": [],
+        "severity": "high",
+        "title": "Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects",
+        "package_name": "serialize-javascript",
+        "vulnerable_range": "<7.0.5",
         "patched_version": "14.0.0",
         "is_direct": false
       },
@@ -529,7 +529,7 @@
         "severity": "moderate",
         "title": "brace-expansion: Zero-step sequence causes process hang and memory exhaustion",
         "package_name": "brace-expansion",
-        "vulnerable_range": "<5.0.5",
+        "vulnerable_range": "<1.1.13",
         "patched_version": null,
         "is_direct": false
       },
@@ -704,16 +704,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-5m6q-g25r-mvwx",
-        "aliases": [],
-        "severity": "high",
-        "title": "Forge has Denial of Service via Infinite Loop in BigInteger.modInverse() with Zero Input",
-        "package_name": "node-forge",
-        "vulnerable_range": "<1.4.0",
-        "patched_version": null,
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-2328-f5f3-gj25",
         "aliases": [],
         "severity": "high",
@@ -744,6 +734,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-5m6q-g25r-mvwx",
+        "aliases": [],
+        "severity": "high",
+        "title": "Forge has Denial of Service via Infinite Loop in BigInteger.modInverse() with Zero Input",
+        "package_name": "node-forge",
+        "vulnerable_range": "<1.4.0",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-76c9-3jph-rj3q",
         "aliases": [],
         "severity": "low",
@@ -754,12 +754,12 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-c2c7-rcm5-vvqj",
+        "vuln_id": "GHSA-37ch-88jc-xwx2",
         "aliases": [],
         "severity": "high",
-        "title": "Picomatch has a ReDoS vulnerability via extglob quantifiers",
-        "package_name": "picomatch",
-        "vulnerable_range": "<2.3.2",
+        "title": "path-to-regexp vulnerable to Regular Expression Denial of Service via multiple route parameters",
+        "package_name": "path-to-regexp",
+        "vulnerable_range": "<0.1.13",
         "patched_version": null,
         "is_direct": false
       },
@@ -768,6 +768,16 @@
         "aliases": [],
         "severity": "high",
         "title": "Picomatch: Method Injection in POSIX Character Classes causes incorrect Glob Matching",
+        "package_name": "picomatch",
+        "vulnerable_range": "<2.3.2",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-c2c7-rcm5-vvqj",
+        "aliases": [],
+        "severity": "high",
+        "title": "Picomatch has a ReDoS vulnerability via extglob quantifiers",
         "package_name": "picomatch",
         "vulnerable_range": "<2.3.2",
         "patched_version": null,
@@ -810,6 +820,16 @@
         "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
         "package_name": "serialize-javascript",
         "vulnerable_range": "<=7.0.2",
+        "patched_version": "14.0.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-qj8w-gfj5-8c6v",
+        "aliases": [],
+        "severity": "high",
+        "title": "Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects",
+        "package_name": "serialize-javascript",
+        "vulnerable_range": "<7.0.5",
         "patched_version": "14.0.0",
         "is_direct": false
       },
@@ -958,16 +978,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-f886-m6hf-6m8v",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "brace-expansion: Zero-step sequence causes process hang and memory exhaustion",
-        "package_name": "brace-expansion",
-        "vulnerable_range": "<5.0.5",
-        "patched_version": "7.22.0",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
         "severity": "low",
@@ -1004,6 +1014,16 @@
         "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
         "package_name": "serialize-javascript",
         "vulnerable_range": "<=7.0.2",
+        "patched_version": "14.0.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-qj8w-gfj5-8c6v",
+        "aliases": [],
+        "severity": "high",
+        "title": "Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects",
+        "package_name": "serialize-javascript",
+        "vulnerable_range": "<7.0.5",
         "patched_version": "14.0.0",
         "is_direct": false
       },
@@ -1122,16 +1142,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-f886-m6hf-6m8v",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "brace-expansion: Zero-step sequence causes process hang and memory exhaustion",
-        "package_name": "brace-expansion",
-        "vulnerable_range": "<5.0.5",
-        "patched_version": "7.22.0",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
         "severity": "low",
@@ -1168,6 +1178,16 @@
         "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
         "package_name": "serialize-javascript",
         "vulnerable_range": "<=7.0.2",
+        "patched_version": "14.0.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-qj8w-gfj5-8c6v",
+        "aliases": [],
+        "severity": "high",
+        "title": "Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects",
+        "package_name": "serialize-javascript",
+        "vulnerable_range": "<7.0.5",
         "patched_version": "14.0.0",
         "is_direct": false
       },
@@ -1286,16 +1306,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-f886-m6hf-6m8v",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "brace-expansion: Zero-step sequence causes process hang and memory exhaustion",
-        "package_name": "brace-expansion",
-        "vulnerable_range": "<5.0.5",
-        "patched_version": "7.22.0",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
         "severity": "low",
@@ -1332,6 +1342,16 @@
         "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
         "package_name": "serialize-javascript",
         "vulnerable_range": "<=7.0.2",
+        "patched_version": "14.0.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-qj8w-gfj5-8c6v",
+        "aliases": [],
+        "severity": "high",
+        "title": "Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects",
+        "package_name": "serialize-javascript",
+        "vulnerable_range": "<7.0.5",
         "patched_version": "14.0.0",
         "is_direct": false
       },
@@ -1450,16 +1470,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-f886-m6hf-6m8v",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "brace-expansion: Zero-step sequence causes process hang and memory exhaustion",
-        "package_name": "brace-expansion",
-        "vulnerable_range": "<5.0.5",
-        "patched_version": "7.22.0",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
         "severity": "low",
@@ -1496,6 +1506,16 @@
         "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
         "package_name": "serialize-javascript",
         "vulnerable_range": "<=7.0.2",
+        "patched_version": "14.0.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-qj8w-gfj5-8c6v",
+        "aliases": [],
+        "severity": "high",
+        "title": "Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects",
+        "package_name": "serialize-javascript",
+        "vulnerable_range": "<7.0.5",
         "patched_version": "14.0.0",
         "is_direct": false
       },
@@ -1614,16 +1634,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-f886-m6hf-6m8v",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "brace-expansion: Zero-step sequence causes process hang and memory exhaustion",
-        "package_name": "brace-expansion",
-        "vulnerable_range": "<5.0.5",
-        "patched_version": "7.22.0",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
         "severity": "low",
@@ -1660,6 +1670,16 @@
         "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
         "package_name": "serialize-javascript",
         "vulnerable_range": "<=7.0.2",
+        "patched_version": "14.0.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-qj8w-gfj5-8c6v",
+        "aliases": [],
+        "severity": "high",
+        "title": "Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects",
+        "package_name": "serialize-javascript",
+        "vulnerable_range": "<7.0.5",
         "patched_version": "14.0.0",
         "is_direct": false
       },
@@ -1778,16 +1798,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-f886-m6hf-6m8v",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "brace-expansion: Zero-step sequence causes process hang and memory exhaustion",
-        "package_name": "brace-expansion",
-        "vulnerable_range": "<5.0.5",
-        "patched_version": "10.1.0",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
         "severity": "low",
@@ -1824,6 +1834,16 @@
         "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
         "package_name": "serialize-javascript",
         "vulnerable_range": "<=7.0.2",
+        "patched_version": "14.0.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-qj8w-gfj5-8c6v",
+        "aliases": [],
+        "severity": "high",
+        "title": "Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects",
+        "package_name": "serialize-javascript",
+        "vulnerable_range": "<7.0.5",
         "patched_version": "14.0.0",
         "is_direct": false
       },
