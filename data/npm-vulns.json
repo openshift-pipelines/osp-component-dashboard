@@ -724,20 +724,20 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-ppp5-5v6c-4jwp",
+        "vuln_id": "GHSA-5m6q-g25r-mvwx",
         "aliases": [],
         "severity": "high",
-        "title": "Forge has signature forgery in RSA-PKCS due to ASN.1 extra field  ",
+        "title": "Forge has Denial of Service via Infinite Loop in BigInteger.modInverse() with Zero Input",
         "package_name": "node-forge",
         "vulnerable_range": "<1.4.0",
         "patched_version": null,
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-5m6q-g25r-mvwx",
+        "vuln_id": "GHSA-ppp5-5v6c-4jwp",
         "aliases": [],
         "severity": "high",
-        "title": "Forge has Denial of Service via Infinite Loop in BigInteger.modInverse() with Zero Input",
+        "title": "Forge has signature forgery in RSA-PKCS due to ASN.1 extra field  ",
         "package_name": "node-forge",
         "vulnerable_range": "<1.4.0",
         "patched_version": null,
