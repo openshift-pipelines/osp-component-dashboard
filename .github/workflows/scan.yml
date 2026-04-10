@@ -12,6 +12,7 @@ concurrency:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   # First job: get list of versions from config
@@ -157,7 +158,9 @@ jobs:
             uv run osp-dashboard merge artifacts/npm/*/npm-vulns-*.json -o data/npm-vulns.json
           fi
 
-      - name: Commit scan results
+      - name: Create PR with scan results
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
@@ -165,6 +168,24 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
+            BRANCH="chore/update-vuln-scan-results"
+            git checkout -B "$BRANCH"
             git commit -m "chore: Update vulnerability scan results"
-            git push
+            git push -f origin "$BRANCH:$BRANCH"
+
+            # Create or update the PR
+            EXISTING_PR=$(gh pr list --head "$BRANCH" --state open --json number -q '.[0].number')
+            if [ -n "$EXISTING_PR" ]; then
+              echo "PR #$EXISTING_PR already exists, updated branch"
+            else
+              gh pr create \
+                --title "chore: Update vulnerability scan results" \
+                --body "Automated vulnerability scan results update." \
+                --head "$BRANCH" \
+                --base main
+              EXISTING_PR=$(gh pr list --head "$BRANCH" --state open --json number -q '.[0].number')
+            fi
+
+            # Enable auto-merge (squash) so it merges once checks pass
+            gh pr merge "$EXISTING_PR" --auto --squash --delete-branch
           fi
