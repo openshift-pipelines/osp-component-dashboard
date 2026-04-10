@@ -24,10 +24,30 @@
       {
         "vuln_id": "GHSA-xxjr-mmjv-4gpg",
         "aliases": [],
-        "severity": "moderate",
+        "severity": "high",
         "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
         "package_name": "lodash",
         "vulnerable_range": ">=4.0.0 <=4.17.22",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-r5fr-rjxr-66jc",
+        "aliases": [],
+        "severity": "high",
+        "title": "lodash vulnerable to Code Injection via `_.template` imports key names",
+        "package_name": "lodash",
+        "vulnerable_range": ">=4.0.0 <=4.17.23",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f23m-r3pf-42rh",
+        "aliases": [],
+        "severity": "high",
+        "title": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
+        "package_name": "lodash",
+        "vulnerable_range": "<=4.17.23",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -188,10 +208,30 @@
       {
         "vuln_id": "GHSA-xxjr-mmjv-4gpg",
         "aliases": [],
-        "severity": "moderate",
+        "severity": "high",
         "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
         "package_name": "lodash",
         "vulnerable_range": ">=4.0.0 <=4.17.22",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-r5fr-rjxr-66jc",
+        "aliases": [],
+        "severity": "high",
+        "title": "lodash vulnerable to Code Injection via `_.template` imports key names",
+        "package_name": "lodash",
+        "vulnerable_range": ">=4.0.0 <=4.17.23",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f23m-r3pf-42rh",
+        "aliases": [],
+        "severity": "high",
+        "title": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
+        "package_name": "lodash",
+        "vulnerable_range": "<=4.17.23",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -352,10 +392,30 @@
       {
         "vuln_id": "GHSA-xxjr-mmjv-4gpg",
         "aliases": [],
-        "severity": "moderate",
+        "severity": "high",
         "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
         "package_name": "lodash",
         "vulnerable_range": ">=4.0.0 <=4.17.22",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-r5fr-rjxr-66jc",
+        "aliases": [],
+        "severity": "high",
+        "title": "lodash vulnerable to Code Injection via `_.template` imports key names",
+        "package_name": "lodash",
+        "vulnerable_range": ">=4.0.0 <=4.17.23",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f23m-r3pf-42rh",
+        "aliases": [],
+        "severity": "high",
+        "title": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
+        "package_name": "lodash",
+        "vulnerable_range": "<=4.17.23",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -626,7 +686,7 @@
       {
         "vuln_id": "GHSA-xxjr-mmjv-4gpg",
         "aliases": [],
-        "severity": "moderate",
+        "severity": "high",
         "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
         "package_name": "lodash",
         "vulnerable_range": ">=4.0.0 <=4.17.22",
@@ -634,12 +694,52 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-r5fr-rjxr-66jc",
+        "aliases": [],
+        "severity": "high",
+        "title": "lodash vulnerable to Code Injection via `_.template` imports key names",
+        "package_name": "lodash",
+        "vulnerable_range": ">=4.0.0 <=4.17.23",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f23m-r3pf-42rh",
+        "aliases": [],
+        "severity": "high",
+        "title": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
+        "package_name": "lodash",
+        "vulnerable_range": "<=4.17.23",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-xxjr-mmjv-4gpg",
         "aliases": [],
-        "severity": "moderate",
+        "severity": "high",
         "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
         "package_name": "lodash-es",
         "vulnerable_range": ">=4.0.0 <=4.17.22",
+        "patched_version": null,
+        "is_direct": true
+      },
+      {
+        "vuln_id": "GHSA-r5fr-rjxr-66jc",
+        "aliases": [],
+        "severity": "high",
+        "title": "lodash vulnerable to Code Injection via `_.template` imports key names",
+        "package_name": "lodash-es",
+        "vulnerable_range": ">=4.0.0 <=4.17.23",
+        "patched_version": null,
+        "is_direct": true
+      },
+      {
+        "vuln_id": "GHSA-f23m-r3pf-42rh",
+        "aliases": [],
+        "severity": "high",
+        "title": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
+        "package_name": "lodash-es",
+        "vulnerable_range": "<=4.17.23",
         "patched_version": null,
         "is_direct": true
       },
@@ -1000,10 +1100,30 @@
       {
         "vuln_id": "GHSA-xxjr-mmjv-4gpg",
         "aliases": [],
-        "severity": "moderate",
+        "severity": "high",
         "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
         "package_name": "lodash",
         "vulnerable_range": ">=4.0.0 <=4.17.22",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-r5fr-rjxr-66jc",
+        "aliases": [],
+        "severity": "high",
+        "title": "lodash vulnerable to Code Injection via `_.template` imports key names",
+        "package_name": "lodash",
+        "vulnerable_range": ">=4.0.0 <=4.17.23",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f23m-r3pf-42rh",
+        "aliases": [],
+        "severity": "high",
+        "title": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
+        "package_name": "lodash",
+        "vulnerable_range": "<=4.17.23",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -1164,10 +1284,30 @@
       {
         "vuln_id": "GHSA-xxjr-mmjv-4gpg",
         "aliases": [],
-        "severity": "moderate",
+        "severity": "high",
         "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
         "package_name": "lodash",
         "vulnerable_range": ">=4.0.0 <=4.17.22",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-r5fr-rjxr-66jc",
+        "aliases": [],
+        "severity": "high",
+        "title": "lodash vulnerable to Code Injection via `_.template` imports key names",
+        "package_name": "lodash",
+        "vulnerable_range": ">=4.0.0 <=4.17.23",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f23m-r3pf-42rh",
+        "aliases": [],
+        "severity": "high",
+        "title": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
+        "package_name": "lodash",
+        "vulnerable_range": "<=4.17.23",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -1328,10 +1468,30 @@
       {
         "vuln_id": "GHSA-xxjr-mmjv-4gpg",
         "aliases": [],
-        "severity": "moderate",
+        "severity": "high",
         "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
         "package_name": "lodash",
         "vulnerable_range": ">=4.0.0 <=4.17.22",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-r5fr-rjxr-66jc",
+        "aliases": [],
+        "severity": "high",
+        "title": "lodash vulnerable to Code Injection via `_.template` imports key names",
+        "package_name": "lodash",
+        "vulnerable_range": ">=4.0.0 <=4.17.23",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f23m-r3pf-42rh",
+        "aliases": [],
+        "severity": "high",
+        "title": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
+        "package_name": "lodash",
+        "vulnerable_range": "<=4.17.23",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -1492,10 +1652,30 @@
       {
         "vuln_id": "GHSA-xxjr-mmjv-4gpg",
         "aliases": [],
-        "severity": "moderate",
+        "severity": "high",
         "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
         "package_name": "lodash",
         "vulnerable_range": ">=4.0.0 <=4.17.22",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-r5fr-rjxr-66jc",
+        "aliases": [],
+        "severity": "high",
+        "title": "lodash vulnerable to Code Injection via `_.template` imports key names",
+        "package_name": "lodash",
+        "vulnerable_range": ">=4.0.0 <=4.17.23",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f23m-r3pf-42rh",
+        "aliases": [],
+        "severity": "high",
+        "title": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
+        "package_name": "lodash",
+        "vulnerable_range": "<=4.17.23",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -1656,10 +1836,30 @@
       {
         "vuln_id": "GHSA-xxjr-mmjv-4gpg",
         "aliases": [],
-        "severity": "moderate",
+        "severity": "high",
         "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
         "package_name": "lodash",
         "vulnerable_range": ">=4.0.0 <=4.17.22",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-r5fr-rjxr-66jc",
+        "aliases": [],
+        "severity": "high",
+        "title": "lodash vulnerable to Code Injection via `_.template` imports key names",
+        "package_name": "lodash",
+        "vulnerable_range": ">=4.0.0 <=4.17.23",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f23m-r3pf-42rh",
+        "aliases": [],
+        "severity": "high",
+        "title": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
+        "package_name": "lodash",
+        "vulnerable_range": "<=4.17.23",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -1820,10 +2020,30 @@
       {
         "vuln_id": "GHSA-xxjr-mmjv-4gpg",
         "aliases": [],
-        "severity": "moderate",
+        "severity": "high",
         "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
         "package_name": "lodash",
         "vulnerable_range": ">=4.0.0 <=4.17.22",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-r5fr-rjxr-66jc",
+        "aliases": [],
+        "severity": "high",
+        "title": "lodash vulnerable to Code Injection via `_.template` imports key names",
+        "package_name": "lodash",
+        "vulnerable_range": ">=4.0.0 <=4.17.23",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f23m-r3pf-42rh",
+        "aliases": [],
+        "severity": "high",
+        "title": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
+        "package_name": "lodash",
+        "vulnerable_range": "<=4.17.23",
         "patched_version": "0.0.15",
         "is_direct": false
       },
