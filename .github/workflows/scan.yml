@@ -187,5 +187,5 @@ jobs:
             fi
 
             # Enable auto-merge (squash) so it merges once checks pass
-            gh pr merge "$EXISTING_PR" --auto --squash --delete-branch
+            gh pr merge "$EXISTING_PR" --auto --rebase --delete-branch
           fi
