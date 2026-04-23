@@ -52,6 +52,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-xq3m-2v4x-88gg",
+        "aliases": [],
+        "severity": "critical",
+        "title": "Arbitrary code execution in protobufjs",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5c6j-r48x-rmvq",
         "aliases": [],
         "severity": "high",
@@ -119,6 +129,16 @@
         "package_name": "undici",
         "vulnerable_range": "<6.24.0",
         "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-w5hq-g745-h8pq",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+        "package_name": "uuid",
+        "vulnerable_range": "<14.0.0",
+        "patched_version": "1.0.0",
         "is_direct": false
       },
       {
@@ -236,6 +256,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-xq3m-2v4x-88gg",
+        "aliases": [],
+        "severity": "critical",
+        "title": "Arbitrary code execution in protobufjs",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5c6j-r48x-rmvq",
         "aliases": [],
         "severity": "high",
@@ -303,6 +333,16 @@
         "package_name": "undici",
         "vulnerable_range": "<6.24.0",
         "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-w5hq-g745-h8pq",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+        "package_name": "uuid",
+        "vulnerable_range": "<14.0.0",
+        "patched_version": "1.0.0",
         "is_direct": false
       },
       {
@@ -420,6 +460,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-xq3m-2v4x-88gg",
+        "aliases": [],
+        "severity": "critical",
+        "title": "Arbitrary code execution in protobufjs",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5c6j-r48x-rmvq",
         "aliases": [],
         "severity": "high",
@@ -487,6 +537,16 @@
         "package_name": "undici",
         "vulnerable_range": "<6.24.0",
         "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-w5hq-g745-h8pq",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+        "package_name": "uuid",
+        "vulnerable_range": "<14.0.0",
+        "patched_version": "1.0.0",
         "is_direct": false
       },
       {
@@ -620,6 +680,16 @@
         "title": "Prototype Pollution via parse() in NodeJS flatted",
         "package_name": "flatted",
         "vulnerable_range": "<=3.4.1",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-r4q5-vmmm-2653",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "follow-redirects leaks Custom Authentication Headers to Cross-Domain Redirect Targets",
+        "package_name": "follow-redirects",
+        "vulnerable_range": "<=1.15.11",
         "patched_version": null,
         "is_direct": false
       },
@@ -884,13 +954,23 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-xq3m-2v4x-88gg",
+        "aliases": [],
+        "severity": "critical",
+        "title": "Arbitrary code execution in protobufjs",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-w7fw-mjwx-w883",
         "aliases": [],
         "severity": "moderate",
         "title": "qs's arrayLimit bypass in comma parsing allows denial of service",
         "package_name": "qs",
         "vulnerable_range": ">=6.7.0 <=6.14.1",
-        "patched_version": null,
+        "patched_version": "4.2.0",
         "is_direct": false
       },
       {
@@ -900,7 +980,7 @@
         "title": "qs's arrayLimit bypass in its bracket notation allows DoS via memory exhaustion",
         "package_name": "qs",
         "vulnerable_range": "<6.14.1",
-        "patched_version": null,
+        "patched_version": "4.2.0",
         "is_direct": false
       },
       {
@@ -1001,6 +1081,16 @@
         "package_name": "undici",
         "vulnerable_range": "<6.24.0",
         "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-w5hq-g745-h8pq",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+        "package_name": "uuid",
+        "vulnerable_range": "<14.0.0",
+        "patched_version": "1.0.0",
         "is_direct": false
       },
       {
@@ -1128,6 +1218,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-xq3m-2v4x-88gg",
+        "aliases": [],
+        "severity": "critical",
+        "title": "Arbitrary code execution in protobufjs",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5c6j-r48x-rmvq",
         "aliases": [],
         "severity": "high",
@@ -1195,6 +1295,16 @@
         "package_name": "undici",
         "vulnerable_range": "<6.24.0",
         "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-w5hq-g745-h8pq",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+        "package_name": "uuid",
+        "vulnerable_range": "<14.0.0",
+        "patched_version": "1.0.0",
         "is_direct": false
       },
       {
@@ -1312,6 +1422,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-xq3m-2v4x-88gg",
+        "aliases": [],
+        "severity": "critical",
+        "title": "Arbitrary code execution in protobufjs",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5c6j-r48x-rmvq",
         "aliases": [],
         "severity": "high",
@@ -1379,6 +1499,16 @@
         "package_name": "undici",
         "vulnerable_range": "<6.24.0",
         "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-w5hq-g745-h8pq",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+        "package_name": "uuid",
+        "vulnerable_range": "<14.0.0",
+        "patched_version": "1.0.0",
         "is_direct": false
       },
       {
@@ -1496,6 +1626,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-xq3m-2v4x-88gg",
+        "aliases": [],
+        "severity": "critical",
+        "title": "Arbitrary code execution in protobufjs",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5c6j-r48x-rmvq",
         "aliases": [],
         "severity": "high",
@@ -1563,6 +1703,16 @@
         "package_name": "undici",
         "vulnerable_range": "<6.24.0",
         "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-w5hq-g745-h8pq",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+        "package_name": "uuid",
+        "vulnerable_range": "<14.0.0",
+        "patched_version": "1.0.0",
         "is_direct": false
       },
       {
@@ -1680,6 +1830,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-xq3m-2v4x-88gg",
+        "aliases": [],
+        "severity": "critical",
+        "title": "Arbitrary code execution in protobufjs",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5c6j-r48x-rmvq",
         "aliases": [],
         "severity": "high",
@@ -1747,6 +1907,16 @@
         "package_name": "undici",
         "vulnerable_range": "<6.24.0",
         "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-w5hq-g745-h8pq",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+        "package_name": "uuid",
+        "vulnerable_range": "<14.0.0",
+        "patched_version": "1.0.0",
         "is_direct": false
       },
       {
@@ -1864,6 +2034,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-xq3m-2v4x-88gg",
+        "aliases": [],
+        "severity": "critical",
+        "title": "Arbitrary code execution in protobufjs",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5c6j-r48x-rmvq",
         "aliases": [],
         "severity": "high",
@@ -1931,6 +2111,16 @@
         "package_name": "undici",
         "vulnerable_range": "<6.24.0",
         "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-w5hq-g745-h8pq",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+        "package_name": "uuid",
+        "vulnerable_range": "<14.0.0",
+        "patched_version": "1.0.0",
         "is_direct": false
       },
       {
@@ -2048,6 +2238,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-xq3m-2v4x-88gg",
+        "aliases": [],
+        "severity": "critical",
+        "title": "Arbitrary code execution in protobufjs",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5c6j-r48x-rmvq",
         "aliases": [],
         "severity": "high",
@@ -2115,6 +2315,16 @@
         "package_name": "undici",
         "vulnerable_range": "<6.24.0",
         "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-w5hq-g745-h8pq",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+        "package_name": "uuid",
+        "vulnerable_range": "<14.0.0",
+        "patched_version": "1.0.0",
         "is_direct": false
       },
       {
