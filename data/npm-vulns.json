@@ -954,6 +954,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-qx2v-qp2m-jg93",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "PostCSS has XSS via Unescaped </style> in its CSS Stringify Output",
+        "package_name": "postcss",
+        "vulnerable_range": "<8.5.10",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-xq3m-2v4x-88gg",
         "aliases": [],
         "severity": "critical",
