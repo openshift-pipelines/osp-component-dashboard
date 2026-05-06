@@ -82,66 +82,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-g9mf-h72j-4rw9",
-        "aliases": [],
-        "severity": "high",
-        "title": "Undici has an unbounded decompression chain in HTTP responses on Node.js Fetch API via Content-Encoding leads to resource exhaustion",
-        "package_name": "undici",
-        "vulnerable_range": "<6.23.0",
-        "patched_version": "7.13.0",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-2mjp-6q6p-2qxm",
-        "aliases": [],
-        "severity": "high",
-        "title": "Undici has an HTTP Request/Response Smuggling issue",
-        "package_name": "undici",
-        "vulnerable_range": "<6.24.0",
-        "patched_version": "7.13.0",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-vrm6-8vpv-qv8q",
-        "aliases": [],
-        "severity": "high",
-        "title": "Undici has Unbounded Memory Consumption in WebSocket permessage-deflate Decompression",
-        "package_name": "undici",
-        "vulnerable_range": "<6.24.0",
-        "patched_version": "7.13.0",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-v9p9-hfj2-hcw8",
-        "aliases": [],
-        "severity": "high",
-        "title": "Undici has Unhandled Exception in WebSocket Client Due to Invalid server_max_window_bits Validation",
-        "package_name": "undici",
-        "vulnerable_range": "<6.24.0",
-        "patched_version": "7.13.0",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-4992-7rv2-5pvq",
-        "aliases": [],
-        "severity": "high",
-        "title": "Undici has CRLF Injection in undici via `upgrade` option",
-        "package_name": "undici",
-        "vulnerable_range": "<6.24.0",
-        "patched_version": "7.13.0",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-w5hq-g745-h8pq",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
-        "package_name": "uuid",
-        "vulnerable_range": "<14.0.0",
-        "patched_version": "1.0.0",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-g3ch-rx76-35fx",
         "aliases": [],
         "severity": "moderate",
@@ -336,16 +276,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-w5hq-g745-h8pq",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
-        "package_name": "uuid",
-        "vulnerable_range": "<14.0.0",
-        "patched_version": "1.0.0",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-g3ch-rx76-35fx",
         "aliases": [],
         "severity": "moderate",
@@ -537,16 +467,6 @@
         "package_name": "undici",
         "vulnerable_range": "<6.24.0",
         "patched_version": "7.13.0",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-w5hq-g745-h8pq",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
-        "package_name": "uuid",
-        "vulnerable_range": "<14.0.0",
-        "patched_version": "1.0.0",
         "is_direct": false
       },
       {
@@ -980,7 +900,7 @@
         "title": "qs's arrayLimit bypass in comma parsing allows denial of service",
         "package_name": "qs",
         "vulnerable_range": ">=6.7.0 <=6.14.1",
-        "patched_version": "4.2.0",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -990,7 +910,7 @@
         "title": "qs's arrayLimit bypass in its bracket notation allows DoS via memory exhaustion",
         "package_name": "qs",
         "vulnerable_range": "<6.14.1",
-        "patched_version": "4.2.0",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -1099,8 +1019,8 @@
         "severity": "moderate",
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
-        "vulnerable_range": "<14.0.0",
-        "patched_version": "1.0.0",
+        "vulnerable_range": ">=11.0.0 <11.1.1",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -1308,16 +1228,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-w5hq-g745-h8pq",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
-        "package_name": "uuid",
-        "vulnerable_range": "<14.0.0",
-        "patched_version": "1.0.0",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-g3ch-rx76-35fx",
         "aliases": [],
         "severity": "moderate",
@@ -1509,16 +1419,6 @@
         "package_name": "undici",
         "vulnerable_range": "<6.24.0",
         "patched_version": "7.13.0",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-w5hq-g745-h8pq",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
-        "package_name": "uuid",
-        "vulnerable_range": "<14.0.0",
-        "patched_version": "1.0.0",
         "is_direct": false
       },
       {
@@ -1716,16 +1616,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-w5hq-g745-h8pq",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
-        "package_name": "uuid",
-        "vulnerable_range": "<14.0.0",
-        "patched_version": "1.0.0",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-g3ch-rx76-35fx",
         "aliases": [],
         "severity": "moderate",
@@ -1917,16 +1807,6 @@
         "package_name": "undici",
         "vulnerable_range": "<6.24.0",
         "patched_version": "7.13.0",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-w5hq-g745-h8pq",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
-        "package_name": "uuid",
-        "vulnerable_range": "<14.0.0",
-        "patched_version": "1.0.0",
         "is_direct": false
       },
       {
@@ -2124,16 +2004,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-w5hq-g745-h8pq",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
-        "package_name": "uuid",
-        "vulnerable_range": "<14.0.0",
-        "patched_version": "1.0.0",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-g3ch-rx76-35fx",
         "aliases": [],
         "severity": "moderate",
@@ -2325,16 +2195,6 @@
         "package_name": "undici",
         "vulnerable_range": "<6.24.0",
         "patched_version": "7.13.0",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-w5hq-g745-h8pq",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
-        "package_name": "uuid",
-        "vulnerable_range": "<14.0.0",
-        "patched_version": "1.0.0",
         "is_direct": false
       },
       {
