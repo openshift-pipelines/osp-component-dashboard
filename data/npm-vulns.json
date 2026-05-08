@@ -8,7 +8,7 @@
         "title": "@tootallnate/once vulnerable to Incorrect Control Flow Scoping",
         "package_name": "@tootallnate/once",
         "vulnerable_range": "<3.0.1",
-        "patched_version": "30.3.0",
+        "patched_version": "30.4.0",
         "is_direct": false
       },
       {
@@ -142,7 +142,7 @@
         "title": "@tootallnate/once vulnerable to Incorrect Control Flow Scoping",
         "package_name": "@tootallnate/once",
         "vulnerable_range": "<3.0.1",
-        "patched_version": "30.3.0",
+        "patched_version": "30.4.0",
         "is_direct": false
       },
       {
@@ -336,7 +336,7 @@
         "title": "@tootallnate/once vulnerable to Incorrect Control Flow Scoping",
         "package_name": "@tootallnate/once",
         "vulnerable_range": "<3.0.1",
-        "patched_version": "30.3.0",
+        "patched_version": "30.4.0",
         "is_direct": false
       },
       {
@@ -540,7 +540,7 @@
         "title": "@tootallnate/once vulnerable to Incorrect Control Flow Scoping",
         "package_name": "@tootallnate/once",
         "vulnerable_range": "<3.0.1",
-        "patched_version": "30.3.0",
+        "patched_version": "30.4.0",
         "is_direct": false
       },
       {
@@ -1094,7 +1094,7 @@
         "title": "@tootallnate/once vulnerable to Incorrect Control Flow Scoping",
         "package_name": "@tootallnate/once",
         "vulnerable_range": "<3.0.1",
-        "patched_version": "30.3.0",
+        "patched_version": "30.4.0",
         "is_direct": false
       },
       {
@@ -1288,7 +1288,7 @@
         "title": "@tootallnate/once vulnerable to Incorrect Control Flow Scoping",
         "package_name": "@tootallnate/once",
         "vulnerable_range": "<3.0.1",
-        "patched_version": "30.3.0",
+        "patched_version": "30.4.0",
         "is_direct": false
       },
       {
@@ -1482,7 +1482,7 @@
         "title": "@tootallnate/once vulnerable to Incorrect Control Flow Scoping",
         "package_name": "@tootallnate/once",
         "vulnerable_range": "<3.0.1",
-        "patched_version": "30.3.0",
+        "patched_version": "30.4.0",
         "is_direct": false
       },
       {
@@ -1676,7 +1676,7 @@
         "title": "@tootallnate/once vulnerable to Incorrect Control Flow Scoping",
         "package_name": "@tootallnate/once",
         "vulnerable_range": "<3.0.1",
-        "patched_version": "30.3.0",
+        "patched_version": "30.4.0",
         "is_direct": false
       },
       {
@@ -1870,7 +1870,7 @@
         "title": "@tootallnate/once vulnerable to Incorrect Control Flow Scoping",
         "package_name": "@tootallnate/once",
         "vulnerable_range": "<3.0.1",
-        "patched_version": "30.3.0",
+        "patched_version": "30.4.0",
         "is_direct": false
       },
       {
@@ -2064,7 +2064,7 @@
         "title": "@tootallnate/once vulnerable to Incorrect Control Flow Scoping",
         "package_name": "@tootallnate/once",
         "vulnerable_range": "<3.0.1",
-        "patched_version": "30.3.0",
+        "patched_version": "30.4.0",
         "is_direct": false
       },
       {
