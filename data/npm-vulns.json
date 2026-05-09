@@ -8,7 +8,7 @@
         "title": "@tootallnate/once vulnerable to Incorrect Control Flow Scoping",
         "package_name": "@tootallnate/once",
         "vulnerable_range": "<3.0.1",
-        "patched_version": "30.4.0",
+        "patched_version": "30.4.1",
         "is_direct": false
       },
       {
@@ -142,7 +142,7 @@
         "title": "@tootallnate/once vulnerable to Incorrect Control Flow Scoping",
         "package_name": "@tootallnate/once",
         "vulnerable_range": "<3.0.1",
-        "patched_version": "30.4.0",
+        "patched_version": "30.4.1",
         "is_direct": false
       },
       {
@@ -336,7 +336,7 @@
         "title": "@tootallnate/once vulnerable to Incorrect Control Flow Scoping",
         "package_name": "@tootallnate/once",
         "vulnerable_range": "<3.0.1",
-        "patched_version": "30.4.0",
+        "patched_version": "30.4.1",
         "is_direct": false
       },
       {
@@ -524,6 +524,16 @@
   "1.18": {
     "openshift-pipelines/console-plugin": [
       {
+        "vuln_id": "GHSA-fv7c-fp4j-7gwp",
+        "aliases": [],
+        "severity": "high",
+        "title": "@babel/plugin-transform-modules-systemjs generates arbitrary code when compiling malicious input",
+        "package_name": "@babel/plugin-transform-modules-systemjs",
+        "vulnerable_range": ">=7.12.0 <=7.29.3",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-2w69-qvjg-hvjx",
         "aliases": [],
         "severity": "high",
@@ -540,7 +550,7 @@
         "title": "@tootallnate/once vulnerable to Incorrect Control Flow Scoping",
         "package_name": "@tootallnate/once",
         "vulnerable_range": "<3.0.1",
-        "patched_version": "30.4.0",
+        "patched_version": "30.4.1",
         "is_direct": false
       },
       {
@@ -580,6 +590,26 @@
         "title": "jsdiff has a Denial of Service vulnerability in parsePatch and applyPatch",
         "package_name": "diff",
         "vulnerable_range": ">=4.0.0 <4.0.4",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-q3j6-qgpj-74h6",
+        "aliases": [],
+        "severity": "high",
+        "title": "fast-uri vulnerable to path traversal via percent-encoded dot segments",
+        "package_name": "fast-uri",
+        "vulnerable_range": "<=3.1.0",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-v39h-62p7-jpjc",
+        "aliases": [],
+        "severity": "high",
+        "title": "fast-uri vulnerable to host confusion via percent-encoded authority delimiters",
+        "package_name": "fast-uri",
+        "vulnerable_range": "<=3.1.1",
         "patched_version": null,
         "is_direct": false
       },
@@ -1094,7 +1124,7 @@
         "title": "@tootallnate/once vulnerable to Incorrect Control Flow Scoping",
         "package_name": "@tootallnate/once",
         "vulnerable_range": "<3.0.1",
-        "patched_version": "30.4.0",
+        "patched_version": "30.4.1",
         "is_direct": false
       },
       {
@@ -1288,7 +1318,7 @@
         "title": "@tootallnate/once vulnerable to Incorrect Control Flow Scoping",
         "package_name": "@tootallnate/once",
         "vulnerable_range": "<3.0.1",
-        "patched_version": "30.4.0",
+        "patched_version": "30.4.1",
         "is_direct": false
       },
       {
@@ -1372,56 +1402,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-g9mf-h72j-4rw9",
-        "aliases": [],
-        "severity": "high",
-        "title": "Undici has an unbounded decompression chain in HTTP responses on Node.js Fetch API via Content-Encoding leads to resource exhaustion",
-        "package_name": "undici",
-        "vulnerable_range": "<6.23.0",
-        "patched_version": "7.13.0",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-2mjp-6q6p-2qxm",
-        "aliases": [],
-        "severity": "high",
-        "title": "Undici has an HTTP Request/Response Smuggling issue",
-        "package_name": "undici",
-        "vulnerable_range": "<6.24.0",
-        "patched_version": "7.13.0",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-vrm6-8vpv-qv8q",
-        "aliases": [],
-        "severity": "high",
-        "title": "Undici has Unbounded Memory Consumption in WebSocket permessage-deflate Decompression",
-        "package_name": "undici",
-        "vulnerable_range": "<6.24.0",
-        "patched_version": "7.13.0",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-v9p9-hfj2-hcw8",
-        "aliases": [],
-        "severity": "high",
-        "title": "Undici has Unhandled Exception in WebSocket Client Due to Invalid server_max_window_bits Validation",
-        "package_name": "undici",
-        "vulnerable_range": "<6.24.0",
-        "patched_version": "7.13.0",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-4992-7rv2-5pvq",
-        "aliases": [],
-        "severity": "high",
-        "title": "Undici has CRLF Injection in undici via `upgrade` option",
-        "package_name": "undici",
-        "vulnerable_range": "<6.24.0",
-        "patched_version": "7.13.0",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-g3ch-rx76-35fx",
         "aliases": [],
         "severity": "moderate",
@@ -1482,7 +1462,7 @@
         "title": "@tootallnate/once vulnerable to Incorrect Control Flow Scoping",
         "package_name": "@tootallnate/once",
         "vulnerable_range": "<3.0.1",
-        "patched_version": "30.4.0",
+        "patched_version": "30.4.1",
         "is_direct": false
       },
       {
@@ -1676,7 +1656,7 @@
         "title": "@tootallnate/once vulnerable to Incorrect Control Flow Scoping",
         "package_name": "@tootallnate/once",
         "vulnerable_range": "<3.0.1",
-        "patched_version": "30.4.0",
+        "patched_version": "30.4.1",
         "is_direct": false
       },
       {
@@ -1870,7 +1850,7 @@
         "title": "@tootallnate/once vulnerable to Incorrect Control Flow Scoping",
         "package_name": "@tootallnate/once",
         "vulnerable_range": "<3.0.1",
-        "patched_version": "30.4.0",
+        "patched_version": "30.4.1",
         "is_direct": false
       },
       {
@@ -2064,7 +2044,7 @@
         "title": "@tootallnate/once vulnerable to Incorrect Control Flow Scoping",
         "package_name": "@tootallnate/once",
         "vulnerable_range": "<3.0.1",
-        "patched_version": "30.4.0",
+        "patched_version": "30.4.1",
         "is_direct": false
       },
       {
