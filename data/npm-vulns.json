@@ -62,6 +62,76 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-q6x5-8v7m-xcrf",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs has overlong UTF-8 decoding",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-2pr8-phx7-x9h3",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Denial of service from crafted field names in generated code",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-66ff-xgx4-vchm",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Code injection through bytes field defaults in generated toObject code",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-fx83-v9x8-x52w",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Prototype injection in generated message constructors",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-75px-5xx7-5xc7",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Code generation gadget after prototype pollution",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-jvwf-75h9-cwgg",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Process-wide denial of service through unsafe option paths",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-685m-2w69-288q",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Denial of service through unbounded protobuf recursion",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5c6j-r48x-rmvq",
         "aliases": [],
         "severity": "high",
@@ -202,6 +272,76 @@
         "title": "Arbitrary code execution in protobufjs",
         "package_name": "protobufjs",
         "vulnerable_range": "<7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-q6x5-8v7m-xcrf",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs has overlong UTF-8 decoding",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-2pr8-phx7-x9h3",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Denial of service from crafted field names in generated code",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-66ff-xgx4-vchm",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Code injection through bytes field defaults in generated toObject code",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-fx83-v9x8-x52w",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Prototype injection in generated message constructors",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-75px-5xx7-5xc7",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Code generation gadget after prototype pollution",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-jvwf-75h9-cwgg",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Process-wide denial of service through unsafe option paths",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-685m-2w69-288q",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Denial of service through unbounded protobuf recursion",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -400,6 +540,76 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-q6x5-8v7m-xcrf",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs has overlong UTF-8 decoding",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-2pr8-phx7-x9h3",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Denial of service from crafted field names in generated code",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-66ff-xgx4-vchm",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Code injection through bytes field defaults in generated toObject code",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-fx83-v9x8-x52w",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Prototype injection in generated message constructors",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-75px-5xx7-5xc7",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Code generation gadget after prototype pollution",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-jvwf-75h9-cwgg",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Process-wide denial of service through unsafe option paths",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-685m-2w69-288q",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Denial of service through unbounded protobuf recursion",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5c6j-r48x-rmvq",
         "aliases": [],
         "severity": "high",
@@ -530,6 +740,16 @@
         "title": "@babel/plugin-transform-modules-systemjs generates arbitrary code when compiling malicious input",
         "package_name": "@babel/plugin-transform-modules-systemjs",
         "vulnerable_range": ">=7.12.0 <=7.29.3",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-q6x5-8v7m-xcrf",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "protobufjs has overlong UTF-8 decoding",
+        "package_name": "@protobufjs/utf8",
+        "vulnerable_range": "<=1.1.0",
         "patched_version": null,
         "is_direct": false
       },
@@ -924,6 +1144,76 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-q6x5-8v7m-xcrf",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs has overlong UTF-8 decoding",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-2pr8-phx7-x9h3",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Denial of service from crafted field names in generated code",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-66ff-xgx4-vchm",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Code injection through bytes field defaults in generated toObject code",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-fx83-v9x8-x52w",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Prototype injection in generated message constructors",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-75px-5xx7-5xc7",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Code generation gadget after prototype pollution",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-jvwf-75h9-cwgg",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Process-wide denial of service through unsafe option paths",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-685m-2w69-288q",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Denial of service through unbounded protobuf recursion",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-w7fw-mjwx-w883",
         "aliases": [],
         "severity": "moderate",
@@ -1188,6 +1478,76 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-q6x5-8v7m-xcrf",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs has overlong UTF-8 decoding",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-2pr8-phx7-x9h3",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Denial of service from crafted field names in generated code",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-66ff-xgx4-vchm",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Code injection through bytes field defaults in generated toObject code",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-fx83-v9x8-x52w",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Prototype injection in generated message constructors",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-75px-5xx7-5xc7",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Code generation gadget after prototype pollution",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-jvwf-75h9-cwgg",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Process-wide denial of service through unsafe option paths",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-685m-2w69-288q",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Denial of service through unbounded protobuf recursion",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5c6j-r48x-rmvq",
         "aliases": [],
         "severity": "high",
@@ -1382,6 +1742,76 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-q6x5-8v7m-xcrf",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs has overlong UTF-8 decoding",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-2pr8-phx7-x9h3",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Denial of service from crafted field names in generated code",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-66ff-xgx4-vchm",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Code injection through bytes field defaults in generated toObject code",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-fx83-v9x8-x52w",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Prototype injection in generated message constructors",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-75px-5xx7-5xc7",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Code generation gadget after prototype pollution",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-jvwf-75h9-cwgg",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Process-wide denial of service through unsafe option paths",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-685m-2w69-288q",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Denial of service through unbounded protobuf recursion",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5c6j-r48x-rmvq",
         "aliases": [],
         "severity": "high",
@@ -1522,6 +1952,76 @@
         "title": "Arbitrary code execution in protobufjs",
         "package_name": "protobufjs",
         "vulnerable_range": "<7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-q6x5-8v7m-xcrf",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs has overlong UTF-8 decoding",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-2pr8-phx7-x9h3",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Denial of service from crafted field names in generated code",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-66ff-xgx4-vchm",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Code injection through bytes field defaults in generated toObject code",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-fx83-v9x8-x52w",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Prototype injection in generated message constructors",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-75px-5xx7-5xc7",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Code generation gadget after prototype pollution",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-jvwf-75h9-cwgg",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Process-wide denial of service through unsafe option paths",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-685m-2w69-288q",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Denial of service through unbounded protobuf recursion",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -1720,6 +2220,76 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-q6x5-8v7m-xcrf",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs has overlong UTF-8 decoding",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-2pr8-phx7-x9h3",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Denial of service from crafted field names in generated code",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-66ff-xgx4-vchm",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Code injection through bytes field defaults in generated toObject code",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-fx83-v9x8-x52w",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Prototype injection in generated message constructors",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-75px-5xx7-5xc7",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Code generation gadget after prototype pollution",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-jvwf-75h9-cwgg",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Process-wide denial of service through unsafe option paths",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-685m-2w69-288q",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Denial of service through unbounded protobuf recursion",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5c6j-r48x-rmvq",
         "aliases": [],
         "severity": "high",
@@ -1914,6 +2484,76 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-q6x5-8v7m-xcrf",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs has overlong UTF-8 decoding",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-2pr8-phx7-x9h3",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Denial of service from crafted field names in generated code",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-66ff-xgx4-vchm",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Code injection through bytes field defaults in generated toObject code",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-fx83-v9x8-x52w",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Prototype injection in generated message constructors",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-75px-5xx7-5xc7",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Code generation gadget after prototype pollution",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-jvwf-75h9-cwgg",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Process-wide denial of service through unsafe option paths",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-685m-2w69-288q",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Denial of service through unbounded protobuf recursion",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5c6j-r48x-rmvq",
         "aliases": [],
         "severity": "high",
@@ -2104,6 +2744,76 @@
         "title": "Arbitrary code execution in protobufjs",
         "package_name": "protobufjs",
         "vulnerable_range": "<7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-q6x5-8v7m-xcrf",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs has overlong UTF-8 decoding",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-2pr8-phx7-x9h3",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Denial of service from crafted field names in generated code",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-66ff-xgx4-vchm",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Code injection through bytes field defaults in generated toObject code",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-fx83-v9x8-x52w",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Prototype injection in generated message constructors",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-75px-5xx7-5xc7",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Code generation gadget after prototype pollution",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-jvwf-75h9-cwgg",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Process-wide denial of service through unsafe option paths",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-685m-2w69-288q",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Denial of service through unbounded protobuf recursion",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
         "patched_version": "0.0.15",
         "is_direct": false
       },
