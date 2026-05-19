@@ -1394,6 +1394,26 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-79cf-xcqc-c78w",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "webpack-dev-server vulnerable to cross-origin source code exposure on non-HTTPS origins",
+        "package_name": "webpack-dev-server",
+        "vulnerable_range": "<=5.2.3",
+        "patched_version": null,
+        "is_direct": true
+      },
+      {
+        "vuln_id": "GHSA-58qx-3vcg-4xpx",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "ws: Uninitialized memory disclosure",
+        "package_name": "ws",
+        "vulnerable_range": ">=8.0.0 <8.20.1",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-48c2-rrv3-qjmp",
         "aliases": [],
         "severity": "moderate",
