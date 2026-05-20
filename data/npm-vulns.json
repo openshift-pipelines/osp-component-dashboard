@@ -132,6 +132,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-jggg-4jg4-v7c6",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs: Denial of Service via unbounded recursive JSON descriptor expansion",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.7",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5c6j-r48x-rmvq",
         "aliases": [],
         "severity": "high",
@@ -342,6 +352,16 @@
         "title": "protobufjs has overlong UTF-8 decoding",
         "package_name": "protobufjs",
         "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-jggg-4jg4-v7c6",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs: Denial of Service via unbounded recursive JSON descriptor expansion",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.7",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -606,6 +626,16 @@
         "title": "protobufjs has overlong UTF-8 decoding",
         "package_name": "protobufjs",
         "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-jggg-4jg4-v7c6",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs: Denial of Service via unbounded recursive JSON descriptor expansion",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.7",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -1214,6 +1244,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-jggg-4jg4-v7c6",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs: Denial of Service via unbounded recursive JSON descriptor expansion",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.7",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-w7fw-mjwx-w883",
         "aliases": [],
         "severity": "moderate",
@@ -1568,6 +1608,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-jggg-4jg4-v7c6",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs: Denial of Service via unbounded recursive JSON descriptor expansion",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.7",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5c6j-r48x-rmvq",
         "aliases": [],
         "severity": "high",
@@ -1832,6 +1882,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-jggg-4jg4-v7c6",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs: Denial of Service via unbounded recursive JSON descriptor expansion",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.7",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5c6j-r48x-rmvq",
         "aliases": [],
         "severity": "high",
@@ -2042,6 +2102,16 @@
         "title": "protobufjs has overlong UTF-8 decoding",
         "package_name": "protobufjs",
         "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-jggg-4jg4-v7c6",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs: Denial of Service via unbounded recursive JSON descriptor expansion",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.7",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -2310,6 +2380,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-jggg-4jg4-v7c6",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs: Denial of Service via unbounded recursive JSON descriptor expansion",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.7",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5c6j-r48x-rmvq",
         "aliases": [],
         "severity": "high",
@@ -2524,6 +2604,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-jggg-4jg4-v7c6",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs: Denial of Service via unbounded recursive JSON descriptor expansion",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.7",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5c6j-r48x-rmvq",
         "aliases": [],
         "severity": "high",
@@ -2734,6 +2824,16 @@
         "title": "protobufjs has overlong UTF-8 decoding",
         "package_name": "protobufjs",
         "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-jggg-4jg4-v7c6",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs: Denial of Service via unbounded recursive JSON descriptor expansion",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.7",
         "patched_version": "0.0.15",
         "is_direct": false
       },
