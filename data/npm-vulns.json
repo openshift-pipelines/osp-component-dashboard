@@ -2,16 +2,6 @@
   "1.15": {
     "openshift-pipelines/console-plugin": [
       {
-        "vuln_id": "GHSA-vpq2-c234-7xj6",
-        "aliases": [],
-        "severity": "low",
-        "title": "@tootallnate/once vulnerable to Incorrect Control Flow Scoping",
-        "package_name": "@tootallnate/once",
-        "vulnerable_range": "<3.0.1",
-        "patched_version": "30.4.1",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
         "severity": "moderate",
@@ -157,8 +147,18 @@
         "severity": "high",
         "title": "Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects",
         "package_name": "serialize-javascript",
-        "vulnerable_range": "<7.0.5",
+        "vulnerable_range": ">=5.0.0 <7.0.5",
         "patched_version": "14.0.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-w5hq-g745-h8pq",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+        "package_name": "uuid",
+        "vulnerable_range": "<11.1.1",
+        "patched_version": "1.0.0",
         "is_direct": false
       },
       {
@@ -216,16 +216,6 @@
   "1.16": {
     "openshift-pipelines/console-plugin": [
       {
-        "vuln_id": "GHSA-vpq2-c234-7xj6",
-        "aliases": [],
-        "severity": "low",
-        "title": "@tootallnate/once vulnerable to Incorrect Control Flow Scoping",
-        "package_name": "@tootallnate/once",
-        "vulnerable_range": "<3.0.1",
-        "patched_version": "30.4.1",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
         "severity": "low",
@@ -381,7 +371,7 @@
         "severity": "high",
         "title": "Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects",
         "package_name": "serialize-javascript",
-        "vulnerable_range": "<7.0.5",
+        "vulnerable_range": ">=5.0.0 <7.0.5",
         "patched_version": "14.0.0",
         "is_direct": false
       },
@@ -433,6 +423,16 @@
         "package_name": "undici",
         "vulnerable_range": "<6.24.0",
         "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-w5hq-g745-h8pq",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+        "package_name": "uuid",
+        "vulnerable_range": "<11.1.1",
+        "patched_version": "1.0.0",
         "is_direct": false
       },
       {
@@ -490,16 +490,6 @@
   "1.17": {
     "openshift-pipelines/console-plugin": [
       {
-        "vuln_id": "GHSA-vpq2-c234-7xj6",
-        "aliases": [],
-        "severity": "low",
-        "title": "@tootallnate/once vulnerable to Incorrect Control Flow Scoping",
-        "package_name": "@tootallnate/once",
-        "vulnerable_range": "<3.0.1",
-        "patched_version": "30.4.1",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
         "severity": "low",
@@ -655,7 +645,7 @@
         "severity": "high",
         "title": "Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects",
         "package_name": "serialize-javascript",
-        "vulnerable_range": "<7.0.5",
+        "vulnerable_range": ">=5.0.0 <7.0.5",
         "patched_version": "14.0.0",
         "is_direct": false
       },
@@ -707,6 +697,16 @@
         "package_name": "undici",
         "vulnerable_range": "<6.24.0",
         "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-w5hq-g745-h8pq",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+        "package_name": "uuid",
+        "vulnerable_range": "<11.1.1",
+        "patched_version": "1.0.0",
         "is_direct": false
       },
       {
@@ -799,8 +799,8 @@
         "severity": "low",
         "title": "@tootallnate/once vulnerable to Incorrect Control Flow Scoping",
         "package_name": "@tootallnate/once",
-        "vulnerable_range": "<3.0.1",
-        "patched_version": "30.4.1",
+        "vulnerable_range": "<2.0.1",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -1260,7 +1260,7 @@
         "title": "qs's arrayLimit bypass in comma parsing allows denial of service",
         "package_name": "qs",
         "vulnerable_range": ">=6.7.0 <=6.14.1",
-        "patched_version": null,
+        "patched_version": "15.15.0",
         "is_direct": false
       },
       {
@@ -1270,7 +1270,7 @@
         "title": "qs's arrayLimit bypass in its bracket notation allows DoS via memory exhaustion",
         "package_name": "qs",
         "vulnerable_range": "<6.14.1",
-        "patched_version": null,
+        "patched_version": "15.15.0",
         "is_direct": false
       },
       {
@@ -1299,7 +1299,7 @@
         "severity": "high",
         "title": "Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects",
         "package_name": "serialize-javascript",
-        "vulnerable_range": "<7.0.5",
+        "vulnerable_range": ">=5.0.0 <7.0.5",
         "patched_version": "14.0.0",
         "is_direct": false
       },
@@ -1379,8 +1379,8 @@
         "severity": "moderate",
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
-        "vulnerable_range": ">=11.0.0 <11.1.1",
-        "patched_version": null,
+        "vulnerable_range": "<11.1.1",
+        "patched_version": "1.0.0",
         "is_direct": false
       },
       {
@@ -1468,16 +1468,6 @@
   "1.19": {
     "openshift-pipelines/console-plugin": [
       {
-        "vuln_id": "GHSA-vpq2-c234-7xj6",
-        "aliases": [],
-        "severity": "low",
-        "title": "@tootallnate/once vulnerable to Incorrect Control Flow Scoping",
-        "package_name": "@tootallnate/once",
-        "vulnerable_range": "<3.0.1",
-        "patched_version": "30.4.1",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
         "severity": "low",
@@ -1633,7 +1623,7 @@
         "severity": "high",
         "title": "Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects",
         "package_name": "serialize-javascript",
-        "vulnerable_range": "<7.0.5",
+        "vulnerable_range": ">=5.0.0 <7.0.5",
         "patched_version": "14.0.0",
         "is_direct": false
       },
@@ -1685,6 +1675,16 @@
         "package_name": "undici",
         "vulnerable_range": "<6.24.0",
         "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-w5hq-g745-h8pq",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+        "package_name": "uuid",
+        "vulnerable_range": "<11.1.1",
+        "patched_version": "1.0.0",
         "is_direct": false
       },
       {
@@ -1742,16 +1742,6 @@
   "1.20": {
     "openshift-pipelines/console-plugin": [
       {
-        "vuln_id": "GHSA-vpq2-c234-7xj6",
-        "aliases": [],
-        "severity": "low",
-        "title": "@tootallnate/once vulnerable to Incorrect Control Flow Scoping",
-        "package_name": "@tootallnate/once",
-        "vulnerable_range": "<3.0.1",
-        "patched_version": "30.4.1",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
         "severity": "low",
@@ -1907,8 +1897,18 @@
         "severity": "high",
         "title": "Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects",
         "package_name": "serialize-javascript",
-        "vulnerable_range": "<7.0.5",
+        "vulnerable_range": ">=5.0.0 <7.0.5",
         "patched_version": "14.0.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-w5hq-g745-h8pq",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+        "package_name": "uuid",
+        "vulnerable_range": "<11.1.1",
+        "patched_version": "1.0.0",
         "is_direct": false
       },
       {
@@ -1966,16 +1966,6 @@
   "1.21": {
     "openshift-pipelines/console-plugin": [
       {
-        "vuln_id": "GHSA-vpq2-c234-7xj6",
-        "aliases": [],
-        "severity": "low",
-        "title": "@tootallnate/once vulnerable to Incorrect Control Flow Scoping",
-        "package_name": "@tootallnate/once",
-        "vulnerable_range": "<3.0.1",
-        "patched_version": "30.4.1",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
         "severity": "low",
@@ -2131,7 +2121,7 @@
         "severity": "high",
         "title": "Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects",
         "package_name": "serialize-javascript",
-        "vulnerable_range": "<7.0.5",
+        "vulnerable_range": ">=5.0.0 <7.0.5",
         "patched_version": "14.0.0",
         "is_direct": false
       },
@@ -2183,6 +2173,16 @@
         "package_name": "undici",
         "vulnerable_range": "<6.24.0",
         "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-w5hq-g745-h8pq",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+        "package_name": "uuid",
+        "vulnerable_range": "<11.1.1",
+        "patched_version": "1.0.0",
         "is_direct": false
       },
       {
@@ -2240,16 +2240,6 @@
   "1.22": {
     "openshift-pipelines/console-plugin": [
       {
-        "vuln_id": "GHSA-vpq2-c234-7xj6",
-        "aliases": [],
-        "severity": "low",
-        "title": "@tootallnate/once vulnerable to Incorrect Control Flow Scoping",
-        "package_name": "@tootallnate/once",
-        "vulnerable_range": "<3.0.1",
-        "patched_version": "30.4.1",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
         "severity": "low",
@@ -2405,8 +2395,18 @@
         "severity": "high",
         "title": "Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects",
         "package_name": "serialize-javascript",
-        "vulnerable_range": "<7.0.5",
+        "vulnerable_range": ">=5.0.0 <7.0.5",
         "patched_version": "14.0.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-w5hq-g745-h8pq",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+        "package_name": "uuid",
+        "vulnerable_range": "<11.1.1",
+        "patched_version": "1.0.0",
         "is_direct": false
       },
       {
@@ -2464,16 +2464,6 @@
   "main": {
     "openshift-pipelines/console-plugin": [
       {
-        "vuln_id": "GHSA-vpq2-c234-7xj6",
-        "aliases": [],
-        "severity": "low",
-        "title": "@tootallnate/once vulnerable to Incorrect Control Flow Scoping",
-        "package_name": "@tootallnate/once",
-        "vulnerable_range": "<3.0.1",
-        "patched_version": "30.4.1",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
         "severity": "low",
@@ -2629,8 +2619,18 @@
         "severity": "high",
         "title": "Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects",
         "package_name": "serialize-javascript",
-        "vulnerable_range": "<7.0.5",
+        "vulnerable_range": ">=5.0.0 <7.0.5",
         "patched_version": "14.0.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-w5hq-g745-h8pq",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+        "package_name": "uuid",
+        "vulnerable_range": "<11.1.1",
+        "patched_version": "1.0.0",
         "is_direct": false
       },
       {
@@ -2688,16 +2688,6 @@
   "next": {
     "openshift-pipelines/console-plugin": [
       {
-        "vuln_id": "GHSA-vpq2-c234-7xj6",
-        "aliases": [],
-        "severity": "low",
-        "title": "@tootallnate/once vulnerable to Incorrect Control Flow Scoping",
-        "package_name": "@tootallnate/once",
-        "vulnerable_range": "<3.0.1",
-        "patched_version": "30.4.1",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
         "severity": "low",
@@ -2853,8 +2843,18 @@
         "severity": "high",
         "title": "Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects",
         "package_name": "serialize-javascript",
-        "vulnerable_range": "<7.0.5",
+        "vulnerable_range": ">=5.0.0 <7.0.5",
         "patched_version": "14.0.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-w5hq-g745-h8pq",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+        "package_name": "uuid",
+        "vulnerable_range": "<11.1.1",
+        "patched_version": "1.0.0",
         "is_direct": false
       },
       {
