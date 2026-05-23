@@ -132,6 +132,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-q8mj-m7cp-5q26",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
+        "package_name": "qs",
+        "vulnerable_range": ">=6.11.1 <=6.15.1",
+        "patched_version": "13.14.2",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5c6j-r48x-rmvq",
         "aliases": [],
         "severity": "high",
@@ -353,6 +363,16 @@
         "package_name": "protobufjs",
         "vulnerable_range": "<=7.5.7",
         "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-q8mj-m7cp-5q26",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
+        "package_name": "qs",
+        "vulnerable_range": ">=6.11.1 <=6.15.1",
+        "patched_version": "15.15.0",
         "is_direct": false
       },
       {
@@ -627,6 +647,16 @@
         "package_name": "protobufjs",
         "vulnerable_range": "<=7.5.7",
         "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-q8mj-m7cp-5q26",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
+        "package_name": "qs",
+        "vulnerable_range": ">=6.11.1 <=6.15.1",
+        "patched_version": "15.15.0",
         "is_direct": false
       },
       {
@@ -1274,6 +1304,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-q8mj-m7cp-5q26",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
+        "package_name": "qs",
+        "vulnerable_range": ">=6.11.1 <=6.15.1",
+        "patched_version": "15.15.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-9jcx-v3wj-wh4m",
         "aliases": [],
         "severity": "high",
@@ -1608,6 +1648,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-q8mj-m7cp-5q26",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
+        "package_name": "qs",
+        "vulnerable_range": ">=6.11.1 <=6.15.1",
+        "patched_version": "15.15.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5c6j-r48x-rmvq",
         "aliases": [],
         "severity": "high",
@@ -1882,6 +1932,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-q8mj-m7cp-5q26",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
+        "package_name": "qs",
+        "vulnerable_range": ">=6.11.1 <=6.15.1",
+        "patched_version": "15.15.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5c6j-r48x-rmvq",
         "aliases": [],
         "severity": "high",
@@ -2103,6 +2163,16 @@
         "package_name": "protobufjs",
         "vulnerable_range": "<=7.5.7",
         "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-q8mj-m7cp-5q26",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
+        "package_name": "qs",
+        "vulnerable_range": ">=6.11.1 <=6.15.1",
+        "patched_version": "15.15.0",
         "is_direct": false
       },
       {
@@ -2380,6 +2450,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-q8mj-m7cp-5q26",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
+        "package_name": "qs",
+        "vulnerable_range": ">=6.11.1 <=6.15.1",
+        "patched_version": "15.15.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5c6j-r48x-rmvq",
         "aliases": [],
         "severity": "high",
@@ -2604,6 +2684,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-q8mj-m7cp-5q26",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
+        "package_name": "qs",
+        "vulnerable_range": ">=6.11.1 <=6.15.1",
+        "patched_version": "15.15.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5c6j-r48x-rmvq",
         "aliases": [],
         "severity": "high",
@@ -2825,6 +2915,16 @@
         "package_name": "protobufjs",
         "vulnerable_range": "<=7.5.7",
         "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-q8mj-m7cp-5q26",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
+        "package_name": "qs",
+        "vulnerable_range": ">=6.11.1 <=6.15.1",
+        "patched_version": "15.15.0",
         "is_direct": false
       },
       {
