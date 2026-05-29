@@ -138,7 +138,7 @@
         "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
         "package_name": "qs",
         "vulnerable_range": ">=6.11.1 <=6.15.1",
-        "patched_version": "13.14.2",
+        "patched_version": "15.16.0",
         "is_direct": false
       },
       {
