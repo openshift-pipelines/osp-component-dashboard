@@ -1324,6 +1324,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-2j2x-hqr9-3h42",
+        "aliases": [],
+        "severity": "high",
+        "title": "React Router's same-origin redirect with path starting // causes open redirect via protocol-relative URL reinterpretation",
+        "package_name": "react-router",
+        "vulnerable_range": ">=6.7.0 <6.30.4",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5c6j-r48x-rmvq",
         "aliases": [],
         "severity": "high",
@@ -2203,56 +2213,6 @@
         "package_name": "serialize-javascript",
         "vulnerable_range": ">=5.0.0 <7.0.5",
         "patched_version": "14.0.0",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-g9mf-h72j-4rw9",
-        "aliases": [],
-        "severity": "high",
-        "title": "Undici has an unbounded decompression chain in HTTP responses on Node.js Fetch API via Content-Encoding leads to resource exhaustion",
-        "package_name": "undici",
-        "vulnerable_range": "<6.23.0",
-        "patched_version": "7.13.0",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-2mjp-6q6p-2qxm",
-        "aliases": [],
-        "severity": "high",
-        "title": "Undici has an HTTP Request/Response Smuggling issue",
-        "package_name": "undici",
-        "vulnerable_range": "<6.24.0",
-        "patched_version": "7.13.0",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-vrm6-8vpv-qv8q",
-        "aliases": [],
-        "severity": "high",
-        "title": "Undici has Unbounded Memory Consumption in WebSocket permessage-deflate Decompression",
-        "package_name": "undici",
-        "vulnerable_range": "<6.24.0",
-        "patched_version": "7.13.0",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-v9p9-hfj2-hcw8",
-        "aliases": [],
-        "severity": "high",
-        "title": "Undici has Unhandled Exception in WebSocket Client Due to Invalid server_max_window_bits Validation",
-        "package_name": "undici",
-        "vulnerable_range": "<6.24.0",
-        "patched_version": "7.13.0",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-4992-7rv2-5pvq",
-        "aliases": [],
-        "severity": "high",
-        "title": "Undici has CRLF Injection in undici via `upgrade` option",
-        "package_name": "undici",
-        "vulnerable_range": "<6.24.0",
-        "patched_version": "7.13.0",
         "is_direct": false
       },
       {
