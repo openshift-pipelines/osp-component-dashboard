@@ -12,16 +12,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-xxjr-mmjv-4gpg",
-        "aliases": [],
-        "severity": "high",
-        "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
-        "package_name": "lodash",
-        "vulnerable_range": ">=4.0.0 <=4.17.22",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-r5fr-rjxr-66jc",
         "aliases": [],
         "severity": "high",
@@ -38,6 +28,16 @@
         "title": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
         "package_name": "lodash",
         "vulnerable_range": "<=4.17.23",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-xxjr-mmjv-4gpg",
+        "aliases": [],
+        "severity": "high",
+        "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
+        "package_name": "lodash",
+        "vulnerable_range": ">=4.0.0 <=4.17.22",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -138,7 +138,7 @@
         "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
         "package_name": "qs",
         "vulnerable_range": ">=6.11.1 <=6.15.1",
-        "patched_version": "15.16.0",
+        "patched_version": "15.17.0",
         "is_direct": false
       },
       {
@@ -246,16 +246,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-xxjr-mmjv-4gpg",
-        "aliases": [],
-        "severity": "high",
-        "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
-        "package_name": "lodash",
-        "vulnerable_range": ">=4.0.0 <=4.17.22",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-r5fr-rjxr-66jc",
         "aliases": [],
         "severity": "high",
@@ -272,6 +262,16 @@
         "title": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
         "package_name": "lodash",
         "vulnerable_range": "<=4.17.23",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-xxjr-mmjv-4gpg",
+        "aliases": [],
+        "severity": "high",
+        "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
+        "package_name": "lodash",
+        "vulnerable_range": ">=4.0.0 <=4.17.22",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -372,7 +372,7 @@
         "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
         "package_name": "qs",
         "vulnerable_range": ">=6.11.1 <=6.15.1",
-        "patched_version": "15.16.0",
+        "patched_version": "15.17.0",
         "is_direct": false
       },
       {
@@ -530,16 +530,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-xxjr-mmjv-4gpg",
-        "aliases": [],
-        "severity": "high",
-        "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
-        "package_name": "lodash",
-        "vulnerable_range": ">=4.0.0 <=4.17.22",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-r5fr-rjxr-66jc",
         "aliases": [],
         "severity": "high",
@@ -556,6 +546,16 @@
         "title": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
         "package_name": "lodash",
         "vulnerable_range": "<=4.17.23",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-xxjr-mmjv-4gpg",
+        "aliases": [],
+        "severity": "high",
+        "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
+        "package_name": "lodash",
+        "vulnerable_range": ">=4.0.0 <=4.17.22",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -656,7 +656,7 @@
         "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
         "package_name": "qs",
         "vulnerable_range": ">=6.11.1 <=6.15.1",
-        "patched_version": "15.16.0",
+        "patched_version": "15.17.0",
         "is_direct": false
       },
       {
@@ -984,16 +984,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-xxjr-mmjv-4gpg",
-        "aliases": [],
-        "severity": "high",
-        "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
-        "package_name": "lodash",
-        "vulnerable_range": ">=4.0.0 <=4.17.22",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-r5fr-rjxr-66jc",
         "aliases": [],
         "severity": "high",
@@ -1018,10 +1008,10 @@
         "aliases": [],
         "severity": "high",
         "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
-        "package_name": "lodash-es",
+        "package_name": "lodash",
         "vulnerable_range": ">=4.0.0 <=4.17.22",
-        "patched_version": null,
-        "is_direct": true
+        "patched_version": "0.0.15",
+        "is_direct": false
       },
       {
         "vuln_id": "GHSA-r5fr-rjxr-66jc",
@@ -1040,6 +1030,16 @@
         "title": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
         "package_name": "lodash-es",
         "vulnerable_range": "<=4.17.23",
+        "patched_version": null,
+        "is_direct": true
+      },
+      {
+        "vuln_id": "GHSA-xxjr-mmjv-4gpg",
+        "aliases": [],
+        "severity": "high",
+        "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
+        "package_name": "lodash-es",
+        "vulnerable_range": ">=4.0.0 <=4.17.22",
         "patched_version": null,
         "is_direct": true
       },
@@ -1290,7 +1290,7 @@
         "title": "qs's arrayLimit bypass in comma parsing allows denial of service",
         "package_name": "qs",
         "vulnerable_range": ">=6.7.0 <=6.14.1",
-        "patched_version": "15.16.0",
+        "patched_version": "15.17.0",
         "is_direct": false
       },
       {
@@ -1300,7 +1300,7 @@
         "title": "qs's arrayLimit bypass in its bracket notation allows DoS via memory exhaustion",
         "package_name": "qs",
         "vulnerable_range": "<6.14.1",
-        "patched_version": "15.16.0",
+        "patched_version": "15.17.0",
         "is_direct": false
       },
       {
@@ -1310,7 +1310,7 @@
         "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
         "package_name": "qs",
         "vulnerable_range": ">=6.11.1 <=6.15.1",
-        "patched_version": "15.16.0",
+        "patched_version": "15.17.0",
         "is_direct": false
       },
       {
@@ -1351,6 +1351,16 @@
         "package_name": "serialize-javascript",
         "vulnerable_range": ">=5.0.0 <7.0.5",
         "patched_version": "14.0.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-w7jw-789q-3m8p",
+        "aliases": [],
+        "severity": "critical",
+        "title": "shell-quote quote() does not escape newlines in object .op values",
+        "package_name": "shell-quote",
+        "vulnerable_range": ">=1.1.0 <=1.8.3",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -1548,16 +1558,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-xxjr-mmjv-4gpg",
-        "aliases": [],
-        "severity": "high",
-        "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
-        "package_name": "lodash",
-        "vulnerable_range": ">=4.0.0 <=4.17.22",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-r5fr-rjxr-66jc",
         "aliases": [],
         "severity": "high",
@@ -1574,6 +1574,16 @@
         "title": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
         "package_name": "lodash",
         "vulnerable_range": "<=4.17.23",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-xxjr-mmjv-4gpg",
+        "aliases": [],
+        "severity": "high",
+        "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
+        "package_name": "lodash",
+        "vulnerable_range": ">=4.0.0 <=4.17.22",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -1674,7 +1684,7 @@
         "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
         "package_name": "qs",
         "vulnerable_range": ">=6.11.1 <=6.15.1",
-        "patched_version": "15.16.0",
+        "patched_version": "15.17.0",
         "is_direct": false
       },
       {
@@ -1832,16 +1842,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-xxjr-mmjv-4gpg",
-        "aliases": [],
-        "severity": "high",
-        "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
-        "package_name": "lodash",
-        "vulnerable_range": ">=4.0.0 <=4.17.22",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-r5fr-rjxr-66jc",
         "aliases": [],
         "severity": "high",
@@ -1858,6 +1858,16 @@
         "title": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
         "package_name": "lodash",
         "vulnerable_range": "<=4.17.23",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-xxjr-mmjv-4gpg",
+        "aliases": [],
+        "severity": "high",
+        "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
+        "package_name": "lodash",
+        "vulnerable_range": ">=4.0.0 <=4.17.22",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -1958,7 +1968,7 @@
         "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
         "package_name": "qs",
         "vulnerable_range": ">=6.11.1 <=6.15.1",
-        "patched_version": "15.16.0",
+        "patched_version": "15.17.0",
         "is_direct": false
       },
       {
@@ -2066,16 +2076,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-xxjr-mmjv-4gpg",
-        "aliases": [],
-        "severity": "high",
-        "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
-        "package_name": "lodash",
-        "vulnerable_range": ">=4.0.0 <=4.17.22",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-r5fr-rjxr-66jc",
         "aliases": [],
         "severity": "high",
@@ -2092,6 +2092,16 @@
         "title": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
         "package_name": "lodash",
         "vulnerable_range": "<=4.17.23",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-xxjr-mmjv-4gpg",
+        "aliases": [],
+        "severity": "high",
+        "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
+        "package_name": "lodash",
+        "vulnerable_range": ">=4.0.0 <=4.17.22",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -2192,7 +2202,7 @@
         "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
         "package_name": "qs",
         "vulnerable_range": ">=6.11.1 <=6.15.1",
-        "patched_version": "15.16.0",
+        "patched_version": "15.17.0",
         "is_direct": false
       },
       {
@@ -2300,16 +2310,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-xxjr-mmjv-4gpg",
-        "aliases": [],
-        "severity": "high",
-        "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
-        "package_name": "lodash",
-        "vulnerable_range": ">=4.0.0 <=4.17.22",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-r5fr-rjxr-66jc",
         "aliases": [],
         "severity": "high",
@@ -2326,6 +2326,16 @@
         "title": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
         "package_name": "lodash",
         "vulnerable_range": "<=4.17.23",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-xxjr-mmjv-4gpg",
+        "aliases": [],
+        "severity": "high",
+        "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
+        "package_name": "lodash",
+        "vulnerable_range": ">=4.0.0 <=4.17.22",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -2426,7 +2436,7 @@
         "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
         "package_name": "qs",
         "vulnerable_range": ">=6.11.1 <=6.15.1",
-        "patched_version": "15.16.0",
+        "patched_version": "15.17.0",
         "is_direct": false
       },
       {
@@ -2534,16 +2544,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-xxjr-mmjv-4gpg",
-        "aliases": [],
-        "severity": "high",
-        "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
-        "package_name": "lodash",
-        "vulnerable_range": ">=4.0.0 <=4.17.22",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-r5fr-rjxr-66jc",
         "aliases": [],
         "severity": "high",
@@ -2560,6 +2560,16 @@
         "title": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
         "package_name": "lodash",
         "vulnerable_range": "<=4.17.23",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-xxjr-mmjv-4gpg",
+        "aliases": [],
+        "severity": "high",
+        "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
+        "package_name": "lodash",
+        "vulnerable_range": ">=4.0.0 <=4.17.22",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -2660,7 +2670,7 @@
         "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
         "package_name": "qs",
         "vulnerable_range": ">=6.11.1 <=6.15.1",
-        "patched_version": "15.16.0",
+        "patched_version": "15.17.0",
         "is_direct": false
       },
       {
@@ -2768,16 +2778,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-xxjr-mmjv-4gpg",
-        "aliases": [],
-        "severity": "high",
-        "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
-        "package_name": "lodash",
-        "vulnerable_range": ">=4.0.0 <=4.17.22",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-r5fr-rjxr-66jc",
         "aliases": [],
         "severity": "high",
@@ -2794,6 +2794,16 @@
         "title": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
         "package_name": "lodash",
         "vulnerable_range": "<=4.17.23",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-xxjr-mmjv-4gpg",
+        "aliases": [],
+        "severity": "high",
+        "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
+        "package_name": "lodash",
+        "vulnerable_range": ">=4.0.0 <=4.17.22",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -2894,7 +2904,7 @@
         "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
         "package_name": "qs",
         "vulnerable_range": ">=6.11.1 <=6.15.1",
-        "patched_version": "15.16.0",
+        "patched_version": "15.17.0",
         "is_direct": false
       },
       {
