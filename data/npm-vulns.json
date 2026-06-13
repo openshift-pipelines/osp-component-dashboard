@@ -874,6 +874,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-gv7w-rqvm-qjhr",
+        "aliases": [],
+        "severity": "high",
+        "title": "esbuild: Missing binary integrity verification in Deno module enables remote code execution via NPM_CONFIG_REGISTRY",
+        "package_name": "esbuild",
+        "vulnerable_range": ">=0.17.0 <0.28.1",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-q3j6-qgpj-74h6",
         "aliases": [],
         "severity": "high",
