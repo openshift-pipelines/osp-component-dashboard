@@ -12,6 +12,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-h67p-54hq-rp68",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "JS-YAML: Quadratic-complexity DoS in merge key handling via repeated aliases",
+        "package_name": "js-yaml",
+        "vulnerable_range": "<=4.1.1",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-r5fr-rjxr-66jc",
         "aliases": [],
         "severity": "high",
@@ -128,6 +138,26 @@
         "title": "protobufjs: Denial of Service via unbounded recursive JSON descriptor expansion",
         "package_name": "protobufjs",
         "vulnerable_range": "<=7.5.7",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f38q-mgvj-vph7",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs : Schema-derived names can shadow runtime-significant properties",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.6.2",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-wcpc-wj8m-hjx6",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs: Denial of service through unbounded Any expansion during JSON conversion",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.6.0",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -246,6 +276,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-h67p-54hq-rp68",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "JS-YAML: Quadratic-complexity DoS in merge key handling via repeated aliases",
+        "package_name": "js-yaml",
+        "vulnerable_range": "<=4.1.1",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-r5fr-rjxr-66jc",
         "aliases": [],
         "severity": "high",
@@ -362,6 +402,26 @@
         "title": "protobufjs: Denial of Service via unbounded recursive JSON descriptor expansion",
         "package_name": "protobufjs",
         "vulnerable_range": "<=7.5.7",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f38q-mgvj-vph7",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs : Schema-derived names can shadow runtime-significant properties",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.6.2",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-wcpc-wj8m-hjx6",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs: Denial of service through unbounded Any expansion during JSON conversion",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.6.0",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -530,6 +590,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-h67p-54hq-rp68",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "JS-YAML: Quadratic-complexity DoS in merge key handling via repeated aliases",
+        "package_name": "js-yaml",
+        "vulnerable_range": "<=4.1.1",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-r5fr-rjxr-66jc",
         "aliases": [],
         "severity": "high",
@@ -646,6 +716,26 @@
         "title": "protobufjs: Denial of Service via unbounded recursive JSON descriptor expansion",
         "package_name": "protobufjs",
         "vulnerable_range": "<=7.5.7",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f38q-mgvj-vph7",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs : Schema-derived names can shadow runtime-significant properties",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.6.2",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-wcpc-wj8m-hjx6",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs: Denial of service through unbounded Any expansion during JSON conversion",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.6.0",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -793,6 +883,16 @@
   },
   "1.18": {
     "openshift-pipelines/console-plugin": [
+      {
+        "vuln_id": "GHSA-4x5r-pxfx-6jf8",
+        "aliases": [],
+        "severity": "low",
+        "title": "@babel/core: Arbitrary File Read via sourceMappingURL Comment",
+        "package_name": "@babel/core",
+        "vulnerable_range": "<=7.29.0",
+        "patched_version": null,
+        "is_direct": true
+      },
       {
         "vuln_id": "GHSA-fv7c-fp4j-7gwp",
         "aliases": [],
@@ -944,6 +1044,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-hmw2-7cc7-3qxx",
+        "aliases": [],
+        "severity": "critical",
+        "title": "form-data: CRLF injection in form-data via unescaped multipart field names and filenames",
+        "package_name": "form-data",
+        "vulnerable_range": ">=4.0.0 <4.0.6",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5j98-mcp5-4vw2",
         "aliases": [],
         "severity": "high",
@@ -991,6 +1101,26 @@
         "package_name": "js-yaml",
         "vulnerable_range": "<3.14.2",
         "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-h67p-54hq-rp68",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "JS-YAML: Quadratic-complexity DoS in merge key handling via repeated aliases",
+        "package_name": "js-yaml",
+        "vulnerable_range": "<=4.1.1",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-v6wh-96g9-6wx3",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "launch-editor: NTLMv2 hash disclosure via UNC path handling on Windows",
+        "package_name": "launch-editor",
+        "vulnerable_range": "<=2.14.0",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -1294,6 +1424,26 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-f38q-mgvj-vph7",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs : Schema-derived names can shadow runtime-significant properties",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.6.2",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-wcpc-wj8m-hjx6",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs: Denial of service through unbounded Any expansion during JSON conversion",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.6.0",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-w7fw-mjwx-w883",
         "aliases": [],
         "severity": "moderate",
@@ -1526,10 +1676,20 @@
       {
         "vuln_id": "GHSA-58qx-3vcg-4xpx",
         "aliases": [],
-        "severity": "moderate",
+        "severity": "high",
         "title": "ws: Uninitialized memory disclosure",
         "package_name": "ws",
         "vulnerable_range": ">=8.0.0 <8.20.1",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-96hv-2xvq-fx4p",
+        "aliases": [],
+        "severity": "high",
+        "title": "ws: Memory exhaustion DoS from tiny fragments and data chunks",
+        "package_name": "ws",
+        "vulnerable_range": ">=8.0.0 <8.21.0",
         "patched_version": null,
         "is_direct": false
       },
@@ -1564,6 +1724,16 @@
         "title": "js-yaml has prototype pollution in merge (<<)",
         "package_name": "js-yaml",
         "vulnerable_range": ">=4.0.0 <4.1.1",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-h67p-54hq-rp68",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "JS-YAML: Quadratic-complexity DoS in merge key handling via repeated aliases",
+        "package_name": "js-yaml",
+        "vulnerable_range": "<=4.1.1",
         "patched_version": "9.4.0",
         "is_direct": false
       },
@@ -1684,6 +1854,26 @@
         "title": "protobufjs: Denial of Service via unbounded recursive JSON descriptor expansion",
         "package_name": "protobufjs",
         "vulnerable_range": "<=7.5.7",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f38q-mgvj-vph7",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs : Schema-derived names can shadow runtime-significant properties",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.6.2",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-wcpc-wj8m-hjx6",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs: Denial of service through unbounded Any expansion during JSON conversion",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.6.0",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -1852,6 +2042,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-h67p-54hq-rp68",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "JS-YAML: Quadratic-complexity DoS in merge key handling via repeated aliases",
+        "package_name": "js-yaml",
+        "vulnerable_range": "<=4.1.1",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-r5fr-rjxr-66jc",
         "aliases": [],
         "severity": "high",
@@ -1968,6 +2168,26 @@
         "title": "protobufjs: Denial of Service via unbounded recursive JSON descriptor expansion",
         "package_name": "protobufjs",
         "vulnerable_range": "<=7.5.7",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f38q-mgvj-vph7",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs : Schema-derived names can shadow runtime-significant properties",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.6.2",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-wcpc-wj8m-hjx6",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs: Denial of service through unbounded Any expansion during JSON conversion",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.6.0",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -2086,6 +2306,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-h67p-54hq-rp68",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "JS-YAML: Quadratic-complexity DoS in merge key handling via repeated aliases",
+        "package_name": "js-yaml",
+        "vulnerable_range": "<=4.1.1",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-r5fr-rjxr-66jc",
         "aliases": [],
         "severity": "high",
@@ -2202,6 +2432,26 @@
         "title": "protobufjs: Denial of Service via unbounded recursive JSON descriptor expansion",
         "package_name": "protobufjs",
         "vulnerable_range": "<=7.5.7",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f38q-mgvj-vph7",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs : Schema-derived names can shadow runtime-significant properties",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.6.2",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-wcpc-wj8m-hjx6",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs: Denial of service through unbounded Any expansion during JSON conversion",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.6.0",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -2320,6 +2570,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-h67p-54hq-rp68",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "JS-YAML: Quadratic-complexity DoS in merge key handling via repeated aliases",
+        "package_name": "js-yaml",
+        "vulnerable_range": "<=4.1.1",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-r5fr-rjxr-66jc",
         "aliases": [],
         "severity": "high",
@@ -2436,6 +2696,26 @@
         "title": "protobufjs: Denial of Service via unbounded recursive JSON descriptor expansion",
         "package_name": "protobufjs",
         "vulnerable_range": "<=7.5.7",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f38q-mgvj-vph7",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs : Schema-derived names can shadow runtime-significant properties",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.6.2",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-wcpc-wj8m-hjx6",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs: Denial of service through unbounded Any expansion during JSON conversion",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.6.0",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -2554,6 +2834,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-h67p-54hq-rp68",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "JS-YAML: Quadratic-complexity DoS in merge key handling via repeated aliases",
+        "package_name": "js-yaml",
+        "vulnerable_range": "<=4.1.1",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-r5fr-rjxr-66jc",
         "aliases": [],
         "severity": "high",
@@ -2670,6 +2960,26 @@
         "title": "protobufjs: Denial of Service via unbounded recursive JSON descriptor expansion",
         "package_name": "protobufjs",
         "vulnerable_range": "<=7.5.7",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f38q-mgvj-vph7",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs : Schema-derived names can shadow runtime-significant properties",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.6.2",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-wcpc-wj8m-hjx6",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs: Denial of service through unbounded Any expansion during JSON conversion",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.6.0",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -2788,6 +3098,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-h67p-54hq-rp68",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "JS-YAML: Quadratic-complexity DoS in merge key handling via repeated aliases",
+        "package_name": "js-yaml",
+        "vulnerable_range": "<=4.1.1",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-r5fr-rjxr-66jc",
         "aliases": [],
         "severity": "high",
@@ -2904,6 +3224,26 @@
         "title": "protobufjs: Denial of Service via unbounded recursive JSON descriptor expansion",
         "package_name": "protobufjs",
         "vulnerable_range": "<=7.5.7",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f38q-mgvj-vph7",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs : Schema-derived names can shadow runtime-significant properties",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.6.2",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-wcpc-wj8m-hjx6",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs: Denial of service through unbounded Any expansion during JSON conversion",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.6.0",
         "patched_version": "0.0.15",
         "is_direct": false
       },
