@@ -974,16 +974,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-gv7w-rqvm-qjhr",
-        "aliases": [],
-        "severity": "high",
-        "title": "esbuild: Missing binary integrity verification in Deno module enables remote code execution via NPM_CONFIG_REGISTRY",
-        "package_name": "esbuild",
-        "vulnerable_range": ">=0.17.0 <0.28.1",
-        "patched_version": null,
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-q3j6-qgpj-74h6",
         "aliases": [],
         "severity": "high",
@@ -1670,6 +1660,16 @@
         "title": "webpack-dev-server vulnerable to cross-origin source code exposure on non-HTTPS origins",
         "package_name": "webpack-dev-server",
         "vulnerable_range": "<=5.2.3",
+        "patched_version": null,
+        "is_direct": true
+      },
+      {
+        "vuln_id": "GHSA-mx8g-39q3-5c79",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "webpack-dev-server vulnerable to HMR WebSocket interception via permissive user proxies",
+        "package_name": "webpack-dev-server",
+        "vulnerable_range": "<5.2.5",
         "patched_version": null,
         "is_direct": true
       },
