@@ -526,6 +526,46 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-p88m-4jfj-68fv",
+        "aliases": [],
+        "severity": "high",
+        "title": "undici vulnerable to HTTP header injection via Set-Cookie percent-decoding",
+        "package_name": "undici",
+        "vulnerable_range": "<6.27.0",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-vxpw-j846-p89q",
+        "aliases": [],
+        "severity": "high",
+        "title": "undici WebSocket client vulnerable to denial of service via fragment count bypass",
+        "package_name": "undici",
+        "vulnerable_range": "<6.27.0",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-35p6-xmwp-9g52",
+        "aliases": [],
+        "severity": "high",
+        "title": "undici vulnerable to HTTP response queue poisoning via keep-alive socket reuse",
+        "package_name": "undici",
+        "vulnerable_range": "<6.27.0",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-g8m3-5g58-fq7m",
+        "aliases": [],
+        "severity": "high",
+        "title": "undici vulnerable to Set-Cookie SameSite attribute downgrade via permissive substring matching",
+        "package_name": "undici",
+        "vulnerable_range": "<6.27.0",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-w5hq-g745-h8pq",
         "aliases": [],
         "severity": "moderate",
@@ -846,6 +886,46 @@
         "title": "Undici has CRLF Injection in undici via `upgrade` option",
         "package_name": "undici",
         "vulnerable_range": "<6.24.0",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-p88m-4jfj-68fv",
+        "aliases": [],
+        "severity": "high",
+        "title": "undici vulnerable to HTTP header injection via Set-Cookie percent-decoding",
+        "package_name": "undici",
+        "vulnerable_range": "<6.27.0",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-vxpw-j846-p89q",
+        "aliases": [],
+        "severity": "high",
+        "title": "undici WebSocket client vulnerable to denial of service via fragment count bypass",
+        "package_name": "undici",
+        "vulnerable_range": "<6.27.0",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-35p6-xmwp-9g52",
+        "aliases": [],
+        "severity": "high",
+        "title": "undici vulnerable to HTTP response queue poisoning via keep-alive socket reuse",
+        "package_name": "undici",
+        "vulnerable_range": "<6.27.0",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-g8m3-5g58-fq7m",
+        "aliases": [],
+        "severity": "high",
+        "title": "undici vulnerable to Set-Cookie SameSite attribute downgrade via permissive substring matching",
+        "package_name": "undici",
+        "vulnerable_range": "<6.27.0",
         "patched_version": "7.13.0",
         "is_direct": false
       },
@@ -1634,6 +1714,46 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-p88m-4jfj-68fv",
+        "aliases": [],
+        "severity": "high",
+        "title": "undici vulnerable to HTTP header injection via Set-Cookie percent-decoding",
+        "package_name": "undici",
+        "vulnerable_range": "<6.27.0",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-vxpw-j846-p89q",
+        "aliases": [],
+        "severity": "high",
+        "title": "undici WebSocket client vulnerable to denial of service via fragment count bypass",
+        "package_name": "undici",
+        "vulnerable_range": "<6.27.0",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-35p6-xmwp-9g52",
+        "aliases": [],
+        "severity": "high",
+        "title": "undici vulnerable to HTTP response queue poisoning via keep-alive socket reuse",
+        "package_name": "undici",
+        "vulnerable_range": "<6.27.0",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-g8m3-5g58-fq7m",
+        "aliases": [],
+        "severity": "high",
+        "title": "undici vulnerable to Set-Cookie SameSite attribute downgrade via permissive substring matching",
+        "package_name": "undici",
+        "vulnerable_range": "<6.27.0",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-w5hq-g745-h8pq",
         "aliases": [],
         "severity": "moderate",
@@ -2004,6 +2124,46 @@
         "title": "Undici has CRLF Injection in undici via `upgrade` option",
         "package_name": "undici",
         "vulnerable_range": "<6.24.0",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-p88m-4jfj-68fv",
+        "aliases": [],
+        "severity": "high",
+        "title": "undici vulnerable to HTTP header injection via Set-Cookie percent-decoding",
+        "package_name": "undici",
+        "vulnerable_range": "<6.27.0",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-vxpw-j846-p89q",
+        "aliases": [],
+        "severity": "high",
+        "title": "undici WebSocket client vulnerable to denial of service via fragment count bypass",
+        "package_name": "undici",
+        "vulnerable_range": "<6.27.0",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-35p6-xmwp-9g52",
+        "aliases": [],
+        "severity": "high",
+        "title": "undici vulnerable to HTTP response queue poisoning via keep-alive socket reuse",
+        "package_name": "undici",
+        "vulnerable_range": "<6.27.0",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-g8m3-5g58-fq7m",
+        "aliases": [],
+        "severity": "high",
+        "title": "undici vulnerable to Set-Cookie SameSite attribute downgrade via permissive substring matching",
+        "package_name": "undici",
+        "vulnerable_range": "<6.27.0",
         "patched_version": "7.13.0",
         "is_direct": false
       },
