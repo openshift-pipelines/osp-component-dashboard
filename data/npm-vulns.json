@@ -2,16 +2,6 @@
   "1.15": {
     "openshift-pipelines/console-plugin": [
       {
-        "vuln_id": "GHSA-64mm-vxmg-q3vj",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "http-proxy-middleware `router` host+path substring matching allows Host-header-driven backend routing bypass",
-        "package_name": "http-proxy-middleware",
-        "vulnerable_range": ">=0.16.0 <3.0.6",
-        "patched_version": "1.14.1",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
         "severity": "moderate",
@@ -273,16 +263,6 @@
         "package_name": "diff",
         "vulnerable_range": ">=6.0.0 <8.0.3",
         "patched_version": null,
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-64mm-vxmg-q3vj",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "http-proxy-middleware `router` host+path substring matching allows Host-header-driven backend routing bypass",
-        "package_name": "http-proxy-middleware",
-        "vulnerable_range": ">=0.16.0 <3.0.6",
-        "patched_version": "1.14.1",
         "is_direct": false
       },
       {
@@ -637,16 +617,6 @@
         "package_name": "diff",
         "vulnerable_range": ">=6.0.0 <8.0.3",
         "patched_version": null,
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-64mm-vxmg-q3vj",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "http-proxy-middleware `router` host+path substring matching allows Host-header-driven backend routing bypass",
-        "package_name": "http-proxy-middleware",
-        "vulnerable_range": ">=0.16.0 <3.0.6",
-        "patched_version": "1.14.1",
         "is_direct": false
       },
       {
@@ -1189,7 +1159,7 @@
         "severity": "moderate",
         "title": "http-proxy-middleware `router` host+path substring matching allows Host-header-driven backend routing bypass",
         "package_name": "http-proxy-middleware",
-        "vulnerable_range": ">=0.16.0 <3.0.6",
+        "vulnerable_range": ">=0.16.0 <2.0.10",
         "patched_version": null,
         "is_direct": false
       },
@@ -1878,16 +1848,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-64mm-vxmg-q3vj",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "http-proxy-middleware `router` host+path substring matching allows Host-header-driven backend routing bypass",
-        "package_name": "http-proxy-middleware",
-        "vulnerable_range": ">=0.16.0 <3.0.6",
-        "patched_version": "1.14.1",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
         "severity": "moderate",
@@ -2242,16 +2202,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-64mm-vxmg-q3vj",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "http-proxy-middleware `router` host+path substring matching allows Host-header-driven backend routing bypass",
-        "package_name": "http-proxy-middleware",
-        "vulnerable_range": ">=0.16.0 <3.0.6",
-        "patched_version": "1.14.1",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
         "severity": "moderate",
@@ -2513,16 +2463,6 @@
         "package_name": "diff",
         "vulnerable_range": ">=6.0.0 <8.0.3",
         "patched_version": null,
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-64mm-vxmg-q3vj",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "http-proxy-middleware `router` host+path substring matching allows Host-header-driven backend routing bypass",
-        "package_name": "http-proxy-middleware",
-        "vulnerable_range": ">=0.16.0 <3.0.6",
-        "patched_version": "1.14.1",
         "is_direct": false
       },
       {
@@ -2790,16 +2730,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-64mm-vxmg-q3vj",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "http-proxy-middleware `router` host+path substring matching allows Host-header-driven backend routing bypass",
-        "package_name": "http-proxy-middleware",
-        "vulnerable_range": ">=0.16.0 <3.0.6",
-        "patched_version": "1.14.1",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
         "severity": "moderate",
@@ -3064,16 +2994,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-64mm-vxmg-q3vj",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "http-proxy-middleware `router` host+path substring matching allows Host-header-driven backend routing bypass",
-        "package_name": "http-proxy-middleware",
-        "vulnerable_range": ">=0.16.0 <3.0.6",
-        "patched_version": "1.14.1",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
         "severity": "moderate",
@@ -3335,16 +3255,6 @@
         "package_name": "diff",
         "vulnerable_range": ">=6.0.0 <8.0.3",
         "patched_version": null,
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-64mm-vxmg-q3vj",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "http-proxy-middleware `router` host+path substring matching allows Host-header-driven backend routing bypass",
-        "package_name": "http-proxy-middleware",
-        "vulnerable_range": ">=0.16.0 <3.0.6",
-        "patched_version": "1.14.1",
         "is_direct": false
       },
       {
