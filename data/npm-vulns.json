@@ -22,6 +22,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-22p9-wv53-3rq4",
+        "aliases": [],
+        "severity": "high",
+        "title": "LinkifyIt#match scan loop has quadratic algorithmic complexity",
+        "package_name": "linkify-it",
+        "vulnerable_range": "<=5.0.0",
+        "patched_version": "0.0.4",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-r5fr-rjxr-66jc",
         "aliases": [],
         "severity": "high",
@@ -283,6 +293,16 @@
         "package_name": "js-yaml",
         "vulnerable_range": "<=4.1.1",
         "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-22p9-wv53-3rq4",
+        "aliases": [],
+        "severity": "high",
+        "title": "LinkifyIt#match scan loop has quadratic algorithmic complexity",
+        "package_name": "linkify-it",
+        "vulnerable_range": "<=5.0.0",
+        "patched_version": "0.0.4",
         "is_direct": false
       },
       {
@@ -637,6 +657,16 @@
         "package_name": "js-yaml",
         "vulnerable_range": "<=4.1.1",
         "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-22p9-wv53-3rq4",
+        "aliases": [],
+        "severity": "high",
+        "title": "LinkifyIt#match scan loop has quadratic algorithmic complexity",
+        "package_name": "linkify-it",
+        "vulnerable_range": "<=5.0.0",
+        "patched_version": "0.0.4",
         "is_direct": false
       },
       {
@@ -1201,6 +1231,16 @@
         "package_name": "launch-editor",
         "vulnerable_range": "<=2.14.0",
         "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-22p9-wv53-3rq4",
+        "aliases": [],
+        "severity": "high",
+        "title": "LinkifyIt#match scan loop has quadratic algorithmic complexity",
+        "package_name": "linkify-it",
+        "vulnerable_range": "<=5.0.0",
+        "patched_version": "0.0.4",
         "is_direct": false
       },
       {
@@ -1868,6 +1908,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-22p9-wv53-3rq4",
+        "aliases": [],
+        "severity": "high",
+        "title": "LinkifyIt#match scan loop has quadratic algorithmic complexity",
+        "package_name": "linkify-it",
+        "vulnerable_range": "<=5.0.0",
+        "patched_version": "0.0.4",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-r5fr-rjxr-66jc",
         "aliases": [],
         "severity": "high",
@@ -2222,6 +2272,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-22p9-wv53-3rq4",
+        "aliases": [],
+        "severity": "high",
+        "title": "LinkifyIt#match scan loop has quadratic algorithmic complexity",
+        "package_name": "linkify-it",
+        "vulnerable_range": "<=5.0.0",
+        "patched_version": "0.0.4",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-r5fr-rjxr-66jc",
         "aliases": [],
         "severity": "high",
@@ -2483,6 +2543,16 @@
         "package_name": "js-yaml",
         "vulnerable_range": "<=4.1.1",
         "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-22p9-wv53-3rq4",
+        "aliases": [],
+        "severity": "high",
+        "title": "LinkifyIt#match scan loop has quadratic algorithmic complexity",
+        "package_name": "linkify-it",
+        "vulnerable_range": "<=5.0.0",
+        "patched_version": "0.0.4",
         "is_direct": false
       },
       {
@@ -2750,6 +2820,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-22p9-wv53-3rq4",
+        "aliases": [],
+        "severity": "high",
+        "title": "LinkifyIt#match scan loop has quadratic algorithmic complexity",
+        "package_name": "linkify-it",
+        "vulnerable_range": "<=5.0.0",
+        "patched_version": "0.0.4",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-r5fr-rjxr-66jc",
         "aliases": [],
         "severity": "high",
@@ -3014,6 +3094,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-22p9-wv53-3rq4",
+        "aliases": [],
+        "severity": "high",
+        "title": "LinkifyIt#match scan loop has quadratic algorithmic complexity",
+        "package_name": "linkify-it",
+        "vulnerable_range": "<=5.0.0",
+        "patched_version": "0.0.4",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-r5fr-rjxr-66jc",
         "aliases": [],
         "severity": "high",
@@ -3275,6 +3365,16 @@
         "package_name": "js-yaml",
         "vulnerable_range": "<=4.1.1",
         "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-22p9-wv53-3rq4",
+        "aliases": [],
+        "severity": "high",
+        "title": "LinkifyIt#match scan loop has quadratic algorithmic complexity",
+        "package_name": "linkify-it",
+        "vulnerable_range": "<=5.0.0",
+        "patched_version": "0.0.4",
         "is_direct": false
       },
       {
