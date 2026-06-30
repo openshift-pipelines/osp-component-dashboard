@@ -17,7 +17,7 @@
         "severity": "moderate",
         "title": "JS-YAML: Quadratic-complexity DoS in merge key handling via repeated aliases",
         "package_name": "js-yaml",
-        "vulnerable_range": "<=4.1.1",
+        "vulnerable_range": ">=4.0.0 <=4.1.1",
         "patched_version": "9.4.0",
         "is_direct": false
       },
@@ -291,7 +291,7 @@
         "severity": "moderate",
         "title": "JS-YAML: Quadratic-complexity DoS in merge key handling via repeated aliases",
         "package_name": "js-yaml",
-        "vulnerable_range": "<=4.1.1",
+        "vulnerable_range": ">=4.0.0 <=4.1.1",
         "patched_version": "9.4.0",
         "is_direct": false
       },
@@ -655,7 +655,7 @@
         "severity": "moderate",
         "title": "JS-YAML: Quadratic-complexity DoS in merge key handling via repeated aliases",
         "package_name": "js-yaml",
-        "vulnerable_range": "<=4.1.1",
+        "vulnerable_range": ">=4.0.0 <=4.1.1",
         "patched_version": "9.4.0",
         "is_direct": false
       },
@@ -1219,7 +1219,7 @@
         "severity": "moderate",
         "title": "JS-YAML: Quadratic-complexity DoS in merge key handling via repeated aliases",
         "package_name": "js-yaml",
-        "vulnerable_range": "<=4.1.1",
+        "vulnerable_range": "<3.15.0",
         "patched_version": "9.4.0",
         "is_direct": false
       },
@@ -1903,7 +1903,7 @@
         "severity": "moderate",
         "title": "JS-YAML: Quadratic-complexity DoS in merge key handling via repeated aliases",
         "package_name": "js-yaml",
-        "vulnerable_range": "<=4.1.1",
+        "vulnerable_range": ">=4.0.0 <=4.1.1",
         "patched_version": "9.4.0",
         "is_direct": false
       },
@@ -2267,7 +2267,7 @@
         "severity": "moderate",
         "title": "JS-YAML: Quadratic-complexity DoS in merge key handling via repeated aliases",
         "package_name": "js-yaml",
-        "vulnerable_range": "<=4.1.1",
+        "vulnerable_range": ">=4.0.0 <=4.1.1",
         "patched_version": "9.4.0",
         "is_direct": false
       },
@@ -2541,7 +2541,7 @@
         "severity": "moderate",
         "title": "JS-YAML: Quadratic-complexity DoS in merge key handling via repeated aliases",
         "package_name": "js-yaml",
-        "vulnerable_range": "<=4.1.1",
+        "vulnerable_range": ">=4.0.0 <=4.1.1",
         "patched_version": "9.4.0",
         "is_direct": false
       },
@@ -2815,7 +2815,7 @@
         "severity": "moderate",
         "title": "JS-YAML: Quadratic-complexity DoS in merge key handling via repeated aliases",
         "package_name": "js-yaml",
-        "vulnerable_range": "<=4.1.1",
+        "vulnerable_range": ">=4.0.0 <=4.1.1",
         "patched_version": "9.4.0",
         "is_direct": false
       },
@@ -3089,7 +3089,7 @@
         "severity": "moderate",
         "title": "JS-YAML: Quadratic-complexity DoS in merge key handling via repeated aliases",
         "package_name": "js-yaml",
-        "vulnerable_range": "<=4.1.1",
+        "vulnerable_range": ">=4.0.0 <=4.1.1",
         "patched_version": "9.4.0",
         "is_direct": false
       },
@@ -3363,7 +3363,7 @@
         "severity": "moderate",
         "title": "JS-YAML: Quadratic-complexity DoS in merge key handling via repeated aliases",
         "package_name": "js-yaml",
-        "vulnerable_range": "<=4.1.1",
+        "vulnerable_range": ">=4.0.0 <=4.1.1",
         "patched_version": "9.4.0",
         "is_direct": false
       },
