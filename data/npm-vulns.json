@@ -152,22 +152,22 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-f38q-mgvj-vph7",
-        "aliases": [],
-        "severity": "critical",
-        "title": "protobufjs : Schema-derived names can shadow runtime-significant properties",
-        "package_name": "protobufjs",
-        "vulnerable_range": "<=7.6.2",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-wcpc-wj8m-hjx6",
         "aliases": [],
         "severity": "critical",
         "title": "protobufjs: Denial of service through unbounded Any expansion during JSON conversion",
         "package_name": "protobufjs",
         "vulnerable_range": "<=7.6.0",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f38q-mgvj-vph7",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs : Schema-derived names can shadow runtime-significant properties",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.6.2",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -426,22 +426,22 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-f38q-mgvj-vph7",
-        "aliases": [],
-        "severity": "critical",
-        "title": "protobufjs : Schema-derived names can shadow runtime-significant properties",
-        "package_name": "protobufjs",
-        "vulnerable_range": "<=7.6.2",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-wcpc-wj8m-hjx6",
         "aliases": [],
         "severity": "critical",
         "title": "protobufjs: Denial of service through unbounded Any expansion during JSON conversion",
         "package_name": "protobufjs",
         "vulnerable_range": "<=7.6.0",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f38q-mgvj-vph7",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs : Schema-derived names can shadow runtime-significant properties",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.6.2",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -790,22 +790,22 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-f38q-mgvj-vph7",
-        "aliases": [],
-        "severity": "critical",
-        "title": "protobufjs : Schema-derived names can shadow runtime-significant properties",
-        "package_name": "protobufjs",
-        "vulnerable_range": "<=7.6.2",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-wcpc-wj8m-hjx6",
         "aliases": [],
         "severity": "critical",
         "title": "protobufjs: Denial of service through unbounded Any expansion during JSON conversion",
         "package_name": "protobufjs",
         "vulnerable_range": "<=7.6.0",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f38q-mgvj-vph7",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs : Schema-derived names can shadow runtime-significant properties",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.6.2",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -1544,22 +1544,22 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-f38q-mgvj-vph7",
-        "aliases": [],
-        "severity": "critical",
-        "title": "protobufjs : Schema-derived names can shadow runtime-significant properties",
-        "package_name": "protobufjs",
-        "vulnerable_range": "<=7.6.2",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-wcpc-wj8m-hjx6",
         "aliases": [],
         "severity": "critical",
         "title": "protobufjs: Denial of service through unbounded Any expansion during JSON conversion",
         "package_name": "protobufjs",
         "vulnerable_range": "<=7.6.0",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f38q-mgvj-vph7",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs : Schema-derived names can shadow runtime-significant properties",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.6.2",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -1844,6 +1844,26 @@
         "is_direct": true
       },
       {
+        "vuln_id": "GHSA-mp7j-qc5w-4988",
+        "aliases": [],
+        "severity": "critical",
+        "title": "websocket-driver: Resource limit bypass via message compression",
+        "package_name": "websocket-driver",
+        "vulnerable_range": "<0.7.5",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-xv26-6w52-cph6",
+        "aliases": [],
+        "severity": "critical",
+        "title": "websocket-driver: Message corruption via abuse of protocol length headers",
+        "package_name": "websocket-driver",
+        "vulnerable_range": "<0.7.5",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-58qx-3vcg-4xpx",
         "aliases": [],
         "severity": "high",
@@ -2038,22 +2058,22 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-f38q-mgvj-vph7",
-        "aliases": [],
-        "severity": "critical",
-        "title": "protobufjs : Schema-derived names can shadow runtime-significant properties",
-        "package_name": "protobufjs",
-        "vulnerable_range": "<=7.6.2",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-wcpc-wj8m-hjx6",
         "aliases": [],
         "severity": "critical",
         "title": "protobufjs: Denial of service through unbounded Any expansion during JSON conversion",
         "package_name": "protobufjs",
         "vulnerable_range": "<=7.6.0",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f38q-mgvj-vph7",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs : Schema-derived names can shadow runtime-significant properties",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.6.2",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -2402,22 +2422,22 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-f38q-mgvj-vph7",
-        "aliases": [],
-        "severity": "critical",
-        "title": "protobufjs : Schema-derived names can shadow runtime-significant properties",
-        "package_name": "protobufjs",
-        "vulnerable_range": "<=7.6.2",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-wcpc-wj8m-hjx6",
         "aliases": [],
         "severity": "critical",
         "title": "protobufjs: Denial of service through unbounded Any expansion during JSON conversion",
         "package_name": "protobufjs",
         "vulnerable_range": "<=7.6.0",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f38q-mgvj-vph7",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs : Schema-derived names can shadow runtime-significant properties",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.6.2",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -2676,22 +2696,22 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-f38q-mgvj-vph7",
-        "aliases": [],
-        "severity": "critical",
-        "title": "protobufjs : Schema-derived names can shadow runtime-significant properties",
-        "package_name": "protobufjs",
-        "vulnerable_range": "<=7.6.2",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-wcpc-wj8m-hjx6",
         "aliases": [],
         "severity": "critical",
         "title": "protobufjs: Denial of service through unbounded Any expansion during JSON conversion",
         "package_name": "protobufjs",
         "vulnerable_range": "<=7.6.0",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f38q-mgvj-vph7",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs : Schema-derived names can shadow runtime-significant properties",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.6.2",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -2950,22 +2970,22 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-f38q-mgvj-vph7",
-        "aliases": [],
-        "severity": "critical",
-        "title": "protobufjs : Schema-derived names can shadow runtime-significant properties",
-        "package_name": "protobufjs",
-        "vulnerable_range": "<=7.6.2",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-wcpc-wj8m-hjx6",
         "aliases": [],
         "severity": "critical",
         "title": "protobufjs: Denial of service through unbounded Any expansion during JSON conversion",
         "package_name": "protobufjs",
         "vulnerable_range": "<=7.6.0",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f38q-mgvj-vph7",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs : Schema-derived names can shadow runtime-significant properties",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.6.2",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -3224,22 +3244,22 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-f38q-mgvj-vph7",
-        "aliases": [],
-        "severity": "critical",
-        "title": "protobufjs : Schema-derived names can shadow runtime-significant properties",
-        "package_name": "protobufjs",
-        "vulnerable_range": "<=7.6.2",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-wcpc-wj8m-hjx6",
         "aliases": [],
         "severity": "critical",
         "title": "protobufjs: Denial of service through unbounded Any expansion during JSON conversion",
         "package_name": "protobufjs",
         "vulnerable_range": "<=7.6.0",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f38q-mgvj-vph7",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs : Schema-derived names can shadow runtime-significant properties",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.6.2",
         "patched_version": "0.0.15",
         "is_direct": false
       },
@@ -3498,22 +3518,22 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-f38q-mgvj-vph7",
-        "aliases": [],
-        "severity": "critical",
-        "title": "protobufjs : Schema-derived names can shadow runtime-significant properties",
-        "package_name": "protobufjs",
-        "vulnerable_range": "<=7.6.2",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-wcpc-wj8m-hjx6",
         "aliases": [],
         "severity": "critical",
         "title": "protobufjs: Denial of service through unbounded Any expansion during JSON conversion",
         "package_name": "protobufjs",
         "vulnerable_range": "<=7.6.0",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f38q-mgvj-vph7",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs : Schema-derived names can shadow runtime-significant properties",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.6.2",
         "patched_version": "0.0.15",
         "is_direct": false
       },
