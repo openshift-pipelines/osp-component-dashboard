@@ -2,6 +2,26 @@
   "1.15": {
     "openshift-pipelines/console-plugin": [
       {
+        "vuln_id": "GHSA-v56q-mh7h-f735",
+        "aliases": [],
+        "severity": "high",
+        "title": "Immutable.js `List` 32-bit trie overflow \u2192 unrecoverable DoS",
+        "package_name": "immutable",
+        "vulnerable_range": "<4.3.9",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-xvcm-6775-5m9r",
+        "aliases": [],
+        "severity": "high",
+        "title": "Immutabl: Hash-collision algorithmic complexity denial of service in Immutable.Map/Set",
+        "package_name": "immutable",
+        "vulnerable_range": "<4.3.9",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
         "severity": "high",
@@ -38,6 +58,16 @@
         "title": "LinkifyIt#match scan loop has quadratic algorithmic complexity",
         "package_name": "linkify-it",
         "vulnerable_range": "<=5.0.0",
+        "patched_version": "0.0.4",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-v245-v573-v5vm",
+        "aliases": [],
+        "severity": "high",
+        "title": "linkify-it: Quadratic-complexity DoS via the `mailto:` validator scan-loop on attacker text",
+        "package_name": "linkify-it",
+        "vulnerable_range": "<=5.0.1",
         "patched_version": "0.0.4",
         "is_direct": false
       },
@@ -188,7 +218,7 @@
         "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
         "package_name": "qs",
         "vulnerable_range": ">=6.11.1 <=6.15.1",
-        "patched_version": "15.18.1",
+        "patched_version": "15.19.0",
         "is_direct": false
       },
       {
@@ -286,6 +316,26 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-v56q-mh7h-f735",
+        "aliases": [],
+        "severity": "high",
+        "title": "Immutable.js `List` 32-bit trie overflow \u2192 unrecoverable DoS",
+        "package_name": "immutable",
+        "vulnerable_range": "<4.3.9",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-xvcm-6775-5m9r",
+        "aliases": [],
+        "severity": "high",
+        "title": "Immutabl: Hash-collision algorithmic complexity denial of service in Immutable.Map/Set",
+        "package_name": "immutable",
+        "vulnerable_range": "<4.3.9",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
         "severity": "high",
@@ -322,6 +372,16 @@
         "title": "LinkifyIt#match scan loop has quadratic algorithmic complexity",
         "package_name": "linkify-it",
         "vulnerable_range": "<=5.0.0",
+        "patched_version": "0.0.4",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-v245-v573-v5vm",
+        "aliases": [],
+        "severity": "high",
+        "title": "linkify-it: Quadratic-complexity DoS via the `mailto:` validator scan-loop on attacker text",
+        "package_name": "linkify-it",
+        "vulnerable_range": "<=5.0.1",
         "patched_version": "0.0.4",
         "is_direct": false
       },
@@ -472,7 +532,7 @@
         "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
         "package_name": "qs",
         "vulnerable_range": ">=6.11.1 <=6.15.1",
-        "patched_version": "15.18.1",
+        "patched_version": "15.19.0",
         "is_direct": false
       },
       {
@@ -660,6 +720,26 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-v56q-mh7h-f735",
+        "aliases": [],
+        "severity": "high",
+        "title": "Immutable.js `List` 32-bit trie overflow \u2192 unrecoverable DoS",
+        "package_name": "immutable",
+        "vulnerable_range": "<4.3.9",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-xvcm-6775-5m9r",
+        "aliases": [],
+        "severity": "high",
+        "title": "Immutabl: Hash-collision algorithmic complexity denial of service in Immutable.Map/Set",
+        "package_name": "immutable",
+        "vulnerable_range": "<4.3.9",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
         "severity": "high",
@@ -696,6 +776,16 @@
         "title": "LinkifyIt#match scan loop has quadratic algorithmic complexity",
         "package_name": "linkify-it",
         "vulnerable_range": "<=5.0.0",
+        "patched_version": "0.0.4",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-v245-v573-v5vm",
+        "aliases": [],
+        "severity": "high",
+        "title": "linkify-it: Quadratic-complexity DoS via the `mailto:` validator scan-loop on attacker text",
+        "package_name": "linkify-it",
+        "vulnerable_range": "<=5.0.1",
         "patched_version": "0.0.4",
         "is_direct": false
       },
@@ -846,7 +936,7 @@
         "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
         "package_name": "qs",
         "vulnerable_range": ">=6.11.1 <=6.15.1",
-        "patched_version": "15.18.1",
+        "patched_version": "15.19.0",
         "is_direct": false
       },
       {
@@ -966,7 +1056,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -1154,6 +1244,26 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-4c8g-83qw-93j6",
+        "aliases": [],
+        "severity": "high",
+        "title": "fast-uri vulnerable to host confusion via failed IDN canonicalization",
+        "package_name": "fast-uri",
+        "vulnerable_range": ">=3.0.0 <3.1.3",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-v2hh-gcrm-f6hx",
+        "aliases": [],
+        "severity": "high",
+        "title": "fast-uri vulnerable to host confusion via literal backslash authority delimiter",
+        "package_name": "fast-uri",
+        "vulnerable_range": ">=3.0.0 <=3.1.3",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-25h7-pfq9-p65f",
         "aliases": [],
         "severity": "high",
@@ -1254,6 +1364,26 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-v56q-mh7h-f735",
+        "aliases": [],
+        "severity": "high",
+        "title": "Immutable.js `List` 32-bit trie overflow \u2192 unrecoverable DoS",
+        "package_name": "immutable",
+        "vulnerable_range": ">=5.0.0-beta.1 <5.1.8",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-xvcm-6775-5m9r",
+        "aliases": [],
+        "severity": "high",
+        "title": "Immutabl: Hash-collision algorithmic complexity denial of service in Immutable.Map/Set",
+        "package_name": "immutable",
+        "vulnerable_range": ">=5.0.0-beta.1 <5.1.8",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
         "severity": "high",
@@ -1300,6 +1430,16 @@
         "title": "LinkifyIt#match scan loop has quadratic algorithmic complexity",
         "package_name": "linkify-it",
         "vulnerable_range": "<=5.0.0",
+        "patched_version": "0.0.4",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-v245-v573-v5vm",
+        "aliases": [],
+        "severity": "high",
+        "title": "linkify-it: Quadratic-complexity DoS via the `mailto:` validator scan-loop on attacker text",
+        "package_name": "linkify-it",
+        "vulnerable_range": "<=5.0.1",
         "patched_version": "0.0.4",
         "is_direct": false
       },
@@ -1630,7 +1770,7 @@
         "title": "qs's arrayLimit bypass in comma parsing allows denial of service",
         "package_name": "qs",
         "vulnerable_range": ">=6.7.0 <=6.14.1",
-        "patched_version": "15.18.1",
+        "patched_version": "15.19.0",
         "is_direct": false
       },
       {
@@ -1640,7 +1780,7 @@
         "title": "qs's arrayLimit bypass in its bracket notation allows DoS via memory exhaustion",
         "package_name": "qs",
         "vulnerable_range": "<6.14.1",
-        "patched_version": "15.18.1",
+        "patched_version": "15.19.0",
         "is_direct": false
       },
       {
@@ -1650,7 +1790,7 @@
         "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
         "package_name": "qs",
         "vulnerable_range": ">=6.11.1 <=6.15.1",
-        "patched_version": "15.18.1",
+        "patched_version": "15.19.0",
         "is_direct": false
       },
       {
@@ -1840,7 +1980,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "26.0.0",
         "is_direct": false
       },
       {
@@ -1998,6 +2138,26 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-v56q-mh7h-f735",
+        "aliases": [],
+        "severity": "high",
+        "title": "Immutable.js `List` 32-bit trie overflow \u2192 unrecoverable DoS",
+        "package_name": "immutable",
+        "vulnerable_range": "<4.3.9",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-xvcm-6775-5m9r",
+        "aliases": [],
+        "severity": "high",
+        "title": "Immutabl: Hash-collision algorithmic complexity denial of service in Immutable.Map/Set",
+        "package_name": "immutable",
+        "vulnerable_range": "<4.3.9",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
         "severity": "high",
@@ -2034,6 +2194,16 @@
         "title": "LinkifyIt#match scan loop has quadratic algorithmic complexity",
         "package_name": "linkify-it",
         "vulnerable_range": "<=5.0.0",
+        "patched_version": "0.0.4",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-v245-v573-v5vm",
+        "aliases": [],
+        "severity": "high",
+        "title": "linkify-it: Quadratic-complexity DoS via the `mailto:` validator scan-loop on attacker text",
+        "package_name": "linkify-it",
+        "vulnerable_range": "<=5.0.1",
         "patched_version": "0.0.4",
         "is_direct": false
       },
@@ -2184,7 +2354,7 @@
         "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
         "package_name": "qs",
         "vulnerable_range": ">=6.11.1 <=6.15.1",
-        "patched_version": "15.18.1",
+        "patched_version": "15.19.0",
         "is_direct": false
       },
       {
@@ -2304,7 +2474,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -2372,6 +2542,26 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-v56q-mh7h-f735",
+        "aliases": [],
+        "severity": "high",
+        "title": "Immutable.js `List` 32-bit trie overflow \u2192 unrecoverable DoS",
+        "package_name": "immutable",
+        "vulnerable_range": "<4.3.9",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-xvcm-6775-5m9r",
+        "aliases": [],
+        "severity": "high",
+        "title": "Immutabl: Hash-collision algorithmic complexity denial of service in Immutable.Map/Set",
+        "package_name": "immutable",
+        "vulnerable_range": "<4.3.9",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
         "severity": "high",
@@ -2408,6 +2598,16 @@
         "title": "LinkifyIt#match scan loop has quadratic algorithmic complexity",
         "package_name": "linkify-it",
         "vulnerable_range": "<=5.0.0",
+        "patched_version": "0.0.4",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-v245-v573-v5vm",
+        "aliases": [],
+        "severity": "high",
+        "title": "linkify-it: Quadratic-complexity DoS via the `mailto:` validator scan-loop on attacker text",
+        "package_name": "linkify-it",
+        "vulnerable_range": "<=5.0.1",
         "patched_version": "0.0.4",
         "is_direct": false
       },
@@ -2558,7 +2758,7 @@
         "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
         "package_name": "qs",
         "vulnerable_range": ">=6.11.1 <=6.15.1",
-        "patched_version": "15.18.1",
+        "patched_version": "15.19.0",
         "is_direct": false
       },
       {
@@ -2588,7 +2788,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -2656,6 +2856,26 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-v56q-mh7h-f735",
+        "aliases": [],
+        "severity": "high",
+        "title": "Immutable.js `List` 32-bit trie overflow \u2192 unrecoverable DoS",
+        "package_name": "immutable",
+        "vulnerable_range": "<4.3.9",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-xvcm-6775-5m9r",
+        "aliases": [],
+        "severity": "high",
+        "title": "Immutabl: Hash-collision algorithmic complexity denial of service in Immutable.Map/Set",
+        "package_name": "immutable",
+        "vulnerable_range": "<4.3.9",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
         "severity": "high",
@@ -2692,6 +2912,16 @@
         "title": "LinkifyIt#match scan loop has quadratic algorithmic complexity",
         "package_name": "linkify-it",
         "vulnerable_range": "<=5.0.0",
+        "patched_version": "0.0.4",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-v245-v573-v5vm",
+        "aliases": [],
+        "severity": "high",
+        "title": "linkify-it: Quadratic-complexity DoS via the `mailto:` validator scan-loop on attacker text",
+        "package_name": "linkify-it",
+        "vulnerable_range": "<=5.0.1",
         "patched_version": "0.0.4",
         "is_direct": false
       },
@@ -2842,7 +3072,7 @@
         "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
         "package_name": "qs",
         "vulnerable_range": ">=6.11.1 <=6.15.1",
-        "patched_version": "15.18.1",
+        "patched_version": "15.19.0",
         "is_direct": false
       },
       {
@@ -2940,6 +3170,26 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-v56q-mh7h-f735",
+        "aliases": [],
+        "severity": "high",
+        "title": "Immutable.js `List` 32-bit trie overflow \u2192 unrecoverable DoS",
+        "package_name": "immutable",
+        "vulnerable_range": "<4.3.9",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-xvcm-6775-5m9r",
+        "aliases": [],
+        "severity": "high",
+        "title": "Immutabl: Hash-collision algorithmic complexity denial of service in Immutable.Map/Set",
+        "package_name": "immutable",
+        "vulnerable_range": "<4.3.9",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
         "severity": "high",
@@ -2976,6 +3226,16 @@
         "title": "LinkifyIt#match scan loop has quadratic algorithmic complexity",
         "package_name": "linkify-it",
         "vulnerable_range": "<=5.0.0",
+        "patched_version": "0.0.4",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-v245-v573-v5vm",
+        "aliases": [],
+        "severity": "high",
+        "title": "linkify-it: Quadratic-complexity DoS via the `mailto:` validator scan-loop on attacker text",
+        "package_name": "linkify-it",
+        "vulnerable_range": "<=5.0.1",
         "patched_version": "0.0.4",
         "is_direct": false
       },
@@ -3126,7 +3386,7 @@
         "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
         "package_name": "qs",
         "vulnerable_range": ">=6.11.1 <=6.15.1",
-        "patched_version": "15.18.1",
+        "patched_version": "15.19.0",
         "is_direct": false
       },
       {
@@ -3156,7 +3416,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -3224,6 +3484,26 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-v56q-mh7h-f735",
+        "aliases": [],
+        "severity": "high",
+        "title": "Immutable.js `List` 32-bit trie overflow \u2192 unrecoverable DoS",
+        "package_name": "immutable",
+        "vulnerable_range": "<4.3.9",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-xvcm-6775-5m9r",
+        "aliases": [],
+        "severity": "high",
+        "title": "Immutabl: Hash-collision algorithmic complexity denial of service in Immutable.Map/Set",
+        "package_name": "immutable",
+        "vulnerable_range": "<4.3.9",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
         "severity": "high",
@@ -3260,6 +3540,16 @@
         "title": "LinkifyIt#match scan loop has quadratic algorithmic complexity",
         "package_name": "linkify-it",
         "vulnerable_range": "<=5.0.0",
+        "patched_version": "0.0.4",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-v245-v573-v5vm",
+        "aliases": [],
+        "severity": "high",
+        "title": "linkify-it: Quadratic-complexity DoS via the `mailto:` validator scan-loop on attacker text",
+        "package_name": "linkify-it",
+        "vulnerable_range": "<=5.0.1",
         "patched_version": "0.0.4",
         "is_direct": false
       },
@@ -3410,7 +3700,7 @@
         "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
         "package_name": "qs",
         "vulnerable_range": ">=6.11.1 <=6.15.1",
-        "patched_version": "15.18.1",
+        "patched_version": "15.19.0",
         "is_direct": false
       },
       {
@@ -3508,6 +3798,26 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-v56q-mh7h-f735",
+        "aliases": [],
+        "severity": "high",
+        "title": "Immutable.js `List` 32-bit trie overflow \u2192 unrecoverable DoS",
+        "package_name": "immutable",
+        "vulnerable_range": "<4.3.9",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-xvcm-6775-5m9r",
+        "aliases": [],
+        "severity": "high",
+        "title": "Immutabl: Hash-collision algorithmic complexity denial of service in Immutable.Map/Set",
+        "package_name": "immutable",
+        "vulnerable_range": "<4.3.9",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
         "severity": "high",
@@ -3544,6 +3854,16 @@
         "title": "LinkifyIt#match scan loop has quadratic algorithmic complexity",
         "package_name": "linkify-it",
         "vulnerable_range": "<=5.0.0",
+        "patched_version": "0.0.4",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-v245-v573-v5vm",
+        "aliases": [],
+        "severity": "high",
+        "title": "linkify-it: Quadratic-complexity DoS via the `mailto:` validator scan-loop on attacker text",
+        "package_name": "linkify-it",
+        "vulnerable_range": "<=5.0.1",
         "patched_version": "0.0.4",
         "is_direct": false
       },
@@ -3694,7 +4014,7 @@
         "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
         "package_name": "qs",
         "vulnerable_range": ">=6.11.1 <=6.15.1",
-        "patched_version": "15.18.1",
+        "patched_version": "15.19.0",
         "is_direct": false
       },
       {
