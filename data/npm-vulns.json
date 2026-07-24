@@ -222,6 +222,28 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-wrjc-x8rr-h8h6",
+        "aliases": [
+          "CVE-2025-68470"
+        ],
+        "severity": "moderate",
+        "title": "React Router: Open redirect via backslash in <Link> and useNavigate (CVE-2025-68470 bypass)",
+        "package_name": "react-router",
+        "vulnerable_range": ">=6.0.0 <7.18.0",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-337j-9hxr-rhxg",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration",
+        "package_name": "react-router",
+        "vulnerable_range": ">=6.4.0 <7.18.0",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5c6j-r48x-rmvq",
         "aliases": [],
         "severity": "high",
@@ -533,6 +555,28 @@
         "package_name": "qs",
         "vulnerable_range": ">=6.11.1 <=6.15.1",
         "patched_version": "15.19.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-wrjc-x8rr-h8h6",
+        "aliases": [
+          "CVE-2025-68470"
+        ],
+        "severity": "moderate",
+        "title": "React Router: Open redirect via backslash in <Link> and useNavigate (CVE-2025-68470 bypass)",
+        "package_name": "react-router",
+        "vulnerable_range": ">=6.0.0 <7.18.0",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-337j-9hxr-rhxg",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration",
+        "package_name": "react-router",
+        "vulnerable_range": ">=6.4.0 <7.18.0",
+        "patched_version": "0.0.12",
         "is_direct": false
       },
       {
@@ -940,6 +984,28 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-wrjc-x8rr-h8h6",
+        "aliases": [
+          "CVE-2025-68470"
+        ],
+        "severity": "moderate",
+        "title": "React Router: Open redirect via backslash in <Link> and useNavigate (CVE-2025-68470 bypass)",
+        "package_name": "react-router",
+        "vulnerable_range": ">=6.0.0 <7.18.0",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-337j-9hxr-rhxg",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration",
+        "package_name": "react-router",
+        "vulnerable_range": ">=6.4.0 <7.18.0",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5c6j-r48x-rmvq",
         "aliases": [],
         "severity": "high",
@@ -1056,7 +1122,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -1646,10 +1712,20 @@
       {
         "vuln_id": "GHSA-qx2v-qp2m-jg93",
         "aliases": [],
-        "severity": "moderate",
+        "severity": "high",
         "title": "PostCSS has XSS via Unescaped </style> in its CSS Stringify Output",
         "package_name": "postcss",
         "vulnerable_range": "<8.5.10",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-6g55-p6wh-862q",
+        "aliases": [],
+        "severity": "high",
+        "title": "PostCSS: Arbitrary file read and information disclosure via attacker-controlled sourceMappingURL in CSS comments",
+        "package_name": "postcss",
+        "vulnerable_range": "<=8.5.11",
         "patched_version": null,
         "is_direct": false
       },
@@ -1810,6 +1886,28 @@
         "title": "React Router's same-origin redirect with path starting // causes open redirect via protocol-relative URL reinterpretation",
         "package_name": "react-router",
         "vulnerable_range": ">=6.7.0 <6.30.4",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-wrjc-x8rr-h8h6",
+        "aliases": [
+          "CVE-2025-68470"
+        ],
+        "severity": "high",
+        "title": "React Router: Open redirect via backslash in <Link> and useNavigate (CVE-2025-68470 bypass)",
+        "package_name": "react-router",
+        "vulnerable_range": ">=6.0.0 <7.18.0",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-337j-9hxr-rhxg",
+        "aliases": [],
+        "severity": "high",
+        "title": "React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration",
+        "package_name": "react-router",
+        "vulnerable_range": ">=6.4.0 <7.18.0",
         "patched_version": null,
         "is_direct": false
       },
@@ -1980,7 +2078,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": "26.0.0",
         "is_direct": false
       },
       {
@@ -2358,6 +2456,28 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-wrjc-x8rr-h8h6",
+        "aliases": [
+          "CVE-2025-68470"
+        ],
+        "severity": "moderate",
+        "title": "React Router: Open redirect via backslash in <Link> and useNavigate (CVE-2025-68470 bypass)",
+        "package_name": "react-router",
+        "vulnerable_range": ">=6.0.0 <7.18.0",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-337j-9hxr-rhxg",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration",
+        "package_name": "react-router",
+        "vulnerable_range": ">=6.4.0 <7.18.0",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5c6j-r48x-rmvq",
         "aliases": [],
         "severity": "high",
@@ -2474,7 +2594,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -2759,6 +2879,28 @@
         "package_name": "qs",
         "vulnerable_range": ">=6.11.1 <=6.15.1",
         "patched_version": "15.19.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-wrjc-x8rr-h8h6",
+        "aliases": [
+          "CVE-2025-68470"
+        ],
+        "severity": "moderate",
+        "title": "React Router: Open redirect via backslash in <Link> and useNavigate (CVE-2025-68470 bypass)",
+        "package_name": "react-router",
+        "vulnerable_range": ">=6.0.0 <7.18.0",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-337j-9hxr-rhxg",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration",
+        "package_name": "react-router",
+        "vulnerable_range": ">=6.4.0 <7.18.0",
+        "patched_version": "0.0.12",
         "is_direct": false
       },
       {
@@ -3076,6 +3218,28 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-wrjc-x8rr-h8h6",
+        "aliases": [
+          "CVE-2025-68470"
+        ],
+        "severity": "moderate",
+        "title": "React Router: Open redirect via backslash in <Link> and useNavigate (CVE-2025-68470 bypass)",
+        "package_name": "react-router",
+        "vulnerable_range": ">=6.0.0 <7.18.0",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-337j-9hxr-rhxg",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration",
+        "package_name": "react-router",
+        "vulnerable_range": ">=6.4.0 <7.18.0",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5c6j-r48x-rmvq",
         "aliases": [],
         "severity": "high",
@@ -3102,7 +3266,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -3390,6 +3554,28 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-wrjc-x8rr-h8h6",
+        "aliases": [
+          "CVE-2025-68470"
+        ],
+        "severity": "moderate",
+        "title": "React Router: Open redirect via backslash in <Link> and useNavigate (CVE-2025-68470 bypass)",
+        "package_name": "react-router",
+        "vulnerable_range": ">=6.0.0 <7.18.0",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-337j-9hxr-rhxg",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration",
+        "package_name": "react-router",
+        "vulnerable_range": ">=6.4.0 <7.18.0",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5c6j-r48x-rmvq",
         "aliases": [],
         "severity": "high",
@@ -3416,7 +3602,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -3704,6 +3890,28 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-wrjc-x8rr-h8h6",
+        "aliases": [
+          "CVE-2025-68470"
+        ],
+        "severity": "moderate",
+        "title": "React Router: Open redirect via backslash in <Link> and useNavigate (CVE-2025-68470 bypass)",
+        "package_name": "react-router",
+        "vulnerable_range": ">=6.0.0 <7.18.0",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-337j-9hxr-rhxg",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration",
+        "package_name": "react-router",
+        "vulnerable_range": ">=6.4.0 <7.18.0",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5c6j-r48x-rmvq",
         "aliases": [],
         "severity": "high",
@@ -3730,7 +3938,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -4018,6 +4226,28 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-wrjc-x8rr-h8h6",
+        "aliases": [
+          "CVE-2025-68470"
+        ],
+        "severity": "moderate",
+        "title": "React Router: Open redirect via backslash in <Link> and useNavigate (CVE-2025-68470 bypass)",
+        "package_name": "react-router",
+        "vulnerable_range": ">=6.0.0 <7.18.0",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-337j-9hxr-rhxg",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration",
+        "package_name": "react-router",
+        "vulnerable_range": ">=6.4.0 <7.18.0",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-5c6j-r48x-rmvq",
         "aliases": [],
         "severity": "high",
@@ -4044,7 +4274,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
