@@ -2,6 +2,16 @@
   "1.15": {
     "openshift-pipelines/console-plugin": [
       {
+        "vuln_id": "GHSA-mh99-v99m-4gvg",
+        "aliases": [],
+        "severity": "high",
+        "title": "brace-expansion: DoS via unbounded expansion length causing an out-of-memory process crash",
+        "package_name": "brace-expansion",
+        "vulnerable_range": "<=5.0.7",
+        "patched_version": "10.8.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-v56q-mh7h-f735",
         "aliases": [],
         "severity": "high",
@@ -270,7 +280,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -327,6 +337,16 @@
   },
   "1.16": {
     "openshift-pipelines/console-plugin": [
+      {
+        "vuln_id": "GHSA-mh99-v99m-4gvg",
+        "aliases": [],
+        "severity": "high",
+        "title": "brace-expansion: DoS via unbounded expansion length causing an out-of-memory process crash",
+        "package_name": "brace-expansion",
+        "vulnerable_range": "<=5.0.7",
+        "patched_version": "7.22.0",
+        "is_direct": false
+      },
       {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
@@ -754,6 +774,16 @@
   "1.17": {
     "openshift-pipelines/console-plugin": [
       {
+        "vuln_id": "GHSA-mh99-v99m-4gvg",
+        "aliases": [],
+        "severity": "high",
+        "title": "brace-expansion: DoS via unbounded expansion length causing an out-of-memory process crash",
+        "package_name": "brace-expansion",
+        "vulnerable_range": "<=5.0.7",
+        "patched_version": "7.22.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
         "severity": "low",
@@ -1122,7 +1152,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -1276,6 +1306,16 @@
         "title": "brace-expansion: DoS via exponential-time expansion of consecutive non-expanding {} groups",
         "package_name": "brace-expansion",
         "vulnerable_range": ">=2.0.0 <2.1.2",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-mh99-v99m-4gvg",
+        "aliases": [],
+        "severity": "high",
+        "title": "brace-expansion: DoS via unbounded expansion length causing an out-of-memory process crash",
+        "package_name": "brace-expansion",
+        "vulnerable_range": "<=5.0.7",
         "patched_version": null,
         "is_direct": false
       },
@@ -1726,6 +1766,16 @@
         "title": "PostCSS: Arbitrary file read and information disclosure via attacker-controlled sourceMappingURL in CSS comments",
         "package_name": "postcss",
         "vulnerable_range": "<=8.5.11",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-r28c-9q8g-f849",
+        "aliases": [],
+        "severity": "high",
+        "title": "PostCSS: Path Traversal in Previous Source Map Auto-Loading (sourceMappingURL) leads to Arbitrary .map File Disclosure",
+        "package_name": "postcss",
+        "vulnerable_range": "<=8.5.17",
         "patched_version": null,
         "is_direct": false
       },
@@ -2226,6 +2276,16 @@
   "1.19": {
     "openshift-pipelines/console-plugin": [
       {
+        "vuln_id": "GHSA-mh99-v99m-4gvg",
+        "aliases": [],
+        "severity": "high",
+        "title": "brace-expansion: DoS via unbounded expansion length causing an out-of-memory process crash",
+        "package_name": "brace-expansion",
+        "vulnerable_range": "<=5.0.7",
+        "patched_version": "10.8.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
         "severity": "low",
@@ -2594,7 +2654,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -2651,6 +2711,16 @@
   },
   "1.20": {
     "openshift-pipelines/console-plugin": [
+      {
+        "vuln_id": "GHSA-mh99-v99m-4gvg",
+        "aliases": [],
+        "severity": "high",
+        "title": "brace-expansion: DoS via unbounded expansion length causing an out-of-memory process crash",
+        "package_name": "brace-expansion",
+        "vulnerable_range": "<=5.0.7",
+        "patched_version": "7.22.0",
+        "is_direct": false
+      },
       {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
@@ -2988,6 +3058,16 @@
   "1.21": {
     "openshift-pipelines/console-plugin": [
       {
+        "vuln_id": "GHSA-mh99-v99m-4gvg",
+        "aliases": [],
+        "severity": "high",
+        "title": "brace-expansion: DoS via unbounded expansion length causing an out-of-memory process crash",
+        "package_name": "brace-expansion",
+        "vulnerable_range": "<=5.0.7",
+        "patched_version": "7.22.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
         "severity": "low",
@@ -3324,6 +3404,16 @@
   "1.22": {
     "openshift-pipelines/console-plugin": [
       {
+        "vuln_id": "GHSA-mh99-v99m-4gvg",
+        "aliases": [],
+        "severity": "high",
+        "title": "brace-expansion: DoS via unbounded expansion length causing an out-of-memory process crash",
+        "package_name": "brace-expansion",
+        "vulnerable_range": "<=5.0.7",
+        "patched_version": "7.22.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
         "severity": "low",
@@ -3602,7 +3692,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -3659,6 +3749,16 @@
   },
   "main": {
     "openshift-pipelines/console-plugin": [
+      {
+        "vuln_id": "GHSA-mh99-v99m-4gvg",
+        "aliases": [],
+        "severity": "high",
+        "title": "brace-expansion: DoS via unbounded expansion length causing an out-of-memory process crash",
+        "package_name": "brace-expansion",
+        "vulnerable_range": "<=5.0.7",
+        "patched_version": "10.8.0",
+        "is_direct": false
+      },
       {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
@@ -3996,6 +4096,16 @@
   "next": {
     "openshift-pipelines/console-plugin": [
       {
+        "vuln_id": "GHSA-mh99-v99m-4gvg",
+        "aliases": [],
+        "severity": "high",
+        "title": "brace-expansion: DoS via unbounded expansion length causing an out-of-memory process crash",
+        "package_name": "brace-expansion",
+        "vulnerable_range": "<=5.0.7",
+        "patched_version": "7.22.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
         "severity": "low",
@@ -4274,7 +4384,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
