@@ -280,7 +280,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -716,7 +716,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -780,7 +780,7 @@
         "title": "brace-expansion: DoS via unbounded expansion length causing an out-of-memory process crash",
         "package_name": "brace-expansion",
         "vulnerable_range": "<=5.0.7",
-        "patched_version": "7.22.0",
+        "patched_version": "10.8.0",
         "is_direct": false
       },
       {
@@ -1152,7 +1152,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -2654,7 +2654,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -3000,7 +3000,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -3064,7 +3064,7 @@
         "title": "brace-expansion: DoS via unbounded expansion length causing an out-of-memory process crash",
         "package_name": "brace-expansion",
         "vulnerable_range": "<=5.0.7",
-        "patched_version": "10.8.0",
+        "patched_version": "7.22.0",
         "is_direct": false
       },
       {
@@ -3756,352 +3756,6 @@
         "title": "brace-expansion: DoS via unbounded expansion length causing an out-of-memory process crash",
         "package_name": "brace-expansion",
         "vulnerable_range": "<=5.0.7",
-        "patched_version": "7.22.0",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-73rr-hh4g-fpgx",
-        "aliases": [],
-        "severity": "low",
-        "title": "jsdiff has a Denial of Service vulnerability in parsePatch and applyPatch",
-        "package_name": "diff",
-        "vulnerable_range": ">=6.0.0 <8.0.3",
-        "patched_version": null,
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-v56q-mh7h-f735",
-        "aliases": [],
-        "severity": "high",
-        "title": "Immutable.js `List` 32-bit trie overflow \u2192 unrecoverable DoS",
-        "package_name": "immutable",
-        "vulnerable_range": "<4.3.9",
-        "patched_version": "0.0.12",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-xvcm-6775-5m9r",
-        "aliases": [],
-        "severity": "high",
-        "title": "Immutabl: Hash-collision algorithmic complexity denial of service in Immutable.Map/Set",
-        "package_name": "immutable",
-        "vulnerable_range": "<4.3.9",
-        "patched_version": "0.0.12",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-mh29-5h37-fv8m",
-        "aliases": [],
-        "severity": "high",
-        "title": "js-yaml has prototype pollution in merge (<<)",
-        "package_name": "js-yaml",
-        "vulnerable_range": ">=4.0.0 <4.1.1",
-        "patched_version": "9.4.0",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-h67p-54hq-rp68",
-        "aliases": [],
-        "severity": "high",
-        "title": "JS-YAML: Quadratic-complexity DoS in merge key handling via repeated aliases",
-        "package_name": "js-yaml",
-        "vulnerable_range": ">=4.0.0 <=4.1.1",
-        "patched_version": "9.4.0",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-52cp-r559-cp3m",
-        "aliases": [],
-        "severity": "high",
-        "title": "js-yaml: YAML merge-key chains can force quadratic CPU consumption",
-        "package_name": "js-yaml",
-        "vulnerable_range": ">=4.0.0 <4.3.0",
-        "patched_version": "9.4.0",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-22p9-wv53-3rq4",
-        "aliases": [],
-        "severity": "high",
-        "title": "LinkifyIt#match scan loop has quadratic algorithmic complexity",
-        "package_name": "linkify-it",
-        "vulnerable_range": "<=5.0.0",
-        "patched_version": "0.0.4",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-v245-v573-v5vm",
-        "aliases": [],
-        "severity": "high",
-        "title": "linkify-it: Quadratic-complexity DoS via the `mailto:` validator scan-loop on attacker text",
-        "package_name": "linkify-it",
-        "vulnerable_range": "<=5.0.1",
-        "patched_version": "0.0.4",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-r5fr-rjxr-66jc",
-        "aliases": [],
-        "severity": "high",
-        "title": "lodash vulnerable to Code Injection via `_.template` imports key names",
-        "package_name": "lodash",
-        "vulnerable_range": ">=4.0.0 <=4.17.23",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-f23m-r3pf-42rh",
-        "aliases": [],
-        "severity": "high",
-        "title": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
-        "package_name": "lodash",
-        "vulnerable_range": "<=4.17.23",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-xxjr-mmjv-4gpg",
-        "aliases": [],
-        "severity": "high",
-        "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
-        "package_name": "lodash",
-        "vulnerable_range": ">=4.0.0 <=4.17.22",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-xq3m-2v4x-88gg",
-        "aliases": [],
-        "severity": "critical",
-        "title": "Arbitrary code execution in protobufjs",
-        "package_name": "protobufjs",
-        "vulnerable_range": "<7.5.5",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-66ff-xgx4-vchm",
-        "aliases": [],
-        "severity": "critical",
-        "title": "protobuf.js: Code injection through bytes field defaults in generated toObject code",
-        "package_name": "protobufjs",
-        "vulnerable_range": "<=7.5.5",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-2pr8-phx7-x9h3",
-        "aliases": [],
-        "severity": "critical",
-        "title": "protobuf.js: Denial of service from crafted field names in generated code",
-        "package_name": "protobufjs",
-        "vulnerable_range": "<=7.5.5",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-fx83-v9x8-x52w",
-        "aliases": [],
-        "severity": "critical",
-        "title": "protobuf.js: Prototype injection in generated message constructors",
-        "package_name": "protobufjs",
-        "vulnerable_range": "<=7.5.5",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-75px-5xx7-5xc7",
-        "aliases": [],
-        "severity": "critical",
-        "title": "protobuf.js: Code generation gadget after prototype pollution",
-        "package_name": "protobufjs",
-        "vulnerable_range": "<=7.5.5",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-jvwf-75h9-cwgg",
-        "aliases": [],
-        "severity": "critical",
-        "title": "protobuf.js: Process-wide denial of service through unsafe option paths",
-        "package_name": "protobufjs",
-        "vulnerable_range": "<=7.5.5",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-685m-2w69-288q",
-        "aliases": [],
-        "severity": "critical",
-        "title": "protobuf.js: Denial of service through unbounded protobuf recursion",
-        "package_name": "protobufjs",
-        "vulnerable_range": "<=7.5.5",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-q6x5-8v7m-xcrf",
-        "aliases": [],
-        "severity": "critical",
-        "title": "protobufjs has overlong UTF-8 decoding",
-        "package_name": "protobufjs",
-        "vulnerable_range": "<=7.5.5",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-jggg-4jg4-v7c6",
-        "aliases": [],
-        "severity": "critical",
-        "title": "protobufjs: Denial of Service via unbounded recursive JSON descriptor expansion",
-        "package_name": "protobufjs",
-        "vulnerable_range": "<=7.5.7",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-wcpc-wj8m-hjx6",
-        "aliases": [],
-        "severity": "critical",
-        "title": "protobufjs: Denial of service through unbounded Any expansion during JSON conversion",
-        "package_name": "protobufjs",
-        "vulnerable_range": "<=7.6.0",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-f38q-mgvj-vph7",
-        "aliases": [],
-        "severity": "critical",
-        "title": "protobufjs : Schema-derived names can shadow runtime-significant properties",
-        "package_name": "protobufjs",
-        "vulnerable_range": "<=7.6.2",
-        "patched_version": "0.0.15",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-q8mj-m7cp-5q26",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
-        "package_name": "qs",
-        "vulnerable_range": ">=6.11.1 <=6.15.1",
-        "patched_version": "15.19.0",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-wrjc-x8rr-h8h6",
-        "aliases": [
-          "CVE-2025-68470"
-        ],
-        "severity": "moderate",
-        "title": "React Router: Open redirect via backslash in <Link> and useNavigate (CVE-2025-68470 bypass)",
-        "package_name": "react-router",
-        "vulnerable_range": ">=6.0.0 <7.18.0",
-        "patched_version": "0.0.12",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-337j-9hxr-rhxg",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration",
-        "package_name": "react-router",
-        "vulnerable_range": ">=6.4.0 <7.18.0",
-        "patched_version": "0.0.12",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-5c6j-r48x-rmvq",
-        "aliases": [],
-        "severity": "high",
-        "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
-        "package_name": "serialize-javascript",
-        "vulnerable_range": "<=7.0.2",
-        "patched_version": "14.0.0",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-qj8w-gfj5-8c6v",
-        "aliases": [],
-        "severity": "high",
-        "title": "Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects",
-        "package_name": "serialize-javascript",
-        "vulnerable_range": ">=5.0.0 <7.0.5",
-        "patched_version": "14.0.0",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-w5hq-g745-h8pq",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
-        "package_name": "uuid",
-        "vulnerable_range": "<11.1.1",
-        "patched_version": null,
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-g3ch-rx76-35fx",
-        "aliases": [],
-        "severity": "moderate",
-        "title": "vue-template-compiler vulnerable to client-side Cross-Site Scripting (XSS)",
-        "package_name": "vue-template-compiler",
-        "vulnerable_range": ">=2.0.0 <3.0.0",
-        "patched_version": "9.4.0",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-hc6q-2mpp-qw7j",
-        "aliases": [],
-        "severity": "critical",
-        "title": "Cross-realm object access in Webpack 5",
-        "package_name": "webpack",
-        "vulnerable_range": ">=5.0.0 <5.76.0",
-        "patched_version": "1.3.0",
-        "is_direct": true
-      },
-      {
-        "vuln_id": "GHSA-4vvj-4cpr-p986",
-        "aliases": [],
-        "severity": "critical",
-        "title": "Webpack's AutoPublicPathRuntimeModule has a DOM Clobbering Gadget that leads to XSS",
-        "package_name": "webpack",
-        "vulnerable_range": ">=5.0.0-alpha.0 <5.94.0",
-        "patched_version": "1.3.0",
-        "is_direct": true
-      },
-      {
-        "vuln_id": "GHSA-8fgc-7cc6-rx7x",
-        "aliases": [],
-        "severity": "critical",
-        "title": "webpack buildHttp: allowedUris allow-list bypass via URL userinfo (@) leading to build-time SSRF behavior",
-        "package_name": "webpack",
-        "vulnerable_range": ">=5.49.0 <=5.104.0",
-        "patched_version": "1.3.0",
-        "is_direct": true
-      },
-      {
-        "vuln_id": "GHSA-38r7-794h-5758",
-        "aliases": [],
-        "severity": "critical",
-        "title": "webpack buildHttp HttpUriPlugin allowedUris bypass via HTTP redirects \u2192 SSRF + cache persistence",
-        "package_name": "webpack",
-        "vulnerable_range": ">=5.49.0 <5.104.0",
-        "patched_version": "1.3.0",
-        "is_direct": true
-      }
-    ]
-  },
-  "next": {
-    "openshift-pipelines/console-plugin": [
-      {
-        "vuln_id": "GHSA-mh99-v99m-4gvg",
-        "aliases": [],
-        "severity": "high",
-        "title": "brace-expansion: DoS via unbounded expansion length causing an out-of-memory process crash",
-        "package_name": "brace-expansion",
-        "vulnerable_range": "<=5.0.7",
         "patched_version": "10.8.0",
         "is_direct": false
       },
@@ -4385,6 +4039,352 @@
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
         "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-g3ch-rx76-35fx",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "vue-template-compiler vulnerable to client-side Cross-Site Scripting (XSS)",
+        "package_name": "vue-template-compiler",
+        "vulnerable_range": ">=2.0.0 <3.0.0",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-hc6q-2mpp-qw7j",
+        "aliases": [],
+        "severity": "critical",
+        "title": "Cross-realm object access in Webpack 5",
+        "package_name": "webpack",
+        "vulnerable_range": ">=5.0.0 <5.76.0",
+        "patched_version": "1.3.0",
+        "is_direct": true
+      },
+      {
+        "vuln_id": "GHSA-4vvj-4cpr-p986",
+        "aliases": [],
+        "severity": "critical",
+        "title": "Webpack's AutoPublicPathRuntimeModule has a DOM Clobbering Gadget that leads to XSS",
+        "package_name": "webpack",
+        "vulnerable_range": ">=5.0.0-alpha.0 <5.94.0",
+        "patched_version": "1.3.0",
+        "is_direct": true
+      },
+      {
+        "vuln_id": "GHSA-8fgc-7cc6-rx7x",
+        "aliases": [],
+        "severity": "critical",
+        "title": "webpack buildHttp: allowedUris allow-list bypass via URL userinfo (@) leading to build-time SSRF behavior",
+        "package_name": "webpack",
+        "vulnerable_range": ">=5.49.0 <=5.104.0",
+        "patched_version": "1.3.0",
+        "is_direct": true
+      },
+      {
+        "vuln_id": "GHSA-38r7-794h-5758",
+        "aliases": [],
+        "severity": "critical",
+        "title": "webpack buildHttp HttpUriPlugin allowedUris bypass via HTTP redirects \u2192 SSRF + cache persistence",
+        "package_name": "webpack",
+        "vulnerable_range": ">=5.49.0 <5.104.0",
+        "patched_version": "1.3.0",
+        "is_direct": true
+      }
+    ]
+  },
+  "next": {
+    "openshift-pipelines/console-plugin": [
+      {
+        "vuln_id": "GHSA-mh99-v99m-4gvg",
+        "aliases": [],
+        "severity": "high",
+        "title": "brace-expansion: DoS via unbounded expansion length causing an out-of-memory process crash",
+        "package_name": "brace-expansion",
+        "vulnerable_range": "<=5.0.7",
+        "patched_version": "7.22.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-73rr-hh4g-fpgx",
+        "aliases": [],
+        "severity": "low",
+        "title": "jsdiff has a Denial of Service vulnerability in parsePatch and applyPatch",
+        "package_name": "diff",
+        "vulnerable_range": ">=6.0.0 <8.0.3",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-v56q-mh7h-f735",
+        "aliases": [],
+        "severity": "high",
+        "title": "Immutable.js `List` 32-bit trie overflow \u2192 unrecoverable DoS",
+        "package_name": "immutable",
+        "vulnerable_range": "<4.3.9",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-xvcm-6775-5m9r",
+        "aliases": [],
+        "severity": "high",
+        "title": "Immutabl: Hash-collision algorithmic complexity denial of service in Immutable.Map/Set",
+        "package_name": "immutable",
+        "vulnerable_range": "<4.3.9",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-mh29-5h37-fv8m",
+        "aliases": [],
+        "severity": "high",
+        "title": "js-yaml has prototype pollution in merge (<<)",
+        "package_name": "js-yaml",
+        "vulnerable_range": ">=4.0.0 <4.1.1",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-h67p-54hq-rp68",
+        "aliases": [],
+        "severity": "high",
+        "title": "JS-YAML: Quadratic-complexity DoS in merge key handling via repeated aliases",
+        "package_name": "js-yaml",
+        "vulnerable_range": ">=4.0.0 <=4.1.1",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-52cp-r559-cp3m",
+        "aliases": [],
+        "severity": "high",
+        "title": "js-yaml: YAML merge-key chains can force quadratic CPU consumption",
+        "package_name": "js-yaml",
+        "vulnerable_range": ">=4.0.0 <4.3.0",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-22p9-wv53-3rq4",
+        "aliases": [],
+        "severity": "high",
+        "title": "LinkifyIt#match scan loop has quadratic algorithmic complexity",
+        "package_name": "linkify-it",
+        "vulnerable_range": "<=5.0.0",
+        "patched_version": "0.0.4",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-v245-v573-v5vm",
+        "aliases": [],
+        "severity": "high",
+        "title": "linkify-it: Quadratic-complexity DoS via the `mailto:` validator scan-loop on attacker text",
+        "package_name": "linkify-it",
+        "vulnerable_range": "<=5.0.1",
+        "patched_version": "0.0.4",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-r5fr-rjxr-66jc",
+        "aliases": [],
+        "severity": "high",
+        "title": "lodash vulnerable to Code Injection via `_.template` imports key names",
+        "package_name": "lodash",
+        "vulnerable_range": ">=4.0.0 <=4.17.23",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f23m-r3pf-42rh",
+        "aliases": [],
+        "severity": "high",
+        "title": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
+        "package_name": "lodash",
+        "vulnerable_range": "<=4.17.23",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-xxjr-mmjv-4gpg",
+        "aliases": [],
+        "severity": "high",
+        "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
+        "package_name": "lodash",
+        "vulnerable_range": ">=4.0.0 <=4.17.22",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-xq3m-2v4x-88gg",
+        "aliases": [],
+        "severity": "critical",
+        "title": "Arbitrary code execution in protobufjs",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-66ff-xgx4-vchm",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Code injection through bytes field defaults in generated toObject code",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-2pr8-phx7-x9h3",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Denial of service from crafted field names in generated code",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-fx83-v9x8-x52w",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Prototype injection in generated message constructors",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-75px-5xx7-5xc7",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Code generation gadget after prototype pollution",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-jvwf-75h9-cwgg",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Process-wide denial of service through unsafe option paths",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-685m-2w69-288q",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobuf.js: Denial of service through unbounded protobuf recursion",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-q6x5-8v7m-xcrf",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs has overlong UTF-8 decoding",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.5",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-jggg-4jg4-v7c6",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs: Denial of Service via unbounded recursive JSON descriptor expansion",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.5.7",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-wcpc-wj8m-hjx6",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs: Denial of service through unbounded Any expansion during JSON conversion",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.6.0",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-f38q-mgvj-vph7",
+        "aliases": [],
+        "severity": "critical",
+        "title": "protobufjs : Schema-derived names can shadow runtime-significant properties",
+        "package_name": "protobufjs",
+        "vulnerable_range": "<=7.6.2",
+        "patched_version": "0.0.15",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-q8mj-m7cp-5q26",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
+        "package_name": "qs",
+        "vulnerable_range": ">=6.11.1 <=6.15.1",
+        "patched_version": "15.19.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-wrjc-x8rr-h8h6",
+        "aliases": [
+          "CVE-2025-68470"
+        ],
+        "severity": "moderate",
+        "title": "React Router: Open redirect via backslash in <Link> and useNavigate (CVE-2025-68470 bypass)",
+        "package_name": "react-router",
+        "vulnerable_range": ">=6.0.0 <7.18.0",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-337j-9hxr-rhxg",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration",
+        "package_name": "react-router",
+        "vulnerable_range": ">=6.4.0 <7.18.0",
+        "patched_version": "0.0.12",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-5c6j-r48x-rmvq",
+        "aliases": [],
+        "severity": "high",
+        "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
+        "package_name": "serialize-javascript",
+        "vulnerable_range": "<=7.0.2",
+        "patched_version": "14.0.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-qj8w-gfj5-8c6v",
+        "aliases": [],
+        "severity": "high",
+        "title": "Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects",
+        "package_name": "serialize-javascript",
+        "vulnerable_range": ">=5.0.0 <7.0.5",
+        "patched_version": "14.0.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-w5hq-g745-h8pq",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+        "package_name": "uuid",
+        "vulnerable_range": "<11.1.1",
+        "patched_version": null,
         "is_direct": false
       },
       {
