@@ -690,13 +690,43 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-8xcm-r25x-g524",
+        "aliases": [],
+        "severity": "high",
+        "title": "undici vulnerable to downstream response desynchronization via retry interceptor",
+        "package_name": "undici",
+        "vulnerable_range": "<6.28.0",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-m8rv-5g2x-5cg5",
+        "aliases": [],
+        "severity": "high",
+        "title": "undici vulnerable to CRLF Injection via blob-like body 'type' property",
+        "package_name": "undici",
+        "vulnerable_range": "<6.28.0",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-v3r7-h72x-cjcm",
+        "aliases": [],
+        "severity": "high",
+        "title": "undici vulnerable to cookie attribute injection via unsanitized domain and unparsed setCookie fields",
+        "package_name": "undici",
+        "vulnerable_range": "<6.28.0",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-w5hq-g745-h8pq",
         "aliases": [],
         "severity": "moderate",
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -1116,6 +1146,36 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-8xcm-r25x-g524",
+        "aliases": [],
+        "severity": "high",
+        "title": "undici vulnerable to downstream response desynchronization via retry interceptor",
+        "package_name": "undici",
+        "vulnerable_range": "<6.28.0",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-m8rv-5g2x-5cg5",
+        "aliases": [],
+        "severity": "high",
+        "title": "undici vulnerable to CRLF Injection via blob-like body 'type' property",
+        "package_name": "undici",
+        "vulnerable_range": "<6.28.0",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-v3r7-h72x-cjcm",
+        "aliases": [],
+        "severity": "high",
+        "title": "undici vulnerable to cookie attribute injection via unsanitized domain and unparsed setCookie fields",
+        "package_name": "undici",
+        "vulnerable_range": "<6.28.0",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-w5hq-g745-h8pq",
         "aliases": [],
         "severity": "moderate",
@@ -1290,6 +1350,18 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-rgw5-rvv9-x895",
+        "aliases": [
+          "CVE-2026-14257"
+        ],
+        "severity": "high",
+        "title": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation",
+        "package_name": "brace-expansion",
+        "vulnerable_range": ">=2.0.0 <2.1.4",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
         "severity": "low",
@@ -1336,6 +1408,16 @@
         "title": "fast-uri vulnerable to host confusion via failed IDN canonicalization",
         "package_name": "fast-uri",
         "vulnerable_range": ">=3.0.0 <3.1.3",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-7p8r-x3mc-p8w7",
+        "aliases": [],
+        "severity": "high",
+        "title": "fast-uri vulnerable to host confusion via backslash authority introducer",
+        "package_name": "fast-uri",
+        "vulnerable_range": ">=3.0.0 <3.1.5",
         "patched_version": null,
         "is_direct": false
       },
@@ -1750,6 +1832,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-fxqj-rqcc-2cmp",
+        "aliases": [],
+        "severity": "high",
+        "title": "PostCSS: incomplete fix of GHSA-6g55-p6wh-862q \u2014 attacker-controlled sourceMappingURL reads arbitrary .map files when `from` is unset",
+        "package_name": "postcss",
+        "vulnerable_range": "<=8.5.22",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-xq3m-2v4x-88gg",
         "aliases": [],
         "severity": "critical",
@@ -2092,13 +2184,43 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-8xcm-r25x-g524",
+        "aliases": [],
+        "severity": "high",
+        "title": "undici vulnerable to downstream response desynchronization via retry interceptor",
+        "package_name": "undici",
+        "vulnerable_range": "<6.28.0",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-m8rv-5g2x-5cg5",
+        "aliases": [],
+        "severity": "high",
+        "title": "undici vulnerable to CRLF Injection via blob-like body 'type' property",
+        "package_name": "undici",
+        "vulnerable_range": "<6.28.0",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-v3r7-h72x-cjcm",
+        "aliases": [],
+        "severity": "high",
+        "title": "undici vulnerable to cookie attribute injection via unsanitized domain and unparsed setCookie fields",
+        "package_name": "undici",
+        "vulnerable_range": "<6.28.0",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-w5hq-g745-h8pq",
         "aliases": [],
         "severity": "moderate",
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -2608,6 +2730,36 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-8xcm-r25x-g524",
+        "aliases": [],
+        "severity": "high",
+        "title": "undici vulnerable to downstream response desynchronization via retry interceptor",
+        "package_name": "undici",
+        "vulnerable_range": "<6.28.0",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-m8rv-5g2x-5cg5",
+        "aliases": [],
+        "severity": "high",
+        "title": "undici vulnerable to CRLF Injection via blob-like body 'type' property",
+        "package_name": "undici",
+        "vulnerable_range": "<6.28.0",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-v3r7-h72x-cjcm",
+        "aliases": [],
+        "severity": "high",
+        "title": "undici vulnerable to cookie attribute injection via unsanitized domain and unparsed setCookie fields",
+        "package_name": "undici",
+        "vulnerable_range": "<6.28.0",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-w5hq-g745-h8pq",
         "aliases": [],
         "severity": "moderate",
@@ -2950,7 +3102,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -4294,7 +4446,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
