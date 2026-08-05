@@ -218,7 +218,7 @@
         "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
         "package_name": "qs",
         "vulnerable_range": ">=6.11.1 <=6.15.1",
-        "patched_version": "15.19.0",
+        "patched_version": "15.20.0",
         "is_direct": false
       },
       {
@@ -554,7 +554,7 @@
         "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
         "package_name": "qs",
         "vulnerable_range": ">=6.11.1 <=6.15.1",
-        "patched_version": "15.19.0",
+        "patched_version": "15.20.0",
         "is_direct": false
       },
       {
@@ -726,7 +726,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -1010,7 +1010,7 @@
         "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
         "package_name": "qs",
         "vulnerable_range": ">=6.11.1 <=6.15.1",
-        "patched_version": "15.19.0",
+        "patched_version": "15.20.0",
         "is_direct": false
       },
       {
@@ -1280,6 +1280,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-2j2x-hqr9-3h42",
+        "aliases": [],
+        "severity": "high",
+        "title": "React Router's same-origin redirect with path starting // causes open redirect via protocol-relative URL reinterpretation",
+        "package_name": "@remix-run/router",
+        "vulnerable_range": ">=1.3.0 <1.23.3",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-vpq2-c234-7xj6",
         "aliases": [],
         "severity": "low",
@@ -1402,22 +1412,22 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-4c8g-83qw-93j6",
-        "aliases": [],
-        "severity": "high",
-        "title": "fast-uri vulnerable to host confusion via failed IDN canonicalization",
-        "package_name": "fast-uri",
-        "vulnerable_range": ">=3.0.0 <3.1.3",
-        "patched_version": null,
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-7p8r-x3mc-p8w7",
         "aliases": [],
         "severity": "high",
         "title": "fast-uri vulnerable to host confusion via backslash authority introducer",
         "package_name": "fast-uri",
         "vulnerable_range": ">=3.0.0 <3.1.5",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-4c8g-83qw-93j6",
+        "aliases": [],
+        "severity": "high",
+        "title": "fast-uri vulnerable to host confusion via failed IDN canonicalization",
+        "package_name": "fast-uri",
+        "vulnerable_range": ">=3.0.0 <3.1.3",
         "patched_version": null,
         "is_direct": false
       },
@@ -1958,7 +1968,7 @@
         "title": "qs's arrayLimit bypass in comma parsing allows denial of service",
         "package_name": "qs",
         "vulnerable_range": ">=6.7.0 <=6.14.1",
-        "patched_version": "15.19.0",
+        "patched_version": "15.20.0",
         "is_direct": false
       },
       {
@@ -1968,7 +1978,7 @@
         "title": "qs's arrayLimit bypass in its bracket notation allows DoS via memory exhaustion",
         "package_name": "qs",
         "vulnerable_range": "<6.14.1",
-        "patched_version": "15.19.0",
+        "patched_version": "15.20.0",
         "is_direct": false
       },
       {
@@ -1978,7 +1988,7 @@
         "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
         "package_name": "qs",
         "vulnerable_range": ">=6.11.1 <=6.15.1",
-        "patched_version": "15.19.0",
+        "patched_version": "15.20.0",
         "is_direct": false
       },
       {
@@ -1988,16 +1998,6 @@
         "title": "React Router has unexpected external redirect via untrusted paths",
         "package_name": "react-router",
         "vulnerable_range": ">=6.0.0 <6.30.2",
-        "patched_version": null,
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-2j2x-hqr9-3h42",
-        "aliases": [],
-        "severity": "high",
-        "title": "React Router's same-origin redirect with path starting // causes open redirect via protocol-relative URL reinterpretation",
-        "package_name": "react-router",
-        "vulnerable_range": ">=6.7.0 <6.30.4",
         "patched_version": null,
         "is_direct": false
       },
@@ -2020,6 +2020,16 @@
         "title": "React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration",
         "package_name": "react-router",
         "vulnerable_range": ">=6.4.0 <7.18.0",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-2j2x-hqr9-3h42",
+        "aliases": [],
+        "severity": "high",
+        "title": "React Router's same-origin redirect with path starting // causes open redirect via protocol-relative URL reinterpretation",
+        "package_name": "react-router",
+        "vulnerable_range": ">=6.7.0 <6.30.4",
         "patched_version": null,
         "is_direct": false
       },
@@ -2220,7 +2230,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -2594,7 +2604,7 @@
         "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
         "package_name": "qs",
         "vulnerable_range": ">=6.11.1 <=6.15.1",
-        "patched_version": "15.19.0",
+        "patched_version": "15.20.0",
         "is_direct": false
       },
       {
@@ -3050,7 +3060,7 @@
         "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
         "package_name": "qs",
         "vulnerable_range": ">=6.11.1 <=6.15.1",
-        "patched_version": "15.19.0",
+        "patched_version": "15.20.0",
         "is_direct": false
       },
       {
@@ -3386,7 +3396,7 @@
         "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
         "package_name": "qs",
         "vulnerable_range": ">=6.11.1 <=6.15.1",
-        "patched_version": "15.19.0",
+        "patched_version": "15.20.0",
         "is_direct": false
       },
       {
@@ -3438,7 +3448,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -3722,7 +3732,7 @@
         "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
         "package_name": "qs",
         "vulnerable_range": ">=6.11.1 <=6.15.1",
-        "patched_version": "15.19.0",
+        "patched_version": "15.20.0",
         "is_direct": false
       },
       {
@@ -4058,7 +4068,7 @@
         "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
         "package_name": "qs",
         "vulnerable_range": ">=6.11.1 <=6.15.1",
-        "patched_version": "15.19.0",
+        "patched_version": "15.20.0",
         "is_direct": false
       },
       {
@@ -4394,7 +4404,7 @@
         "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
         "package_name": "qs",
         "vulnerable_range": ">=6.11.1 <=6.15.1",
-        "patched_version": "15.19.0",
+        "patched_version": "15.20.0",
         "is_direct": false
       },
       {
@@ -4446,7 +4456,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
