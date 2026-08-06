@@ -670,16 +670,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-35p6-xmwp-9g52",
-        "aliases": [],
-        "severity": "high",
-        "title": "undici vulnerable to HTTP response queue poisoning via keep-alive socket reuse",
-        "package_name": "undici",
-        "vulnerable_range": "<6.27.0",
-        "patched_version": "7.13.0",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-g8m3-5g58-fq7m",
         "aliases": [],
         "severity": "high",
@@ -720,13 +710,23 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-35p6-xmwp-9g52",
+        "aliases": [],
+        "severity": "high",
+        "title": "undici vulnerable to HTTP response queue poisoning via keep-alive socket reuse",
+        "package_name": "undici",
+        "vulnerable_range": "<6.27.0",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-w5hq-g745-h8pq",
         "aliases": [],
         "severity": "moderate",
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -1126,16 +1126,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-35p6-xmwp-9g52",
-        "aliases": [],
-        "severity": "high",
-        "title": "undici vulnerable to HTTP response queue poisoning via keep-alive socket reuse",
-        "package_name": "undici",
-        "vulnerable_range": "<6.27.0",
-        "patched_version": "7.13.0",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-g8m3-5g58-fq7m",
         "aliases": [],
         "severity": "high",
@@ -1176,13 +1166,23 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-35p6-xmwp-9g52",
+        "aliases": [],
+        "severity": "high",
+        "title": "undici vulnerable to HTTP response queue poisoning via keep-alive socket reuse",
+        "package_name": "undici",
+        "vulnerable_range": "<6.27.0",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-w5hq-g745-h8pq",
         "aliases": [],
         "severity": "moderate",
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -2174,16 +2174,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-35p6-xmwp-9g52",
-        "aliases": [],
-        "severity": "high",
-        "title": "undici vulnerable to HTTP response queue poisoning via keep-alive socket reuse",
-        "package_name": "undici",
-        "vulnerable_range": "<6.27.0",
-        "patched_version": "7.13.0",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-g8m3-5g58-fq7m",
         "aliases": [],
         "severity": "high",
@@ -2220,6 +2210,16 @@
         "title": "undici vulnerable to cookie attribute injection via unsanitized domain and unparsed setCookie fields",
         "package_name": "undici",
         "vulnerable_range": "<6.28.0",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-35p6-xmwp-9g52",
+        "aliases": [],
+        "severity": "high",
+        "title": "undici vulnerable to HTTP response queue poisoning via keep-alive socket reuse",
+        "package_name": "undici",
+        "vulnerable_range": "<6.27.0",
         "patched_version": "7.13.0",
         "is_direct": false
       },
@@ -2720,16 +2720,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-35p6-xmwp-9g52",
-        "aliases": [],
-        "severity": "high",
-        "title": "undici vulnerable to HTTP response queue poisoning via keep-alive socket reuse",
-        "package_name": "undici",
-        "vulnerable_range": "<6.27.0",
-        "patched_version": "7.13.0",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-g8m3-5g58-fq7m",
         "aliases": [],
         "severity": "high",
@@ -2770,13 +2760,23 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-35p6-xmwp-9g52",
+        "aliases": [],
+        "severity": "high",
+        "title": "undici vulnerable to HTTP response queue poisoning via keep-alive socket reuse",
+        "package_name": "undici",
+        "vulnerable_range": "<6.27.0",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-w5hq-g745-h8pq",
         "aliases": [],
         "severity": "moderate",
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -3112,7 +3112,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -3448,7 +3448,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -3784,7 +3784,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -4120,7 +4120,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
