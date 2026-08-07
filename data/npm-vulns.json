@@ -52,6 +52,18 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-5p4m-2wfm-xmqj",
+        "aliases": [
+          "CVE-2026-59870"
+        ],
+        "severity": "high",
+        "title": "JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) \u2014 CVE-2026-59870 fix not backported",
+        "package_name": "js-yaml",
+        "vulnerable_range": ">=4.0.0 <4.3.1",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-22p9-wv53-3rq4",
         "aliases": [],
         "severity": "high",
@@ -270,7 +282,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -388,6 +400,18 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-5p4m-2wfm-xmqj",
+        "aliases": [
+          "CVE-2026-59870"
+        ],
+        "severity": "high",
+        "title": "JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) \u2014 CVE-2026-59870 fix not backported",
+        "package_name": "js-yaml",
+        "vulnerable_range": ">=4.0.0 <4.3.1",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-22p9-wv53-3rq4",
         "aliases": [],
         "severity": "high",
@@ -726,7 +750,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -844,6 +868,18 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-5p4m-2wfm-xmqj",
+        "aliases": [
+          "CVE-2026-59870"
+        ],
+        "severity": "high",
+        "title": "JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) \u2014 CVE-2026-59870 fix not backported",
+        "package_name": "js-yaml",
+        "vulnerable_range": ">=4.0.0 <4.3.1",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-22p9-wv53-3rq4",
         "aliases": [],
         "severity": "high",
@@ -1182,7 +1218,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -1578,6 +1614,18 @@
         "title": "js-yaml: YAML merge-key chains can force quadratic CPU consumption",
         "package_name": "js-yaml",
         "vulnerable_range": ">=4.0.0 <4.3.0",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-5p4m-2wfm-xmqj",
+        "aliases": [
+          "CVE-2026-59870"
+        ],
+        "severity": "high",
+        "title": "JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) \u2014 CVE-2026-59870 fix not backported",
+        "package_name": "js-yaml",
+        "vulnerable_range": ">=3.0.0 <3.15.1",
         "patched_version": "9.4.0",
         "is_direct": false
       },
@@ -2230,7 +2278,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -2434,6 +2482,18 @@
         "title": "js-yaml: YAML merge-key chains can force quadratic CPU consumption",
         "package_name": "js-yaml",
         "vulnerable_range": ">=4.0.0 <4.3.0",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-5p4m-2wfm-xmqj",
+        "aliases": [
+          "CVE-2026-59870"
+        ],
+        "severity": "high",
+        "title": "JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) \u2014 CVE-2026-59870 fix not backported",
+        "package_name": "js-yaml",
+        "vulnerable_range": ">=4.0.0 <4.3.1",
         "patched_version": "9.4.0",
         "is_direct": false
       },
@@ -2776,7 +2836,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -2890,6 +2950,18 @@
         "title": "js-yaml: YAML merge-key chains can force quadratic CPU consumption",
         "package_name": "js-yaml",
         "vulnerable_range": ">=4.0.0 <4.3.0",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-5p4m-2wfm-xmqj",
+        "aliases": [
+          "CVE-2026-59870"
+        ],
+        "severity": "high",
+        "title": "JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) \u2014 CVE-2026-59870 fix not backported",
+        "package_name": "js-yaml",
+        "vulnerable_range": ">=4.0.0 <4.3.1",
         "patched_version": "9.4.0",
         "is_direct": false
       },
@@ -3230,6 +3302,18 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-5p4m-2wfm-xmqj",
+        "aliases": [
+          "CVE-2026-59870"
+        ],
+        "severity": "high",
+        "title": "JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) \u2014 CVE-2026-59870 fix not backported",
+        "package_name": "js-yaml",
+        "vulnerable_range": ">=4.0.0 <4.3.1",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-22p9-wv53-3rq4",
         "aliases": [],
         "severity": "high",
@@ -3448,7 +3532,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -3562,6 +3646,18 @@
         "title": "js-yaml: YAML merge-key chains can force quadratic CPU consumption",
         "package_name": "js-yaml",
         "vulnerable_range": ">=4.0.0 <4.3.0",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-5p4m-2wfm-xmqj",
+        "aliases": [
+          "CVE-2026-59870"
+        ],
+        "severity": "high",
+        "title": "JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) \u2014 CVE-2026-59870 fix not backported",
+        "package_name": "js-yaml",
+        "vulnerable_range": ">=4.0.0 <4.3.1",
         "patched_version": "9.4.0",
         "is_direct": false
       },
@@ -3902,6 +3998,18 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-5p4m-2wfm-xmqj",
+        "aliases": [
+          "CVE-2026-59870"
+        ],
+        "severity": "high",
+        "title": "JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) \u2014 CVE-2026-59870 fix not backported",
+        "package_name": "js-yaml",
+        "vulnerable_range": ">=4.0.0 <4.3.1",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-22p9-wv53-3rq4",
         "aliases": [],
         "severity": "high",
@@ -4238,6 +4346,18 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-5p4m-2wfm-xmqj",
+        "aliases": [
+          "CVE-2026-59870"
+        ],
+        "severity": "high",
+        "title": "JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) \u2014 CVE-2026-59870 fix not backported",
+        "package_name": "js-yaml",
+        "vulnerable_range": ">=4.0.0 <4.3.1",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-22p9-wv53-3rq4",
         "aliases": [],
         "severity": "high",
@@ -4456,7 +4576,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
