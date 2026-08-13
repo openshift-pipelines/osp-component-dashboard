@@ -2,6 +2,16 @@
   "1.15": {
     "openshift-pipelines/console-plugin": [
       {
+        "vuln_id": "GHSA-jmr9-qjv8-65gv",
+        "aliases": [],
+        "severity": "high",
+        "title": "extract-zip unvalidated symlink path traversal",
+        "package_name": "extract-zip",
+        "vulnerable_range": "<=2.0.1",
+        "patched_version": "15.20.1",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-v56q-mh7h-f735",
         "aliases": [],
         "severity": "high",
@@ -262,7 +272,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -327,6 +337,16 @@
         "package_name": "diff",
         "vulnerable_range": ">=6.0.0 <8.0.3",
         "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-jmr9-qjv8-65gv",
+        "aliases": [],
+        "severity": "high",
+        "title": "extract-zip unvalidated symlink path traversal",
+        "package_name": "extract-zip",
+        "vulnerable_range": "<=2.0.1",
+        "patched_version": "15.20.1",
         "is_direct": false
       },
       {
@@ -798,6 +818,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-jmr9-qjv8-65gv",
+        "aliases": [],
+        "severity": "high",
+        "title": "extract-zip unvalidated symlink path traversal",
+        "package_name": "extract-zip",
+        "vulnerable_range": "<=2.0.1",
+        "patched_version": "15.20.1",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-v56q-mh7h-f735",
         "aliases": [],
         "severity": "high",
@@ -1198,7 +1228,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -1395,6 +1425,16 @@
         "package_name": "diff",
         "vulnerable_range": ">=4.0.0 <4.0.4",
         "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-jmr9-qjv8-65gv",
+        "aliases": [],
+        "severity": "high",
+        "title": "extract-zip unvalidated symlink path traversal",
+        "package_name": "extract-zip",
+        "vulnerable_range": "<=2.0.1",
+        "patched_version": "15.20.1",
         "is_direct": false
       },
       {
@@ -2278,7 +2318,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -2433,6 +2473,16 @@
         "package_name": "diff",
         "vulnerable_range": ">=6.0.0 <8.0.3",
         "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-jmr9-qjv8-65gv",
+        "aliases": [],
+        "severity": "high",
+        "title": "extract-zip unvalidated symlink path traversal",
+        "package_name": "extract-zip",
+        "vulnerable_range": "<=2.0.1",
+        "patched_version": "15.20.1",
         "is_direct": false
       },
       {
@@ -2836,7 +2886,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -2901,6 +2951,16 @@
         "package_name": "diff",
         "vulnerable_range": ">=6.0.0 <8.0.3",
         "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-jmr9-qjv8-65gv",
+        "aliases": [],
+        "severity": "high",
+        "title": "extract-zip unvalidated symlink path traversal",
+        "package_name": "extract-zip",
+        "vulnerable_range": "<=2.0.1",
+        "patched_version": "15.20.1",
         "is_direct": false
       },
       {
@@ -3184,7 +3244,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -3249,6 +3309,16 @@
         "package_name": "diff",
         "vulnerable_range": ">=6.0.0 <8.0.3",
         "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-jmr9-qjv8-65gv",
+        "aliases": [],
+        "severity": "high",
+        "title": "extract-zip unvalidated symlink path traversal",
+        "package_name": "extract-zip",
+        "vulnerable_range": "<=2.0.1",
+        "patched_version": "15.20.1",
         "is_direct": false
       },
       {
@@ -3580,6 +3650,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-jmr9-qjv8-65gv",
+        "aliases": [],
+        "severity": "high",
+        "title": "extract-zip unvalidated symlink path traversal",
+        "package_name": "extract-zip",
+        "vulnerable_range": "<=2.0.1",
+        "patched_version": "15.20.1",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-v56q-mh7h-f735",
         "aliases": [],
         "severity": "high",
@@ -3840,7 +3920,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -3908,6 +3988,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-jmr9-qjv8-65gv",
+        "aliases": [],
+        "severity": "high",
+        "title": "extract-zip unvalidated symlink path traversal",
+        "package_name": "extract-zip",
+        "vulnerable_range": "<=2.0.1",
+        "patched_version": "15.20.1",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-v56q-mh7h-f735",
         "aliases": [],
         "severity": "high",
@@ -4168,7 +4258,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -4236,6 +4326,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-jmr9-qjv8-65gv",
+        "aliases": [],
+        "severity": "high",
+        "title": "extract-zip unvalidated symlink path traversal",
+        "package_name": "extract-zip",
+        "vulnerable_range": "<=2.0.1",
+        "patched_version": "15.20.1",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-v56q-mh7h-f735",
         "aliases": [],
         "severity": "high",
@@ -4496,7 +4596,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
