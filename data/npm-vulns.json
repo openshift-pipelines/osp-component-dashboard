@@ -272,7 +272,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -1228,7 +1228,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -2476,6 +2476,16 @@
   "1.19": {
     "openshift-pipelines/console-plugin": [
       {
+        "vuln_id": "GHSA-vcc3-ghjq-m6fr",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "decode-uri-component: Denial of service via exponential decoding of malformed percent-encoded input",
+        "package_name": "decode-uri-component",
+        "vulnerable_range": "<=0.4.2",
+        "patched_version": "4.5.1",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
         "severity": "low",
@@ -2896,7 +2906,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -2953,6 +2963,16 @@
   },
   "1.20": {
     "openshift-pipelines/console-plugin": [
+      {
+        "vuln_id": "GHSA-vcc3-ghjq-m6fr",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "decode-uri-component: Denial of service via exponential decoding of malformed percent-encoded input",
+        "package_name": "decode-uri-component",
+        "vulnerable_range": "<=0.4.2",
+        "patched_version": "4.5.1",
+        "is_direct": false
+      },
       {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
@@ -3254,7 +3274,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -3930,7 +3950,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -4268,7 +4288,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
