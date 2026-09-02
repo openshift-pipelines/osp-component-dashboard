@@ -1228,7 +1228,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -1414,6 +1414,26 @@
         "title": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation",
         "package_name": "brace-expansion",
         "vulnerable_range": ">=2.0.0 <2.1.4",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-c83g-rgw3-j3cx",
+        "aliases": [],
+        "severity": "high",
+        "title": "Browserslist: Unbounded memory growth (no cache eviction) via distinct query results, leading to eventual OOM",
+        "package_name": "browserslist",
+        "vulnerable_range": "<=4.28.6",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-73wf-gq98-2v4g",
+        "aliases": [],
+        "severity": "high",
+        "title": "Browserslist: Uncaught crash / prototype write via untrusted browserslist-stats.json custom stats (normalizeStats)",
+        "package_name": "browserslist",
+        "vulnerable_range": "<=4.28.6",
         "patched_version": null,
         "is_direct": false
       },
@@ -1800,6 +1820,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-xwg4-73v4-xw9w",
+        "aliases": [],
+        "severity": "high",
+        "title": "nanoid: Integer Overflow or Wraparound",
+        "package_name": "nanoid",
+        "vulnerable_range": "<3.3.12",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-554w-wpv2-vw27",
         "aliases": [],
         "severity": "high",
@@ -1946,6 +1976,16 @@
         "title": "PostCSS: Path Traversal in Previous Source Map Auto-Loading (sourceMappingURL) leads to Arbitrary .map File Disclosure",
         "package_name": "postcss",
         "vulnerable_range": "<=8.5.17",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-w9m9-85wc-3x92",
+        "aliases": [],
+        "severity": "low",
+        "title": "postcss-selector-parser allows denial of service through uncontrolled AST recursion",
+        "package_name": "postcss-selector-parser",
+        "vulnerable_range": ">=7.1.0 <7.1.3",
         "patched_version": null,
         "is_direct": false
       },
@@ -2328,7 +2368,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -2906,7 +2946,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -3612,7 +3652,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -3950,7 +3990,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -4626,7 +4666,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
