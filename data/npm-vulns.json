@@ -12,6 +12,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-7pqw-9j4j-h8q3",
+        "aliases": [],
+        "severity": "high",
+        "title": "extract-zip allows arbitrary file writes through symlink archive entries",
+        "package_name": "extract-zip",
+        "vulnerable_range": "<=2.0.1",
+        "patched_version": "15.21.1",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-v56q-mh7h-f735",
         "aliases": [],
         "severity": "high",
@@ -60,6 +70,16 @@
         "title": "JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) \u2014 CVE-2026-59870 fix not backported",
         "package_name": "js-yaml",
         "vulnerable_range": ">=4.0.0 <4.3.1",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-2883-xcg3-v3hh",
+        "aliases": [],
+        "severity": "high",
+        "title": "js-yaml: maxTotalMergeKeys does not limit CPU use for empty merge sources",
+        "package_name": "js-yaml",
+        "vulnerable_range": ">=4.0.0 <4.3.2",
         "patched_version": "9.4.0",
         "is_direct": false
       },
@@ -282,7 +302,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -360,6 +380,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-7pqw-9j4j-h8q3",
+        "aliases": [],
+        "severity": "high",
+        "title": "extract-zip allows arbitrary file writes through symlink archive entries",
+        "package_name": "extract-zip",
+        "vulnerable_range": "<=2.0.1",
+        "patched_version": "15.21.1",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-v56q-mh7h-f735",
         "aliases": [],
         "severity": "high",
@@ -408,6 +438,16 @@
         "title": "JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) \u2014 CVE-2026-59870 fix not backported",
         "package_name": "js-yaml",
         "vulnerable_range": ">=4.0.0 <4.3.1",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-2883-xcg3-v3hh",
+        "aliases": [],
+        "severity": "high",
+        "title": "js-yaml: maxTotalMergeKeys does not limit CPU use for empty merge sources",
+        "package_name": "js-yaml",
+        "vulnerable_range": ">=4.0.0 <4.3.2",
         "patched_version": "9.4.0",
         "is_direct": false
       },
@@ -848,6 +888,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-7pqw-9j4j-h8q3",
+        "aliases": [],
+        "severity": "high",
+        "title": "extract-zip allows arbitrary file writes through symlink archive entries",
+        "package_name": "extract-zip",
+        "vulnerable_range": "<=2.0.1",
+        "patched_version": "15.21.1",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-v56q-mh7h-f735",
         "aliases": [],
         "severity": "high",
@@ -896,6 +946,16 @@
         "title": "JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) \u2014 CVE-2026-59870 fix not backported",
         "package_name": "js-yaml",
         "vulnerable_range": ">=4.0.0 <4.3.1",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-2883-xcg3-v3hh",
+        "aliases": [],
+        "severity": "high",
+        "title": "js-yaml: maxTotalMergeKeys does not limit CPU use for empty merge sources",
+        "package_name": "js-yaml",
+        "vulnerable_range": ">=4.0.0 <4.3.2",
         "patched_version": "9.4.0",
         "is_direct": false
       },
@@ -1258,7 +1318,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -1468,6 +1528,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-2wm5-q62r-hmrv",
+        "aliases": [],
+        "severity": "moderate",
+        "title": "Colord: Slow rejection of oversized malformed color strings",
+        "package_name": "colord",
+        "vulnerable_range": "<2.9.4",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
         "severity": "low",
@@ -1482,6 +1552,16 @@
         "aliases": [],
         "severity": "high",
         "title": "extract-zip unvalidated symlink path traversal",
+        "package_name": "extract-zip",
+        "vulnerable_range": "<=2.0.1",
+        "patched_version": "15.21.1",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-7pqw-9j4j-h8q3",
+        "aliases": [],
+        "severity": "high",
+        "title": "extract-zip allows arbitrary file writes through symlink archive entries",
         "package_name": "extract-zip",
         "vulnerable_range": "<=2.0.1",
         "patched_version": "15.21.1",
@@ -1726,6 +1806,16 @@
         "title": "JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) \u2014 CVE-2026-59870 fix not backported",
         "package_name": "js-yaml",
         "vulnerable_range": ">=3.0.0 <3.15.1",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-2883-xcg3-v3hh",
+        "aliases": [],
+        "severity": "high",
+        "title": "js-yaml: maxTotalMergeKeys does not limit CPU use for empty merge sources",
+        "package_name": "js-yaml",
+        "vulnerable_range": ">=3.0.0 <3.15.2",
         "patched_version": "9.4.0",
         "is_direct": false
       },
@@ -2606,6 +2696,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-7pqw-9j4j-h8q3",
+        "aliases": [],
+        "severity": "high",
+        "title": "extract-zip allows arbitrary file writes through symlink archive entries",
+        "package_name": "extract-zip",
+        "vulnerable_range": "<=2.0.1",
+        "patched_version": "15.21.1",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-v56q-mh7h-f735",
         "aliases": [],
         "severity": "high",
@@ -2654,6 +2754,16 @@
         "title": "JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) \u2014 CVE-2026-59870 fix not backported",
         "package_name": "js-yaml",
         "vulnerable_range": ">=4.0.0 <4.3.1",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-2883-xcg3-v3hh",
+        "aliases": [],
+        "severity": "high",
+        "title": "js-yaml: maxTotalMergeKeys does not limit CPU use for empty merge sources",
+        "package_name": "js-yaml",
+        "vulnerable_range": ">=4.0.0 <4.3.2",
         "patched_version": "9.4.0",
         "is_direct": false
       },
@@ -3016,7 +3126,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -3104,6 +3214,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-7pqw-9j4j-h8q3",
+        "aliases": [],
+        "severity": "high",
+        "title": "extract-zip allows arbitrary file writes through symlink archive entries",
+        "package_name": "extract-zip",
+        "vulnerable_range": "<=2.0.1",
+        "patched_version": "15.21.1",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-v56q-mh7h-f735",
         "aliases": [],
         "severity": "high",
@@ -3152,6 +3272,16 @@
         "title": "JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) \u2014 CVE-2026-59870 fix not backported",
         "package_name": "js-yaml",
         "vulnerable_range": ">=4.0.0 <4.3.1",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-2883-xcg3-v3hh",
+        "aliases": [],
+        "severity": "high",
+        "title": "js-yaml: maxTotalMergeKeys does not limit CPU use for empty merge sources",
+        "package_name": "js-yaml",
+        "vulnerable_range": ">=4.0.0 <4.3.2",
         "patched_version": "9.4.0",
         "is_direct": false
       },
@@ -3472,6 +3602,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-7pqw-9j4j-h8q3",
+        "aliases": [],
+        "severity": "high",
+        "title": "extract-zip allows arbitrary file writes through symlink archive entries",
+        "package_name": "extract-zip",
+        "vulnerable_range": "<=2.0.1",
+        "patched_version": "15.21.1",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-v56q-mh7h-f735",
         "aliases": [],
         "severity": "high",
@@ -3520,6 +3660,16 @@
         "title": "JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) \u2014 CVE-2026-59870 fix not backported",
         "package_name": "js-yaml",
         "vulnerable_range": ">=4.0.0 <4.3.1",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-2883-xcg3-v3hh",
+        "aliases": [],
+        "severity": "high",
+        "title": "js-yaml: maxTotalMergeKeys does not limit CPU use for empty merge sources",
+        "package_name": "js-yaml",
+        "vulnerable_range": ">=4.0.0 <4.3.2",
         "patched_version": "9.4.0",
         "is_direct": false
       },
@@ -3742,7 +3892,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -3820,6 +3970,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-7pqw-9j4j-h8q3",
+        "aliases": [],
+        "severity": "high",
+        "title": "extract-zip allows arbitrary file writes through symlink archive entries",
+        "package_name": "extract-zip",
+        "vulnerable_range": "<=2.0.1",
+        "patched_version": "15.21.1",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-v56q-mh7h-f735",
         "aliases": [],
         "severity": "high",
@@ -3868,6 +4028,16 @@
         "title": "JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) \u2014 CVE-2026-59870 fix not backported",
         "package_name": "js-yaml",
         "vulnerable_range": ">=4.0.0 <4.3.1",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-2883-xcg3-v3hh",
+        "aliases": [],
+        "severity": "high",
+        "title": "js-yaml: maxTotalMergeKeys does not limit CPU use for empty merge sources",
+        "package_name": "js-yaml",
+        "vulnerable_range": ">=4.0.0 <4.3.2",
         "patched_version": "9.4.0",
         "is_direct": false
       },
@@ -4168,6 +4338,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-7pqw-9j4j-h8q3",
+        "aliases": [],
+        "severity": "high",
+        "title": "extract-zip allows arbitrary file writes through symlink archive entries",
+        "package_name": "extract-zip",
+        "vulnerable_range": "<=2.0.1",
+        "patched_version": "15.21.1",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-v56q-mh7h-f735",
         "aliases": [],
         "severity": "high",
@@ -4216,6 +4396,16 @@
         "title": "JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) \u2014 CVE-2026-59870 fix not backported",
         "package_name": "js-yaml",
         "vulnerable_range": ">=4.0.0 <4.3.1",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-2883-xcg3-v3hh",
+        "aliases": [],
+        "severity": "high",
+        "title": "js-yaml: maxTotalMergeKeys does not limit CPU use for empty merge sources",
+        "package_name": "js-yaml",
+        "vulnerable_range": ">=4.0.0 <4.3.2",
         "patched_version": "9.4.0",
         "is_direct": false
       },
@@ -4516,6 +4706,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-7pqw-9j4j-h8q3",
+        "aliases": [],
+        "severity": "high",
+        "title": "extract-zip allows arbitrary file writes through symlink archive entries",
+        "package_name": "extract-zip",
+        "vulnerable_range": "<=2.0.1",
+        "patched_version": "15.21.1",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-v56q-mh7h-f735",
         "aliases": [],
         "severity": "high",
@@ -4564,6 +4764,16 @@
         "title": "JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) \u2014 CVE-2026-59870 fix not backported",
         "package_name": "js-yaml",
         "vulnerable_range": ">=4.0.0 <4.3.1",
+        "patched_version": "9.4.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-2883-xcg3-v3hh",
+        "aliases": [],
+        "severity": "high",
+        "title": "js-yaml: maxTotalMergeKeys does not limit CPU use for empty merge sources",
+        "package_name": "js-yaml",
+        "vulnerable_range": ">=4.0.0 <4.3.2",
         "patched_version": "9.4.0",
         "is_direct": false
       },
@@ -4786,7 +4996,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
