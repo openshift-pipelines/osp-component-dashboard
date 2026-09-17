@@ -22,16 +22,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-v56q-mh7h-f735",
-        "aliases": [],
-        "severity": "high",
-        "title": "Immutable.js `List` 32-bit trie overflow \u2192 unrecoverable DoS",
-        "package_name": "immutable",
-        "vulnerable_range": "<4.3.9",
-        "patched_version": "0.0.12",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
         "severity": "high",
@@ -262,7 +252,7 @@
         "title": "React Router: Open redirect via backslash in <Link> and useNavigate (CVE-2025-68470 bypass)",
         "package_name": "react-router",
         "vulnerable_range": ">=6.0.0 <7.18.0",
-        "patched_version": "0.0.12",
+        "patched_version": "4.23.0-prerelease.5",
         "is_direct": false
       },
       {
@@ -272,7 +262,7 @@
         "title": "React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration",
         "package_name": "react-router",
         "vulnerable_range": ">=6.4.0 <7.18.0",
-        "patched_version": "0.0.12",
+        "patched_version": "4.23.0-prerelease.5",
         "is_direct": false
       },
       {
@@ -302,7 +292,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -387,16 +377,6 @@
         "package_name": "extract-zip",
         "vulnerable_range": "<=2.0.1",
         "patched_version": "15.21.1",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-v56q-mh7h-f735",
-        "aliases": [],
-        "severity": "high",
-        "title": "Immutable.js `List` 32-bit trie overflow \u2192 unrecoverable DoS",
-        "package_name": "immutable",
-        "vulnerable_range": "<4.3.9",
-        "patched_version": "0.0.12",
         "is_direct": false
       },
       {
@@ -650,7 +630,7 @@
         "title": "React Router: Open redirect via backslash in <Link> and useNavigate (CVE-2025-68470 bypass)",
         "package_name": "react-router",
         "vulnerable_range": ">=6.0.0 <7.18.0",
-        "patched_version": "0.0.12",
+        "patched_version": "4.23.0-prerelease.5",
         "is_direct": false
       },
       {
@@ -660,7 +640,7 @@
         "title": "React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration",
         "package_name": "react-router",
         "vulnerable_range": ">=6.4.0 <7.18.0",
-        "patched_version": "0.0.12",
+        "patched_version": "4.23.0-prerelease.5",
         "is_direct": false
       },
       {
@@ -898,16 +878,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-v56q-mh7h-f735",
-        "aliases": [],
-        "severity": "high",
-        "title": "Immutable.js `List` 32-bit trie overflow \u2192 unrecoverable DoS",
-        "package_name": "immutable",
-        "vulnerable_range": "<4.3.9",
-        "patched_version": "0.0.12",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
         "severity": "high",
@@ -1158,7 +1128,7 @@
         "title": "React Router: Open redirect via backslash in <Link> and useNavigate (CVE-2025-68470 bypass)",
         "package_name": "react-router",
         "vulnerable_range": ">=6.0.0 <7.18.0",
-        "patched_version": "0.0.12",
+        "patched_version": "4.23.0-prerelease.5",
         "is_direct": false
       },
       {
@@ -1168,7 +1138,7 @@
         "title": "React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration",
         "package_name": "react-router",
         "vulnerable_range": ">=6.4.0 <7.18.0",
-        "patched_version": "0.0.12",
+        "patched_version": "4.23.0-prerelease.5",
         "is_direct": false
       },
       {
@@ -1748,22 +1718,22 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-v56q-mh7h-f735",
-        "aliases": [],
-        "severity": "high",
-        "title": "Immutable.js `List` 32-bit trie overflow \u2192 unrecoverable DoS",
-        "package_name": "immutable",
-        "vulnerable_range": ">=5.0.0-beta.1 <5.1.8",
-        "patched_version": null,
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-xvcm-6775-5m9r",
         "aliases": [],
         "severity": "high",
         "title": "Immutable: Hash-collision algorithmic complexity denial of service in Immutable.Map/Set",
         "package_name": "immutable",
         "vulnerable_range": ">=5.0.0-beta.1 <5.1.8",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-v56q-mh7h-f735",
+        "aliases": [],
+        "severity": "high",
+        "title": "Immutable.js `List` 32-bit trie overflow \u2192 unrecoverable DoS",
+        "package_name": "immutable",
+        "vulnerable_range": "<3.8.4",
         "patched_version": null,
         "is_direct": false
       },
@@ -2706,16 +2676,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-v56q-mh7h-f735",
-        "aliases": [],
-        "severity": "high",
-        "title": "Immutable.js `List` 32-bit trie overflow \u2192 unrecoverable DoS",
-        "package_name": "immutable",
-        "vulnerable_range": "<4.3.9",
-        "patched_version": "0.0.12",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
         "severity": "high",
@@ -2966,7 +2926,7 @@
         "title": "React Router: Open redirect via backslash in <Link> and useNavigate (CVE-2025-68470 bypass)",
         "package_name": "react-router",
         "vulnerable_range": ">=6.0.0 <7.18.0",
-        "patched_version": "0.0.12",
+        "patched_version": "4.23.0-prerelease.5",
         "is_direct": false
       },
       {
@@ -2976,7 +2936,7 @@
         "title": "React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration",
         "package_name": "react-router",
         "vulnerable_range": ">=6.4.0 <7.18.0",
-        "patched_version": "0.0.12",
+        "patched_version": "4.23.0-prerelease.5",
         "is_direct": false
       },
       {
@@ -3224,16 +3184,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-v56q-mh7h-f735",
-        "aliases": [],
-        "severity": "high",
-        "title": "Immutable.js `List` 32-bit trie overflow \u2192 unrecoverable DoS",
-        "package_name": "immutable",
-        "vulnerable_range": "<4.3.9",
-        "patched_version": "0.0.12",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
         "severity": "high",
@@ -3484,7 +3434,7 @@
         "title": "React Router: Open redirect via backslash in <Link> and useNavigate (CVE-2025-68470 bypass)",
         "package_name": "react-router",
         "vulnerable_range": ">=6.0.0 <7.18.0",
-        "patched_version": "0.0.12",
+        "patched_version": "4.23.0-prerelease.5",
         "is_direct": false
       },
       {
@@ -3494,7 +3444,7 @@
         "title": "React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration",
         "package_name": "react-router",
         "vulnerable_range": ">=6.4.0 <7.18.0",
-        "patched_version": "0.0.12",
+        "patched_version": "4.23.0-prerelease.5",
         "is_direct": false
       },
       {
@@ -3612,16 +3562,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-v56q-mh7h-f735",
-        "aliases": [],
-        "severity": "high",
-        "title": "Immutable.js `List` 32-bit trie overflow \u2192 unrecoverable DoS",
-        "package_name": "immutable",
-        "vulnerable_range": "<4.3.9",
-        "patched_version": "0.0.12",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
         "severity": "high",
@@ -3852,7 +3792,7 @@
         "title": "React Router: Open redirect via backslash in <Link> and useNavigate (CVE-2025-68470 bypass)",
         "package_name": "react-router",
         "vulnerable_range": ">=6.0.0 <7.18.0",
-        "patched_version": "0.0.12",
+        "patched_version": "4.23.0-prerelease.5",
         "is_direct": false
       },
       {
@@ -3862,7 +3802,7 @@
         "title": "React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration",
         "package_name": "react-router",
         "vulnerable_range": ">=6.4.0 <7.18.0",
-        "patched_version": "0.0.12",
+        "patched_version": "4.23.0-prerelease.5",
         "is_direct": false
       },
       {
@@ -3980,16 +3920,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-v56q-mh7h-f735",
-        "aliases": [],
-        "severity": "high",
-        "title": "Immutable.js `List` 32-bit trie overflow \u2192 unrecoverable DoS",
-        "package_name": "immutable",
-        "vulnerable_range": "<4.3.9",
-        "patched_version": "0.0.12",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
         "severity": "high",
@@ -4220,7 +4150,7 @@
         "title": "React Router: Open redirect via backslash in <Link> and useNavigate (CVE-2025-68470 bypass)",
         "package_name": "react-router",
         "vulnerable_range": ">=6.0.0 <7.18.0",
-        "patched_version": "0.0.12",
+        "patched_version": "4.23.0-prerelease.5",
         "is_direct": false
       },
       {
@@ -4230,7 +4160,7 @@
         "title": "React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration",
         "package_name": "react-router",
         "vulnerable_range": ">=6.4.0 <7.18.0",
-        "patched_version": "0.0.12",
+        "patched_version": "4.23.0-prerelease.5",
         "is_direct": false
       },
       {
@@ -4260,7 +4190,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -4348,16 +4278,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-v56q-mh7h-f735",
-        "aliases": [],
-        "severity": "high",
-        "title": "Immutable.js `List` 32-bit trie overflow \u2192 unrecoverable DoS",
-        "package_name": "immutable",
-        "vulnerable_range": "<4.3.9",
-        "patched_version": "0.0.12",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
         "severity": "high",
@@ -4588,7 +4508,7 @@
         "title": "React Router: Open redirect via backslash in <Link> and useNavigate (CVE-2025-68470 bypass)",
         "package_name": "react-router",
         "vulnerable_range": ">=6.0.0 <7.18.0",
-        "patched_version": "0.0.12",
+        "patched_version": "4.23.0-prerelease.5",
         "is_direct": false
       },
       {
@@ -4598,7 +4518,7 @@
         "title": "React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration",
         "package_name": "react-router",
         "vulnerable_range": ">=6.4.0 <7.18.0",
-        "patched_version": "0.0.12",
+        "patched_version": "4.23.0-prerelease.5",
         "is_direct": false
       },
       {
@@ -4628,7 +4548,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -4716,16 +4636,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-v56q-mh7h-f735",
-        "aliases": [],
-        "severity": "high",
-        "title": "Immutable.js `List` 32-bit trie overflow \u2192 unrecoverable DoS",
-        "package_name": "immutable",
-        "vulnerable_range": "<4.3.9",
-        "patched_version": "0.0.12",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
         "severity": "high",
@@ -4956,7 +4866,7 @@
         "title": "React Router: Open redirect via backslash in <Link> and useNavigate (CVE-2025-68470 bypass)",
         "package_name": "react-router",
         "vulnerable_range": ">=6.0.0 <7.18.0",
-        "patched_version": "0.0.12",
+        "patched_version": "4.23.0-prerelease.5",
         "is_direct": false
       },
       {
@@ -4966,7 +4876,7 @@
         "title": "React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration",
         "package_name": "react-router",
         "vulnerable_range": ">=6.4.0 <7.18.0",
-        "patched_version": "0.0.12",
+        "patched_version": "4.23.0-prerelease.5",
         "is_direct": false
       },
       {
@@ -4996,7 +4906,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
