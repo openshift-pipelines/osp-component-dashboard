@@ -2,6 +2,16 @@
   "1.15": {
     "openshift-pipelines/console-plugin": [
       {
+        "vuln_id": "GHSA-vfj7-8cjw-p6xm",
+        "aliases": [],
+        "severity": "high",
+        "title": "braces vulnerable to stack-exhaustion denial of service through deeply nested patterns",
+        "package_name": "braces",
+        "vulnerable_range": "<=3.0.3",
+        "patched_version": "0.1.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-jmr9-qjv8-65gv",
         "aliases": [],
         "severity": "high",
@@ -349,6 +359,26 @@
   },
   "1.16": {
     "openshift-pipelines/console-plugin": [
+      {
+        "vuln_id": "GHSA-x8mw-p69m-v3mx",
+        "aliases": [],
+        "severity": "high",
+        "title": "@fastify/busboy vulnerable to Denial of Service via prototype-named multipart part header",
+        "package_name": "@fastify/busboy",
+        "vulnerable_range": ">=1.0.0 <3.2.1",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-vfj7-8cjw-p6xm",
+        "aliases": [],
+        "severity": "high",
+        "title": "braces vulnerable to stack-exhaustion denial of service through deeply nested patterns",
+        "package_name": "braces",
+        "vulnerable_range": "<=3.0.3",
+        "patched_version": "0.1.0",
+        "is_direct": false
+      },
       {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
@@ -858,6 +888,26 @@
   "1.17": {
     "openshift-pipelines/console-plugin": [
       {
+        "vuln_id": "GHSA-x8mw-p69m-v3mx",
+        "aliases": [],
+        "severity": "high",
+        "title": "@fastify/busboy vulnerable to Denial of Service via prototype-named multipart part header",
+        "package_name": "@fastify/busboy",
+        "vulnerable_range": ">=1.0.0 <3.2.1",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-vfj7-8cjw-p6xm",
+        "aliases": [],
+        "severity": "high",
+        "title": "braces vulnerable to stack-exhaustion denial of service through deeply nested patterns",
+        "package_name": "braces",
+        "vulnerable_range": "<=3.0.3",
+        "patched_version": "0.1.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
         "severity": "low",
@@ -1308,7 +1358,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -1383,6 +1433,16 @@
         "package_name": "@babel/plugin-transform-modules-systemjs",
         "vulnerable_range": ">=7.12.0 <=7.29.3",
         "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-x8mw-p69m-v3mx",
+        "aliases": [],
+        "severity": "high",
+        "title": "@fastify/busboy vulnerable to Denial of Service via prototype-named multipart part header",
+        "package_name": "@fastify/busboy",
+        "vulnerable_range": ">=1.0.0 <3.2.1",
+        "patched_version": "7.13.0",
         "is_direct": false
       },
       {
@@ -1525,6 +1585,16 @@
         "package_name": "brace-expansion",
         "vulnerable_range": "<1.1.19",
         "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-vfj7-8cjw-p6xm",
+        "aliases": [],
+        "severity": "high",
+        "title": "braces vulnerable to stack-exhaustion denial of service through deeply nested patterns",
+        "package_name": "braces",
+        "vulnerable_range": "<=3.0.3",
+        "patched_version": "0.1.0",
         "is_direct": false
       },
       {
@@ -1750,7 +1820,7 @@
       {
         "vuln_id": "GHSA-9gqv-wp59-fq42",
         "aliases": [],
-        "severity": "moderate",
+        "severity": "high",
         "title": "http-proxy-middleware allows fixRequestBody to proceed even if bodyParser has failed",
         "package_name": "http-proxy-middleware",
         "vulnerable_range": ">=1.3.0 <2.0.9",
@@ -1760,7 +1830,7 @@
       {
         "vuln_id": "GHSA-4www-5p9h-95mh",
         "aliases": [],
-        "severity": "moderate",
+        "severity": "high",
         "title": "http-proxy-middleware can call writeBody twice because \"else if\" is not used",
         "package_name": "http-proxy-middleware",
         "vulnerable_range": ">=1.3.0 <2.0.8",
@@ -1770,7 +1840,7 @@
       {
         "vuln_id": "GHSA-64mm-vxmg-q3vj",
         "aliases": [],
-        "severity": "moderate",
+        "severity": "high",
         "title": "http-proxy-middleware `router` host+path substring matching allows Host-header-driven backend routing bypass",
         "package_name": "http-proxy-middleware",
         "vulnerable_range": ">=0.16.0 <2.0.10",
@@ -2654,7 +2724,7 @@
       {
         "vuln_id": "GHSA-79cf-xcqc-c78w",
         "aliases": [],
-        "severity": "moderate",
+        "severity": "high",
         "title": "webpack-dev-server vulnerable to cross-origin source code exposure on non-HTTPS origins",
         "package_name": "webpack-dev-server",
         "vulnerable_range": "<=5.2.3",
@@ -2664,7 +2734,7 @@
       {
         "vuln_id": "GHSA-mx8g-39q3-5c79",
         "aliases": [],
-        "severity": "moderate",
+        "severity": "high",
         "title": "webpack-dev-server vulnerable to HMR WebSocket interception via permissive user proxies",
         "package_name": "webpack-dev-server",
         "vulnerable_range": "<5.2.5",
@@ -2674,7 +2744,7 @@
       {
         "vuln_id": "GHSA-f5vj-f2hx-8m93",
         "aliases": [],
-        "severity": "moderate",
+        "severity": "high",
         "title": "webpack-dev-server vulnerable to cross-site request forgery via internal developer endpoints",
         "package_name": "webpack-dev-server",
         "vulnerable_range": "<=5.2.5",
@@ -2684,7 +2754,7 @@
       {
         "vuln_id": "GHSA-m28w-2pqf-7qgj",
         "aliases": [],
-        "severity": "moderate",
+        "severity": "high",
         "title": "webpack-dev-server vulnerable to denial of service via a malformed Host or Origin header",
         "package_name": "webpack-dev-server",
         "vulnerable_range": "<=5.2.5",
@@ -2745,6 +2815,26 @@
   },
   "1.19": {
     "openshift-pipelines/console-plugin": [
+      {
+        "vuln_id": "GHSA-x8mw-p69m-v3mx",
+        "aliases": [],
+        "severity": "high",
+        "title": "@fastify/busboy vulnerable to Denial of Service via prototype-named multipart part header",
+        "package_name": "@fastify/busboy",
+        "vulnerable_range": ">=1.0.0 <3.2.1",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-vfj7-8cjw-p6xm",
+        "aliases": [],
+        "severity": "high",
+        "title": "braces vulnerable to stack-exhaustion denial of service through deeply nested patterns",
+        "package_name": "braces",
+        "vulnerable_range": "<=3.0.3",
+        "patched_version": "0.1.0",
+        "is_direct": false
+      },
       {
         "vuln_id": "GHSA-vcc3-ghjq-m6fr",
         "aliases": [],
@@ -3264,6 +3354,16 @@
   "1.20": {
     "openshift-pipelines/console-plugin": [
       {
+        "vuln_id": "GHSA-vfj7-8cjw-p6xm",
+        "aliases": [],
+        "severity": "high",
+        "title": "braces vulnerable to stack-exhaustion denial of service through deeply nested patterns",
+        "package_name": "braces",
+        "vulnerable_range": "<=3.0.3",
+        "patched_version": "0.1.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-vcc3-ghjq-m6fr",
         "aliases": [],
         "severity": "moderate",
@@ -3594,7 +3694,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -3651,6 +3751,16 @@
   },
   "1.21": {
     "openshift-pipelines/console-plugin": [
+      {
+        "vuln_id": "GHSA-vfj7-8cjw-p6xm",
+        "aliases": [],
+        "severity": "high",
+        "title": "braces vulnerable to stack-exhaustion denial of service through deeply nested patterns",
+        "package_name": "braces",
+        "vulnerable_range": "<=3.0.3",
+        "patched_version": "0.1.0",
+        "is_direct": false
+      },
       {
         "vuln_id": "GHSA-73rr-hh4g-fpgx",
         "aliases": [],
@@ -3952,7 +4062,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -4009,6 +4119,16 @@
   },
   "1.22": {
     "openshift-pipelines/console-plugin": [
+      {
+        "vuln_id": "GHSA-vfj7-8cjw-p6xm",
+        "aliases": [],
+        "severity": "high",
+        "title": "braces vulnerable to stack-exhaustion denial of service through deeply nested patterns",
+        "package_name": "braces",
+        "vulnerable_range": "<=3.0.3",
+        "patched_version": "0.1.0",
+        "is_direct": false
+      },
       {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
@@ -4168,6 +4288,16 @@
   "main": {
     "openshift-pipelines/console-plugin": [
       {
+        "vuln_id": "GHSA-vfj7-8cjw-p6xm",
+        "aliases": [],
+        "severity": "high",
+        "title": "braces vulnerable to stack-exhaustion denial of service through deeply nested patterns",
+        "package_name": "braces",
+        "vulnerable_range": "<=3.0.3",
+        "patched_version": "0.1.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
         "severity": "high",
@@ -4325,6 +4455,16 @@
   },
   "next": {
     "openshift-pipelines/console-plugin": [
+      {
+        "vuln_id": "GHSA-vfj7-8cjw-p6xm",
+        "aliases": [],
+        "severity": "high",
+        "title": "braces vulnerable to stack-exhaustion denial of service through deeply nested patterns",
+        "package_name": "braces",
+        "vulnerable_range": "<=3.0.3",
+        "patched_version": "0.1.0",
+        "is_direct": false
+      },
       {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
