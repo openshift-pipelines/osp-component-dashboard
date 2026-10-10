@@ -400,16 +400,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-73rr-hh4g-fpgx",
-        "aliases": [],
-        "severity": "low",
-        "title": "jsdiff has a Denial of Service vulnerability in parsePatch and applyPatch",
-        "package_name": "diff",
-        "vulnerable_range": ">=6.0.0 <8.0.3",
-        "patched_version": null,
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-jmr9-qjv8-65gv",
         "aliases": [],
         "severity": "high",
@@ -945,16 +935,6 @@
         "package_name": "braces",
         "vulnerable_range": "<=3.0.3",
         "patched_version": "0.1.0",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-73rr-hh4g-fpgx",
-        "aliases": [],
-        "severity": "low",
-        "title": "jsdiff has a Denial of Service vulnerability in parsePatch and applyPatch",
-        "package_name": "diff",
-        "vulnerable_range": ">=6.0.0 <8.0.3",
-        "patched_version": null,
         "is_direct": false
       },
       {
@@ -2768,7 +2748,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -2963,16 +2943,6 @@
         "package_name": "decode-uri-component",
         "vulnerable_range": "<=0.4.2",
         "patched_version": "4.5.1",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-73rr-hh4g-fpgx",
-        "aliases": [],
-        "severity": "low",
-        "title": "jsdiff has a Denial of Service vulnerability in parsePatch and applyPatch",
-        "package_name": "diff",
-        "vulnerable_range": ">=6.0.0 <8.0.3",
-        "patched_version": null,
         "is_direct": false
       },
       {
@@ -3426,7 +3396,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -3501,16 +3471,6 @@
         "package_name": "decode-uri-component",
         "vulnerable_range": "<=0.4.2",
         "patched_version": "4.5.1",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-73rr-hh4g-fpgx",
-        "aliases": [],
-        "severity": "low",
-        "title": "jsdiff has a Denial of Service vulnerability in parsePatch and applyPatch",
-        "package_name": "diff",
-        "vulnerable_range": ">=6.0.0 <8.0.3",
-        "patched_version": null,
         "is_direct": false
       },
       {
@@ -3834,7 +3794,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -3899,16 +3859,6 @@
         "package_name": "braces",
         "vulnerable_range": "<=3.0.3",
         "patched_version": "0.1.0",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-73rr-hh4g-fpgx",
-        "aliases": [],
-        "severity": "low",
-        "title": "jsdiff has a Denial of Service vulnerability in parsePatch and applyPatch",
-        "package_name": "diff",
-        "vulnerable_range": ">=6.0.0 <8.0.3",
-        "patched_version": null,
         "is_direct": false
       },
       {
