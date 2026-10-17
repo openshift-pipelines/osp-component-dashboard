@@ -262,7 +262,7 @@
         "title": "React Router: Open redirect via backslash in <Link> and useNavigate (CVE-2025-68470 bypass)",
         "package_name": "react-router",
         "vulnerable_range": ">=6.0.0 <7.18.0",
-        "patched_version": "4.23.0-prerelease.5",
+        "patched_version": "5.1.0-prerelease.1",
         "is_direct": false
       },
       {
@@ -272,7 +272,7 @@
         "title": "React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration",
         "package_name": "react-router",
         "vulnerable_range": ">=6.4.0 <7.18.0",
-        "patched_version": "4.23.0-prerelease.5",
+        "patched_version": "5.1.0-prerelease.1",
         "is_direct": false
       },
       {
@@ -670,7 +670,7 @@
         "title": "React Router: Open redirect via backslash in <Link> and useNavigate (CVE-2025-68470 bypass)",
         "package_name": "react-router",
         "vulnerable_range": ">=6.0.0 <7.18.0",
-        "patched_version": "4.23.0-prerelease.5",
+        "patched_version": "5.1.0-prerelease.1",
         "is_direct": false
       },
       {
@@ -680,7 +680,7 @@
         "title": "React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration",
         "package_name": "react-router",
         "vulnerable_range": ">=6.4.0 <7.18.0",
-        "patched_version": "4.23.0-prerelease.5",
+        "patched_version": "5.1.0-prerelease.1",
         "is_direct": false
       },
       {
@@ -850,7 +850,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -1208,7 +1208,7 @@
         "title": "React Router: Open redirect via backslash in <Link> and useNavigate (CVE-2025-68470 bypass)",
         "package_name": "react-router",
         "vulnerable_range": ">=6.0.0 <7.18.0",
-        "patched_version": "4.23.0-prerelease.5",
+        "patched_version": "5.1.0-prerelease.1",
         "is_direct": false
       },
       {
@@ -1218,7 +1218,7 @@
         "title": "React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration",
         "package_name": "react-router",
         "vulnerable_range": ">=6.4.0 <7.18.0",
-        "patched_version": "4.23.0-prerelease.5",
+        "patched_version": "5.1.0-prerelease.1",
         "is_direct": false
       },
       {
@@ -1388,7 +1388,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -2748,7 +2748,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -3216,7 +3216,7 @@
         "title": "React Router: Open redirect via backslash in <Link> and useNavigate (CVE-2025-68470 bypass)",
         "package_name": "react-router",
         "vulnerable_range": ">=6.0.0 <7.18.0",
-        "patched_version": "4.23.0-prerelease.5",
+        "patched_version": "5.1.0-prerelease.1",
         "is_direct": false
       },
       {
@@ -3226,7 +3226,7 @@
         "title": "React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration",
         "package_name": "react-router",
         "vulnerable_range": ">=6.4.0 <7.18.0",
-        "patched_version": "4.23.0-prerelease.5",
+        "patched_version": "5.1.0-prerelease.1",
         "is_direct": false
       },
       {
@@ -3396,7 +3396,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -3744,7 +3744,7 @@
         "title": "React Router: Open redirect via backslash in <Link> and useNavigate (CVE-2025-68470 bypass)",
         "package_name": "react-router",
         "vulnerable_range": ">=6.0.0 <7.18.0",
-        "patched_version": "4.23.0-prerelease.5",
+        "patched_version": "5.1.0-prerelease.1",
         "is_direct": false
       },
       {
@@ -3754,7 +3754,7 @@
         "title": "React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration",
         "package_name": "react-router",
         "vulnerable_range": ">=6.4.0 <7.18.0",
-        "patched_version": "4.23.0-prerelease.5",
+        "patched_version": "5.1.0-prerelease.1",
         "is_direct": false
       },
       {
@@ -4112,7 +4112,7 @@
         "title": "React Router: Open redirect via backslash in <Link> and useNavigate (CVE-2025-68470 bypass)",
         "package_name": "react-router",
         "vulnerable_range": ">=6.0.0 <7.18.0",
-        "patched_version": "4.23.0-prerelease.5",
+        "patched_version": "5.1.0-prerelease.1",
         "is_direct": false
       },
       {
@@ -4122,7 +4122,7 @@
         "title": "React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration",
         "package_name": "react-router",
         "vulnerable_range": ">=6.4.0 <7.18.0",
-        "patched_version": "4.23.0-prerelease.5",
+        "patched_version": "5.1.0-prerelease.1",
         "is_direct": false
       },
       {
@@ -4162,7 +4162,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -4290,7 +4290,7 @@
         "title": "React Router: Open redirect via backslash in <Link> and useNavigate (CVE-2025-68470 bypass)",
         "package_name": "react-router",
         "vulnerable_range": ">=6.0.0 <7.18.0",
-        "patched_version": "4.23.0-prerelease.5",
+        "patched_version": "5.1.0-prerelease.1",
         "is_direct": false
       },
       {
@@ -4300,7 +4300,7 @@
         "title": "React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration",
         "package_name": "react-router",
         "vulnerable_range": ">=6.4.0 <7.18.0",
-        "patched_version": "4.23.0-prerelease.5",
+        "patched_version": "5.1.0-prerelease.1",
         "is_direct": false
       },
       {
@@ -4468,7 +4468,7 @@
         "title": "React Router: Open redirect via backslash in <Link> and useNavigate (CVE-2025-68470 bypass)",
         "package_name": "react-router",
         "vulnerable_range": ">=6.0.0 <7.18.0",
-        "patched_version": "4.23.0-prerelease.5",
+        "patched_version": "5.1.0-prerelease.1",
         "is_direct": false
       },
       {
@@ -4478,7 +4478,7 @@
         "title": "React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration",
         "package_name": "react-router",
         "vulnerable_range": ">=6.4.0 <7.18.0",
-        "patched_version": "4.23.0-prerelease.5",
+        "patched_version": "5.1.0-prerelease.1",
         "is_direct": false
       },
       {
@@ -4646,7 +4646,7 @@
         "title": "React Router: Open redirect via backslash in <Link> and useNavigate (CVE-2025-68470 bypass)",
         "package_name": "react-router",
         "vulnerable_range": ">=6.0.0 <7.18.0",
-        "patched_version": "4.23.0-prerelease.5",
+        "patched_version": "5.1.0-prerelease.1",
         "is_direct": false
       },
       {
@@ -4656,7 +4656,7 @@
         "title": "React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration",
         "package_name": "react-router",
         "vulnerable_range": ">=6.4.0 <7.18.0",
-        "patched_version": "4.23.0-prerelease.5",
+        "patched_version": "5.1.0-prerelease.1",
         "is_direct": false
       },
       {
