@@ -312,7 +312,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -850,7 +850,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": null,
+        "patched_version": "0.0.15",
         "is_direct": false
       },
       {
@@ -1982,10 +1982,40 @@
       {
         "vuln_id": "GHSA-v6wh-96g9-6wx3",
         "aliases": [],
-        "severity": "moderate",
+        "severity": "high",
         "title": "launch-editor: NTLMv2 hash disclosure via UNC path handling on Windows",
         "package_name": "launch-editor",
         "vulnerable_range": "<=2.14.0",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-698v-4r3x-3vcv",
+        "aliases": [],
+        "severity": "high",
+        "title": "launch-editor: escapeCmdArgs() omits % escaping on Windows",
+        "package_name": "launch-editor",
+        "vulnerable_range": "<=2.14.1",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-r825-w8mm-5pxw",
+        "aliases": [],
+        "severity": "high",
+        "title": "launch-editor: Editor CLI flag misinterpretation causing arbitrary command execution for some editors",
+        "package_name": "launch-editor",
+        "vulnerable_range": "<=2.14.1",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-587h-7wmj-h5pm",
+        "aliases": [],
+        "severity": "high",
+        "title": "launch-editor: `fs.existsSync()` existence check can be bypassed on Windows",
+        "package_name": "launch-editor",
+        "vulnerable_range": "<=2.14.1",
         "patched_version": null,
         "is_direct": false
       },
@@ -3396,7 +3426,7 @@
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
