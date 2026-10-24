@@ -2,16 +2,6 @@
   "1.15": {
     "openshift-pipelines/console-plugin": [
       {
-        "vuln_id": "GHSA-vfj7-8cjw-p6xm",
-        "aliases": [],
-        "severity": "high",
-        "title": "braces vulnerable to stack-exhaustion denial of service through deeply nested patterns",
-        "package_name": "braces",
-        "vulnerable_range": "<=3.0.3",
-        "patched_version": "0.1.0",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-jmr9-qjv8-65gv",
         "aliases": [],
         "severity": "high",
@@ -296,6 +286,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-m5mm-p8h7-m29v",
+        "aliases": [],
+        "severity": "high",
+        "title": "Serialize JavaScript: Cross-site scripting (XSS) via unescaped </script at the end of a serialized function body",
+        "package_name": "serialize-javascript",
+        "vulnerable_range": "<7.1.3",
+        "patched_version": "14.0.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-w5hq-g745-h8pq",
         "aliases": [],
         "severity": "moderate",
@@ -377,16 +377,6 @@
         "package_name": "@fastify/busboy",
         "vulnerable_range": "<3.2.2",
         "patched_version": "7.13.0",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-vfj7-8cjw-p6xm",
-        "aliases": [],
-        "severity": "high",
-        "title": "braces vulnerable to stack-exhaustion denial of service through deeply nested patterns",
-        "package_name": "braces",
-        "vulnerable_range": "<=3.0.3",
-        "patched_version": "0.1.0",
         "is_direct": false
       },
       {
@@ -690,6 +680,16 @@
         "title": "Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects",
         "package_name": "serialize-javascript",
         "vulnerable_range": ">=5.0.0 <7.0.5",
+        "patched_version": "14.0.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-m5mm-p8h7-m29v",
+        "aliases": [],
+        "severity": "high",
+        "title": "Serialize JavaScript: Cross-site scripting (XSS) via unescaped </script at the end of a serialized function body",
+        "package_name": "serialize-javascript",
+        "vulnerable_range": "<7.1.3",
         "patched_version": "14.0.0",
         "is_direct": false
       },
@@ -908,16 +908,6 @@
         "is_direct": false
       },
       {
-        "vuln_id": "GHSA-vfj7-8cjw-p6xm",
-        "aliases": [],
-        "severity": "high",
-        "title": "braces vulnerable to stack-exhaustion denial of service through deeply nested patterns",
-        "package_name": "braces",
-        "vulnerable_range": "<=3.0.3",
-        "patched_version": "0.1.0",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-jmr9-qjv8-65gv",
         "aliases": [],
         "severity": "high",
@@ -1218,6 +1208,16 @@
         "title": "Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects",
         "package_name": "serialize-javascript",
         "vulnerable_range": ">=5.0.0 <7.0.5",
+        "patched_version": "14.0.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-m5mm-p8h7-m29v",
+        "aliases": [],
+        "severity": "high",
+        "title": "Serialize JavaScript: Cross-site scripting (XSS) via unescaped </script at the end of a serialized function body",
+        "package_name": "serialize-javascript",
+        "vulnerable_range": "<7.1.3",
         "patched_version": "14.0.0",
         "is_direct": false
       },
@@ -1508,10 +1508,20 @@
       {
         "vuln_id": "GHSA-v422-hmwv-36x6",
         "aliases": [],
-        "severity": "moderate",
+        "severity": "high",
         "title": "body-parser vulnerable to denial of service when invalid limit value silently disables size enforcement",
         "package_name": "body-parser",
         "vulnerable_range": "<1.20.6",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-27r3-jxmh-p828",
+        "aliases": [],
+        "severity": "high",
+        "title": "body-parser vulnerable to Denial of Service via trailing bytes after a compressed request body",
+        "package_name": "body-parser",
+        "vulnerable_range": "<1.20.9",
         "patched_version": null,
         "is_direct": false
       },
@@ -1595,16 +1605,6 @@
         "package_name": "brace-expansion",
         "vulnerable_range": "<1.1.19",
         "patched_version": null,
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-vfj7-8cjw-p6xm",
-        "aliases": [],
-        "severity": "high",
-        "title": "braces vulnerable to stack-exhaustion denial of service through deeply nested patterns",
-        "package_name": "braces",
-        "vulnerable_range": "<=3.0.3",
-        "patched_version": "0.1.0",
         "is_direct": false
       },
       {
@@ -1768,6 +1768,36 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-w74x-v6f9-j3xg",
+        "aliases": [],
+        "severity": "high",
+        "title": "fast-uri vulnerable to URI scheme spoofing via percent-encoded scheme decoding",
+        "package_name": "fast-uri",
+        "vulnerable_range": ">=3.0.0 <3.1.9",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-xhq7-xmqj-769h",
+        "aliases": [],
+        "severity": "high",
+        "title": "fast-uri vulnerable to improper path equivalence in relative reference normalization",
+        "package_name": "fast-uri",
+        "vulnerable_range": ">=3.0.0 <3.1.9",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-333x-w4r6-6crp",
+        "aliases": [],
+        "severity": "high",
+        "title": "fast-uri vulnerable to scheme injection via an unescaped first-segment colon in suffix references",
+        "package_name": "fast-uri",
+        "vulnerable_range": ">=3.0.0 <3.1.9",
+        "patched_version": null,
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-25h7-pfq9-p65f",
         "aliases": [],
         "severity": "high",
@@ -1840,7 +1870,7 @@
       {
         "vuln_id": "GHSA-9gqv-wp59-fq42",
         "aliases": [],
-        "severity": "high",
+        "severity": "moderate",
         "title": "http-proxy-middleware allows fixRequestBody to proceed even if bodyParser has failed",
         "package_name": "http-proxy-middleware",
         "vulnerable_range": ">=1.3.0 <2.0.9",
@@ -1850,7 +1880,7 @@
       {
         "vuln_id": "GHSA-4www-5p9h-95mh",
         "aliases": [],
-        "severity": "high",
+        "severity": "moderate",
         "title": "http-proxy-middleware can call writeBody twice because \"else if\" is not used",
         "package_name": "http-proxy-middleware",
         "vulnerable_range": ">=1.3.0 <2.0.8",
@@ -1860,7 +1890,7 @@
       {
         "vuln_id": "GHSA-64mm-vxmg-q3vj",
         "aliases": [],
-        "severity": "high",
+        "severity": "moderate",
         "title": "http-proxy-middleware `router` host+path substring matching allows Host-header-driven backend routing bypass",
         "package_name": "http-proxy-middleware",
         "vulnerable_range": ">=0.16.0 <2.0.10",
@@ -2532,6 +2562,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-m5mm-p8h7-m29v",
+        "aliases": [],
+        "severity": "high",
+        "title": "Serialize JavaScript: Cross-site scripting (XSS) via unescaped </script at the end of a serialized function body",
+        "package_name": "serialize-javascript",
+        "vulnerable_range": "<7.1.3",
+        "patched_version": "14.0.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-w7jw-789q-3m8p",
         "aliases": [],
         "severity": "critical",
@@ -2732,6 +2772,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-4qv8-2p9j-2685",
+        "aliases": [],
+        "severity": "high",
+        "title": "undici vulnerable to Denial of Service via unbounded memory in the EventSource parser",
+        "package_name": "undici",
+        "vulnerable_range": ">=6.5.0 <6.29.1",
+        "patched_version": "7.13.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-w5hq-g745-h8pq",
         "aliases": [],
         "severity": "moderate",
@@ -2804,7 +2854,7 @@
       {
         "vuln_id": "GHSA-79cf-xcqc-c78w",
         "aliases": [],
-        "severity": "high",
+        "severity": "moderate",
         "title": "webpack-dev-server vulnerable to cross-origin source code exposure on non-HTTPS origins",
         "package_name": "webpack-dev-server",
         "vulnerable_range": "<=5.2.3",
@@ -2814,7 +2864,7 @@
       {
         "vuln_id": "GHSA-mx8g-39q3-5c79",
         "aliases": [],
-        "severity": "high",
+        "severity": "moderate",
         "title": "webpack-dev-server vulnerable to HMR WebSocket interception via permissive user proxies",
         "package_name": "webpack-dev-server",
         "vulnerable_range": "<5.2.5",
@@ -2824,7 +2874,7 @@
       {
         "vuln_id": "GHSA-f5vj-f2hx-8m93",
         "aliases": [],
-        "severity": "high",
+        "severity": "moderate",
         "title": "webpack-dev-server vulnerable to cross-site request forgery via internal developer endpoints",
         "package_name": "webpack-dev-server",
         "vulnerable_range": "<=5.2.5",
@@ -2834,7 +2884,7 @@
       {
         "vuln_id": "GHSA-m28w-2pqf-7qgj",
         "aliases": [],
-        "severity": "high",
+        "severity": "moderate",
         "title": "webpack-dev-server vulnerable to denial of service via a malformed Host or Origin header",
         "package_name": "webpack-dev-server",
         "vulnerable_range": "<=5.2.5",
@@ -2913,16 +2963,6 @@
         "package_name": "@fastify/busboy",
         "vulnerable_range": "<3.2.2",
         "patched_version": "7.13.0",
-        "is_direct": false
-      },
-      {
-        "vuln_id": "GHSA-vfj7-8cjw-p6xm",
-        "aliases": [],
-        "severity": "high",
-        "title": "braces vulnerable to stack-exhaustion denial of service through deeply nested patterns",
-        "package_name": "braces",
-        "vulnerable_range": "<=3.0.3",
-        "patched_version": "0.1.0",
         "is_direct": false
       },
       {
@@ -3236,6 +3276,16 @@
         "title": "Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects",
         "package_name": "serialize-javascript",
         "vulnerable_range": ">=5.0.0 <7.0.5",
+        "patched_version": "14.0.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-m5mm-p8h7-m29v",
+        "aliases": [],
+        "severity": "high",
+        "title": "Serialize JavaScript: Cross-site scripting (XSS) via unescaped </script at the end of a serialized function body",
+        "package_name": "serialize-javascript",
+        "vulnerable_range": "<7.1.3",
         "patched_version": "14.0.0",
         "is_direct": false
       },
@@ -3434,16 +3484,6 @@
   "1.20": {
     "openshift-pipelines/console-plugin": [
       {
-        "vuln_id": "GHSA-vfj7-8cjw-p6xm",
-        "aliases": [],
-        "severity": "high",
-        "title": "braces vulnerable to stack-exhaustion denial of service through deeply nested patterns",
-        "package_name": "braces",
-        "vulnerable_range": "<=3.0.3",
-        "patched_version": "0.1.0",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-vcc3-ghjq-m6fr",
         "aliases": [],
         "severity": "moderate",
@@ -3758,6 +3798,16 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-m5mm-p8h7-m29v",
+        "aliases": [],
+        "severity": "high",
+        "title": "Serialize JavaScript: Cross-site scripting (XSS) via unescaped </script at the end of a serialized function body",
+        "package_name": "serialize-javascript",
+        "vulnerable_range": "<7.1.3",
+        "patched_version": "14.0.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-w5hq-g745-h8pq",
         "aliases": [],
         "severity": "moderate",
@@ -3821,16 +3871,6 @@
   },
   "1.21": {
     "openshift-pipelines/console-plugin": [
-      {
-        "vuln_id": "GHSA-vfj7-8cjw-p6xm",
-        "aliases": [],
-        "severity": "high",
-        "title": "braces vulnerable to stack-exhaustion denial of service through deeply nested patterns",
-        "package_name": "braces",
-        "vulnerable_range": "<=3.0.3",
-        "patched_version": "0.1.0",
-        "is_direct": false
-      },
       {
         "vuln_id": "GHSA-jmr9-qjv8-65gv",
         "aliases": [],
@@ -4116,13 +4156,23 @@
         "is_direct": false
       },
       {
+        "vuln_id": "GHSA-m5mm-p8h7-m29v",
+        "aliases": [],
+        "severity": "high",
+        "title": "Serialize JavaScript: Cross-site scripting (XSS) via unescaped </script at the end of a serialized function body",
+        "package_name": "serialize-javascript",
+        "vulnerable_range": "<7.1.3",
+        "patched_version": "14.0.0",
+        "is_direct": false
+      },
+      {
         "vuln_id": "GHSA-w5hq-g745-h8pq",
         "aliases": [],
         "severity": "moderate",
         "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
         "package_name": "uuid",
         "vulnerable_range": "<11.1.1",
-        "patched_version": "0.0.15",
+        "patched_version": null,
         "is_direct": false
       },
       {
@@ -4179,16 +4229,6 @@
   },
   "1.22": {
     "openshift-pipelines/console-plugin": [
-      {
-        "vuln_id": "GHSA-vfj7-8cjw-p6xm",
-        "aliases": [],
-        "severity": "high",
-        "title": "braces vulnerable to stack-exhaustion denial of service through deeply nested patterns",
-        "package_name": "braces",
-        "vulnerable_range": "<=3.0.3",
-        "patched_version": "0.1.0",
-        "is_direct": false
-      },
       {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
@@ -4280,6 +4320,16 @@
         "title": "Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects",
         "package_name": "serialize-javascript",
         "vulnerable_range": ">=5.0.0 <7.0.5",
+        "patched_version": "14.0.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-m5mm-p8h7-m29v",
+        "aliases": [],
+        "severity": "high",
+        "title": "Serialize JavaScript: Cross-site scripting (XSS) via unescaped </script at the end of a serialized function body",
+        "package_name": "serialize-javascript",
+        "vulnerable_range": "<7.1.3",
         "patched_version": "14.0.0",
         "is_direct": false
       },
@@ -4348,16 +4398,6 @@
   "main": {
     "openshift-pipelines/console-plugin": [
       {
-        "vuln_id": "GHSA-vfj7-8cjw-p6xm",
-        "aliases": [],
-        "severity": "high",
-        "title": "braces vulnerable to stack-exhaustion denial of service through deeply nested patterns",
-        "package_name": "braces",
-        "vulnerable_range": "<=3.0.3",
-        "patched_version": "0.1.0",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
         "severity": "high",
@@ -4448,6 +4488,16 @@
         "title": "Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects",
         "package_name": "serialize-javascript",
         "vulnerable_range": ">=5.0.0 <7.0.5",
+        "patched_version": "14.0.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-m5mm-p8h7-m29v",
+        "aliases": [],
+        "severity": "high",
+        "title": "Serialize JavaScript: Cross-site scripting (XSS) via unescaped </script at the end of a serialized function body",
+        "package_name": "serialize-javascript",
+        "vulnerable_range": "<7.1.3",
         "patched_version": "14.0.0",
         "is_direct": false
       },
@@ -4516,16 +4566,6 @@
   "next": {
     "openshift-pipelines/console-plugin": [
       {
-        "vuln_id": "GHSA-vfj7-8cjw-p6xm",
-        "aliases": [],
-        "severity": "high",
-        "title": "braces vulnerable to stack-exhaustion denial of service through deeply nested patterns",
-        "package_name": "braces",
-        "vulnerable_range": "<=3.0.3",
-        "patched_version": "0.1.0",
-        "is_direct": false
-      },
-      {
         "vuln_id": "GHSA-mh29-5h37-fv8m",
         "aliases": [],
         "severity": "high",
@@ -4616,6 +4656,16 @@
         "title": "Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects",
         "package_name": "serialize-javascript",
         "vulnerable_range": ">=5.0.0 <7.0.5",
+        "patched_version": "14.0.0",
+        "is_direct": false
+      },
+      {
+        "vuln_id": "GHSA-m5mm-p8h7-m29v",
+        "aliases": [],
+        "severity": "high",
+        "title": "Serialize JavaScript: Cross-site scripting (XSS) via unescaped </script at the end of a serialized function body",
+        "package_name": "serialize-javascript",
+        "vulnerable_range": "<7.1.3",
         "patched_version": "14.0.0",
         "is_direct": false
       },
